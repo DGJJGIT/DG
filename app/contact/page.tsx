@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import SectionLabel from "@/components/ui/SectionLabel"
+import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -33,44 +34,7 @@ export default function ContactPage() {
             {/* Form */}
             <div>
               <h2 className="text-2xl font-semibold text-[#0D0D0D] tracking-tight mb-8">Send a message</h2>
-              <form className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">First Name</label>
-                    <input type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] placeholder-[#A3A3A3] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="First name" />
-                  </div>
-                  <div>
-                    <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Last Name</label>
-                    <input type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] placeholder-[#A3A3A3] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="Last name" />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Work Email</label>
-                  <input type="email" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] placeholder-[#A3A3A3] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="you@company.com" />
-                </div>
-                <div>
-                  <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Company</label>
-                  <input type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] placeholder-[#A3A3A3] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="Company name" />
-                </div>
-                <div>
-                  <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Subject</label>
-                  <select className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] focus:outline-none focus:border-[#B8962E] transition-colors">
-                    <option value="">Select a subject</option>
-                    <option>Get a Quote</option>
-                    <option>Service Information</option>
-                    <option>Partnership Inquiry</option>
-                    <option>Technical Support</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Message</label>
-                  <textarea rows={5} className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] placeholder-[#A3A3A3] focus:outline-none focus:border-[#B8962E] transition-colors resize-none" placeholder="Tell us about your logistics needs..." />
-                </div>
-                <button type="submit" className="w-full py-3 bg-[#0D0D0D] text-white text-[14px] font-medium rounded-md hover:bg-[#1a1a1a] transition-colors">
-                  Send Message
-                </button>
-              </form>
+              <ContactForm />
             </div>
 
             {/* Info */}

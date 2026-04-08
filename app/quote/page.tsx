@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { CheckCircle } from "lucide-react"
 import SectionLabel from "@/components/ui/SectionLabel"
+import QuoteForm from "@/components/QuoteForm"
 
 export const metadata: Metadata = {
   title: "Get a Quote",
@@ -36,66 +37,7 @@ export default function QuotePage() {
           <div className="grid lg:grid-cols-5 gap-16">
             <div className="lg:col-span-3">
               <h2 className="text-2xl font-semibold text-[#0D0D0D] tracking-tight mb-8">Tell us about your needs</h2>
-              <form className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">First Name *</label>
-                    <input required type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" />
-                  </div>
-                  <div>
-                    <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Last Name *</label>
-                    <input required type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Work Email *</label>
-                  <input required type="email" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" />
-                </div>
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Company *</label>
-                    <input required type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" />
-                  </div>
-                  <div>
-                    <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Phone</label>
-                    <input type="tel" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Services Needed *</label>
-                  <select required className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors">
-                    <option value="">Select primary service</option>
-                    <option>Amazon FBA Prep</option>
-                    <option>3PL Fulfillment</option>
-                    <option>Last-Mile Delivery</option>
-                    <option>Expedited Shipping</option>
-                    <option>Multiple Services</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Monthly Shipment Volume *</label>
-                  <select required className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors">
-                    <option value="">Select volume range</option>
-                    <option>Under 500 shipments/month</option>
-                    <option>500 – 2,000 shipments/month</option>
-                    <option>2,000 – 10,000 shipments/month</option>
-                    <option>10,000 – 50,000 shipments/month</option>
-                    <option>50,000+ shipments/month</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Delivery Geography</label>
-                  <input type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="e.g. Nationwide, Northeast US, Chicago metro..." />
-                </div>
-                <div>
-                  <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Additional Requirements</label>
-                  <textarea rows={4} className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors resize-none" placeholder="Special handling requirements, integration needs, timeline, etc." />
-                </div>
-                <button type="submit" className="w-full py-3.5 bg-[#B8962E] text-white text-[14px] font-medium rounded-md hover:bg-[#A0801F] transition-colors">
-                  Submit Request
-                </button>
-                <p className="text-[12px] text-[#A3A3A3] text-center">We'll respond within 1 business day. No commitment required.</p>
-              </form>
+              <QuoteForm />
             </div>
 
             <div className="lg:col-span-2">
