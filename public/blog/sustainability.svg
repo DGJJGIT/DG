@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D0D0D"/>
+      <stop offset="50%" stop-color="#121212"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B8962E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8962E" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Subtle organic curves -->
+  <g opacity="0.03">
+    <path d="M0,400 Q300,350 600,380 Q900,410 1200,360" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+    <path d="M0,450 Q300,400 600,430 Q900,460 1200,410" fill="none" stroke="#FFFFFF" stroke-width="0.5"/>
+  </g>
+  <!-- Leaf shape -->
+  <g filter="url(#glow)" transform="translate(550, 240)">
+    <path d="M0,80 Q-10,40 10,-20 Q30,-60 80,-80 Q60,-30 50,10 Q45,40 40,60 Q30,80 0,80 Z" fill="url(#leafGrad)" stroke="#B8962E" stroke-width="1.5" stroke-opacity="0.6"/>
+    <!-- Leaf vein -->
+    <path d="M0,80 Q20,30 50,-20" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.4"/>
+    <path d="M25,50 Q35,35 50,20" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.25"/>
+    <path d="M15,65 Q25,55 40,40" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.2"/>
+    <!-- Stem -->
+    <path d="M0,80 Q-10,100 -5,120" fill="none" stroke="#B8962E" stroke-width="1.2" opacity="0.5" stroke-linecap="round"/>
+  </g>
+  <!-- Circular recycling arrows -->
+  <g filter="url(#glow)" transform="translate(640, 300)">
+    <!-- Arrow arc 1 -->
+    <path d="M0,-55 A55,55 0 0 1 48,28" fill="none" stroke="#B8962E" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+    <polygon points="48,28 55,18 42,20" fill="#B8962E" opacity="0.4"/>
+    <!-- Arrow arc 2 -->
+    <path d="M48,28 A55,55 0 0 1 -48,28" fill="none" stroke="#B8962E" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+    <polygon points="-48,28 -42,20 -55,18" fill="#B8962E" opacity="0.4"/>
+    <!-- Arrow arc 3 -->
+    <path d="M-48,28 A55,55 0 0 1 0,-55" fill="none" stroke="#B8962E" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+    <polygon points="0,-55 -8,-46 6,-46" fill="#B8962E" opacity="0.4"/>
+  </g>
+  <!-- Second smaller leaf -->
+  <g opacity="0.3" transform="translate(720, 200) scale(0.5) rotate(30)">
+    <path d="M0,80 Q-10,40 10,-20 Q30,-60 80,-80 Q60,-30 50,10 Q45,40 40,60 Q30,80 0,80 Z" fill="none" stroke="#D4AF37" stroke-width="1"/>
+    <path d="M0,80 Q20,30 50,-20" fill="none" stroke="#D4AF37" stroke-width="0.6" opacity="0.4"/>
+  </g>
+  <!-- Organic scattered dots -->
+  <g opacity="0.15">
+    <circle cx="380" cy="250" r="2" fill="#B8962E"/>
+    <circle cx="400" cy="380" r="1.5" fill="#D4AF37"/>
+    <circle cx="800" cy="220" r="2" fill="#B8962E"/>
+    <circle cx="450" cy="180" r="1.5" fill="#D4AF37"/>
+    <circle cx="760" cy="400" r="2" fill="#B8962E"/>
+    <circle cx="340" cy="320" r="1" fill="#D4AF37"/>
+    <circle cx="850" cy="340" r="1.5" fill="#B8962E"/>
+  </g>
+  <!-- Category label -->
+  <text x="600" y="560" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="300" letter-spacing="4" fill="#A3A3A3">SUSTAINABILITY</text>
+  <rect x="535" y="575" width="130" height="1" fill="url(#gold)" opacity="0.5"/>
+</svg>

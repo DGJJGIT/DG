@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D0D0D"/>
+      <stop offset="40%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8962E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Subtle diagonal lines pattern -->
+  <g opacity="0.03">
+    <line x1="0" y1="0" x2="630" y2="630" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="100" y1="0" x2="730" y2="630" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="200" y1="0" x2="830" y2="630" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="300" y1="0" x2="930" y2="630" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="400" y1="0" x2="1030" y2="630" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="500" y1="0" x2="1130" y2="630" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="600" y1="0" x2="1200" y2="600" stroke="#FFFFFF" stroke-width="1"/>
+  </g>
+  <!-- Chess-piece-like geometric shapes -->
+  <g filter="url(#glow)">
+    <!-- King piece - tall geometric shape -->
+    <g transform="translate(480, 140)">
+      <rect x="-3" y="0" width="6" height="20" fill="#D4AF37" opacity="0.8"/>
+      <rect x="-10" y="7" width="20" height="6" fill="#D4AF37" opacity="0.8"/>
+      <circle cx="0" cy="45" r="18" fill="none" stroke="#B8962E" stroke-width="1.5" opacity="0.7"/>
+      <path d="M-20,70 Q0,55 20,70 L25,120 Q0,115 -25,120 Z" fill="#B8962E" opacity="0.15" stroke="#B8962E" stroke-width="1" />
+      <path d="M-30,120 L30,120 L35,140 L-35,140 Z" fill="#B8962E" opacity="0.2" stroke="#B8962E" stroke-width="1"/>
+      <rect x="-38" y="140" width="76" height="8" rx="2" fill="#B8962E" opacity="0.4"/>
+    </g>
+    <!-- Rook piece -->
+    <g transform="translate(650, 200)">
+      <path d="M-18,0 L-18,12 L-10,12 L-10,0 L-4,0 L-4,12 L4,12 L4,0 L10,0 L10,12 L18,12 L18,0 L22,0 L22,18 L-22,18 Z" fill="#B8962E" opacity="0.5"/>
+      <rect x="-18" y="18" width="36" height="70" rx="1" fill="#B8962E" opacity="0.12" stroke="#B8962E" stroke-width="1"/>
+      <path d="M-24,88 L24,88 L28,100 L-28,100 Z" fill="#B8962E" opacity="0.18" stroke="#B8962E" stroke-width="1"/>
+      <rect x="-30" y="100" width="60" height="7" rx="2" fill="#B8962E" opacity="0.35"/>
+    </g>
+    <!-- Bishop piece -->
+    <g transform="translate(780, 220)">
+      <circle cx="0" cy="5" r="5" fill="#D4AF37" opacity="0.6"/>
+      <path d="M0,10 Q-15,40 -12,65 Q0,55 12,65 Q15,40 0,10 Z" fill="#B8962E" opacity="0.12" stroke="#B8962E" stroke-width="1"/>
+      <ellipse cx="0" cy="68" rx="16" ry="5" fill="#B8962E" opacity="0.18" stroke="#B8962E" stroke-width="1"/>
+      <rect x="-20" y="73" width="40" height="6" rx="2" fill="#B8962E" opacity="0.3"/>
+    </g>
+    <!-- Pawn pieces in a row -->
+    <g opacity="0.4">
+      <g transform="translate(380, 340)">
+        <circle cx="0" cy="0" r="10" fill="none" stroke="#B8962E" stroke-width="1"/>
+        <path d="M-12,15 Q0,8 12,15 L15,35 L-15,35 Z" fill="#B8962E" opacity="0.15" stroke="#B8962E" stroke-width="0.8"/>
+        <rect x="-18" y="35" width="36" height="5" rx="2" fill="#B8962E" opacity="0.3"/>
+      </g>
+      <g transform="translate(440, 360)">
+        <circle cx="0" cy="0" r="8" fill="none" stroke="#B8962E" stroke-width="0.8"/>
+        <path d="M-10,12 Q0,6 10,12 L12,28 L-12,28 Z" fill="#B8962E" opacity="0.1" stroke="#B8962E" stroke-width="0.6"/>
+        <rect x="-14" y="28" width="28" height="4" rx="1" fill="#B8962E" opacity="0.2"/>
+      </g>
+    </g>
+    <!-- Strategic arrows/paths -->
+    <path d="M520,300 L620,250" stroke="#D4AF37" stroke-width="0.8" opacity="0.25" stroke-dasharray="4,4"/>
+    <path d="M520,300 L680,280" stroke="#D4AF37" stroke-width="0.8" opacity="0.2" stroke-dasharray="4,4"/>
+    <path d="M620,250 L750,270" stroke="#D4AF37" stroke-width="0.8" opacity="0.2" stroke-dasharray="4,4"/>
+  </g>
+  <!-- Category label -->
+  <text x="600" y="560" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="300" letter-spacing="4" fill="#A3A3A3">BUSINESS STRATEGY</text>
+  <rect x="525" y="575" width="150" height="1" fill="url(#gold)" opacity="0.5"/>
+</svg>

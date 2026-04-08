@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D0D0D"/>
+      <stop offset="50%" stop-color="#151515"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8962E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04">
+    <line x1="0" y1="0" x2="1200" y2="630" stroke="#FFFFFF" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="1200" y2="500" stroke="#FFFFFF" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="1200" y2="400" stroke="#FFFFFF" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1000" y2="630" stroke="#FFFFFF" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="800" y2="630" stroke="#FFFFFF" stroke-width="0.5"/>
+    <line x1="1200" y1="0" x2="0" y2="630" stroke="#FFFFFF" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="0" y2="500" stroke="#FFFFFF" stroke-width="0.5"/>
+  </g>
+  <!-- Connected nodes network -->
+  <g filter="url(#glow)">
+    <!-- Connection lines -->
+    <line x1="400" y1="250" x2="550" y2="180" stroke="#B8962E" stroke-width="1" opacity="0.4"/>
+    <line x1="550" y1="180" x2="700" y2="220" stroke="#B8962E" stroke-width="1" opacity="0.4"/>
+    <line x1="700" y1="220" x2="600" y2="340" stroke="#B8962E" stroke-width="1" opacity="0.4"/>
+    <line x1="600" y1="340" x2="400" y2="250" stroke="#B8962E" stroke-width="1" opacity="0.4"/>
+    <line x1="550" y1="180" x2="600" y2="340" stroke="#B8962E" stroke-width="1" opacity="0.3"/>
+    <line x1="400" y1="250" x2="700" y2="220" stroke="#B8962E" stroke-width="1" opacity="0.3"/>
+    <line x1="700" y1="220" x2="850" y2="300" stroke="#B8962E" stroke-width="1" opacity="0.4"/>
+    <line x1="850" y1="300" x2="750" y2="420" stroke="#B8962E" stroke-width="1" opacity="0.4"/>
+    <line x1="600" y1="340" x2="750" y2="420" stroke="#B8962E" stroke-width="1" opacity="0.3"/>
+    <line x1="850" y1="300" x2="600" y2="340" stroke="#B8962E" stroke-width="1" opacity="0.2"/>
+    <line x1="400" y1="250" x2="300" y2="380" stroke="#B8962E" stroke-width="1" opacity="0.3"/>
+    <line x1="300" y1="380" x2="450" y2="450" stroke="#B8962E" stroke-width="1" opacity="0.3"/>
+    <line x1="450" y1="450" x2="600" y2="340" stroke="#B8962E" stroke-width="1" opacity="0.3"/>
+    <!-- Outer faint nodes -->
+    <line x1="550" y1="180" x2="500" y2="100" stroke="#B8962E" stroke-width="0.5" opacity="0.2"/>
+    <line x1="850" y1="300" x2="950" y2="250" stroke="#B8962E" stroke-width="0.5" opacity="0.2"/>
+    <line x1="300" y1="380" x2="200" y2="350" stroke="#B8962E" stroke-width="0.5" opacity="0.2"/>
+    <!-- Nodes -->
+    <circle cx="400" cy="250" r="8" fill="#B8962E" opacity="0.9"/>
+    <circle cx="400" cy="250" r="14" fill="none" stroke="#B8962E" stroke-width="1" opacity="0.3"/>
+    <circle cx="550" cy="180" r="10" fill="#D4AF37" opacity="0.9"/>
+    <circle cx="550" cy="180" r="16" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+    <circle cx="700" cy="220" r="7" fill="#B8962E" opacity="0.8"/>
+    <circle cx="700" cy="220" r="12" fill="none" stroke="#B8962E" stroke-width="1" opacity="0.25"/>
+    <circle cx="600" cy="340" r="12" fill="#B8962E" opacity="0.9"/>
+    <circle cx="600" cy="340" r="18" fill="none" stroke="#B8962E" stroke-width="1" opacity="0.3"/>
+    <circle cx="850" cy="300" r="6" fill="#D4AF37" opacity="0.7"/>
+    <circle cx="850" cy="300" r="10" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.2"/>
+    <circle cx="750" cy="420" r="5" fill="#B8962E" opacity="0.6"/>
+    <circle cx="300" cy="380" r="6" fill="#B8962E" opacity="0.6"/>
+    <circle cx="450" cy="450" r="5" fill="#D4AF37" opacity="0.5"/>
+    <circle cx="500" cy="100" r="4" fill="#B8962E" opacity="0.3"/>
+    <circle cx="950" cy="250" r="4" fill="#B8962E" opacity="0.3"/>
+    <circle cx="200" cy="350" r="3" fill="#D4AF37" opacity="0.25"/>
+  </g>
+  <!-- Category label -->
+  <text x="600" y="560" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="300" letter-spacing="4" fill="#A3A3A3" text-transform="uppercase">PLATFORM GUIDES</text>
+  <!-- Bottom accent line -->
+  <rect x="540" y="575" width="120" height="1" fill="url(#gold)" opacity="0.5"/>
+</svg>
