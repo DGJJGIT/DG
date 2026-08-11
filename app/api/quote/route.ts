@@ -2,7 +2,11 @@ import { NextRequest, NextResponse } from "next/server"
 
 export async function POST(req: NextRequest) {
   try {
-    const { firstName, lastName, email, company, phone, service, volume, geography, notes } = await req.json()
+    const {
+      firstName, lastName, email, company, phone, service, volume, geography, notes,
+      seoService, utm_source, utm_medium, utm_campaign, utm_term, utm_content,
+      first_touch_referrer, first_touch_landing,
+    } = await req.json()
 
     if (!email) {
       return NextResponse.json({ error: "Email is required" }, { status: 400 })
@@ -32,6 +36,16 @@ export async function POST(req: NextRequest) {
           phone,
           message: messageBody,
           hs_lead_status: "NEW",
+          seo_keyword: seoService || service || "",
+          landing_page: seoService ? `/${seoService}` : "",
+          monthly_volume: volume || "",
+          utm_source: utm_source || "",
+          utm_medium: utm_medium || "",
+          utm_campaign: utm_campaign || "",
+          utm_term: utm_term || "",
+          utm_content: utm_content || "",
+          first_touch_referrer: first_touch_referrer || "",
+          first_touch_landing: first_touch_landing || "",
         },
       }),
     })
@@ -55,6 +69,16 @@ export async function POST(req: NextRequest) {
                 phone,
                 message: messageBody,
                 hs_lead_status: "NEW",
+          seo_keyword: seoService || service || "",
+          landing_page: seoService ? `/${seoService}` : "",
+          monthly_volume: volume || "",
+          utm_source: utm_source || "",
+          utm_medium: utm_medium || "",
+          utm_campaign: utm_campaign || "",
+          utm_term: utm_term || "",
+          utm_content: utm_content || "",
+          first_touch_referrer: first_touch_referrer || "",
+          first_touch_landing: first_touch_landing || "",
               },
             }),
           }

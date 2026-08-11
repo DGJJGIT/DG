@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const industry = getIndustry(slug)
   if (!industry) return { title: "Not Found" }
-  return { title: industry.title, description: industry.description }
+  return { title: industry.title, description: industry.description, alternates: { canonical: `https://www.deliverygroupinc.com/industries/${slug}` } }
 }
 
 export default async function IndustryPage({ params }: { params: Promise<{ slug: string }> }) {

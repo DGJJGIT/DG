@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `Delivery Services in ${loc.city}, ${loc.stateAbbr}`,
     description: `Premium last-mile and logistics delivery services in ${loc.city}, ${loc.state}. ${loc.description}`,
+    alternates: { canonical: `https://www.deliverygroupinc.com/locations/${slug}` },
   }
 }
 

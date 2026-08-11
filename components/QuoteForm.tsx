@@ -1,10 +1,26 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function QuoteForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [errorMsg, setErrorMsg] = useState("")
+
+  // Freeze first-touch attribution (UTM + referrer) on first visit (card #115).
+  useEffect(() => {
+    if (typeof window === "undefined") return
+    if (localStorage.getItem("dg_first_touch")) return
+    const q = new URLSearchParams(window.location.search)
+    localStorage.setItem("dg_first_touch", JSON.stringify({
+      utm_source: q.get("utm_source") || "",
+      utm_medium: q.get("utm_medium") || "",
+      utm_campaign: q.get("utm_campaign") || "",
+      utm_term: q.get("utm_term") || "",
+      utm_content: q.get("utm_content") || "",
+      first_touch_referrer: document.referrer || "",
+      first_touch_landing: window.location.pathname || "",
+    }))
+  }, [])
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -22,6 +38,9 @@ export default function QuoteForm() {
       volume: (form.elements.namedItem("volume") as HTMLSelectElement).value,
       geography: (form.elements.namedItem("geography") as HTMLInputElement).value,
       notes: (form.elements.namedItem("notes") as HTMLTextAreaElement).value,
+      // Attribution (card #115): which SEO page produced the lead + first-touch/UTM.
+      seoService: new URLSearchParams(window.location.search).get("service") || "",
+      ...(() => { try { return JSON.parse(localStorage.getItem("dg_first_touch") || "{}") } catch { return {} } })(),
     }
 
     try {
