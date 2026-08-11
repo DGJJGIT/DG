@@ -221,6 +221,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   /* ── New SEO cluster pages (hazmat, fulfillment, 3PL, courier, reverse logistics) ── */
   const seoSlugs = [
+    "liquidation-pallets",
     "ecommerce-returns-solution",
     "reverse-logistics-company",
     "courier-for-business",
