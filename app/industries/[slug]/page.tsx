@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import JsonLd from "@/components/JsonLd"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowRight, CheckCircle, ArrowLeft, AlertCircle } from "lucide-react"
@@ -23,6 +24,17 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: industry.title,
+          serviceType: "logistics fulfillment",
+          provider: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://www.deliverygroupinc.com" },
+          areaServed: { "@type": "Country", name: "United States" },
+          url: `https://www.deliverygroupinc.com/industries/${slug}`,
+        }}
+      />
       <section className="bg-[#0D0D0D] text-white py-20 md:py-28">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <Link href="/industries" className="inline-flex items-center gap-1.5 text-[13px] text-[#737373] hover:text-white transition-colors mb-8">

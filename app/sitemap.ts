@@ -71,6 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   /* ── Blog posts ── */
   const blogSlugs = [
+    "what-is-3pl",
     "3pl-shipping-cost-analysis",
     "amazon-fba-prep-guide-2025",
     "amazon-inbound-placement-fees",
