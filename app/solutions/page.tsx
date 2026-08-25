@@ -6,7 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel"
 export const metadata: Metadata = {
   title: "Solutions",
   description: "End-to-end logistics solutions for e-commerce fulfillment, omnichannel retail, returns management, and enterprise supply chain operations.",
-  alternates: { canonical: "https://www.deliverygroupinc.com/solutions" },
+  alternates: { canonical: "https://deliverygroupinc.com/solutions" },
 }
 
 const solutions = [

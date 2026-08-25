@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm"
 export const metadata: Metadata = {
   title: "Contact Us",
   description: "Contact Delivery Group Inc. to discuss your logistics needs, get a quote, or speak with a delivery specialist.",
-  alternates: { canonical: "https://www.deliverygroupinc.com/contact" },
+  alternates: { canonical: "https://deliverygroupinc.com/contact" },
 }
 
 const offices = [

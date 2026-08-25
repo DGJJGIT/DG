@@ -6,7 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel"
 export const metadata: Metadata = {
   title: "Industries",
   description: "Vertical-specific logistics solutions for e-commerce, healthcare, retail, and supplements & nutraceuticals.",
-  alternates: { canonical: "https://www.deliverygroupinc.com/industries" },
+  alternates: { canonical: "https://deliverygroupinc.com/industries" },
 }
 
 const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {

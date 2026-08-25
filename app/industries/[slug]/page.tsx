@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const industry = getIndustry(slug)
   if (!industry) return { title: "Not Found" }
-  return { title: industry.title, description: industry.description, alternates: { canonical: `https://www.deliverygroupinc.com/industries/${slug}` } }
+  return { title: industry.title, description: industry.description, alternates: { canonical: `https://deliverygroupinc.com/industries/${slug}` } }
 }
 
 export default async function IndustryPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -30,9 +30,9 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
           "@type": "Service",
           name: industry.title,
           serviceType: "logistics fulfillment",
-          provider: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://www.deliverygroupinc.com" },
+          provider: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
           areaServed: { "@type": "Country", name: "United States" },
-          url: `https://www.deliverygroupinc.com/industries/${slug}`,
+          url: `https://deliverygroupinc.com/industries/${slug}`,
         }}
       />
       <section className="bg-[#0D0D0D] text-white py-20 md:py-28">

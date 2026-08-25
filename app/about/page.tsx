@@ -6,7 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel"
 export const metadata: Metadata = {
   title: "About Us",
   description: "Delivery Group Inc. is a premium last-mile delivery and logistics company built on precision, technology, and a commitment to the customer experience.",
-  alternates: { canonical: "https://www.deliverygroupinc.com/about" },
+  alternates: { canonical: "https://deliverygroupinc.com/about" },
   openGraph: {
     title: "About Us",
     description: "Delivery Group Inc. is a premium last-mile delivery and logistics company built on precision, technology, and a commitment to the customer experience.",

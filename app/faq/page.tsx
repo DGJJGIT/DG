@@ -6,7 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel"
 export const metadata: Metadata = {
   title: "FAQ — Frequently Asked Questions",
   description: "Answers to common questions about Delivery Group's services, pricing, integrations, and operations.",
-  alternates: { canonical: "https://www.deliverygroupinc.com/faq" },
+  alternates: { canonical: "https://deliverygroupinc.com/faq" },
 }
 
 const faqs = [

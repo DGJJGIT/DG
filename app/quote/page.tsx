@@ -6,7 +6,7 @@ import QuoteForm from "@/components/QuoteForm"
 export const metadata: Metadata = {
   title: "Get a Quote",
   description: "Request a custom logistics proposal from Delivery Group. Share your requirements and receive a tailored quote within 24 hours.",
-  alternates: { canonical: "https://www.deliverygroupinc.com/quote" },
+  alternates: { canonical: "https://deliverygroupinc.com/quote" },
 }
 
 const includes = [

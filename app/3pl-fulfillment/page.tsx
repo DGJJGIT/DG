@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "Full-service 3PL fulfillment from our Northern Kentucky warehouse. Direct DHL partnership for lower shipping rates. Pick & pack, storage, kitting, returns, and branded packaging for e-commerce brands.",
   keywords: ["3pl fulfillment", "3pl warehouse", "order fulfillment", "ecommerce fulfillment", "pick and pack", "3pl shipping"],
-  alternates: { canonical: "https://www.deliverygroupinc.com/3pl-fulfillment" },
+  alternates: { canonical: "https://deliverygroupinc.com/3pl-fulfillment" },
   openGraph: {
     title: "3PL Fulfillment Services — Ship Faster, Spend Less",
     description: "Full-service 3PL fulfillment from our Northern Kentucky warehouse. Direct DHL partnership for lower shipping rates. Pick & pack, storage, kitting, returns, and branded packaging for e-commerce brands.",
@@ -164,7 +164,7 @@ export default function ThreePLFulfillmentPage() {
           provider: {
             "@type": "Organization",
             name: "Delivery Group Inc.",
-            url: "https://www.deliverygroupinc.com",
+            url: "https://deliverygroupinc.com",
           },
           areaServed: "US",
           description:

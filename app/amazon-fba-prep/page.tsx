@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Professional Amazon FBA prep services from our 75,000 sq ft Northern Kentucky facility — 5 miles from Amazon's CVG Air Hub. Under 48-hour turnaround, 99.9% accuracy, rates starting at $0.20/unit.",
   keywords: ["amazon fba prep", "fba prep service", "amazon prep center", "fba labeling", "fba poly bagging", "amazon cvg air hub"],
-  alternates: { canonical: "https://www.deliverygroupinc.com/amazon-fba-prep" },
+  alternates: { canonical: "https://deliverygroupinc.com/amazon-fba-prep" },
   openGraph: {
     title: "Amazon FBA Prep Services — 30-50% Below Market Rates",
     description: "Professional Amazon FBA prep services from our 75,000 sq ft Northern Kentucky facility — 5 miles from Amazon's CVG Air Hub. Under 48-hour turnaround, 99.9% accuracy, rates starting at $0.20/unit.",
@@ -338,7 +338,7 @@ export default function AmazonFBAPrepPage() {
           provider: {
             "@type": "Organization",
             name: "Delivery Group Inc.",
-            url: "https://www.deliverygroupinc.com",
+            url: "https://deliverygroupinc.com",
           },
           areaServed: "US",
           description:

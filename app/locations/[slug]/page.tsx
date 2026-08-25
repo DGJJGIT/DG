@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `Delivery Services in ${loc.city}, ${loc.stateAbbr}`,
     description: `Premium last-mile and logistics delivery services in ${loc.city}, ${loc.state}. ${loc.description}`,
-    alternates: { canonical: `https://www.deliverygroupinc.com/locations/${slug}` },
+    alternates: { canonical: `https://deliverygroupinc.com/locations/${slug}` },
   }
 }
 
@@ -37,9 +37,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           "@type": "Service",
           name: `Delivery Services in ${loc.city}, ${loc.stateAbbr}`,
           serviceType: "last-mile delivery",
-          provider: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://www.deliverygroupinc.com" },
+          provider: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
           areaServed: { "@type": "City", name: loc.city },
-          url: `https://www.deliverygroupinc.com/locations/${slug}`,
+          url: `https://deliverygroupinc.com/locations/${slug}`,
         }}
       />
       <section className="bg-[#0D0D0D] text-white py-20 md:py-28">

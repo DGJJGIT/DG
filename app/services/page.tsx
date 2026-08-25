@@ -6,7 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel"
 export const metadata: Metadata = {
   title: "Services",
   description: "Comprehensive delivery and logistics services including Amazon FBA prep, last-mile, and expedited shipping solutions nationwide.",
-  alternates: { canonical: "https://www.deliverygroupinc.com/services" },
+  alternates: { canonical: "https://deliverygroupinc.com/services" },
 }
 
 const services = [

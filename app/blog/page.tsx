@@ -9,7 +9,7 @@ import Badge from "@/components/ui/Badge"
 export const metadata: Metadata = {
   title: "Blog — Logistics Insights & Industry News",
   description: "Expert perspectives on last-mile delivery, logistics technology, industry trends, and supply chain best practices from the Delivery Group team.",
-  alternates: { canonical: "https://www.deliverygroupinc.com/blog" },
+  alternates: { canonical: "https://deliverygroupinc.com/blog" },
   openGraph: {
     title: "Blog — Logistics Insights & Industry News",
     description: "Expert perspectives on last-mile delivery, logistics technology, industry trends, and supply chain best practices from the Delivery Group team.",

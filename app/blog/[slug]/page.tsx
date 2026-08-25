@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: post.title,
       description: post.excerpt,
     },
-    alternates: { canonical: `https://www.deliverygroupinc.com/blog/${slug}` },
+    alternates: { canonical: `https://deliverygroupinc.com/blog/${slug}` },
     keywords: [post.category],
   }
 }
@@ -53,7 +53,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           headline: post.title,
           description: post.excerpt,
           image: post.image
-            ? `https://www.deliverygroupinc.com${post.image}`
+            ? `https://deliverygroupinc.com${post.image}`
             : undefined,
           datePublished: new Date(post.date).toISOString(),
           author: {

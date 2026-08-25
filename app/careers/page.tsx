@@ -6,7 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel"
 export const metadata: Metadata = {
   title: "Careers",
   description: "Join Delivery Group Inc. and help build the future of logistics. Open positions in operations, technology, sales, and more.",
-  alternates: { canonical: "https://www.deliverygroupinc.com/careers" },
+  alternates: { canonical: "https://deliverygroupinc.com/careers" },
 }
 
 const perks = [

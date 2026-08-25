@@ -49,9 +49,9 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
           "@type": "Service",
           name: data.metaTitle,
           serviceType: data.keyword,
-          provider: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://www.deliverygroupinc.com" },
+          provider: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
           areaServed: { "@type": "Country", name: "United States" },
-          url: `https://www.deliverygroupinc.com/${data.slug}`,
+          url: `https://deliverygroupinc.com/${data.slug}`,
         }}
       />
       <JsonLd

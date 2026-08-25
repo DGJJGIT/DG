@@ -12,7 +12,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.deliverygroupinc.com"),
+  metadataBase: new URL("https://deliverygroupinc.com"),
   title: {
     default: "Delivery Group Inc. — Premium Last-Mile Delivery & Logistics",
     template: "%s | Delivery Group Inc.",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.ico" },
-  alternates: { canonical: "https://www.deliverygroupinc.com" },
+  alternates: { canonical: "https://deliverygroupinc.com" },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -44,8 +44,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Delivery Group Inc.",
-            url: "https://www.deliverygroupinc.com",
-            logo: "https://www.deliverygroupinc.com/logo.png",
+            url: "https://deliverygroupinc.com",
+            logo: "https://deliverygroupinc.com/logo.png",
             description:
               "Premium last-mile delivery and logistics company offering Amazon FBA prep, 3PL fulfillment, last-mile delivery, and expedited shipping.",
             contactPoint: {

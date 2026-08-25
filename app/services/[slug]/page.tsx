@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: service.title,
     description: service.description,
-    alternates: { canonical: `https://www.deliverygroupinc.com/services/${slug}` },
+    alternates: { canonical: `https://deliverygroupinc.com/services/${slug}` },
   }
 }
 
@@ -34,9 +34,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           "@type": "Service",
           name: service.title,
           serviceType: service.slug,
-          provider: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://www.deliverygroupinc.com" },
+          provider: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
           areaServed: { "@type": "Country", name: "United States" },
-          url: `https://www.deliverygroupinc.com/services/${slug}`,
+          url: `https://deliverygroupinc.com/services/${slug}`,
         }}
       />
       {/* Hero */}

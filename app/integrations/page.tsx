@@ -6,7 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel"
 export const metadata: Metadata = {
   title: "Integrations — 200+ Platform Connections",
   description: "DeliveryGroup integrates with every major e-commerce platform, marketplace, ERP, and shipping carrier. Shopify, Amazon, WooCommerce, BigCommerce, and 200+ more.",
-  alternates: { canonical: "https://www.deliverygroupinc.com/integrations" },
+  alternates: { canonical: "https://deliverygroupinc.com/integrations" },
   keywords: ["3pl integrations", "ecommerce fulfillment integrations", "shopify 3pl", "amazon fulfillment integration", "woocommerce fulfillment"],
 }
 

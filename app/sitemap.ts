@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next"
 
-const BASE_URL = "https://www.deliverygroupinc.com"
+const BASE_URL = "https://deliverygroupinc.com"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()

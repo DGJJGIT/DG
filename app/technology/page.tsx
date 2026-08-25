@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "ecommerce 3pl integrations",
     "logistics technology platform",
   ],
-  alternates: { canonical: "https://www.deliverygroupinc.com/technology" },
+  alternates: { canonical: "https://deliverygroupinc.com/technology" },
 }
 
 const platformCapabilities = [

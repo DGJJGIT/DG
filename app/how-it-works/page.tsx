@@ -6,7 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel"
 export const metadata: Metadata = {
   title: "How It Works — Getting Started with DeliveryGroup",
   description: "Go from first call to first shipment in 5-10 business days. See how our simple onboarding process works for FBA prep and 3PL fulfillment.",
-  alternates: { canonical: "https://www.deliverygroupinc.com/how-it-works" },
+  alternates: { canonical: "https://deliverygroupinc.com/how-it-works" },
   keywords: ["3pl onboarding", "fulfillment setup", "how 3pl works", "fba prep process", "ecommerce fulfillment setup"],
 }
 

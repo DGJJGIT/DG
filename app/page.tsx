@@ -111,7 +111,7 @@ export default function Home() {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           name: "Delivery Group Inc.",
-          url: "https://www.deliverygroupinc.com",
+          url: "https://deliverygroupinc.com",
           telephone: "+1-800-370-2105",
           email: "info@deliverygroupinc.com",
           address: {

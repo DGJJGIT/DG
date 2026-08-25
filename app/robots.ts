@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://www.deliverygroupinc.com/sitemap.xml",
+    sitemap: "https://deliverygroupinc.com/sitemap.xml",
   }
 }
