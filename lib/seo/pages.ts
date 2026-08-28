@@ -2,6 +2,48 @@ import { AlertTriangle, Package, Warehouse, Truck, RefreshCw } from "lucide-reac
 import type { ServiceLandingData } from "@/components/seo/ServiceLanding"
 
 export const seoPages: Record<string, ServiceLandingData> = {
+  "3pl": {
+    slug: "3pl",
+    keyword: "3pl",
+    metaTitle: "3PL Services | Third-Party Logistics & Fulfillment",
+    metaDescription: "3PL services from Delivery Group — warehousing, pick/pack, kitting, and nationwide shipping from one partner. 2M+ deliveries a month, 99.4% on-time. Get a quote.",
+    keywords: ["3pl", "3pl fulfillment (hub)", "3pl warehouse", "third party logistics"],
+    eyebrowIcon: Warehouse,
+    eyebrow: "3PL & Warehousing",
+    h1lead: "Third-Party",
+    h1gold: "Logistics",
+    heroSub: "One 3PL partner for storage, fulfillment, and nationwide shipping — built to scale from your first order to your millionth.",
+    ctaLabel: "Get a 3PL quote",
+    overviewLabel: "What a 3PL does for you",
+    intro: "A third-party logistics provider (3PL) stores your inventory, picks and packs your orders, and ships them, so you don't have to run a warehouse yourself. Delivery Group runs 2M+ deliveries a month at a 99.4% on-time rate from our Northern Kentucky hub, with a direct DHL partnership that keeps shipping costs down across all 50 states.",
+    sections: [
+      { h2: "Warehousing and fulfillment under one roof", body: "Inventory sits in real-time-tracked storage at our Northern Kentucky warehouse, and every order that comes in gets picked, packed, and shipped from the same building — no handoffs between a separate storage vendor and a separate fulfillment vendor." },
+      { h2: "Built to plug into how you already sell", body: "200+ platform integrations mean your store, marketplace, or ERP connects directly to our system — orders sync automatically and inventory counts stay accurate without manual updates on either side." },
+      { h2: "From first order to high volume", body: "The same 3PL relationship scales from a small business shipping a few hundred orders a month to a high-volume brand — including specialized handling like hazmat storage and transport, kitting, subscription box assembly, and branded packaging." },
+    ],
+    whyLabel: "Why Delivery Group",
+    whyHeading: "A full 3PL — warehousing, fulfillment, and real-time visibility.",
+    whyBullets: ["2M+ deliveries/month, 99.4% on-time", "Direct DHL partnership", "200+ platform integrations", "All 50 states"],
+    relatedLabel: "Related services",
+    related: [
+      { label: "3PL fulfillment (hub)", href: "/3pl-fulfillment" },
+      { label: "3PL warehouse", href: "/3pl-warehouse" },
+      { label: "3PL for small business", href: "/3pl-for-small-business" },
+      { label: "3PL ecommerce fulfillment", href: "/3pl-ecommerce-fulfillment" },
+      { label: "Hazmat 3PL", href: "/hazmat-3pl" },
+      { label: "What is 3PL?", href: "/blog/what-is-3pl" },
+    ],
+    faqs: [
+      { q: "What is a 3PL?", a: "A third-party logistics provider that handles warehousing, order fulfillment, and shipping on behalf of another business, so that business doesn't need its own warehouse or fulfillment team." },
+      { q: "What does Delivery Group's 3PL service include?", a: "Inventory storage, pick and pack, kitting, returns processing, and nationwide shipping — all from our Northern Kentucky hub, with real-time inventory visibility." },
+      { q: "Can a small business use a 3PL, or is it only for high-volume brands?", a: "Both — our 3PL scales from a small business shipping a few hundred orders a month up to high-volume accounts, with pricing and onboarding that fit each stage." },
+      { q: "Do you handle specialized inventory like hazmat or temperature-sensitive goods?", a: "Yes — we handle hazmat storage and transport as part of our 3PL services; share your specific product category and we'll confirm the handling requirements." },
+      { q: "How does a 3PL connect to my existing store or marketplace?", a: "Through a direct integration — we support 200+ platforms, so orders sync automatically and inventory stays accurate without manual updates." },
+    ],
+    ctaHeading: "Ready to get started?",
+    ctaSub: "Share your requirements for 3pl and we’ll send a tailored quote.",
+    ctaBadge: "All 50 states",
+  },
   "3pl-ecommerce-fulfillment": {
     slug: "3pl-ecommerce-fulfillment",
     keyword: "3pl ecommerce fulfillment",
