@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from "next/server"
 
+const APEX = "https://deliverygroupinc.com"
+
 export function middleware(request: NextRequest) {
   const host = request.headers.get("host") || ""
   if (host.startsWith("www.")) {
-    const apex = host.replace(/^www\./, "")
-    const url = request.nextUrl.clone()
-    url.host = apex
-    return NextResponse.redirect(url, { status: 301 })
+    const { pathname, search } = request.nextUrl
+    return NextResponse.redirect(`${APEX}${pathname}${search}`, { status: 301 })
   }
   return NextResponse.next()
 }
