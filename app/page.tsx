@@ -146,33 +146,55 @@ export default function Home() {
           style={{ background: "radial-gradient(circle, #B8962E 0%, transparent 70%)", transform: "translate(30%, -30%)" }}
         />
         <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-24 md:py-32 lg:py-40">
-          <div className="max-w-[640px]">
-            <div className="flex items-center gap-2.5 mb-6">
-              <span className="gold-bar" />
-              <span className="text-[11.5px] font-semibold uppercase tracking-[0.12em] text-[#B8962E]">
-                Premium Logistics
-              </span>
+          <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+            <div className="max-w-[640px]">
+              <div className="flex items-center gap-2.5 mb-6">
+                <span className="gold-bar" />
+                <span className="text-[11.5px] font-semibold uppercase tracking-[0.12em] text-[#B8962E]">
+                  Premium Logistics
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-[58px] font-semibold text-white leading-[1.1] tracking-[-0.03em] mb-6">
+                Delivery that defines<br />
+                <span className="gold-text">your brand.</span>
+              </h1>
+              <p className="text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[520px] mb-10">
+                Delivery Group provides Amazon FBA prep, last-mile, and expedited shipping solutions engineered for precision, scale, and a customer experience that reflects your standards.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/quote"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#B8962E] text-white text-[14px] font-medium rounded-md hover:bg-[#A0801F] transition-colors"
+                >
+                  Get a Quote <ArrowRight size={15} />
+                </Link>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 border border-[#333] text-white text-[14px] font-medium rounded-md hover:border-[#555] hover:bg-[#111] transition-colors"
+                >
+                  View Services
+                </Link>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-[58px] font-semibold text-white leading-[1.1] tracking-[-0.03em] mb-6">
-              Delivery that defines<br />
-              <span className="gold-text">your brand.</span>
-            </h1>
-            <p className="text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[520px] mb-10">
-              Delivery Group provides Amazon FBA prep, last-mile, and expedited shipping solutions engineered for precision, scale, and a customer experience that reflects your standards.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/quote"
-                className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#B8962E] text-white text-[14px] font-medium rounded-md hover:bg-[#A0801F] transition-colors"
-              >
-                Get a Quote <ArrowRight size={15} />
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 px-6 py-3.5 border border-[#333] text-white text-[14px] font-medium rounded-md hover:border-[#555] hover:bg-[#111] transition-colors"
-              >
-                View Services
-              </Link>
+
+            {/* Hero photo — desktop only */}
+            <div className="hidden lg:block">
+              <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=900&q=80"
+                  alt="Delivery Group Inc. Northern Kentucky warehouse and logistics operations"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tl from-[#0D0D0D]/60 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5">
+                  <div className="bg-[#0D0D0D]/80 backdrop-blur-sm rounded-lg px-4 py-3 flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#B8962E] shrink-0" />
+                    <span className="text-[12px] text-[#A3A3A3]">2M+ deliveries/month · 99.4% on-time · 50 states</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -262,9 +284,17 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <div className="aspect-[4/3] bg-[#0D0D0D] rounded-xl overflow-hidden relative">
-                <div className="absolute inset-0 flex flex-col justify-end p-8">
-                  <div className="grid grid-cols-2 gap-4">
+              <div className="aspect-[4/3] rounded-xl overflow-hidden relative">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80"
+                  alt="Delivery Group Inc. — 3PL warehouse facility with organized inventory shelving"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/80 via-[#0D0D0D]/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="grid grid-cols-2 gap-3">
                     {[
                       { icon: TrendingUp, label: "On-Time Rate", value: "99.4%" },
                       { icon: Globe, label: "States Served", value: "50" },
@@ -273,8 +303,8 @@ export default function Home() {
                     ].map((m) => {
                       const Icon = m.icon
                       return (
-                        <div key={m.label} className="bg-[#1a1a1a] rounded-lg p-4 border border-[#2a2a2a]">
-                          <Icon size={16} className="text-[#B8962E] mb-2" />
+                        <div key={m.label} className="bg-[#0D0D0D]/70 backdrop-blur-sm rounded-lg p-3.5 border border-[#2a2a2a]">
+                          <Icon size={15} className="text-[#B8962E] mb-1.5" />
                           <div className="text-xl font-semibold text-white">{m.value}</div>
                           <div className="text-[11px] text-[#737373] mt-0.5">{m.label}</div>
                         </div>

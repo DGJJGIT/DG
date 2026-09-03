@@ -25,10 +25,19 @@ export const metadata: Metadata = {
     siteName: "Delivery Group Inc.",
     title: "Delivery Group Inc. — Premium Last-Mile Delivery & Logistics",
     description: "Premium Amazon FBA prep, last-mile, and expedited shipping solutions nationwide.",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Delivery Group Inc. — warehouse and logistics operations in Northern Kentucky",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@deliverygroupinc",
+    site: "@deliverygr_inc",
+    images: ["https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80"],
   },
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.ico" },
@@ -61,7 +70,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               postalCode: "41042",
               addressCountry: "US",
             },
-            sameAs: [],
+            sameAs: [
+              "https://www.instagram.com/delivery.group.inc/",
+              "https://www.linkedin.com/company/106558314",
+              "https://www.facebook.com/profile.php?id=61574137717976",
+              "https://www.tiktok.com/@deliverygroup0",
+              "https://www.youtube.com/@DeliveryGroupInc",
+              "https://x.com/deliverygr_inc",
+              "https://www.pinterest.com/deliverygroupinc/",
+            ],
             foundingDate: "2020",
           }}
         />
