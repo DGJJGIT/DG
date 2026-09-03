@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "3PL Fulfillment Services — Ship Faster, Spend Less",
     description: "Full-service 3PL fulfillment from our Northern Kentucky warehouse. Direct DHL partnership for lower shipping rates. Pick & pack, storage, kitting, returns, and branded packaging for e-commerce brands.",
+    images: [{ url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80", width: 1200, height: 630 }],
   },
 }
 

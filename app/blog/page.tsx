@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Blog — Logistics Insights & Industry News",
     description: "Expert perspectives on last-mile delivery, logistics technology, industry trends, and supply chain best practices from the Delivery Group team.",
+    images: [{ url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80", width: 1200, height: 630 }],
   },
 }
 

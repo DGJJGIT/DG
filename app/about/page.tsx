@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Users, Globe, Award, TrendingUp, CheckCircle, Shield } from "lucide-react"
 import SectionLabel from "@/components/ui/SectionLabel"
 
@@ -8,8 +9,9 @@ export const metadata: Metadata = {
   description: "Delivery Group Inc. is a premium last-mile delivery and logistics company built on precision, technology, and a commitment to the customer experience.",
   alternates: { canonical: "https://deliverygroupinc.com/about" },
   openGraph: {
-    title: "About Us",
+    title: "About Us | Delivery Group Inc.",
     description: "Delivery Group Inc. is a premium last-mile delivery and logistics company built on precision, technology, and a commitment to the customer experience.",
+    images: [{ url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80", width: 1200, height: 630 }],
   },
 }
 
@@ -70,19 +72,29 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { value: "2M+", label: "Monthly Deliveries", sub: "And growing" },
-                { value: "99.4%", label: "On-Time Rate", sub: "Industry-leading" },
-                { value: "1,200+", label: "Team Members", sub: "Nationwide" },
-                { value: "5yr", label: "Experience", sub: "Founded 2020" },
-              ].map(s => (
-                <div key={s.label} className="p-7 bg-[#F7F6F3] rounded-lg">
-                  <div className="text-2xl font-semibold text-[#0D0D0D] tracking-tight">{s.value}</div>
-                  <div className="text-[13px] font-medium text-[#0D0D0D] mt-1">{s.label}</div>
-                  <div className="text-[12px] text-[#B8962E] mt-0.5">{s.sub}</div>
-                </div>
-              ))}
+            <div className="space-y-4">
+              <div className="relative w-full h-[240px] rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&h=480&q=80"
+                  alt="Delivery Group Inc. warehouse and fulfillment operations"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { value: "2M+", label: "Monthly Deliveries", sub: "And growing" },
+                  { value: "99.4%", label: "On-Time Rate", sub: "Industry-leading" },
+                  { value: "1,200+", label: "Team Members", sub: "Nationwide" },
+                  { value: "5yr", label: "Experience", sub: "Founded 2020" },
+                ].map(s => (
+                  <div key={s.label} className="p-6 bg-[#F7F6F3] rounded-lg">
+                    <div className="text-2xl font-semibold text-[#0D0D0D] tracking-tight">{s.value}</div>
+                    <div className="text-[13px] font-medium text-[#0D0D0D] mt-1">{s.label}</div>
+                    <div className="text-[12px] text-[#B8962E] mt-0.5">{s.sub}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

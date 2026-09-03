@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Amazon FBA Prep Services — 30-50% Below Market Rates",
     description: "Professional Amazon FBA prep services from our 75,000 sq ft Northern Kentucky facility — 5 miles from Amazon's CVG Air Hub. Under 48-hour turnaround, 99.9% accuracy, rates starting at $0.20/unit.",
+    images: [{ url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80", width: 1200, height: 630 }],
   },
 }
 

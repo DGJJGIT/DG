@@ -1,5 +1,49 @@
 import Link from "next/link"
-import { MapPin, Phone, Mail, Instagram, Linkedin, Facebook, Youtube, Twitter } from "lucide-react"
+import { MapPin, Phone, Mail } from "lucide-react"
+
+function InstagramIcon({ size = 15 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" width={size} height={size} aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
+function LinkedinIcon({ size = 15 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" width={size} height={size} aria-hidden="true">
+      <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  )
+}
+
+function FacebookIcon({ size = 15 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" width={size} height={size} aria-hidden="true">
+      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+    </svg>
+  )
+}
+
+function YoutubeIcon({ size = 15 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" width={size} height={size} aria-hidden="true">
+      <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z" />
+      <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0D0D0D" />
+    </svg>
+  )
+}
+
+function XIcon({ size = 15 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" width={size} height={size} aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  )
+}
 
 const clusterHubs = [
   { label: "Fulfillment Center", href: "/fulfillment-center" },
@@ -93,19 +137,19 @@ export default function Footer() {
             {/* Social icons */}
             <div className="flex items-center gap-3.5 flex-wrap">
               <a href="https://www.instagram.com/delivery.group.inc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-[#4D4D4D] hover:text-white transition-colors">
-                <Instagram size={15} />
+                <InstagramIcon size={15} />
               </a>
               <a href="https://www.linkedin.com/company/106558314" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[#4D4D4D] hover:text-white transition-colors">
-                <Linkedin size={15} />
+                <LinkedinIcon size={15} />
               </a>
               <a href="https://www.facebook.com/profile.php?id=61574137717976" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-[#4D4D4D] hover:text-white transition-colors">
-                <Facebook size={15} />
+                <FacebookIcon size={15} />
               </a>
               <a href="https://www.youtube.com/@DeliveryGroupInc" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-[#4D4D4D] hover:text-white transition-colors">
-                <Youtube size={15} />
+                <YoutubeIcon size={15} />
               </a>
               <a href="https://x.com/deliverygr_inc" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-[#4D4D4D] hover:text-white transition-colors">
-                <Twitter size={15} />
+                <XIcon size={15} />
               </a>
               <a href="https://www.tiktok.com/@deliverygroup0" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-[#4D4D4D] hover:text-white transition-colors">
                 <TikTokIcon size={15} />

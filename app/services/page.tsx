@@ -10,14 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "All Logistics & Delivery Services | Delivery Group Inc.",
     description: "44 dedicated service pages across fulfillment, 3PL, courier, reverse logistics, and hazmat.",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80",
-        width: 1200,
-        height: 630,
-        alt: "Delivery Group Inc. — logistics services",
-      },
-    ],
+    images: [{ url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80", width: 1200, height: 630, alt: "Delivery Group Inc. — logistics services" }],
   },
 }
 
