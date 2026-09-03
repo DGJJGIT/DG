@@ -450,7 +450,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
     whyHeading: "Fulfillment that scales from startup to enterprise volume.",
     whyBullets: ["Receiving, storage, pick/pack, ship", "Real-time inventory & order tracking", "DHL-discounted shipping, all 50 states", "99.4% on-time across 2M+ monthly orders"],
     relatedLabel: "Related services",
-    related: [{ label: "Pick and pack services", href: "/pick-and-pack-services" }, { label: "Fulfillment warehouse", href: "/fulfillment-warehouse" }, { label: "Kitting services", href: "/kitting-services" }, { label: "Small business fulfillment", href: "/small-business-fulfillment" }, { label: "3PL fulfillment", href: "/3pl-fulfillment" }],
+    related: [{ label: "Pick and pack services", href: "/pick-and-pack-services" }, { label: "Pick and pack fulfillment", href: "/pick-and-pack-fulfillment" }, { label: "Fulfillment warehouse", href: "/fulfillment-warehouse" }, { label: "Kitting services", href: "/kitting-services" }, { label: "Small business fulfillment", href: "/small-business-fulfillment" }, { label: "TikTok shop fulfillment", href: "/tiktok-shop-fulfillment" }, { label: "Apparel fulfillment", href: "/apparel-fulfillment" }, { label: "Crowdfunding fulfillment", href: "/crowdfunding-fulfillment" }, { label: "Supplement fulfillment", href: "/supplement-fulfillment" }, { label: "Etsy fulfillment", href: "/etsy-fulfillment" }, { label: "3PL fulfillment", href: "/3pl-fulfillment" }],
     faqs: [{ q: "What does a fulfillment center cost?", a: "Pricing is per order plus storage; share SKU count and monthly volume for an exact quote." }],
     ctaHeading: "Ready to get started?",
     ctaSub: "Share your requirements for fulfillment center and we’ll send a tailored quote.",
@@ -627,7 +627,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
     whyHeading: "A near-zero-competition category most 3PLs won’t touch.",
     whyBullets: ["DOT-licensed hazmat carriers", "Trained, endorsed hazmat drivers", "Correct placarding & shipping papers"],
     relatedLabel: "Related services",
-    related: [{ label: "Hazmat logistics (hub)", href: "/hazmat-logistics" }, { label: "Hazmat storage", href: "/hazmat-storage" }, { label: "Hazmat 3PL", href: "/hazmat-3pl" }, { label: "Dangerous goods warehouse", href: "/dangerous-goods-warehouse" }],
+    related: [{ label: "Hazmat logistics (hub)", href: "/hazmat-logistics" }, { label: "Hazmat storage", href: "/hazmat-storage" }, { label: "Hazmat warehouse", href: "/hazmat-warehouse" }, { label: "Hazmat 3PL", href: "/hazmat-3pl" }, { label: "Hazmat fulfillment", href: "/hazmat-fulfillment" }, { label: "Dangerous goods warehouse", href: "/dangerous-goods-warehouse" }],
     faqs: [
       { q: "Which hazard classes can you transport?", a: "We transport the common commercial hazard classes for consumer and industrial goods — share your UN numbers and we'll confirm coverage for your specific load." },
       { q: "Do you generate the hazmat shipping papers?", a: "Yes — properly completed shipping papers, labels, and placards are generated for every load as part of the service." },
@@ -854,7 +854,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
     whyHeading: "Turn returns from a cost center into recovered value.",
     whyBullets: ["Receive, inspect & grade returns", "Fast restock of sellable items", "Refurbish / repackage / dispose by rule", "Reporting on return reasons"],
     relatedLabel: "Related services",
-    related: [{ label: "Reverse logistics services", href: "/reverse-logistics-services" }, { label: "Ecommerce returns management", href: "/ecommerce-returns-management" }, { label: "Returns processing", href: "/returns-processing" }, { label: "Ecommerce returns (guide)", href: "/blog/ecommerce-returns-management" }],
+    related: [{ label: "Reverse logistics services", href: "/reverse-logistics-services" }, { label: "Ecommerce returns management", href: "/ecommerce-returns-management" }, { label: "Returns processing", href: "/returns-processing" }, { label: "Reverse logistics company", href: "/reverse-logistics-company" }, { label: "Ecommerce returns solution", href: "/ecommerce-returns-solution" }, { label: "Ecommerce returns (guide)", href: "/blog/ecommerce-returns-management" }],
     faqs: [
       { q: "How fast do you turn around returned inventory?", a: "Sellable items are inspected, graded, and back in live inventory within 48 hours. Items needing repackaging follow a defined timeline based on the work required." },
       { q: "Can I set my own disposition rules?", a: "Yes — you define what happens to each grade of return (restock, refurbish, liquidate, dispose) and we apply your rules consistently on every item." },
@@ -1104,7 +1104,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
     whyHeading: "One partner for every delivery urgency.",
     whyBullets: ["Two-person, in-home/in-office delivery", "Placement, assembly & setup", "Packaging & debris removal", "Scheduled delivery windows"],
     relatedLabel: "Related services",
-    related: [{ label: "Courier services (hub)", href: "/courier-services" }, { label: "Same day courier", href: "/same-day-courier" }, { label: "Last-mile delivery", href: "/last-mile-delivery" }, { label: "Oversized solutions", href: "/solutions/oversized" }],
+    related: [{ label: "Courier services (hub)", href: "/courier-services" }, { label: "Same day courier", href: "/same-day-courier" }, { label: "Last-mile delivery", href: "/last-mile-delivery" }, { label: "Expedited freight", href: "/expedited-freight" }, { label: "Cross docking", href: "/cross-docking" }, { label: "Amazon FBA prep", href: "/amazon-fba-prep" }, { label: "On-demand delivery", href: "/on-demand-delivery" }, { label: "Rush delivery", href: "/rush-delivery" }, { label: "Medical courier", href: "/medical-courier" }],
     faqs: [
       { q: "What does white glove delivery include?", a: "Inside delivery, placement, assembly/setup where applicable, and removal of packaging and debris — plus a scheduled delivery window and real-time tracking on the day." },
       { q: "What types of products do you handle with white glove service?", a: "Furniture, fitness equipment, large appliances, medical devices, premium electronics, and any oversized or high-value item where careful in-home handling is required." },

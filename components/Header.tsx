@@ -27,6 +27,7 @@ const servicesClusters = [
       { label: "3PL WMS", href: "/3pl-wms" },
       { label: "eCommerce 3PL", href: "/3pl-ecommerce-fulfillment" },
       { label: "Small Business 3PL", href: "/3pl-for-small-business" },
+      { label: "Liquidation Pallets", href: "/liquidation-pallets" },
     ],
   },
   {

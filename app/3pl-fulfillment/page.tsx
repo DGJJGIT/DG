@@ -190,38 +190,50 @@ export default function ThreePLFulfillmentPage() {
           }}
         />
         <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-24 md:py-32 lg:py-40">
-          <div className="max-w-[680px]">
-            <div className="flex items-center gap-2.5 mb-6">
-              <span className="gold-bar" />
-              <span className="text-[11.5px] font-semibold uppercase tracking-[0.12em] text-[#B8962E]">
-                3PL Fulfillment Services
-              </span>
+          <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+            <div>
+              <div className="flex items-center gap-2.5 mb-6">
+                <span className="gold-bar" />
+                <span className="text-[11.5px] font-semibold uppercase tracking-[0.12em] text-[#B8962E]">
+                  3PL Fulfillment Services
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-[56px] font-semibold text-white leading-[1.1] tracking-[-0.03em] mb-6">
+                Ship faster.
+                <br />
+                Spend less.
+                <br />
+                <span className="gold-text">Scale without limits.</span>
+              </h1>
+              <p className="text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[540px] mb-10">
+                Full-service 3PL fulfillment powered by a direct DHL partnership
+                and one of the most strategic shipping locations in the country.
+                Your customers get orders faster — and you pay less to ship them.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/quote"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#B8962E] text-white text-[14px] font-medium rounded-md hover:bg-[#A0801F] transition-colors"
+                >
+                  Get a Free Quote <ArrowRight size={15} />
+                </Link>
+                <a
+                  href="#pricing"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 border border-[#333] text-white text-[14px] font-medium rounded-md hover:border-[#555] hover:bg-[#111] transition-colors"
+                >
+                  View Pricing
+                </a>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-semibold text-white leading-[1.1] tracking-[-0.03em] mb-6">
-              Ship faster.
-              <br />
-              Spend less.
-              <br />
-              <span className="gold-text">Scale without limits.</span>
-            </h1>
-            <p className="text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[540px] mb-10">
-              Full-service 3PL fulfillment powered by a direct DHL partnership
-              and one of the most strategic shipping locations in the country.
-              Your customers get orders faster — and you pay less to ship them.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/quote"
-                className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#B8962E] text-white text-[14px] font-medium rounded-md hover:bg-[#A0801F] transition-colors"
-              >
-                Get a Free Quote <ArrowRight size={15} />
-              </Link>
-              <a
-                href="#pricing"
-                className="inline-flex items-center gap-2 px-6 py-3.5 border border-[#333] text-white text-[14px] font-medium rounded-md hover:border-[#555] hover:bg-[#111] transition-colors"
-              >
-                View Pricing
-              </a>
+            <div className="hidden lg:block relative overflow-hidden rounded-lg aspect-[4/3] mt-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80"
+                alt="Delivery Group Inc. 3PL fulfillment warehouse — organized inventory and pick-and-pack operations in Northern Kentucky"
+                className="w-full h-full object-cover"
+                loading="eager"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0D0D0D]/30 to-transparent" />
             </div>
           </div>
         </div>
