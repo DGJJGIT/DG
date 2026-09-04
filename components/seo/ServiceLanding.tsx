@@ -173,8 +173,8 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
       <section className="py-16 md:py-20 bg-[#F7F6F3]">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
-            {/* Left: photo */}
-            <div className="hidden lg:block relative overflow-hidden rounded-lg aspect-[4/3] mb-0">
+            {/* Left: photo — visible on all screen sizes */}
+            <div className="relative overflow-hidden rounded-lg aspect-[4/3] mb-8 lg:mb-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80"
