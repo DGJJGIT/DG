@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Link from "next/link"
 import { Menu, X, ChevronDown, Package, Warehouse, Truck, RefreshCw, AlertTriangle, ArrowRight } from "lucide-react"
 
@@ -99,6 +99,16 @@ export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const [megaOpen, setMegaOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const megaCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const openMega = () => {
+    if (megaCloseTimer.current) clearTimeout(megaCloseTimer.current)
+    setMegaOpen(true)
+    setOpenDropdown(null)
+  }
+  const closeMega = () => {
+    megaCloseTimer.current = setTimeout(() => setMegaOpen(false), 200)
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E2DFD8]">
@@ -123,8 +133,8 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-1">
             {/* Services mega-menu trigger */}
             <div
-              onMouseEnter={() => { setMegaOpen(true); setOpenDropdown(null) }}
-              onMouseLeave={() => setMegaOpen(false)}
+              onMouseEnter={openMega}
+              onMouseLeave={closeMega}
             >
               <Link
                 href="/services"
@@ -198,8 +208,8 @@ export default function Header() {
       {megaOpen && (
         <div
           className="hidden lg:block absolute top-full left-0 right-0 bg-white border-t border-[#E2DFD8] shadow-[0_12px_32px_-8px_rgba(0,0,0,0.12)] z-40"
-          onMouseEnter={() => setMegaOpen(true)}
-          onMouseLeave={() => setMegaOpen(false)}
+          onMouseEnter={openMega}
+          onMouseLeave={closeMega}
         >
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-7">
             <div className="grid grid-cols-5 gap-6">
