@@ -169,12 +169,22 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
         </div>
       </section>
 
-      {/* Why DG — with secondary image */}
+      {/* Why DG — secondary image full-bleed on mobile, in-grid on desktop */}
+      <div className="lg:hidden relative h-56 overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80"
+          alt="Delivery Group Inc. Northern Kentucky warehouse facility — pick, pack, and ship operations"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+
       <section className="py-16 md:py-20 bg-[#F7F6F3]">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
-            {/* Left: photo — visible on all screen sizes */}
-            <div className="relative overflow-hidden rounded-lg aspect-[4/3] mb-8 lg:mb-0">
+            {/* Left: photo — desktop only (mobile version is full-bleed above) */}
+            <div className="hidden lg:block relative overflow-hidden rounded-lg aspect-[4/3]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80"
