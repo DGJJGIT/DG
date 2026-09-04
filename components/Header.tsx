@@ -292,7 +292,7 @@ export default function Header() {
                         >
                           {cluster.hub.label}
                         </Link>
-                        {cluster.spokes.slice(0, 4).map((spoke) => (
+                        {cluster.spokes.map((spoke) => (
                           <Link
                             key={spoke.href}
                             href={spoke.href}
