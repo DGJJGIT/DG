@@ -239,6 +239,19 @@ export default function ThreePLFulfillmentPage() {
           </div>
         </div>
 
+        {/* Mobile hero image strip */}
+        <div className="lg:hidden px-4 py-2">
+          <div className="relative h-56 overflow-hidden rounded-lg">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80"
+              alt="Delivery Group Inc. 3PL fulfillment warehouse — organized inventory in Northern Kentucky"
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+        </div>
+
         {/* Stats Bar */}
         <div className="relative border-t border-[#1a1a1a]">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-8">

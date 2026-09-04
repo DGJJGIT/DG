@@ -413,6 +413,19 @@ export default function AmazonFBAPrepPage() {
           </div>
         </div>
 
+        {/* Mobile hero image strip */}
+        <div className="lg:hidden px-4 py-2">
+          <div className="relative h-56 overflow-hidden rounded-lg">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1400&q=80"
+              alt="Amazon FBA prep facility — Northern Kentucky warehouse 5 miles from CVG Air Hub"
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+        </div>
+
         {/* Stats Bar */}
         <div className="relative border-t border-[#1a1a1a]">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-8">
