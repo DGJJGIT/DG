@@ -927,6 +927,33 @@ export default function ThreePLFulfillmentPage() {
         </div>
       </section>
 
+      {/* ── Related 3PL Services ── */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
+          <p className="text-[11.5px] font-semibold uppercase tracking-[0.1em] text-[#A3A3A3] mb-4">Related services</p>
+          <div className="flex flex-wrap gap-2.5">
+            {[
+              { label: "3PL Warehouse", href: "/3pl-warehouse" },
+              { label: "3PL Warehousing", href: "/3pl-warehousing" },
+              { label: "3PL WMS", href: "/3pl-wms" },
+              { label: "eCommerce 3PL Fulfillment", href: "/3pl-ecommerce-fulfillment" },
+              { label: "3PL for Small Business", href: "/3pl-for-small-business" },
+              { label: "Liquidation Pallets", href: "/liquidation-pallets" },
+              { label: "Fulfillment Center", href: "/fulfillment-center" },
+              { label: "Pick & Pack Services", href: "/pick-and-pack-services" },
+            ].map((s) => (
+              <Link
+                key={s.href}
+                href={s.href}
+                className="inline-flex items-center gap-1.5 border border-[#E2DFD8] rounded px-3.5 py-2 text-[13.5px] text-[#3D3D3D] hover:border-[#B8962E] hover:text-[#0D0D0D] transition-colors"
+              >
+                {s.label} <ArrowRight size={13} className="text-[#B8962E]" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="py-20 md:py-28 bg-[#0D0D0D]">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 text-center">
