@@ -34,6 +34,10 @@ export default function QuoteForm() {
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       company: (form.elements.namedItem("company") as HTMLInputElement).value,
       phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      address: (form.elements.namedItem("address") as HTMLInputElement).value,
+      city: (form.elements.namedItem("city") as HTMLInputElement).value,
+      state: (form.elements.namedItem("state") as HTMLInputElement).value,
+      zip: (form.elements.namedItem("zip") as HTMLInputElement).value,
       service: (form.elements.namedItem("service") as HTMLSelectElement).value,
       volume: (form.elements.namedItem("volume") as HTMLSelectElement).value,
       geography: (form.elements.namedItem("geography") as HTMLInputElement).value,
@@ -99,6 +103,24 @@ export default function QuoteForm() {
         <div>
           <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Phone</label>
           <input name="phone" type="tel" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" />
+        </div>
+      </div>
+      <div>
+        <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Street Address</label>
+        <input name="address" type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="123 Main St" />
+      </div>
+      <div className="grid sm:grid-cols-3 gap-5">
+        <div className="sm:col-span-1">
+          <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">City</label>
+          <input name="city" type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" />
+        </div>
+        <div className="sm:col-span-1">
+          <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">State</label>
+          <input name="state" type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="CA" />
+        </div>
+        <div className="sm:col-span-1">
+          <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">ZIP Code</label>
+          <input name="zip" type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="90210" />
         </div>
       </div>
       <div>

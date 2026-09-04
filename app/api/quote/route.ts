@@ -3,7 +3,9 @@ import { NextRequest, NextResponse } from "next/server"
 export async function POST(req: NextRequest) {
   try {
     const {
-      firstName, lastName, email, company, phone, service, volume, geography, notes,
+      firstName, lastName, email, company, phone,
+      address, city, state, zip,
+      service, volume, geography, notes,
       seoService, utm_source, utm_medium, utm_campaign, utm_term, utm_content,
       first_touch_referrer, first_touch_landing,
     } = await req.json()
@@ -34,6 +36,10 @@ export async function POST(req: NextRequest) {
           email,
           company,
           phone,
+          address: address || "",
+          city: city || "",
+          state: state || "",
+          zip: zip || "",
           message: messageBody,
           hs_lead_status: "NEW",
           seo_keyword: seoService || service || "",
@@ -67,6 +73,10 @@ export async function POST(req: NextRequest) {
                 lastname: lastName,
                 company,
                 phone,
+                address: address || "",
+                city: city || "",
+                state: state || "",
+                zip: zip || "",
                 message: messageBody,
                 hs_lead_status: "NEW",
           seo_keyword: seoService || service || "",
