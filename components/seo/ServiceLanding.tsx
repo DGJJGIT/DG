@@ -34,7 +34,7 @@ export type ServiceLandingData = {
   ctaBadge: string
 }
 
-// Cluster-specific photography from Unsplash — one per service category
+// Hero images per cluster
 const CLUSTER_IMAGES: { match: string[]; url: string; alt: string }[] = [
   {
     match: ["3pl", "warehousing", "warehouse"],
@@ -63,6 +63,35 @@ const DEFAULT_IMAGE = {
   alt: "Delivery Group Inc. fulfillment and logistics operations — Northern Kentucky hub",
 }
 
+// Secondary "Why DG" images — different photo per cluster so pages don't all look the same
+const CLUSTER_WHY_IMAGES: { match: string[]; url: string; alt: string }[] = [
+  {
+    match: ["3pl", "warehousing", "warehouse"],
+    url: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=900&q=80",
+    alt: "Forklift operations in Delivery Group Inc. Northern Kentucky warehouse",
+  },
+  {
+    match: ["courier", "delivery", "last-mile", "last mile"],
+    url: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=80",
+    alt: "Delivery Group Inc. last-mile courier operations and fleet dispatch",
+  },
+  {
+    match: ["return", "reverse"],
+    url: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=900&q=80",
+    alt: "Returns processing and reverse logistics operations",
+  },
+  {
+    match: ["hazmat", "dangerous", "hazardous"],
+    url: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=900&q=80",
+    alt: "Compliant hazmat and dangerous goods warehouse facility",
+  },
+]
+
+const DEFAULT_WHY_IMAGE = {
+  url: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=80",
+  alt: "Delivery Group Inc. warehouse team — pick, pack, and ship operations",
+}
+
 function getClusterImage(eyebrow: string, slug: string): { url: string; alt: string } {
   const text = `${eyebrow} ${slug}`.toLowerCase()
   for (const entry of CLUSTER_IMAGES) {
@@ -73,10 +102,21 @@ function getClusterImage(eyebrow: string, slug: string): { url: string; alt: str
   return DEFAULT_IMAGE
 }
 
+function getClusterWhyImage(eyebrow: string, slug: string): { url: string; alt: string } {
+  const text = `${eyebrow} ${slug}`.toLowerCase()
+  for (const entry of CLUSTER_WHY_IMAGES) {
+    if (entry.match.some((kw) => text.includes(kw))) {
+      return { url: entry.url, alt: entry.alt }
+    }
+  }
+  return DEFAULT_WHY_IMAGE
+}
+
 export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
   const EyebrowIcon = data.eyebrowIcon
   const quoteHref = `/quote?service=${data.slug}`
   const clusterImg = getClusterImage(data.eyebrow, data.slug)
+  const whyImg = getClusterWhyImage(data.eyebrow, data.slug)
 
   return (
     <>
@@ -174,8 +214,8 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
         <div className="relative h-56 overflow-hidden rounded-lg">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80"
-            alt="Delivery Group Inc. Northern Kentucky warehouse facility — pick, pack, and ship operations"
+            src={whyImg.url}
+            alt={whyImg.alt}
             className="w-full h-full object-cover"
             loading="lazy"
           />
@@ -189,8 +229,8 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
             <div className="hidden lg:block relative overflow-hidden rounded-lg aspect-[4/3]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80"
-                alt="Delivery Group Inc. Northern Kentucky warehouse facility — pick, pack, and ship operations"
+                src={whyImg.url}
+                alt={whyImg.alt}
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
