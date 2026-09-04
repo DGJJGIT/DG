@@ -170,14 +170,16 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
       </section>
 
       {/* Why DG — secondary image full-bleed on mobile, in-grid on desktop */}
-      <div className="lg:hidden relative h-56 overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80"
-          alt="Delivery Group Inc. Northern Kentucky warehouse facility — pick, pack, and ship operations"
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
+      <div className="lg:hidden px-4 py-2">
+        <div className="relative h-56 overflow-hidden rounded-lg">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80"
+            alt="Delivery Group Inc. Northern Kentucky warehouse facility — pick, pack, and ship operations"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
       </div>
 
       <section className="py-16 md:py-20 bg-[#F7F6F3]">
