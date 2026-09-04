@@ -32,7 +32,7 @@ function YoutubeIcon({ size = 15 }: { size?: number }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" width={size} height={size} aria-hidden="true">
       <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z" />
-      <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0D0D0D" />
+      <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white" />
     </svg>
   )
 }
@@ -136,25 +136,25 @@ export default function Footer() {
             </div>
             {/* Social icons */}
             <div className="flex items-center gap-3.5 flex-wrap">
-              <a href="https://www.instagram.com/delivery.group.inc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-[#4D4D4D] hover:text-white transition-colors">
+              <a href="https://www.instagram.com/delivery.group.inc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-[#737373] hover:text-white transition-colors">
                 <InstagramIcon size={15} />
               </a>
-              <a href="https://www.linkedin.com/company/106558314" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[#4D4D4D] hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/106558314" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[#737373] hover:text-white transition-colors">
                 <LinkedinIcon size={15} />
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61574137717976" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-[#4D4D4D] hover:text-white transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61574137717976" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-[#737373] hover:text-white transition-colors">
                 <FacebookIcon size={15} />
               </a>
-              <a href="https://www.youtube.com/@DeliveryGroupInc" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-[#4D4D4D] hover:text-white transition-colors">
+              <a href="https://www.youtube.com/@DeliveryGroupInc" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-[#737373] hover:text-white transition-colors">
                 <YoutubeIcon size={15} />
               </a>
-              <a href="https://x.com/deliverygr_inc" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-[#4D4D4D] hover:text-white transition-colors">
+              <a href="https://x.com/deliverygr_inc" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-[#737373] hover:text-white transition-colors">
                 <XIcon size={15} />
               </a>
-              <a href="https://www.tiktok.com/@deliverygroup0" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-[#4D4D4D] hover:text-white transition-colors">
+              <a href="https://www.tiktok.com/@deliverygroup0" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-[#737373] hover:text-white transition-colors">
                 <TikTokIcon size={15} />
               </a>
-              <a href="https://www.pinterest.com/deliverygroupinc/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="text-[#4D4D4D] hover:text-white transition-colors">
+              <a href="https://www.pinterest.com/deliverygroupinc/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="text-[#737373] hover:text-white transition-colors">
                 <PinterestIcon size={15} />
               </a>
             </div>
