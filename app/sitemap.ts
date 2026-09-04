@@ -16,10 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   /* ── High-priority service pages (top-level + dynamic) ── */
-  const serviceSlugs = [
-    "last-mile-delivery",
-    "expedited-shipping",
-  ]
+  const serviceSlugs: string[] = []
 
   const servicePages: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/amazon-fba-prep`, lastModified, changeFrequency: "monthly", priority: 0.9 },
@@ -36,9 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   /* ── Solution product type pages ── */
   const solutionSlugs = [
-    "apparel",
-    "supplements",
-    "subscription-boxes",
     "oversized",
     "fragile",
     "beauty-cosmetics",
@@ -222,6 +216,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   /* ── New SEO cluster pages (hazmat, fulfillment, 3PL, courier, reverse logistics) ── */
   const seoSlugs = [
     "3pl",
+    "last-mile-delivery",
+    "expedited-freight",
+    "apparel-fulfillment",
+    "subscription-box-fulfillment",
+    "supplement-fulfillment",
     "liquidation-pallets",
     "ecommerce-returns-solution",
     "reverse-logistics-company",

@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
+
 import { ArrowRight, Users, Globe, Award, TrendingUp, CheckCircle, Shield } from "lucide-react"
 import SectionLabel from "@/components/ui/SectionLabel"
 
@@ -74,11 +74,12 @@ export default function AboutPage() {
             </div>
             <div className="space-y-4">
               <div className="relative w-full h-[240px] rounded-lg overflow-hidden">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&h=480&q=80"
                   alt="Delivery Group Inc. warehouse and fulfillment operations"
-                  fill
-                  className="object-cover"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">

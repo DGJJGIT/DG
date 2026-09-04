@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   keywords: ["last mile delivery", "amazon fba prep", "logistics", "expedited shipping", "delivery service", "fba prep service", "dhl integration", "3pl fulfillment", "3pl warehouse"],
   openGraph: {
     type: "website",
+    url: "https://deliverygroupinc.com",
     siteName: "Delivery Group Inc.",
     title: "Delivery Group Inc. — Premium Last-Mile Delivery & Logistics",
     description: "Premium Amazon FBA prep, last-mile, and expedited shipping solutions nationwide.",
