@@ -123,6 +123,16 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
       <JsonLd
         data={{
           "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://deliverygroupinc.com" },
+            { "@type": "ListItem", position: 2, name: data.metaTitle, item: `https://deliverygroupinc.com/${data.slug}` },
+          ],
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
           "@type": "Service",
           name: data.metaTitle,
           serviceType: data.keyword,

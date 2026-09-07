@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Delivery Group Inc.",
   },
   description:
-    "Delivery Group Inc. provides premium Amazon FBA prep, last-mile, and expedited shipping solutions for e-commerce, healthcare, retail, and enterprise clients nationwide.",
+    "Premium Amazon FBA prep, last-mile delivery, and expedited shipping for e-commerce and enterprise clients nationwide. 99.4% on-time. All 50 states.",
   keywords: ["last mile delivery", "amazon fba prep", "logistics", "expedited shipping", "delivery service", "fba prep service", "dhl integration", "3pl fulfillment", "3pl warehouse"],
   openGraph: {
     type: "website",
@@ -76,6 +76,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       )}
       <body className="font-[var(--font-inter)] min-h-screen flex flex-col">
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Delivery Group Inc.",
+            url: "https://deliverygroupinc.com",
+          }}
+        />
         <JsonLd
           data={{
             "@context": "https://schema.org",

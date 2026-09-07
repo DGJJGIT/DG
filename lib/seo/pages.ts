@@ -430,7 +430,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
   "fulfillment-center": {
     slug: "fulfillment-center",
     keyword: "fulfillment center",
-    metaTitle: "Fulfillment Center | Order Fulfillment Services Nationwide",
+    metaTitle: "Fulfillment Center — Ship Nationwide",
     metaDescription: "A nationwide fulfillment center — receiving, storage, pick & pack, and fast shipping with real-time inventory. Get a fulfillment quote.",
     keywords: ["fulfillment center", "pick and pack services", "fulfillment warehouse", "kitting services"],
     eyebrowIcon: Package,
@@ -607,7 +607,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
   "hazmat-trucking-companies": {
     slug: "hazmat-trucking-companies",
     keyword: "hazmat trucking companies",
-    metaTitle: "Hazmat Trucking Companies | Licensed DG Carriers Nationwide",
+    metaTitle: "Hazmat Trucking Companies Nationwide",
     metaDescription: "DOT-licensed hazmat trucking across all 50 states — placarded loads, trained drivers, full compliance docs. Get a hazmat freight quote.",
     keywords: ["hazmat trucking companies", "hazmat logistics (hub)", "hazmat storage", "hazmat 3pl"],
     eyebrowIcon: AlertTriangle,
@@ -1084,7 +1084,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
   "white-glove-delivery": {
     slug: "white-glove-delivery",
     keyword: "white glove delivery",
-    metaTitle: "White Glove Delivery Services | Inside Delivery & Setup",
+    metaTitle: "White Glove Delivery — Inside & Setup",
     metaDescription: "White glove delivery for high-value, fragile, and oversized items — inside delivery, placement, setup, and debris removal. Get a quote.",
     keywords: ["white glove delivery", "courier services (hub)", "same day courier", "last-mile delivery"],
     eyebrowIcon: Truck,

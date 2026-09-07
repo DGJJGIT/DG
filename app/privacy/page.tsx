@@ -1,6 +1,10 @@
 import { Metadata } from "next"
 import SectionLabel from "@/components/ui/SectionLabel"
-export const metadata: Metadata = { title: "Privacy Policy", description: "Delivery Group Inc. Privacy Policy." }
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Learn how Delivery Group Inc. collects, uses, and protects your personal information as a licensed logistics and fulfillment provider.",
+  alternates: { canonical: "https://deliverygroupinc.com/privacy" },
+}
 export default function PrivacyPage() {
   return (
     <>

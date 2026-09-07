@@ -4,7 +4,7 @@ import { ArrowRight, Package, Warehouse, Truck, RefreshCw, AlertTriangle } from 
 import SectionLabel from "@/components/ui/SectionLabel"
 
 export const metadata: Metadata = {
-  title: "Services — All 44 Logistics & Delivery Services",
+  title: "All 44 Logistics & Delivery Services",
   description: "44 dedicated service pages across fulfillment, 3PL warehousing, courier & delivery, reverse logistics, and hazmat. One trusted partner for every logistics need.",
   alternates: { canonical: "https://deliverygroupinc.com/services" },
   openGraph: {

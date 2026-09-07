@@ -11,15 +11,15 @@ import Badge from "@/components/ui/Badge"
 import JsonLd from "@/components/JsonLd"
 
 export const metadata: Metadata = {
-  title: "3PL Fulfillment Services — Ship Faster, Spend Less",
+  title: "3PL Fulfillment Services — Ship Faster",
   description:
-    "Full-service 3PL fulfillment from our Northern Kentucky warehouse. Direct DHL partnership for lower shipping rates. Pick & pack, storage, kitting, returns, and branded packaging for e-commerce brands.",
+    "Full-service 3PL from our Northern Kentucky hub — direct DHL rates, pick & pack, storage, kitting, returns, and branded packaging for e-commerce brands.",
   keywords: ["3pl fulfillment", "3pl warehouse", "order fulfillment", "ecommerce fulfillment", "pick and pack", "3pl shipping"],
   alternates: { canonical: "https://deliverygroupinc.com/3pl-fulfillment" },
   openGraph: {
     url: "https://deliverygroupinc.com/3pl-fulfillment",
-    title: "3PL Fulfillment Services — Ship Faster, Spend Less",
-    description: "Full-service 3PL fulfillment from our Northern Kentucky warehouse. Direct DHL partnership for lower shipping rates. Pick & pack, storage, kitting, returns, and branded packaging for e-commerce brands.",
+    title: "3PL Fulfillment Services — Ship Faster",
+    description: "Full-service 3PL from our Northern Kentucky hub — direct DHL rates, pick & pack, storage, kitting, returns, and branded packaging for e-commerce brands.",
     images: [{ url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80", width: 1200, height: 630 }],
   },
 }

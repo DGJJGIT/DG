@@ -12,16 +12,29 @@ export async function generateStaticParams() {
   return posts.map(p => ({ slug: p.slug }))
 }
 
+// Shorten a blog post title to fit within 38 chars (template adds " | Delivery Group Inc." = 22, total ≤60)
+function shortTitle(title: string): string {
+  if (title.length <= 38) return title
+  for (const sep of [": ", " — ", " - "]) {
+    const i = title.indexOf(sep)
+    if (i > 10 && i <= 38) return title.slice(0, i)
+  }
+  const trimmed = title.slice(0, 38)
+  const lastSpace = trimmed.lastIndexOf(" ")
+  return (lastSpace > 10 ? trimmed.slice(0, lastSpace) : trimmed) + "…"
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
   const post = getPost(slug)
   if (!post) return { title: "Not Found" }
+  const metaTitle = shortTitle(post.title)
   return {
-    title: post.title,
+    title: metaTitle,
     description: post.excerpt,
     openGraph: {
       type: "article",
-      title: post.title,
+      title: metaTitle,
       description: post.excerpt,
       publishedTime: post.date,
       authors: [post.author],
@@ -29,7 +42,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: metaTitle,
       description: post.excerpt,
     },
     alternates: { canonical: `https://deliverygroupinc.com/blog/${slug}` },
