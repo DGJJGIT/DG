@@ -8,8 +8,6 @@ author: "Louis Bradley"
 image: "/blog/platform-guides.svg"
 ---
 
-# Best 3PL for WooCommerce Stores: Fulfillment That Works with WordPress
-
 WooCommerce is one of the most popular e-commerce platforms in the world. It powers millions of online stores, from small side businesses to major brands. But while WooCommerce makes it easy to build a store, the fulfillment side of things can get complicated fast.
 
 If you are running a WooCommerce store and shipping is taking up too much of your time, a 3PL can help. This guide covers everything you need to know about finding the right fulfillment partner for your WooCommerce business, and why DeliveryGroup is a strong choice.

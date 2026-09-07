@@ -8,8 +8,6 @@ author: "Louis Bradley"
 image: "/blog/platform-guides.svg"
 ---
 
-# Best 3PL for Amazon Business Sellers: B2B Fulfillment Done Right
-
 Amazon Business is growing fast. It passed $35 billion in annualized sales and it is still accelerating. Millions of business buyers now purchase everything from office supplies to industrial equipment through Amazon Business. If you sell on Amazon and you are not paying attention to this channel, you are leaving money on the table.
 
 But selling to business buyers is different from selling to consumers. Business buyers purchase in larger quantities. They expect professional packaging. They need purchase order tracking. They have compliance requirements that regular Amazon shoppers do not.

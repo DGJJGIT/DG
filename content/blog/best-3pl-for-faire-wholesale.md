@@ -8,8 +8,6 @@ author: "Louis Bradley"
 image: "/blog/platform-guides.svg"
 ---
 
-# Best 3PL for Faire Sellers: Wholesale and DTC from One Warehouse
-
 Faire has changed the wholesale game. It lets independent brands sell to thousands of retailers without a traditional sales team. But here is the problem most Faire sellers run into. Fulfilling wholesale orders is completely different from fulfilling DTC orders. And doing both from your garage or a small warehouse gets messy fast.
 
 Wholesale orders are bigger. They go on pallets. They need different packaging. They ship by freight instead of parcel. Meanwhile, your Shopify or DTC orders need individual picks, branded packaging, and fast ground shipping. Managing both workflows under one roof is a headache.
