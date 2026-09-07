@@ -4,12 +4,35 @@ export async function POST(req: NextRequest) {
   try {
     const {
       firstName, lastName, email, company, phone, service, volume, geography, notes,
+      bot_field, cfToken,
       seoService, utm_source, utm_medium, utm_campaign, utm_term, utm_content,
       first_touch_referrer, first_touch_landing,
     } = await req.json()
 
+    // Honeypot — bots fill this hidden field; real users never see it
+    if (bot_field) {
+      return NextResponse.json({ success: true })
+    }
+
     if (!email) {
       return NextResponse.json({ error: "Email is required" }, { status: 400 })
+    }
+
+    // Turnstile verification — only enforced when secret is configured
+    const turnstileSecret = process.env.TURNSTILE_SECRET_KEY
+    if (turnstileSecret) {
+      if (!cfToken) {
+        return NextResponse.json({ error: "Please complete the security check." }, { status: 400 })
+      }
+      const tvRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ secret: turnstileSecret, response: cfToken }),
+      })
+      const tvData = await tvRes.json() as { success: boolean }
+      if (!tvData.success) {
+        return NextResponse.json({ error: "Security check failed. Please refresh and try again." }, { status: 400 })
+      }
     }
 
     const res = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {

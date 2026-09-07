@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react"
 
+const TURNSTILE_SITEKEY = process.env.NEXT_PUBLIC_TURNSTILE_SITEKEY
+
 export default function QuoteForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [errorMsg, setErrorMsg] = useState("")
@@ -38,6 +40,10 @@ export default function QuoteForm() {
       volume: (form.elements.namedItem("volume") as HTMLSelectElement).value,
       geography: (form.elements.namedItem("geography") as HTMLInputElement).value,
       notes: (form.elements.namedItem("notes") as HTMLTextAreaElement).value,
+      // Honeypot — humans leave this blank; bots fill it
+      bot_field: (form.elements.namedItem("bot_field") as HTMLInputElement | null)?.value || "",
+      // Turnstile token — present when widget is active and solved
+      cfToken: (form.elements.namedItem("cf-turnstile-response") as HTMLInputElement | null)?.value || "",
       // Attribution (card #115): which SEO page produced the lead + first-touch/UTM.
       seoService: new URLSearchParams(window.location.search).get("service") || "",
       ...(() => { try { return JSON.parse(localStorage.getItem("dg_first_touch") || "{}") } catch { return {} } })(),
@@ -77,6 +83,15 @@ export default function QuoteForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+      {/* Honeypot — hidden from real users, bots fill it */}
+      <input
+        name="bot_field"
+        type="text"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", opacity: 0 }}
+      />
       <div className="grid sm:grid-cols-2 gap-5">
         <div>
           <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">First Name *</label>
@@ -131,6 +146,15 @@ export default function QuoteForm() {
         <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Additional Requirements</label>
         <textarea name="notes" rows={4} className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors resize-none" placeholder="Special handling requirements, integration needs, timeline, etc." />
       </div>
+      {/* Cloudflare Turnstile — renders when NEXT_PUBLIC_TURNSTILE_SITEKEY is set */}
+      {TURNSTILE_SITEKEY && (
+        <div
+          className="cf-turnstile"
+          data-sitekey={TURNSTILE_SITEKEY}
+          data-theme="light"
+          data-size="normal"
+        />
+      )}
       {status === "error" && (
         <p className="text-[13px] text-red-500">{errorMsg}</p>
       )}
