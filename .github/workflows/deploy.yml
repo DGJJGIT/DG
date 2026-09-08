@@ -16,10 +16,16 @@ jobs:
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_SSH_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          envs: NEXT_PUBLIC_TURNSTILE_SITEKEY,TURNSTILE_SECRET_KEY
           script: |
             cd /var/www/delivery-group
+            printf "NEXT_PUBLIC_TURNSTILE_SITEKEY=%s\nTURNSTILE_SECRET_KEY=%s\n" \
+              "$NEXT_PUBLIC_TURNSTILE_SITEKEY" "$TURNSTILE_SECRET_KEY" > .env.local
             git pull origin main
             npm install --production=false
             npm run build
             pm2 restart dg-website
             echo "Deploy complete"
+        env:
+          NEXT_PUBLIC_TURNSTILE_SITEKEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITEKEY }}
+          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
