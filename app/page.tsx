@@ -204,8 +204,8 @@ export default function Home() {
           <div className="relative h-56 overflow-hidden rounded-lg">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=900&q=80"
-              alt="Delivery Group Inc. — freight and logistics operations at scale"
+              src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=900&q=80"
+              alt="Delivery Group Inc. Northern Kentucky warehouse and logistics operations"
               className="w-full h-full object-cover"
               loading="eager"
             />
