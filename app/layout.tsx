@@ -54,9 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       {TURNSTILE_SITEKEY && (
         <Script
           src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-          strategy="lazyOnload"
-          async
-          defer
+          strategy="afterInteractive"
         />
       )}
       <body className="font-[var(--font-inter)] min-h-screen flex flex-col">
