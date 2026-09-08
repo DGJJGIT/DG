@@ -156,7 +156,7 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
       {/* Hero — dark with text */}
       <section className="bg-[#0D0D0D] text-white py-20 md:py-28">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+          <div className="md:grid md:grid-cols-2 md:gap-16 md:items-center">
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <EyebrowIcon size={16} className="text-[#B8962E]" />
@@ -177,7 +177,7 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
             </div>
 
             {/* Hero image — desktop only */}
-            <div className="hidden lg:block relative">
+            <div className="hidden md:block relative">
               <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -194,7 +194,7 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
       </section>
 
       {/* Full-width photo strip — mobile */}
-      <div className="lg:hidden relative h-56 overflow-hidden">
+      <div className="md:hidden relative h-56 overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={clusterImg.url}
@@ -220,7 +220,7 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
       </section>
 
       {/* Why DG — secondary image full-bleed on mobile, in-grid on desktop */}
-      <div className="lg:hidden px-4 py-2">
+      <div className="md:hidden px-4 py-2">
         <div className="relative h-56 overflow-hidden rounded-lg">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -234,9 +234,9 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
 
       <section className="py-16 md:py-20 bg-[#F7F6F3]">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+          <div className="md:grid md:grid-cols-2 md:gap-16 md:items-center">
             {/* Left: photo — desktop only (mobile version is full-bleed above) */}
-            <div className="hidden lg:block relative overflow-hidden rounded-lg aspect-[4/3]">
+            <div className="hidden md:block relative overflow-hidden rounded-lg aspect-[4/3]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={whyImg.url}

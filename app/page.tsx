@@ -146,7 +146,7 @@ export default function Home() {
           style={{ background: "radial-gradient(circle, #B8962E 0%, transparent 70%)", transform: "translate(30%, -30%)" }}
         />
         <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-24 md:py-32 lg:py-40">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+          <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center">
             <div className="max-w-[640px]">
               <div className="flex items-center gap-2.5 mb-6">
                 <span className="gold-bar" />
@@ -177,8 +177,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Hero photo — desktop only */}
-            <div className="hidden lg:block">
+            {/* Hero photo — tablet and up */}
+            <div className="hidden md:block">
               <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -200,7 +200,7 @@ export default function Home() {
         </div>
 
         {/* Mobile hero image strip */}
-        <div className="lg:hidden px-4 py-2">
+        <div className="md:hidden px-4 py-2">
           <div className="relative h-56 overflow-hidden rounded-lg">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
