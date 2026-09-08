@@ -6,7 +6,6 @@ import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import JsonLd from "@/components/JsonLd"
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 const TURNSTILE_SITEKEY = process.env.NEXT_PUBLIC_TURNSTILE_SITEKEY
 
 const inter = Inter({
@@ -52,21 +51,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
-      {GA_ID && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script
-            id="ga4-init"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');`,
-            }}
-          />
-        </>
-      )}
       {TURNSTILE_SITEKEY && (
         <Script
           src="https://challenges.cloudflare.com/turnstile/v0/api.js"
