@@ -192,7 +192,7 @@ export default function ThreePLFulfillmentPage() {
           }}
         />
         <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-24 md:py-32 lg:py-40">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+          <div className="md:grid md:grid-cols-2 md:gap-16 md:items-center">
             <div>
               <div className="flex items-center gap-2.5 mb-6">
                 <span className="gold-bar" />
@@ -227,7 +227,7 @@ export default function ThreePLFulfillmentPage() {
                 </a>
               </div>
             </div>
-            <div className="hidden lg:block relative overflow-hidden rounded-lg aspect-[4/3] mt-0">
+            <div className="hidden md:block relative overflow-hidden rounded-lg aspect-[4/3] mt-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80"
@@ -241,7 +241,7 @@ export default function ThreePLFulfillmentPage() {
         </div>
 
         {/* Mobile hero image strip */}
-        <div className="lg:hidden px-4 py-2">
+        <div className="md:hidden px-4 py-2">
           <div className="relative h-56 overflow-hidden rounded-lg">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
