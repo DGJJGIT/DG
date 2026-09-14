@@ -3,7 +3,7 @@ name: Deploy to Staging
 on:
   push:
     branches:
-      - fix/111-nav-social-ogimage-visuals
+      - feat/phase2-content
 
 jobs:
   deploy-staging:
@@ -22,8 +22,8 @@ jobs:
             fi
             cd /var/www/delivery-group-staging
             git fetch origin
-            git checkout fix/111-nav-social-ogimage-visuals
-            git pull origin fix/111-nav-social-ogimage-visuals
+            git checkout feat/phase2-content
+            git pull origin feat/phase2-content
             npm install --production=false
             npm run build
             if pm2 describe dg-staging > /dev/null 2>&1; then
