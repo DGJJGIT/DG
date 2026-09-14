@@ -71,6 +71,7 @@ const footerNav = {
   ],
   Resources: [
     { label: "Get a Quote", href: "/quote" },
+    { label: "FBA Savings Calculator", href: "/fba-savings-calculator" },
     { label: "Contact Us", href: "/contact" },
     { label: "FAQ", href: "/faq" },
     { label: "Solutions", href: "/solutions" },

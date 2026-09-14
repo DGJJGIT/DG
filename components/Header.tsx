@@ -40,6 +40,7 @@ const servicesClusters = [
       { label: "Expedited Freight", href: "/expedited-freight" },
       { label: "Cross Docking", href: "/cross-docking" },
       { label: "Amazon FBA Prep", href: "/amazon-fba-prep" },
+      { label: "FBA Savings Calculator", href: "/fba-savings-calculator" },
       { label: "Courier Services", href: "/courier-services" },
     ],
   },
