@@ -120,22 +120,40 @@ export default function QuoteForm() {
         <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Services Needed *</label>
         <select name="service" required className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors">
           <option value="">Select primary service</option>
-          <option>Amazon FBA Prep</option>
-          <option>3PL Fulfillment</option>
-          <option>Last-Mile Delivery</option>
-          <option>Expedited Shipping</option>
-          <option>Multiple Services</option>
+          <optgroup label="FBA Prep">
+            <option value="fba-prep-standard">Amazon FBA Prep — Standard</option>
+            <option value="fba-prep-apparel">Amazon FBA Prep — Apparel / Footwear</option>
+            <option value="fba-prep-bulky">Amazon FBA Prep — Bulky / Oversized</option>
+            <option value="fba-prep-hazmat">Amazon FBA Prep — Hazmat / Dangerous Goods</option>
+          </optgroup>
+          <optgroup label="Fulfillment &amp; 3PL">
+            <option value="3pl-fulfillment">3PL / eCommerce Fulfillment</option>
+            <option value="dtc-multichannel">DTC + Multi-Channel (Amazon + TikTok Shop + WFS)</option>
+            <option value="subscription-box">Subscription Box Fulfillment</option>
+            <option value="kitting-bundling">Kitting &amp; Bundling</option>
+          </optgroup>
+          <optgroup label="Delivery &amp; Logistics">
+            <option value="last-mile">Last-Mile Delivery</option>
+            <option value="white-glove">White Glove Delivery</option>
+            <option value="same-day-courier">Same-Day Courier</option>
+            <option value="expedited-freight">Expedited Freight</option>
+          </optgroup>
+          <optgroup label="Reverse Logistics">
+            <option value="returns-management">Returns Management / Reverse Logistics</option>
+            <option value="re-prep">Returns Re-Prep for FBA</option>
+          </optgroup>
+          <option value="multiple">Multiple Services / Not Sure</option>
         </select>
       </div>
       <div>
-        <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Monthly Shipment Volume *</label>
+        <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Monthly Unit Volume *</label>
         <select name="volume" required className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors">
-          <option value="">Select volume range</option>
-          <option>Under 500 shipments/month</option>
-          <option>500 – 2,000 shipments/month</option>
-          <option>2,000 – 10,000 shipments/month</option>
-          <option>10,000 – 50,000 shipments/month</option>
-          <option>50,000+ shipments/month</option>
+          <option value="">Select your monthly volume</option>
+          <option value="under-500">Under 500 units/month</option>
+          <option value="500-2000">500 – 2,000 units/month</option>
+          <option value="2000-10000">2,000 – 10,000 units/month</option>
+          <option value="10000-50000">10,000 – 50,000 units/month</option>
+          <option value="50000+">50,000+ units/month</option>
         </select>
       </div>
       <div>

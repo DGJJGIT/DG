@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/3pl-fulfillment`, lastModified, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/services`, lastModified, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/solutions`, lastModified, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/fba-savings-calculator`, lastModified, changeFrequency: "monthly", priority: 0.8 },
     ...serviceSlugs.map((slug) => ({
       url: `${BASE_URL}/services/${slug}`,
       lastModified,
