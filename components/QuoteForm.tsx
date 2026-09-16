@@ -3,10 +3,22 @@
 import { useState, useEffect } from "react"
 
 const TURNSTILE_SITEKEY = process.env.NEXT_PUBLIC_TURNSTILE_SITEKEY
+const CALENDLY = "https://calendly.com/chris-l-deliverygroupinc/15min"
 
 export default function QuoteForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [errorMsg, setErrorMsg] = useState("")
+  const [prefillService, setPrefillService] = useState("")
+  const [prefillVolume, setPrefillVolume] = useState("")
+
+  // Pre-fill service + volume when arriving from the calculator (?from=calculator)
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search)
+    if (q.get("from") === "calculator") {
+      if (q.get("service")) setPrefillService(q.get("service")!)
+      if (q.get("volume"))  setPrefillVolume(q.get("volume")!)
+    }
+  }, [])
 
   // Freeze first-touch attribution (UTM + referrer) on first visit (card #115).
   useEffect(() => {
@@ -76,7 +88,18 @@ export default function QuoteForm() {
           </svg>
         </div>
         <h3 className="text-xl font-semibold text-[#0D0D0D] mb-2">Request received</h3>
-        <p className="text-[14px] text-[#737373]">We'll have a custom proposal ready within one business day.</p>
+        <p className="text-[14px] text-[#737373] mb-6">We'll have a custom proposal ready within one business day.</p>
+        <div className="border-t border-[#E2DFD8] pt-6">
+          <p className="text-[13px] text-[#737373] mb-3">Prefer to talk now?</p>
+          <a
+            href={CALENDLY}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#B8962E] text-white text-[13.5px] font-medium rounded-md hover:bg-[#A0801F] transition-colors"
+          >
+            Book a call now →
+          </a>
+        </div>
       </div>
     )
   }
@@ -118,7 +141,7 @@ export default function QuoteForm() {
       </div>
       <div>
         <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Services Needed *</label>
-        <select name="service" required className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors">
+        <select name="service" required value={prefillService} onChange={e => setPrefillService(e.target.value)} className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors">
           <option value="">Select primary service</option>
           <optgroup label="FBA Prep">
             <option value="fba-prep-standard">Amazon FBA Prep — Standard</option>
@@ -147,7 +170,7 @@ export default function QuoteForm() {
       </div>
       <div>
         <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Monthly Unit Volume *</label>
-        <select name="volume" required className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors">
+        <select name="volume" required value={prefillVolume} onChange={e => setPrefillVolume(e.target.value)} className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors">
           <option value="">Select your monthly volume</option>
           <option value="under-500">Under 500 units/month</option>
           <option value="500-2000">500 – 2,000 units/month</option>

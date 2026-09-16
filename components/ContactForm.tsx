@@ -2,6 +2,8 @@
 
 import { useState } from "react"
 
+const CALENDLY = "https://calendly.com/chris-l-deliverygroupinc/15min"
+
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [errorMsg, setErrorMsg] = useState("")
@@ -48,7 +50,18 @@ export default function ContactForm() {
           </svg>
         </div>
         <h3 className="text-xl font-semibold text-[#0D0D0D] mb-2">Message sent</h3>
-        <p className="text-[14px] text-[#737373]">We'll get back to you within one business day.</p>
+        <p className="text-[14px] text-[#737373] mb-6">We'll get back to you within one business day.</p>
+        <div className="border-t border-[#E2DFD8] pt-6">
+          <p className="text-[13px] text-[#737373] mb-3">Prefer to talk now?</p>
+          <a
+            href={CALENDLY}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#B8962E] text-white text-[13.5px] font-medium rounded-md hover:bg-[#A0801F] transition-colors"
+          >
+            Book a call now →
+          </a>
+        </div>
       </div>
     )
   }

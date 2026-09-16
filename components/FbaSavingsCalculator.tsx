@@ -261,10 +261,18 @@ export default function FbaSavingsCalculator() {
         </div>
       </div>
 
-      {/* CTA */}
+      {/* CTA — passes calculator state to quote form as URL params */}
       <div className="text-center">
         <a
-          href="/quote"
+          href={(() => {
+            const bucket = volume < 500 ? "under-500"
+              : volume < 2000 ? "500-2000"
+              : volume < 10000 ? "2000-10000"
+              : volume < 50000 ? "10000-50000"
+              : "50000+"
+            const svc = isBulky ? "fba-prep-bulky" : "fba-prep-standard"
+            return `/quote?service=${svc}&volume=${bucket}&from=calculator`
+          })()}
           className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#B8962E] text-white text-[14px] font-medium rounded-md hover:bg-[#A0801F] transition-colors"
         >
           Get your exact quote →

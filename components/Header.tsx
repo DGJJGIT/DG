@@ -1,7 +1,7 @@
 "use client"
 import { useState, useRef } from "react"
 import Link from "next/link"
-import { Menu, X, ChevronDown, Package, Warehouse, Truck, RefreshCw, AlertTriangle, ArrowRight } from "lucide-react"
+import { Menu, X, ChevronDown, Package, Warehouse, Truck, RefreshCw, AlertTriangle, ArrowRight, Calculator } from "lucide-react"
 
 const servicesClusters = [
   {
@@ -186,6 +186,15 @@ export default function Header() {
             <a href="tel:+18003702105" className="text-[13.5px] font-medium text-[#3D3D3D] hover:text-[#0D0D0D] transition-colors">
               1-800-370-2105
             </a>
+            <Link
+              href="/fba-savings-calculator"
+              title="FBA Savings Calculator"
+              aria-label="FBA Savings Calculator"
+              className="p-2 text-[#737373] hover:text-[#B8962E] transition-colors"
+              onClick={() => { setMegaOpen(false); setMobileOpen(false) }}
+            >
+              <Calculator size={17} />
+            </Link>
             <Link
               href="/quote"
               className="px-4 py-2 bg-[#0D0D0D] text-white text-[13px] font-medium rounded-md hover:bg-[#1a1a1a] transition-colors"
