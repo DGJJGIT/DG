@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   title: "3PL Fulfillment Services — Ship Faster",
   description:
     "Full-service 3PL from our Northern Kentucky hub — direct DHL rates, pick & pack, storage, kitting, returns, and branded packaging for e-commerce brands.",
-  keywords: ["3pl fulfillment", "3pl warehouse", "order fulfillment", "ecommerce fulfillment", "pick and pack", "3pl shipping"],
   alternates: { canonical: "https://deliverygroupinc.com/3pl-fulfillment" },
   openGraph: {
     url: "https://deliverygroupinc.com/3pl-fulfillment",
@@ -201,9 +200,9 @@ export default function ThreePLFulfillmentPage() {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-[56px] font-semibold text-white leading-[1.1] tracking-[-0.03em] mb-6">
-                Ship faster.
+                Ship faster.{" "}
                 <br />
-                Spend less.
+                Spend less.{" "}
                 <br />
                 <span className="gold-text">Scale without limits.</span>
               </h1>

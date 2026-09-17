@@ -13,7 +13,6 @@ export type ServiceLandingData = {
   keyword: string
   metaTitle: string
   metaDescription: string
-  keywords: string[]
   eyebrowIcon: LucideIcon
   eyebrow: string
   h1lead: string

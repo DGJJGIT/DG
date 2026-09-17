@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   title: "Amazon FBA Prep — 30-50% Below Market",
   description:
     "Professional FBA prep near Amazon's CVG Air Hub — 75,000 sq ft, 48-hr turnaround, 99.9% accuracy, rates from $0.20/unit.",
-  keywords: ["amazon fba prep", "fba prep service", "amazon prep center", "fba labeling", "fba poly bagging", "amazon cvg air hub"],
   alternates: { canonical: "https://deliverygroupinc.com/amazon-fba-prep" },
   openGraph: {
     url: "https://deliverygroupinc.com/amazon-fba-prep",
@@ -375,9 +374,9 @@ export default function AmazonFBAPrepPage() {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-[56px] font-semibold text-white leading-[1.1] tracking-[-0.03em] mb-6">
-                The fastest, most
+                The fastest, most{" "}
                 <br />
-                cost-effective FBA prep
+                cost-effective FBA prep{" "}
                 <br />
                 <span className="gold-text">in the country.</span>
               </h1>
@@ -459,7 +458,7 @@ export default function AmazonFBAPrepPage() {
             <div>
               <SectionLabel>Why This Matters Now</SectionLabel>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0D0D0D] mb-6">
-                Amazon eliminated all FBA prep services. The stakes have never been higher.
+                Amazon eliminated its own FBA prep services. The stakes have never been higher.
               </h2>
               <p className="text-[15px] text-[#737373] leading-relaxed mb-8">
                 As of January 1, 2026, Amazon discontinued all FBA prep and labeling services in the US. Every unit must now arrive at Amazon&apos;s fulfillment centers 100% compliant and shelf-ready. The consequences of non-compliance are severe.

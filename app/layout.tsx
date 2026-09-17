@@ -22,7 +22,6 @@ export const metadata: Metadata = {
   },
   description:
     "Premium Amazon FBA prep, last-mile delivery, and expedited shipping for e-commerce and enterprise clients nationwide. 99.4% on-time. All 50 states.",
-  keywords: ["last mile delivery", "amazon fba prep", "logistics", "expedited shipping", "delivery service", "fba prep service", "dhl integration", "3pl fulfillment", "3pl warehouse"],
   openGraph: {
     type: "website",
     url: "https://deliverygroupinc.com",

@@ -205,7 +205,7 @@ export default function Home() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=900&q=80"
-              alt="Delivery Group Inc. Northern Kentucky warehouse and logistics operations"
+              alt="Delivery Group Inc. warehouse operations in Northern Kentucky"
               className="w-full h-full object-cover"
               loading="eager"
             />

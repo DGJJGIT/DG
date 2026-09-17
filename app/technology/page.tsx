@@ -10,18 +10,6 @@ export const metadata: Metadata = {
   title: "Technology & Platform Integrations — 3PL for Shopify, Amazon, WooCommerce & More",
   description:
     "DeliveryGroup integrates with 17+ major e-commerce platforms including Shopify, Amazon, WooCommerce, BigCommerce, Walmart, eBay, Etsy, TikTok Shop, and more. AI-powered route optimization, real-time tracking, and enterprise-grade logistics technology.",
-  keywords: [
-    "3pl shopify integration",
-    "3pl amazon fulfillment",
-    "woocommerce 3pl",
-    "bigcommerce fulfillment",
-    "walmart marketplace 3pl",
-    "ebay fulfillment service",
-    "etsy fulfillment partner",
-    "tiktok shop fulfillment",
-    "ecommerce 3pl integrations",
-    "logistics technology platform",
-  ],
   alternates: { canonical: "https://deliverygroupinc.com/technology" },
 }
 
