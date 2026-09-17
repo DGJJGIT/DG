@@ -1,6 +1,6 @@
 ---
 title: "Best 3PL for Adobe Commerce (Magento): Enterprise Fulfillment for Complex Stores"
-excerpt: "Adobe Commerce stores need a 3PL that can handle custom integrations and complex workflows. DeliveryGroup builds it to your specs."
+excerpt: "Adobe Commerce's Multi-Source Inventory model and B2B module create fulfillment requirements most 3PL integrations were never built to handle."
 category: "Platform Guides"
 date: "March 23, 2025"
 readTime: "12 min read"
@@ -8,156 +8,81 @@ author: "Louis Bradley"
 image: "/blog/platform-guides.svg"
 ---
 
-Adobe Commerce is not a starter platform. It is built for brands that have outgrown simple tools. The stores running on it tend to have large catalogs, custom workflows, and serious revenue. That means they need a 3PL that can keep up.
+Adobe Commerce (built on the Magento platform) is what brands move to once they've outgrown a plug-and-play storefront — and the two features that usually drive the migration, Multi-Source Inventory and the B2B module, are exactly the two things most 3PL integrations aren't built to handle. A connector designed for a flat "one warehouse, one customer type" order feed breaks the moment either of those is actually in use.
 
-Most 3PLs are built for plug-and-play platforms like Shopify. They offer a basic integration and call it a day. That does not work for Adobe Commerce. Your store has custom logic, unique order routing rules, and integrations that took months to build. You need a fulfillment partner that speaks your language.
+## Multi-Source Inventory Changes What "Inventory Sync" Means
 
-DeliveryGroup is that partner. We work with enterprise brands that need custom integrations, complex order handling, and a team that actually picks up the phone. Our warehouse in Florence, KY sits 5 miles from Amazon's CVG Air Hub and DHL's CVG Super Hub. That location puts your inventory in the geographic center of US shipping networks.
+Adobe Commerce's Multi-Source Inventory (MSI) doesn't just track a stock number per SKU — it models actual physical **Sources** (individual warehouses or drop-ship points) and virtual **Stocks** (which sources serve which sales channels), then calculates **salable quantity** per source based on reservations, not just raw stock on hand. This matters for fulfillment in a specific way: if your 3PL's integration only reads a single "quantity" field per SKU instead of quantity-per-source, MSI's own logic and your warehouse's actual count will drift apart the first time you run more than one source.
 
-## Why Adobe Commerce Stores Need a Different Kind of 3PL
+DeliveryGroup's Adobe Commerce integration maps directly to MSI's source model — our warehouse registers as a Source in your MSI configuration, and salable quantity calculations respect Adobe Commerce's own reservation system rather than working around it. If you're running a single-source setup today but expect to add a second location later, this is worth confirming with any 3PL upfront, since retrofitting proper MSI support after the fact usually means re-testing the entire order flow.
 
-Adobe Commerce gives you full control over your store. You can customize everything. The checkout flow, the catalog structure, the pricing rules, the customer groups. That flexibility is why you chose the platform in the first place.
+## The B2B Module: Company Accounts, Shared Catalogs, and Requisition Lists
 
-But that flexibility creates complexity on the fulfillment side. Your orders are not simple. They might include custom product options. They might route differently based on customer type. They might require specific packaging or documentation for certain SKUs.
+If you're running Adobe Commerce's B2B module, wholesale orders carry structure that a consumer-order-only fulfillment integration doesn't know what to do with:
 
-A basic 3PL cannot handle this. They expect a flat order feed with a name, address, and list of items. When your store sends something more complex, things break. Orders get stuck. Items ship wrong. You end up spending hours on the phone fixing problems.
+- **Company accounts** with multiple buyers and role-based purchasing permissions — the order arrives tied to a company, not just an individual customer.
+- **Shared catalogs** with negotiated, company-specific pricing, which shouldn't appear on packing slips shipped to that buyer's own downstream customers.
+- **Requisition lists and Quick Order** forms that generate large multi-line orders in one submission, sometimes with case-pack or pallet-quantity line items mixed in with individual units.
+- **Purchase order payment terms**, where the order needs to ship before payment is fully reconciled — a workflow retail-only 3PLs frequently aren't set up to trust.
 
-DeliveryGroup takes a different approach. We build custom integrations that match how your store actually works. Not the other way around.
+DeliveryGroup fulfills B2B module orders with retail-price-free packing slips, case-pack and pallet shipping options, and PO-number matching on the shipment paperwork — the same wholesale-order handling that comes up whenever a store runs both a DTC catalog and a B2B storefront on one platform.
 
-## Custom API and EDI Integrations Built to Your Specs
+## REST, GraphQL, or Custom Middleware — We Connect to What You Actually Have
 
-Every Adobe Commerce store is different. Some use the default REST API. Some use GraphQL. Some have custom middleware that sits between the store and everything else. Some need EDI connections for B2B orders.
+Adobe Commerce exposes both a REST API and a GraphQL API, and larger deployments frequently sit behind custom middleware or an Order Management System (OMS) layer rather than talking to a 3PL directly. Our integration team does technical discovery before writing any connector: mapping whether you're on REST, GraphQL, a custom middleware layer, or Adobe Commerce's own OMS module, and whether you're on Adobe Commerce Cloud (managed hosting) or an on-premise deployment, since that affects webhook reliability and retry behavior. For B2B and wholesale partners requiring EDI, we support EDI 850 (purchase orders), EDI 856 (advance ship notices), and EDI 810 (invoices) alongside the API connection.
 
-We support all of these. Our technology team builds integrations that fit your existing setup. We do not force you to change how your store works. We adapt to it.
+Most integrations, including MSI and B2B-module setups, are built and tested in a staging environment within 2 to 4 weeks.
 
-Here is what that looks like in practice. We connect directly to your order management system. Orders flow into our warehouse management system in real time. We push back tracking numbers, inventory updates, and shipment confirmations through the same connection.
+## One Warehouse, Multiple Channels and Customer Types
 
-If you use EDI for wholesale or B2B orders, we handle that too. We support EDI 850 (purchase orders), EDI 856 (advance ship notices), and EDI 810 (invoices). Your retail partners get the documents they expect without you having to manage it.
+Adobe Commerce stores commonly run a DTC storefront, a wholesale B2B portal, and marketplace listings from one platform instance. DeliveryGroup fulfills all three from a single inventory pool, with routing rules based on channel, customer group, or order value — DTC orders ship fast in branded packaging, B2B orders ship on pallets with PO documentation, and marketplace orders meet each platform's own compliance requirements, all without you needing separate fulfillment partners per channel.
 
-The integration process starts with a technical discovery call. We map out your current systems, data flows, and requirements. Then we build and test the connection in a staging environment before going live. Most integrations are up and running within 2 to 4 weeks.
+## Kitting and Bundling with Component-Level Inventory
 
-## Complex Order Routing That Actually Works
+We store bundle and kit components as individual SKUs and assemble at time of order by default, which keeps MSI's salable-quantity math accurate — a component sold individually and the same component sold inside a bundle draw from the same underlying source stock. For high-volume, predictable bundles, we can pre-assemble based on your forecast instead, with dedicated warehouse workstations and a quality check before each bundle ships.
 
-Adobe Commerce stores often sell through multiple channels. You might have a DTC storefront, a wholesale portal, a marketplace presence, and a B2B catalog all running on the same platform. Each channel has different fulfillment requirements.
+## Migrating from In-House Fulfillment
 
-DTC orders need to ship fast in branded packaging. Wholesale orders need to ship on pallets with specific labeling. Marketplace orders need to meet platform compliance standards. B2B orders might need custom documentation or approval workflows.
+Adobe Commerce brands migrating off self-fulfillment usually have the most operational complexity to preserve accurately, since years of manual workarounds and special-case handling live in institutional knowledge, not in the platform config. The migration starts with a full audit of your current workflows and exceptions, followed by test orders run through the new integration and compared against your existing standards, then a phased rollout by product line or channel rather than a single cutover. Most Adobe Commerce migrations, including MSI and B2B-module configurations, take 4 to 8 weeks end to end.
 
-DeliveryGroup handles all of these from a single warehouse. We set up routing rules that match your business logic. When an order comes in, our system knows exactly how to process it based on the channel, customer type, order value, or any other criteria you define.
+## Shipping and the DHL Partnership
 
-This means you do not need multiple fulfillment partners for different channels. One warehouse. One inventory pool. One team to call when you have a question.
+DeliveryGroup's Florence, Kentucky warehouse sits 5 miles from DHL's CVG Super Hub, with ground coverage reaching roughly 80% of the US in 2–3 days. For Adobe Commerce brands — which tend to run higher average order values and heavier packages than platforms built for smaller sellers — that proximity plus multi-carrier rate-shopping (DHL, UPS, FedEx, USPS, and regional carriers) typically shows up as a 15–25% shipping cost reduction after migration, with international rates through DHL being the biggest single factor for brands with meaningful cross-border volume.
 
-## Multi-Warehouse Fulfillment for National Coverage
+## What to Actually Check Before Choosing a 3PL for Adobe Commerce
 
-Some Adobe Commerce brands need inventory in multiple locations. Maybe you have high demand on both coasts. Maybe you need a warehouse close to a specific supplier. Maybe you want to reduce shipping times for your biggest customer regions.
-
-Our Florence, KY location is ideal for central distribution. We can reach over 80% of the US population within 2 to 3 days by ground shipping. For many brands, that single location is enough.
-
-But if you need multi-warehouse fulfillment, we can set that up too. We coordinate inventory allocation across locations so you do not oversell. Orders route to the closest warehouse automatically. You get a single view of your inventory across all locations.
-
-This is especially useful for Adobe Commerce stores with complex inventory rules. Maybe certain products only ship from certain locations. Maybe you allocate inventory differently for wholesale versus DTC. We build those rules into our system so everything runs on autopilot.
-
-## Kitting, Bundling, and Custom Assembly
-
-Adobe Commerce makes it easy to sell bundles and kits on your storefront. But someone has to actually build those bundles in the warehouse. That is where many 3PLs fall short.
-
-DeliveryGroup handles kitting and bundling as part of our standard service. We can assemble product bundles on demand or pre-build them based on your forecasts. We handle subscription boxes, gift sets, promotional bundles, and custom configurations.
-
-Here is what sets us apart. We store your components as individual SKUs and assemble bundles at the time of order. This gives you maximum flexibility. You can change bundle contents without having to ship new pre-built inventory. You can run limited-time promotions without committing to large assembly runs.
-
-For more complex assemblies, we set up dedicated workstations in our warehouse. Your products get assembled, inspected, and packaged according to your specifications. Every bundle goes through a quality check before it ships.
-
-## Dedicated Account Manager Who Knows Your Business
-
-Enterprise brands do not want to submit support tickets and wait 48 hours for a response. You need someone who knows your account, understands your products, and can solve problems in real time.
-
-Every DeliveryGroup client gets a dedicated account manager. This is not a shared support rep handling 200 accounts. This is a person who knows your business inside and out. They join your planning calls. They flag potential issues before they become problems. They coordinate with our warehouse team on your behalf.
-
-Your account manager is available by phone, email, and Slack. When something comes up, you get a real person who can take action immediately. No ticket queues. No automated responses. No waiting.
-
-This matters most during peak seasons, product launches, and promotional events. Your account manager helps you plan for surges. They make sure we have the staff and space to handle your volume. They keep you updated throughout the process.
-
-## Migrating from In-House Fulfillment to a 3PL
-
-Many Adobe Commerce brands start by fulfilling orders themselves. It makes sense when you are small. You have control over everything. You can inspect every order before it ships.
-
-But at some point, fulfillment becomes a bottleneck. You are spending more time packing boxes than growing your business. Your warehouse lease is up and the rent doubled. You cannot find reliable staff during peak season. Shipping costs are eating your margins.
-
-That is when brands start looking at 3PL partners. The migration can feel overwhelming, especially with a complex Adobe Commerce setup. Here is how we make it smooth.
-
-First, we do a full audit of your current fulfillment process. We document every workflow, every special instruction, every exception. Nothing gets lost in the transition.
-
-Next, we set up your integration and run test orders. We process sample orders through our system and compare them against your standards. We tweak the process until it matches your expectations.
-
-Then we do a phased rollout. We might start with one product line or one sales channel. Once that is running smoothly, we bring over the rest. This approach reduces risk and gives you confidence in the process.
-
-Most Adobe Commerce migrations take 4 to 8 weeks from start to finish. That includes the integration build, inventory receiving, process documentation, and testing.
-
-## Shipping Costs and DHL Partnership
-
-Shipping costs are one of the biggest expenses for e-commerce brands. Adobe Commerce stores tend to have higher average order values, which means heavier packages and more expensive shipping.
-
-DeliveryGroup has a partnership with DHL that gives our clients access to discounted shipping rates. Our warehouse sits 5 miles from DHL's CVG Super Hub. That proximity means faster pickup times and lower costs.
-
-We also work with UPS, FedEx, USPS, and regional carriers. Our system automatically selects the best carrier for each order based on your rules. You can optimize for speed, cost, or a balance of both.
-
-For international orders, our DHL partnership is especially valuable. DHL is the world leader in international shipping. Our clients get access to competitive international rates that most brands cannot get on their own.
-
-We provide regular shipping cost analysis reports. These show you where your money is going and where there are opportunities to save. Many of our clients reduce their shipping costs by 15% to 25% after switching to DeliveryGroup.
-
-## What to Look for in a 3PL for Adobe Commerce
-
-Not every 3PL can handle an Adobe Commerce store. Here is what you should look for when evaluating partners.
-
-**Custom integration capability.** They should be able to connect to your store the way it is built. Not force you into a cookie-cutter plugin.
-
-**Experience with complex workflows.** They should have a track record with brands that have multi-channel, multi-customer-type operations.
-
-**Dedicated support.** You need a named contact who knows your account. Not a generic help desk.
-
-**Scalability.** They should be able to handle your peak volume without breaking. Ask about their capacity during Q4.
-
-**Central location.** A warehouse in the middle of the country cuts shipping times and costs for the majority of US orders.
-
-**Transparent pricing.** No hidden fees. No surprise surcharges. You should know exactly what you are paying before you sign.
-
-DeliveryGroup checks all of these boxes. We built our service for brands that need more than a basic 3PL.
+- **Does their integration read MSI's source and salable-quantity model, or just a flat quantity field?**
+- **Do they have a working B2B order path** (company accounts, PO matching, non-retail packing slips), or only consumer parcel fulfillment?
+- **Can they name their EDI support** (850/856/810) if you have retail or wholesale trading partners?
+- **Do you get a named account contact**, or a shared support queue?
+- **What's their proven capacity during Q4**, specifically for stores your size?
 
 ## Frequently Asked Questions
 
-### Does DeliveryGroup have a pre-built Adobe Commerce integration?
+### Does the integration actually support Multi-Source Inventory?
 
-We build custom integrations for each Adobe Commerce client. Every store is different, and a one-size-fits-all plugin does not work for enterprise setups. Our team builds a connection that matches your specific configuration, whether that is REST API, GraphQL, or custom middleware.
+Yes — our warehouse registers as a Source in your MSI configuration, and inventory sync respects Adobe Commerce's own reservation and salable-quantity logic rather than tracking a separate flat count.
 
-### How long does the integration take?
+### Can you fulfill B2B module orders alongside DTC orders?
 
-Most Adobe Commerce integrations are complete within 2 to 4 weeks. Complex setups with EDI requirements or multiple system connections may take slightly longer. We test everything in a staging environment before going live.
+Yes, from the same inventory pool. B2B orders get retail-price-free packing slips, PO-number matching, and case-pack or pallet shipping when needed; DTC orders ship parcel with branded packaging.
 
-### Can you handle both B2B and DTC orders from the same warehouse?
+### Do you connect via REST, GraphQL, or something else?
 
-Yes. We process B2B wholesale orders and DTC consumer orders from a single inventory pool. Orders route through different workflows based on the channel, so each order type gets the right packaging, labeling, and documentation.
+Whichever your store actually uses. We do technical discovery first to confirm your API, any custom middleware or OMS layer, and whether you're on Adobe Commerce Cloud or on-premise before building the connector.
 
-### What is your order accuracy rate?
+### What EDI documents do you support?
 
-We maintain a 99.5% or higher order accuracy rate. Every order goes through a barcode verification process at picking and packing. For brands with strict accuracy requirements, we can add additional quality checkpoints.
+EDI 850 (purchase orders), EDI 856 (advance ship notices), and EDI 810 (invoices) for wholesale and B2B trading partners.
 
-### How do you handle product bundles and kits?
+### How long does a typical migration take?
 
-We store components as individual SKUs and assemble bundles at the time of order. This gives you flexibility to change bundle contents without pre-building inventory. For high-volume bundles, we can also pre-assemble based on your forecasts.
-
-### What happens during peak season?
-
-We plan for peak season months in advance with each client. Your dedicated account manager coordinates staffing, space allocation, and carrier scheduling. We scale our team to handle the increased volume without sacrificing accuracy or speed.
+2 to 4 weeks for the integration itself; 4 to 8 weeks end to end for a full migration off in-house fulfillment, including MSI and B2B-module configurations.
 
 ### Can I visit the warehouse?
 
-Absolutely. We encourage clients to visit our Florence, KY facility. You can see your inventory, meet the team, and walk through the fulfillment process in person. We are located 5 miles from the Cincinnati/Northern Kentucky International Airport, making visits easy.
+Yes — the Florence, KY facility is 5 miles from Cincinnati/Northern Kentucky International Airport, and clients are welcome to see their inventory and walk the fulfillment process in person.
 
-### What are your shipping options?
+## The Bottom Line
 
-We work with DHL, UPS, FedEx, USPS, and regional carriers. Our DHL partnership provides discounted rates, especially for international shipments. Our system selects the optimal carrier for each order based on your preferences for speed and cost.
-
-## Ready to Upgrade Your Adobe Commerce Fulfillment?
-
-Your Adobe Commerce store deserves a fulfillment partner that matches its capabilities. DeliveryGroup gives you custom integrations, complex order handling, and a dedicated team that knows your business.
-
-Contact us today for a free fulfillment consultation. We will review your current setup, identify opportunities for improvement, and show you exactly how we can support your growth.
+Adobe Commerce's Multi-Source Inventory and B2B capabilities are what most brands migrate for — and they're exactly the two things that determine whether a 3PL integration actually works or just looks connected until the first multi-source or wholesale order exposes the gap. DeliveryGroup's Adobe Commerce integration is built around MSI's actual data model and the B2B module's order structure, not a generic flat order feed.
