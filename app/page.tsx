@@ -155,7 +155,7 @@ export default function Home() {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-[58px] font-semibold text-white leading-[1.1] tracking-[-0.03em] mb-6">
-                Delivery that defines<br />
+                Last-mile delivery that defines<br />
                 <span className="gold-text">your brand.</span>
               </h1>
               <p className="text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[520px] mb-10">

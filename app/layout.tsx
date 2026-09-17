@@ -17,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://deliverygroupinc.com"),
   title: {
-    default: "Delivery Group Inc. — Premium Last-Mile Delivery & Logistics",
+    default: "Delivery Group Inc. — Last-Mile Delivery & Logistics",
     template: "%s | Delivery Group Inc.",
   },
   description:
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://deliverygroupinc.com",
     siteName: "Delivery Group Inc.",
-    title: "Delivery Group Inc. — Premium Last-Mile Delivery & Logistics",
+    title: "Delivery Group Inc. — Last-Mile Delivery & Logistics",
     description: "Premium Amazon FBA prep, last-mile, and expedited shipping solutions nationwide.",
     images: [
       {
