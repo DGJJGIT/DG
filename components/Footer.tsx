@@ -118,19 +118,19 @@ export default function Footer() {
                 <span className="font-semibold text-[14px] tracking-tight text-white">Group</span>
               </div>
             </Link>
-            <p className="text-[13.5px] text-[#737373] leading-relaxed max-w-[260px] mb-6">
+            <p className="text-[16px] text-[#737373] leading-relaxed max-w-[260px] mb-6">
               Premium last-mile delivery and logistics solutions for businesses that demand precision, reliability, and a superior customer experience.
             </p>
             <div className="space-y-3 mb-6">
-              <a href="tel:+18003702105" className="flex items-center gap-2.5 text-[13px] text-[#737373] hover:text-white transition-colors">
+              <a href="tel:+18003702105" className="flex items-center gap-2.5 text-[15px] text-[#737373] hover:text-white transition-colors">
                 <Phone size={14} className="text-[#B8962E]" />
                 1-800-370-2105
               </a>
-              <a href="mailto:info@deliverygroupinc.com" className="flex items-center gap-2.5 text-[13px] text-[#737373] hover:text-white transition-colors">
+              <a href="mailto:info@deliverygroupinc.com" className="flex items-center gap-2.5 text-[15px] text-[#737373] hover:text-white transition-colors">
                 <Mail size={14} className="text-[#B8962E]" />
                 info@deliverygroupinc.com
               </a>
-              <div className="flex items-start gap-2.5 text-[13px] text-[#737373]">
+              <div className="flex items-start gap-2.5 text-[15px] text-[#737373]">
                 <MapPin size={14} className="text-[#B8962E] mt-0.5 shrink-0" />
                 <span>7587 Empire Dr<br />Florence, KY 41042</span>
               </div>
@@ -169,7 +169,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {clusterHubs.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-[13px] text-[#737373] hover:text-white transition-colors">
+                  <Link href={link.href} className="text-[15px] text-[#737373] hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -186,7 +186,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-[13px] text-[#737373] hover:text-white transition-colors">
+                    <Link href={link.href} className="text-[15px] text-[#737373] hover:text-white transition-colors">
                       {link.label}
                     </Link>
                   </li>

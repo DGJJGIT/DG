@@ -319,7 +319,7 @@ export default function ThreePLFulfillmentPage() {
                         <h3 className="text-[14.5px] font-semibold text-[#0D0D0D] mb-1">
                           {item.title}
                         </h3>
-                        <p className="text-[13.5px] text-[#737373] leading-relaxed">
+                        <p className="text-[16px] text-[#737373] leading-relaxed">
                           {item.body}
                         </p>
                       </div>
@@ -340,7 +340,7 @@ export default function ThreePLFulfillmentPage() {
               <h3 className="text-xl font-semibold text-white mb-4">
                 Central location = faster delivery to more customers
               </h3>
-              <p className="text-[14px] text-[#A3A3A3] leading-relaxed mb-6">
+              <p className="text-[16px] text-[#A3A3A3] leading-relaxed mb-6">
                 Coastal 3PLs are close to one coast but far from the other. Our
                 Northern Kentucky location puts us within fast ground reach of
                 the majority of the US population.
@@ -507,7 +507,7 @@ export default function ThreePLFulfillmentPage() {
                   <h2 className="text-2xl font-semibold text-[#0D0D0D] tracking-tight">
                     Pick & Pack / Order Fulfillment
                   </h2>
-                  <p className="text-[14px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
+                  <p className="text-[16px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
                     Our core fulfillment service. Per-order processing with flexible packaging options.
                   </p>
                 </div>
@@ -527,7 +527,7 @@ export default function ThreePLFulfillmentPage() {
                   <h2 className="text-2xl font-semibold text-[#0D0D0D] tracking-tight">
                     Storage
                   </h2>
-                  <p className="text-[14px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
+                  <p className="text-[16px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
                     Flexible storage options: racked pallets, bins for small items, and bulk floor space.
                   </p>
                 </div>
@@ -547,7 +547,7 @@ export default function ThreePLFulfillmentPage() {
                   <h2 className="text-2xl font-semibold text-[#0D0D0D] tracking-tight">
                     Receiving
                   </h2>
-                  <p className="text-[14px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
+                  <p className="text-[16px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
                     Pallet, carton, and unit-level receiving with inspection and put-away. Container unloading available.
                   </p>
                 </div>
@@ -567,7 +567,7 @@ export default function ThreePLFulfillmentPage() {
                   <h2 className="text-2xl font-semibold text-[#0D0D0D] tracking-tight">
                     Shipping & Postage
                   </h2>
-                  <p className="text-[14px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
+                  <p className="text-[16px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
                     Our DHL partnership is where the biggest savings happen. We negotiate volume discounts and pass competitive rates to you.
                   </p>
                 </div>
@@ -613,7 +613,7 @@ export default function ThreePLFulfillmentPage() {
                   <h2 className="text-2xl font-semibold text-[#0D0D0D] tracking-tight">
                     Returns Processing
                   </h2>
-                  <p className="text-[14px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
+                  <p className="text-[16px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
                     Full reverse logistics: receive, inspect, grade, restock, or dispose.
                   </p>
                 </div>
@@ -633,7 +633,7 @@ export default function ThreePLFulfillmentPage() {
                   <h2 className="text-2xl font-semibold text-[#0D0D0D] tracking-tight">
                     Value-Added Services
                   </h2>
-                  <p className="text-[14px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
+                  <p className="text-[16px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
                     Kitting, labeling, lot tracking, custom reporting, and more.
                   </p>
                 </div>
@@ -653,7 +653,7 @@ export default function ThreePLFulfillmentPage() {
                   <h2 className="text-2xl font-semibold text-[#0D0D0D] tracking-tight">
                     Account & Technology
                   </h2>
-                  <p className="text-[14px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
+                  <p className="text-[16px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
                     Platform access, account management, and onboarding.
                   </p>
                 </div>
@@ -680,7 +680,7 @@ export default function ThreePLFulfillmentPage() {
                   <h2 className="text-2xl font-semibold text-[#0D0D0D] tracking-tight">
                     Surcharges & Special Handling
                   </h2>
-                  <p className="text-[14px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
+                  <p className="text-[16px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
                     Additional fees for rush processing, oversized items, and specialty handling.
                   </p>
                 </div>

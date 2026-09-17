@@ -257,7 +257,7 @@ export default function Home() {
                   <h3 className="text-[15px] font-semibold text-[#0D0D0D] group-hover:text-white mb-2 transition-colors">
                     {s.title}
                   </h3>
-                  <p className="text-[13px] text-[#737373] group-hover:text-[#A3A3A3] leading-relaxed flex-1 transition-colors">
+                  <p className="text-[16px] text-[#737373] group-hover:text-[#A3A3A3] leading-relaxed flex-1 transition-colors">
                     {s.body}
                   </p>
                   <div className="mt-5 flex items-center gap-1 text-[12.5px] font-medium text-[#B8962E] group-hover:text-[#D4AF37]">
@@ -349,7 +349,7 @@ export default function Home() {
                     <Icon size={17} className="text-[#B8962E]" />
                   </div>
                   <h3 className="text-[15px] font-semibold text-[#0D0D0D] mb-2">{d.title}</h3>
-                  <p className="text-[13px] text-[#737373] leading-relaxed">{d.body}</p>
+                  <p className="text-[16px] text-[#737373] leading-relaxed">{d.body}</p>
                 </div>
               )
             })}

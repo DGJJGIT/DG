@@ -239,7 +239,7 @@ function CategorySection({
           <h2 className="text-2xl font-semibold text-[#0D0D0D] tracking-tight">
             {title}
           </h2>
-          <p className="text-[14px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
+          <p className="text-[16px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
             {description}
           </p>
         </div>
@@ -491,7 +491,7 @@ export default function AmazonFBAPrepPage() {
                         <h3 className="text-[14.5px] font-semibold text-[#0D0D0D] mb-1">
                           {item.title}
                         </h3>
-                        <p className="text-[13.5px] text-[#737373] leading-relaxed">
+                        <p className="text-[16px] text-[#737373] leading-relaxed">
                           {item.body}
                         </p>
                       </div>
@@ -512,7 +512,7 @@ export default function AmazonFBAPrepPage() {
               <h3 className="text-xl font-semibold text-white mb-4">
                 Why Northern Kentucky is the #1 FBA prep location in the country
               </h3>
-              <p className="text-[14px] text-[#A3A3A3] leading-relaxed mb-6">
+              <p className="text-[16px] text-[#A3A3A3] leading-relaxed mb-6">
                 We&apos;re 5 miles from Amazon&apos;s $1.5 billion Air Hub at CVG — the central
                 node of Amazon Air&apos;s entire US cargo network — surrounded by 20+ Amazon
                 fulfillment centers within 200 miles.
@@ -746,7 +746,7 @@ export default function AmazonFBAPrepPage() {
                   <h2 className="text-2xl font-semibold text-[#0D0D0D] tracking-tight">
                     Add-On Services
                   </h2>
-                  <p className="text-[14px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
+                  <p className="text-[16px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
                     Available across all categories. Many services included free with standard prep.
                   </p>
                 </div>

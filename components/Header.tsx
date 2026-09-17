@@ -139,7 +139,7 @@ export default function Header() {
             >
               <Link
                 href="/services"
-                className="flex items-center gap-1 px-3.5 py-2 text-[13.5px] font-medium text-[#3D3D3D] hover:text-[#0D0D0D] transition-colors rounded-md hover:bg-[#F7F6F3]"
+                className="flex items-center gap-1 px-3.5 py-2 text-[15px] font-medium text-[#3D3D3D] hover:text-[#0D0D0D] transition-colors rounded-md hover:bg-[#F7F6F3]"
               >
                 Services
                 <ChevronDown size={13} className={`text-[#A3A3A3] transition-transform duration-150 ${megaOpen ? "rotate-180" : ""}`} />
@@ -156,7 +156,7 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className="flex items-center gap-1 px-3.5 py-2 text-[13.5px] font-medium text-[#3D3D3D] hover:text-[#0D0D0D] transition-colors rounded-md hover:bg-[#F7F6F3]"
+                  className="flex items-center gap-1 px-3.5 py-2 text-[15px] font-medium text-[#3D3D3D] hover:text-[#0D0D0D] transition-colors rounded-md hover:bg-[#F7F6F3]"
                 >
                   {item.label}
                   {item.children && <ChevronDown size={13} className="text-[#A3A3A3]" />}
@@ -169,7 +169,7 @@ export default function Header() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="block px-4 py-2.5 text-[13px] text-[#3D3D3D] hover:text-[#0D0D0D] hover:bg-[#F7F6F3] transition-colors"
+                          className="block px-4 py-2.5 text-[15px] text-[#3D3D3D] hover:text-[#0D0D0D] hover:bg-[#F7F6F3] transition-colors"
                         >
                           {child.label}
                         </Link>
@@ -183,7 +183,7 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:+18003702105" className="text-[13.5px] font-medium text-[#3D3D3D] hover:text-[#0D0D0D] transition-colors">
+            <a href="tel:+18003702105" className="text-[15px] font-medium text-[#3D3D3D] hover:text-[#0D0D0D] transition-colors">
               1-800-370-2105
             </a>
             <Link
