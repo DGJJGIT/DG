@@ -55,6 +55,11 @@ const CLUSTER_IMAGES: { match: string[]; url: string; alt: string }[] = [
     url: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1400&q=80",
     alt: "Hazmat storage and logistics facility — compliant dangerous goods handling",
   },
+  {
+    match: ["supplement"],
+    url: "/images/warehouse/warehouse-supplement-inventory.jpg",
+    alt: "Delivery Group Inc. warehouse shelving with labeled supplement inventory",
+  },
 ]
 
 const DEFAULT_IMAGE = {
@@ -83,6 +88,11 @@ const CLUSTER_WHY_IMAGES: { match: string[]; url: string; alt: string }[] = [
     match: ["hazmat", "dangerous", "hazardous"],
     url: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=900&q=80",
     alt: "Compliant hazmat and dangerous goods warehouse facility",
+  },
+  {
+    match: ["supplement"],
+    url: "/images/warehouse/warehouse-pretium-pallets.jpg",
+    alt: "Palletized supplement inventory staged for shipment in Delivery Group Inc.'s warehouse",
   },
 ]
 

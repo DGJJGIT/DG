@@ -76,8 +76,8 @@ export default function AboutPage() {
               <div className="relative w-full h-[240px] rounded-lg overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&h=480&q=80"
-                  alt="Delivery Group Inc. warehouse and fulfillment operations"
+                  src="/images/warehouse/warehouse-exterior-florence-ky.jpg"
+                  alt="Delivery Group Inc. warehouse facility exterior in Florence, Kentucky"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -130,13 +130,13 @@ export default function AboutPage() {
       {/* Timeline */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-          <div className="max-w-[720px] mx-auto">
-            <div className="text-center mb-14">
-              <SectionLabel>Our Journey</SectionLabel>
-              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0D0D0D] mt-1">
-                Five years of rapid growth.
-              </h2>
-            </div>
+          <div className="text-center mb-14">
+            <SectionLabel>Our Journey</SectionLabel>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0D0D0D] mt-1">
+              Five years of rapid growth.
+            </h2>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-16 items-start max-w-[1100px] mx-auto">
             <div className="space-y-0">
               {timeline.map((t, i) => (
                 <div key={t.year} className="flex gap-6 pb-8 last:pb-0">
@@ -152,6 +152,24 @@ export default function AboutPage() {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="hidden lg:block relative overflow-hidden rounded-xl aspect-[3/4] sticky top-24">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/warehouse/warehouse-pretium-pallets.jpg"
+                alt="Delivery Group Inc. warehouse floor with palletized client inventory ready to ship"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="lg:hidden relative overflow-hidden rounded-xl aspect-[4/3]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/warehouse/warehouse-pretium-pallets.jpg"
+                alt="Delivery Group Inc. warehouse floor with palletized client inventory ready to ship"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
