@@ -279,7 +279,7 @@ export default function Q4FbaPrepPage() {
           </div>
 
           <div className="overflow-x-auto rounded-lg border border-[#E2DFD8] bg-white">
-            <table className="w-full text-[14px]">
+            <table className="w-full min-w-[540px] text-[14px]">
               <thead>
                 <tr className="border-b border-[#E2DFD8] bg-[#F7F6F3]">
                   <th className="text-left px-6 py-4 font-semibold text-[#0D0D0D]">Service</th>
