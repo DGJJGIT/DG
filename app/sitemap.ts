@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const servicePages: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/amazon-fba-prep`, lastModified, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/q4-fba-prep`, lastModified, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/3pl-fulfillment`, lastModified, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/services`, lastModified, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE_URL}/solutions`, lastModified, changeFrequency: "monthly", priority: 0.9 },
