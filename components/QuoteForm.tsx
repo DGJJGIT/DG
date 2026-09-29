@@ -73,7 +73,6 @@ export default function QuoteForm() {
       }
       setStatus("success")
       form.reset()
-      window.open(CALENDLY, "_blank", "noopener,noreferrer")
     } catch (err: unknown) {
       setErrorMsg(err instanceof Error ? err.message : "Something went wrong. Please try again.")
       setStatus("error")
