@@ -111,29 +111,40 @@ export async function POST(req: NextRequest) {
     // Attach a Note with all form fields — visible in the contact's Activity feed.
     // This is the complete record of everything the lead submitted.
     if (contactId) {
-      const noteBody = [
-        "=== Quote Form Submission ===",
-        "",
-        `Name:    ${firstName} ${lastName}`,
-        `Email:   ${email}`,
-        `Company: ${company}`,
-        `Phone:   ${phone}`,
-        "",
-        `Service Requested:  ${service}`,
-        `Monthly Volume:     ${volume}`,
-        `Delivery Geography: ${geography}`,
-        notes ? `\nAdditional Requirements:\n${notes}` : null,
-        "",
-        "=== Attribution ===",
-        `Source Page:       ${seoService ? `/${seoService}` : "/quote"}`,
-        utm_source   ? `UTM Source:        ${utm_source}`   : null,
-        utm_medium   ? `UTM Medium:        ${utm_medium}`   : null,
-        utm_campaign ? `UTM Campaign:      ${utm_campaign}` : null,
-        utm_term     ? `UTM Term:          ${utm_term}`     : null,
-        utm_content  ? `UTM Content:       ${utm_content}`  : null,
-        first_touch_landing  ? `First Touch URL:   ${first_touch_landing}`  : null,
-        first_touch_referrer ? `First Touch Ref:   ${first_touch_referrer}` : null,
-      ].filter((l) => l !== null).join("\n")
+      const attributionItems = [
+        `<li><strong>Source page:</strong> ${seoService ? `/${seoService}` : "/quote"}</li>`,
+        utm_source   ? `<li><strong>UTM source:</strong> ${utm_source}</li>`     : "",
+        utm_medium   ? `<li><strong>UTM medium:</strong> ${utm_medium}</li>`     : "",
+        utm_campaign ? `<li><strong>UTM campaign:</strong> ${utm_campaign}</li>` : "",
+        utm_term     ? `<li><strong>UTM term:</strong> ${utm_term}</li>`         : "",
+        utm_content  ? `<li><strong>UTM content:</strong> ${utm_content}</li>`   : "",
+        first_touch_landing  ? `<li><strong>First touch URL:</strong> ${first_touch_landing}</li>`  : "",
+        first_touch_referrer ? `<li><strong>First touch referrer:</strong> ${first_touch_referrer}</li>` : "",
+      ].filter(Boolean).join("\n")
+
+      const noteBody = `
+<h3>Quote Form Submission</h3>
+
+<p><strong>Contact</strong></p>
+<ul>
+  <li><strong>Name:</strong> ${firstName} ${lastName}</li>
+  <li><strong>Email:</strong> ${email}</li>
+  <li><strong>Company:</strong> ${company}</li>
+  <li><strong>Phone:</strong> ${phone}</li>
+</ul>
+
+<p><strong>Request</strong></p>
+<ul>
+  <li><strong>Service:</strong> ${service}</li>
+  <li><strong>Monthly volume:</strong> ${volume}</li>
+  <li><strong>Geography:</strong> ${geography}</li>
+  ${notes ? `<li><strong>Notes:</strong> ${notes}</li>` : ""}
+</ul>
+
+<p><strong>Attribution</strong></p>
+<ul>
+${attributionItems}
+</ul>`.trim()
 
       await fetch("https://api.hubapi.com/crm/v3/objects/notes", {
         method: "POST",
