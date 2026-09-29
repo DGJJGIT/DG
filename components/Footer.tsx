@@ -105,18 +105,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-5">
-              <div className="relative w-8 h-8">
-                <div className="absolute inset-0 bg-white rounded-md" />
-                <span className="absolute inset-0 flex items-center justify-center text-[13px] font-bold tracking-tight text-[#0D0D0D] leading-none">
-                  DG
-                </span>
-                <div className="absolute bottom-0 right-0 w-2 h-2 bg-[#B8962E] rounded-tl-sm rounded-br-[3px]" />
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="font-semibold text-[14px] tracking-tight text-white">Delivery</span>
-                <span className="font-semibold text-[14px] tracking-tight text-white">Group</span>
-              </div>
+            <Link href="/" className="flex items-center mb-5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/logo/logo-footer.png"
+                alt="Delivery Group"
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="text-[16px] text-[#737373] leading-relaxed max-w-[260px] mb-6">
               Premium last-mile delivery and logistics solutions for businesses that demand precision, reliability, and a superior customer experience.

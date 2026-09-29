@@ -116,18 +116,13 @@ export default function Header() {
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
         <div className="flex items-center justify-between h-16 md:h-[72px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0" onClick={() => { setMegaOpen(false); setMobileOpen(false) }}>
-            <div className="relative w-8 h-8">
-              <div className="absolute inset-0 bg-[#0D0D0D] rounded-md" />
-              <span className="absolute inset-0 flex items-center justify-center text-[13px] font-bold tracking-tight text-[#B8962E] leading-none">
-                DG
-              </span>
-              <div className="absolute bottom-0 right-0 w-2 h-2 bg-[#B8962E] rounded-tl-sm rounded-br-[3px]" />
-            </div>
-            <div className="flex flex-col leading-none">
-              <span className="font-semibold text-[14px] tracking-tight text-[#0D0D0D]">Delivery</span>
-              <span className="font-semibold text-[14px] tracking-tight text-[#0D0D0D]">Group</span>
-            </div>
+          <Link href="/" className="flex items-center shrink-0" onClick={() => { setMegaOpen(false); setMobileOpen(false) }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/logo/logo-header.png"
+              alt="Delivery Group"
+              className="h-9 md:h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Nav */}
