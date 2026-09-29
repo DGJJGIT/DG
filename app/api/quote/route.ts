@@ -35,32 +35,28 @@ export async function POST(req: NextRequest) {
       }
     }
 
+    // Use only standard HubSpot contact properties — custom properties silently drop if they haven't
+    // been created in the portal first (Settings → Properties → Create property).
+    // "service" maps to jobtitle so it's visible on the contact card immediately without any portal setup.
+    // To also store monthly_volume, delivery_geography, and UTM fields as searchable contact properties,
+    // create those custom properties in HubSpot and add them to this object.
+    const contactProperties = {
+      firstname: firstName,
+      lastname: lastName,
+      email,
+      company,
+      phone,
+      jobtitle: service || "",
+      hs_lead_status: "NEW",
+    }
+
     const res = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.HUBSPOT_API_KEY}`,
       },
-      body: JSON.stringify({
-        properties: {
-          firstname: firstName,
-          lastname: lastName,
-          email,
-          company,
-          phone,
-          hs_lead_status: "NEW",
-          seo_keyword: seoService || service || "",
-          landing_page: seoService ? `/${seoService}` : "",
-          monthly_volume: volume || "",
-          utm_source: utm_source || "",
-          utm_medium: utm_medium || "",
-          utm_campaign: utm_campaign || "",
-          utm_term: utm_term || "",
-          utm_content: utm_content || "",
-          first_touch_referrer: first_touch_referrer || "",
-          first_touch_landing: first_touch_landing || "",
-        },
-      }),
+      body: JSON.stringify({ properties: contactProperties }),
     })
 
     let contactId: string | null = null
@@ -68,6 +64,7 @@ export async function POST(req: NextRequest) {
     if (!res.ok) {
       const err = await res.json()
       if (err.category === "CONFLICT") {
+        // Contact with this email already exists — update it
         const existing = await fetch(
           `https://api.hubapi.com/crm/v3/objects/contacts/${encodeURIComponent(email)}?idProperty=email`,
           {
@@ -76,25 +73,7 @@ export async function POST(req: NextRequest) {
               "Content-Type": "application/json",
               Authorization: `Bearer ${process.env.HUBSPOT_API_KEY}`,
             },
-            body: JSON.stringify({
-              properties: {
-                firstname: firstName,
-                lastname: lastName,
-                company,
-                phone,
-                hs_lead_status: "NEW",
-                seo_keyword: seoService || service || "",
-                landing_page: seoService ? `/${seoService}` : "",
-                monthly_volume: volume || "",
-                utm_source: utm_source || "",
-                utm_medium: utm_medium || "",
-                utm_campaign: utm_campaign || "",
-                utm_term: utm_term || "",
-                utm_content: utm_content || "",
-                first_touch_referrer: first_touch_referrer || "",
-                first_touch_landing: first_touch_landing || "",
-              },
-            }),
+            body: JSON.stringify({ properties: contactProperties }),
           }
         )
         if (!existing.ok) throw new Error("Failed to update existing contact")
@@ -108,16 +87,31 @@ export async function POST(req: NextRequest) {
       contactId = contactData.id
     }
 
-    // Create a Note with the full quote details so they appear in Activities
+    // Attach a Note with all form fields — visible in the contact's Activity feed.
+    // This is the complete record of everything the lead submitted.
     if (contactId) {
-      const noteLines = [
-        `Service: ${service || "—"}`,
-        `Monthly Volume: ${volume || "—"}`,
+      const noteBody = [
+        "=== Quote Form Submission ===",
+        "",
+        `Name:    ${firstName} ${lastName}`,
+        `Email:   ${email}`,
+        company  ? `Company: ${company}`  : null,
+        phone    ? `Phone:   ${phone}`    : null,
+        "",
+        `Service Requested:  ${service || "—"}`,
+        `Monthly Volume:     ${volume || "—"}`,
         geography ? `Delivery Geography: ${geography}` : null,
-        notes ? `Additional Requirements: ${notes}` : null,
-        ``,
-        `Source page: ${seoService ? `/${seoService}` : "/quote"}`,
-        utm_source ? `UTM Source: ${utm_source}` : null,
+        notes     ? `\nAdditional Requirements:\n${notes}` : null,
+        "",
+        "=== Attribution ===",
+        `Source Page:       ${seoService ? `/${seoService}` : "/quote"}`,
+        utm_source   ? `UTM Source:        ${utm_source}`   : null,
+        utm_medium   ? `UTM Medium:        ${utm_medium}`   : null,
+        utm_campaign ? `UTM Campaign:      ${utm_campaign}` : null,
+        utm_term     ? `UTM Term:          ${utm_term}`     : null,
+        utm_content  ? `UTM Content:       ${utm_content}`  : null,
+        first_touch_landing  ? `First Touch URL:   ${first_touch_landing}`  : null,
+        first_touch_referrer ? `First Touch Ref:   ${first_touch_referrer}` : null,
       ].filter((l) => l !== null).join("\n")
 
       await fetch("https://api.hubapi.com/crm/v3/objects/notes", {
@@ -128,7 +122,7 @@ export async function POST(req: NextRequest) {
         },
         body: JSON.stringify({
           properties: {
-            hs_note_body: noteLines,
+            hs_note_body: noteBody,
             hs_timestamp: new Date().toISOString(),
           },
           associations: [
