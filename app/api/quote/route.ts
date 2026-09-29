@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
+import { backupLead } from "@/lib/leads-backup"
 
 export async function POST(req: NextRequest) {
   try {
@@ -14,8 +15,21 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: true })
     }
 
-    if (!email) {
-      return NextResponse.json({ error: "Email is required" }, { status: 400 })
+    // Server-side required field validation (mirrors client-side required attributes)
+    const missing = []
+    if (!firstName?.trim()) missing.push("First name")
+    if (!lastName?.trim())  missing.push("Last name")
+    if (!email?.trim())     missing.push("Email")
+    if (!company?.trim())   missing.push("Company")
+    if (!phone?.trim())     missing.push("Phone")
+    if (!service?.trim())   missing.push("Service")
+    if (!volume?.trim())    missing.push("Monthly volume")
+    if (!geography?.trim()) missing.push("Delivery geography")
+    if (missing.length > 0) {
+      return NextResponse.json(
+        { error: `Please fill in all required fields: ${missing.join(", ")}.` },
+        { status: 400 }
+      )
     }
 
     // Turnstile verification — only enforced when secret is configured
@@ -35,18 +49,25 @@ export async function POST(req: NextRequest) {
       }
     }
 
+    // ── Local backup — written before HubSpot so data is never lost ──────────
+    backupLead({
+      source: "quote",
+      firstName, lastName, email, company, phone,
+      service, volume, geography, notes,
+      seoService, utm_source, utm_medium, utm_campaign,
+      first_touch_landing, utm_content,
+    })
+
     // Use only standard HubSpot contact properties — custom properties silently drop if they haven't
     // been created in the portal first (Settings → Properties → Create property).
     // "service" maps to jobtitle so it's visible on the contact card immediately without any portal setup.
-    // To also store monthly_volume, delivery_geography, and UTM fields as searchable contact properties,
-    // create those custom properties in HubSpot and add them to this object.
     const contactProperties = {
       firstname: firstName,
       lastname: lastName,
       email,
       company,
       phone,
-      jobtitle: service || "",
+      jobtitle: service,
       hs_lead_status: "NEW",
     }
 
@@ -95,13 +116,13 @@ export async function POST(req: NextRequest) {
         "",
         `Name:    ${firstName} ${lastName}`,
         `Email:   ${email}`,
-        company  ? `Company: ${company}`  : null,
-        phone    ? `Phone:   ${phone}`    : null,
+        `Company: ${company}`,
+        `Phone:   ${phone}`,
         "",
-        `Service Requested:  ${service || "—"}`,
-        `Monthly Volume:     ${volume || "—"}`,
-        geography ? `Delivery Geography: ${geography}` : null,
-        notes     ? `\nAdditional Requirements:\n${notes}` : null,
+        `Service Requested:  ${service}`,
+        `Monthly Volume:     ${volume}`,
+        `Delivery Geography: ${geography}`,
+        notes ? `\nAdditional Requirements:\n${notes}` : null,
         "",
         "=== Attribution ===",
         `Source Page:       ${seoService ? `/${seoService}` : "/quote"}`,

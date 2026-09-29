@@ -135,8 +135,8 @@ export default function QuoteForm() {
           <input name="company" required type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" />
         </div>
         <div>
-          <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Phone</label>
-          <input name="phone" type="tel" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" />
+          <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Phone *</label>
+          <input name="phone" required type="tel" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" />
         </div>
       </div>
       <div>
@@ -180,8 +180,8 @@ export default function QuoteForm() {
         </select>
       </div>
       <div>
-        <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Delivery Geography</label>
-        <input name="geography" type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="e.g. Nationwide, Northeast US, Chicago metro..." />
+        <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Delivery Geography *</label>
+        <input name="geography" required type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="e.g. Nationwide, Northeast US, Chicago metro..." />
       </div>
       <div>
         <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Additional Requirements</label>
