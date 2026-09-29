@@ -21,6 +21,9 @@ export type LeadRecord = {
   utm_source?: string
   utm_medium?: string
   utm_campaign?: string
+  utm_term?: string
+  utm_content?: string
+  first_touch_referrer?: string
   first_touch_landing?: string
   savedAt: string
 }
