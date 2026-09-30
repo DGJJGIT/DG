@@ -24,9 +24,9 @@ The three things that matter most when choosing a prep center are **location**, 
 
 We are looking at three of the most well-known FBA prep providers:
 
-- **DeliveryGroup** — Florence, Kentucky (5 miles from Amazon's CVG Air Hub)
-- **MyFBAPrep** — Multiple locations across the US
-- **ZonPrep** — Multiple locations with over 400,000 square feet
+- **DeliveryGroup**, Florence, Kentucky (5 miles from Amazon's CVG Air Hub)
+- **MyFBAPrep**, Multiple locations across the US
+- **ZonPrep**, Multiple locations with over 400,000 square feet
 
 ## Location: Why It Is the Biggest Cost Lever
 

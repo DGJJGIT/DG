@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next"
+import { seoPages as seoPagesData } from "@/lib/seo/pages"
 
 const BASE_URL = "https://deliverygroupinc.com"
 
@@ -216,50 +217,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   /* ── New SEO cluster pages (hazmat, fulfillment, 3PL, courier, reverse logistics) ── */
-  const seoSlugs = [
-    "3pl",
-    "last-mile-delivery",
-    "expedited-freight",
-    "apparel-fulfillment",
-    "subscription-box-fulfillment",
-    "supplement-fulfillment",
-    "liquidation-pallets",
-    "ecommerce-returns-solution",
-    "reverse-logistics-company",
-    "courier-for-business",
-    "3pl-for-small-business",
-    "pick-and-pack-fulfillment",
-    "3pl-ecommerce-fulfillment",
-    "3pl-warehouse",
-    "3pl-warehousing",
-    "3pl-wms",
-    "courier-services",
-    "cross-docking",
-    "crowdfunding-fulfillment",
-    "dangerous-goods-warehouse",
-    "ecommerce-returns-management",
-    "etsy-fulfillment",
-    "fulfillment-center",
-    "fulfillment-warehouse",
-    "hazmat-3pl",
-    "hazmat-fulfillment",
-    "hazmat-logistics",
-    "hazmat-storage",
-    "hazmat-trucking-companies",
-    "hazmat-warehouse",
-    "kitting-services",
-    "medical-courier",
-    "on-demand-delivery",
-    "pick-and-pack-services",
-    "returns-management",
-    "returns-processing",
-    "reverse-logistics-services",
-    "rush-delivery",
-    "same-day-courier",
-    "small-business-fulfillment",
-    "tiktok-shop-fulfillment",
-    "white-glove-delivery",
-  ]
+  const seoSlugs = Object.keys(seoPagesData)
   const seoPages: MetadataRoute.Sitemap = seoSlugs.map((slug) => ({
     url: `${BASE_URL}/${slug}`,
     lastModified,

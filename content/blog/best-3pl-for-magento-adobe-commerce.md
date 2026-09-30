@@ -8,26 +8,26 @@ author: "Louis Bradley"
 image: "/blog/platform-guides.svg"
 ---
 
-Adobe Commerce (built on the Magento platform) is what brands move to once they've outgrown a plug-and-play storefront — and the two features that usually drive the migration, Multi-Source Inventory and the B2B module, are exactly the two things most 3PL integrations aren't built to handle. A connector designed for a flat "one warehouse, one customer type" order feed breaks the moment either of those is actually in use.
+Adobe Commerce (built on the Magento platform) is what brands move to once they've outgrown a plug-and-play storefront, and the two features that usually drive the migration, Multi-Source Inventory and the B2B module, are exactly the two things most 3PL integrations aren't built to handle. A connector designed for a flat "one warehouse, one customer type" order feed breaks the moment either of those is actually in use.
 
 ## Multi-Source Inventory Changes What "Inventory Sync" Means
 
-Adobe Commerce's Multi-Source Inventory (MSI) doesn't just track a stock number per SKU — it models actual physical **Sources** (individual warehouses or drop-ship points) and virtual **Stocks** (which sources serve which sales channels), then calculates **salable quantity** per source based on reservations, not just raw stock on hand. This matters for fulfillment in a specific way: if your 3PL's integration only reads a single "quantity" field per SKU instead of quantity-per-source, MSI's own logic and your warehouse's actual count will drift apart the first time you run more than one source.
+Adobe Commerce's Multi-Source Inventory (MSI) doesn't just track a stock number per SKU, it models actual physical **Sources** (individual warehouses or drop-ship points) and virtual **Stocks** (which sources serve which sales channels), then calculates **salable quantity** per source based on reservations, not just raw stock on hand. This matters for fulfillment in a specific way: if your 3PL's integration only reads a single "quantity" field per SKU instead of quantity-per-source, MSI's own logic and your warehouse's actual count will drift apart the first time you run more than one source.
 
-DeliveryGroup's Adobe Commerce integration maps directly to MSI's source model — our warehouse registers as a Source in your MSI configuration, and salable quantity calculations respect Adobe Commerce's own reservation system rather than working around it. If you're running a single-source setup today but expect to add a second location later, this is worth confirming with any 3PL upfront, since retrofitting proper MSI support after the fact usually means re-testing the entire order flow.
+DeliveryGroup's Adobe Commerce integration maps directly to MSI's source model, our warehouse registers as a Source in your MSI configuration, and salable quantity calculations respect Adobe Commerce's own reservation system rather than working around it. If you're running a single-source setup today but expect to add a second location later, this is worth confirming with any 3PL upfront, since retrofitting proper MSI support after the fact usually means re-testing the entire order flow.
 
 ## The B2B Module: Company Accounts, Shared Catalogs, and Requisition Lists
 
 If you're running Adobe Commerce's B2B module, wholesale orders carry structure that a consumer-order-only fulfillment integration doesn't know what to do with:
 
-- **Company accounts** with multiple buyers and role-based purchasing permissions — the order arrives tied to a company, not just an individual customer.
+- **Company accounts** with multiple buyers and role-based purchasing permissions, the order arrives tied to a company, not just an individual customer.
 - **Shared catalogs** with negotiated, company-specific pricing, which shouldn't appear on packing slips shipped to that buyer's own downstream customers.
 - **Requisition lists and Quick Order** forms that generate large multi-line orders in one submission, sometimes with case-pack or pallet-quantity line items mixed in with individual units.
-- **Purchase order payment terms**, where the order needs to ship before payment is fully reconciled — a workflow retail-only 3PLs frequently aren't set up to trust.
+- **Purchase order payment terms**, where the order needs to ship before payment is fully reconciled, a workflow retail-only 3PLs frequently aren't set up to trust.
 
-DeliveryGroup fulfills B2B module orders with retail-price-free packing slips, case-pack and pallet shipping options, and PO-number matching on the shipment paperwork — the same wholesale-order handling that comes up whenever a store runs both a DTC catalog and a B2B storefront on one platform.
+DeliveryGroup fulfills B2B module orders with retail-price-free packing slips, case-pack and pallet shipping options, and PO-number matching on the shipment paperwork, the same wholesale-order handling that comes up whenever a store runs both a DTC catalog and a B2B storefront on one platform.
 
-## REST, GraphQL, or Custom Middleware — We Connect to What You Actually Have
+## REST, GraphQL, or Custom Middleware, We Connect to What You Actually Have
 
 Adobe Commerce exposes both a REST API and a GraphQL API, and larger deployments frequently sit behind custom middleware or an Order Management System (OMS) layer rather than talking to a 3PL directly. Our integration team does technical discovery before writing any connector: mapping whether you're on REST, GraphQL, a custom middleware layer, or Adobe Commerce's own OMS module, and whether you're on Adobe Commerce Cloud (managed hosting) or an on-premise deployment, since that affects webhook reliability and retry behavior. For B2B and wholesale partners requiring EDI, we support EDI 850 (purchase orders), EDI 856 (advance ship notices), and EDI 810 (invoices) alongside the API connection.
 
@@ -35,11 +35,11 @@ Most integrations, including MSI and B2B-module setups, are built and tested in 
 
 ## One Warehouse, Multiple Channels and Customer Types
 
-Adobe Commerce stores commonly run a DTC storefront, a wholesale B2B portal, and marketplace listings from one platform instance. DeliveryGroup fulfills all three from a single inventory pool, with routing rules based on channel, customer group, or order value — DTC orders ship fast in branded packaging, B2B orders ship on pallets with PO documentation, and marketplace orders meet each platform's own compliance requirements, all without you needing separate fulfillment partners per channel.
+Adobe Commerce stores commonly run a DTC storefront, a wholesale B2B portal, and marketplace listings from one platform instance. DeliveryGroup fulfills all three from a single inventory pool, with routing rules based on channel, customer group, or order value, DTC orders ship fast in branded packaging, B2B orders ship on pallets with PO documentation, and marketplace orders meet each platform's own compliance requirements, all without you needing separate fulfillment partners per channel.
 
 ## Kitting and Bundling with Component-Level Inventory
 
-We store bundle and kit components as individual SKUs and assemble at time of order by default, which keeps MSI's salable-quantity math accurate — a component sold individually and the same component sold inside a bundle draw from the same underlying source stock. For high-volume, predictable bundles, we can pre-assemble based on your forecast instead, with dedicated warehouse workstations and a quality check before each bundle ships.
+We store bundle and kit components as individual SKUs and assemble at time of order by default, which keeps MSI's salable-quantity math accurate, a component sold individually and the same component sold inside a bundle draw from the same underlying source stock. For high-volume, predictable bundles, we can pre-assemble based on your forecast instead, with dedicated warehouse workstations and a quality check before each bundle ships.
 
 ## Migrating from In-House Fulfillment
 
@@ -47,7 +47,7 @@ Adobe Commerce brands migrating off self-fulfillment usually have the most opera
 
 ## Shipping and the DHL Partnership
 
-DeliveryGroup's Florence, Kentucky warehouse sits 5 miles from DHL's CVG Super Hub, with ground coverage reaching roughly 80% of the US in 2–3 days. For Adobe Commerce brands — which tend to run higher average order values and heavier packages than platforms built for smaller sellers — that proximity plus multi-carrier rate-shopping (DHL, UPS, FedEx, USPS, and regional carriers) typically shows up as a 15–25% shipping cost reduction after migration, with international rates through DHL being the biggest single factor for brands with meaningful cross-border volume.
+DeliveryGroup's Florence, Kentucky warehouse sits 5 miles from DHL's CVG Super Hub, with ground coverage reaching roughly 80% of the US in 2–3 days. For Adobe Commerce brands, which tend to run higher average order values and heavier packages than platforms built for smaller sellers, that proximity plus multi-carrier rate-shopping (DHL, UPS, FedEx, USPS, and regional carriers) typically shows up as a 15–25% shipping cost reduction after migration, with international rates through DHL being the biggest single factor for brands with meaningful cross-border volume.
 
 ## What to Actually Check Before Choosing a 3PL for Adobe Commerce
 
@@ -61,7 +61,7 @@ DeliveryGroup's Florence, Kentucky warehouse sits 5 miles from DHL's CVG Super H
 
 ### Does the integration actually support Multi-Source Inventory?
 
-Yes — our warehouse registers as a Source in your MSI configuration, and inventory sync respects Adobe Commerce's own reservation and salable-quantity logic rather than tracking a separate flat count.
+Yes, our warehouse registers as a Source in your MSI configuration, and inventory sync respects Adobe Commerce's own reservation and salable-quantity logic rather than tracking a separate flat count.
 
 ### Can you fulfill B2B module orders alongside DTC orders?
 
@@ -81,8 +81,8 @@ EDI 850 (purchase orders), EDI 856 (advance ship notices), and EDI 810 (invoices
 
 ### Can I visit the warehouse?
 
-Yes — the Florence, KY facility is 5 miles from Cincinnati/Northern Kentucky International Airport, and clients are welcome to see their inventory and walk the fulfillment process in person.
+Yes, the Florence, KY facility is 5 miles from Cincinnati/Northern Kentucky International Airport, and clients are welcome to see their inventory and walk the fulfillment process in person.
 
 ## The Bottom Line
 
-Adobe Commerce's Multi-Source Inventory and B2B capabilities are what most brands migrate for — and they're exactly the two things that determine whether a 3PL integration actually works or just looks connected until the first multi-source or wholesale order exposes the gap. DeliveryGroup's Adobe Commerce integration is built around MSI's actual data model and the B2B module's order structure, not a generic flat order feed.
+Adobe Commerce's Multi-Source Inventory and B2B capabilities are what most brands migrate for, and they're exactly the two things that determine whether a 3PL integration actually works or just looks connected until the first multi-source or wholesale order exposes the gap. DeliveryGroup's Adobe Commerce integration is built around MSI's actual data model and the B2B module's order structure, not a generic flat order feed.

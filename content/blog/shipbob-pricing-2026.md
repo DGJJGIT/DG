@@ -46,7 +46,7 @@ The cost structure creates real problems for three groups of sellers.
 
 **Midwest and East Coast brands.** ShipBob's distributed model means your inventory is split across many locations. For brands whose customers are concentrated in the Midwest or East Coast, a single strategically located fulfillment center often provides equivalent transit times at lower cost and with less operational complexity.
 
-## The DIY Alternative — and Why It Fails at Scale
+## The DIY Alternative, and Why It Fails at Scale
 
 Some sellers look at ShipBob's fees and decide to handle FBA prep in-house. On paper, it seems like a way to save money. In practice, the actual cost of DIY FBA prep runs $1.20 to $1.80 per unit when you account for labor, materials, packaging supplies, and the time spent learning and enforcing Amazon's constantly updated compliance requirements.
 
@@ -60,7 +60,7 @@ The pricing is straightforward:
 
 - **Standard FBA prep: $0.50 per unit.** That is the cost for FNSKU labeling, poly bagging, bundling, kitting, and shipping plan creation.
 - **Receiving: free at standard volumes.** Above the Tier 1 threshold, receiving is $0.10 per unit.
-- **Onboarding fee: $350 one-time** for accounts under 500 units per month. This is not a recurring monthly minimum — it is a single setup cost, and it is 63 percent less than ShipBob's entry fee.
+- **Onboarding fee: $350 one-time** for accounts under 500 units per month. This is not a recurring monthly minimum, it is a single setup cost, and it is 63 percent less than ShipBob's entry fee.
 
 At $0.50 per unit compared to a DIY cost of $1.20 to $1.80 per unit, the math is direct. A seller doing 500 units a month saves between $350 and $650 per month by using DeliveryGroup instead of managing prep internally.
 
@@ -78,4 +78,4 @@ DeliveryGroup makes sense if you are building or scaling your Amazon FBA busines
 
 If you are a Midwest or East Coast brand looking for a prep center that treats small and mid-size volume seriously, the comparison is worth making with real numbers.
 
-[Get a fulfillment quote from DeliveryGroup](/quote) — no commitment required, response within one business day.
+[Get a fulfillment quote from DeliveryGroup](/quote), no commitment required, response within one business day.

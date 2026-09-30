@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import Link from "next/link"
 import {
   ArrowRight, Package, MapPin, Clock, Shield, CheckCircle,
-  Truck, Tag, DollarSign, Warehouse, Zap, Star,
+  Truck, Tag, Warehouse, Zap, Star,
   ShoppingCart, Shirt, Footprints, Box, Plus
 } from "lucide-react"
 import SectionLabel from "@/components/ui/SectionLabel"
@@ -10,14 +10,14 @@ import Badge from "@/components/ui/Badge"
 import JsonLd from "@/components/JsonLd"
 
 export const metadata: Metadata = {
-  title: "Amazon FBA Prep — 30-50% Below Market",
+  title: "Amazon FBA Prep Service | Delivery Group Inc.",
   description:
-    "Professional FBA prep near Amazon's CVG Air Hub — 75,000 sq ft, 48-hr turnaround, 99.9% accuracy, rates from $0.20/unit.",
+    "Amazon FBA prep with 48-hour turnaround and same-day receiving in most cases. FNSKU labeling, polybagging, and bundling for FBA, FBM, and DTC sellers.",
   alternates: { canonical: "https://deliverygroupinc.com/amazon-fba-prep" },
   openGraph: {
     url: "https://deliverygroupinc.com/amazon-fba-prep",
-    title: "Amazon FBA Prep — 30-50% Below Market",
-    description: "Professional FBA prep near Amazon's CVG Air Hub — 75,000 sq ft, 48-hr turnaround, 99.9% accuracy, rates from $0.20/unit.",
+    title: "Amazon FBA Prep Service | Delivery Group Inc.",
+    description: "Amazon FBA prep with 48-hour turnaround and same-day receiving in most cases. FNSKU labeling, polybagging, and bundling for FBA, FBM, and DTC sellers.",
     images: [{ url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80", width: 1200, height: 630 }],
   },
 }
@@ -26,22 +26,22 @@ export const metadata: Metadata = {
 
 const standardPricing = {
   intro: [
-    { service: "FNSKU Labeling Only", dg: "$0.20/unit", market: "$0.50–$0.75" },
-    { service: "Standard Prep (FNSKU + poly bag + inspection)", dg: "$0.50/unit", market: "$0.80–$1.25" },
-    { service: "Bubble Wrap + FNSKU + Poly Bag", dg: "$0.75/unit", market: "$1.35–$2.00" },
-    { service: "Bundling (2-pack, incl. FNSKU + poly bag)", dg: "$1.00/bundle", market: "$1.50–$2.50" },
-    { service: "Each Additional Bundle Item", dg: "$0.20/item", market: "$0.40–$0.50" },
-    { service: "Receiving", dg: "FREE", market: "$0.10–$0.25/unit" },
-    { service: "Shipping Plan Creation", dg: "FREE", market: "$0–$5.00/plan" },
-    { service: "Storage (first 30 days)", dg: "FREE", market: "$0.50–$1.50/cu ft/mo" },
+    { service: "FNSKU Labeling Only", dg: "$0.20/unit" },
+    { service: "Standard Prep (FNSKU + poly bag + inspection)", dg: "$0.50/unit" },
+    { service: "Bubble Wrap + FNSKU + Poly Bag", dg: "$0.75/unit" },
+    { service: "Bundling (2-pack, incl. FNSKU + poly bag)", dg: "$1.00/bundle" },
+    { service: "Each Additional Bundle Item", dg: "$0.20/item" },
+    { service: "Receiving", dg: "FREE" },
+    { service: "Shipping Plan Creation", dg: "FREE" },
+    { service: "Storage (first 30 days)", dg: "FREE" },
   ],
   ongoing: [
-    { service: "Standard Prep All-In", dg: "$0.65/unit", market: "$0.80–$1.25" },
-    { service: "Bubble Wrap Prep", dg: "$0.95/unit", market: "$1.35–$2.00" },
-    { service: "Bundling (2-pack)", dg: "$1.25/bundle", market: "$1.50–$2.50" },
-    { service: "Additional Bundle Item", dg: "$0.25/item", market: "$0.40–$0.50" },
-    { service: "Receiving", dg: "$0.10/unit", market: "$0.15–$0.25" },
-    { service: "Storage", dg: "$0.40/cu ft/mo", market: "$0.50–$1.50" },
+    { service: "Standard Prep All-In", dg: "$0.65/unit" },
+    { service: "Bubble Wrap Prep", dg: "$0.95/unit" },
+    { service: "Bundling (2-pack)", dg: "$1.25/bundle" },
+    { service: "Additional Bundle Item", dg: "$0.25/item" },
+    { service: "Receiving", dg: "$0.10/unit" },
+    { service: "Storage", dg: "$0.40/cu ft/mo" },
   ],
   volume: [
     { service: "Standard Prep All-In", dg: "$0.45/unit" },
@@ -54,20 +54,20 @@ const standardPricing = {
 
 const apparelPricing = {
   intro: [
-    { service: "Apparel Prep (FNSKU + polybag + suffocation label + tag removal + verification)", dg: "$0.70/unit", market: "$1.00–$1.75" },
-    { service: "Apparel Bundling (multi-pack sets)", dg: "$1.25/bundle", market: "$2.00–$3.00" },
-    { service: "Each Additional Item in Bundle", dg: "$0.30/item", market: "$0.50–$0.60" },
-    { service: "Hang Tag / Swing Tag Removal", dg: "Included", market: "$0.10–$0.25" },
-    { service: "Polybag Resize / Trim & Tape", dg: "Included", market: "$0.10–$0.20" },
-    { service: "Receiving", dg: "FREE", market: "$0.10–$0.25/unit" },
-    { service: "Storage (first 30 days)", dg: "FREE", market: "$0.50–$1.50/cu ft/mo" },
+    { service: "Apparel Prep (FNSKU + polybag + suffocation label + tag removal + verification)", dg: "$0.70/unit" },
+    { service: "Apparel Bundling (multi-pack sets)", dg: "$1.25/bundle" },
+    { service: "Each Additional Item in Bundle", dg: "$0.30/item" },
+    { service: "Hang Tag / Swing Tag Removal", dg: "Included" },
+    { service: "Polybag Resize / Trim & Tape", dg: "Included" },
+    { service: "Receiving", dg: "FREE" },
+    { service: "Storage (first 30 days)", dg: "FREE" },
   ],
   ongoing: [
-    { service: "Apparel Prep All-In", dg: "$0.90/unit", market: "$1.00–$1.75" },
-    { service: "Apparel Bundling", dg: "$1.50/bundle", market: "$2.00–$3.00" },
-    { service: "Additional Bundle Item", dg: "$0.35/item", market: "$0.50–$0.60" },
-    { service: "Receiving", dg: "$0.10/unit", market: "$0.15–$0.25" },
-    { service: "Storage", dg: "$0.40/cu ft/mo", market: "$0.50–$1.50" },
+    { service: "Apparel Prep All-In", dg: "$0.90/unit" },
+    { service: "Apparel Bundling", dg: "$1.50/bundle" },
+    { service: "Additional Bundle Item", dg: "$0.35/item" },
+    { service: "Receiving", dg: "$0.10/unit" },
+    { service: "Storage", dg: "$0.40/cu ft/mo" },
   ],
   volume: [
     { service: "Apparel Prep All-In", dg: "$0.65/unit" },
@@ -79,23 +79,23 @@ const apparelPricing = {
 
 const shoePricing = {
   intro: [
-    { service: "Shoe Prep — Boxed (FNSKU + polybag over box + tag removal + verification)", dg: "$1.00/unit", market: "$1.75–$2.50" },
-    { service: "Shoe Prep — Unboxed (slippers, sandals, Crocs)", dg: "$0.75/unit", market: "$1.25–$1.75" },
-    { service: "Shoe Bundling (pair sets, multi-pack)", dg: "$1.50/bundle", market: "$2.50–$3.50" },
-    { service: "Box Replacement (if damaged)", dg: "$0.50 + box cost", market: "$1.00+" },
-    { service: "Receiving", dg: "FREE", market: "$0.10–$0.25/unit" },
-    { service: "Storage (first 30 days)", dg: "FREE", market: "$0.50–$1.50/cu ft/mo" },
+    { service: "Shoe Prep, Boxed (FNSKU + polybag over box + tag removal + verification)", dg: "$1.00/unit" },
+    { service: "Shoe Prep, Unboxed (slippers, sandals, Crocs)", dg: "$0.75/unit" },
+    { service: "Shoe Bundling (pair sets, multi-pack)", dg: "$1.50/bundle" },
+    { service: "Box Replacement (if damaged)", dg: "$0.50 + box cost" },
+    { service: "Receiving", dg: "FREE" },
+    { service: "Storage (first 30 days)", dg: "FREE" },
   ],
   ongoing: [
-    { service: "Shoe Prep — Boxed All-In", dg: "$1.25/unit", market: "$1.75–$2.50" },
-    { service: "Shoe Prep — Unboxed All-In", dg: "$0.95/unit", market: "$1.25–$1.75" },
-    { service: "Shoe Bundling", dg: "$1.75/bundle", market: "$2.50–$3.50" },
-    { service: "Receiving", dg: "$0.10/unit", market: "$0.15–$0.25" },
-    { service: "Storage", dg: "$0.40/cu ft/mo", market: "$0.50–$1.50" },
+    { service: "Shoe Prep, Boxed All-In", dg: "$1.25/unit" },
+    { service: "Shoe Prep, Unboxed All-In", dg: "$0.95/unit" },
+    { service: "Shoe Bundling", dg: "$1.75/bundle" },
+    { service: "Receiving", dg: "$0.10/unit" },
+    { service: "Storage", dg: "$0.40/cu ft/mo" },
   ],
   volume: [
-    { service: "Shoe Prep — Boxed All-In", dg: "$0.95/unit" },
-    { service: "Shoe Prep — Unboxed All-In", dg: "$0.70/unit" },
+    { service: "Shoe Prep, Boxed All-In", dg: "$0.95/unit" },
+    { service: "Shoe Prep, Unboxed All-In", dg: "$0.70/unit" },
     { service: "Shoe Bundling All-In", dg: "$1.35/bundle" },
     { service: "Receiving", dg: "FREE" },
     { service: "Storage (first 30 days)", dg: "FREE" },
@@ -104,22 +104,22 @@ const shoePricing = {
 
 const bulkyPricing = {
   intro: [
-    { service: "Large Bulky (18\"–60\", under 50 lbs) Prep All-In", dg: "$2.50/unit", market: "$3.50–$5.00" },
-    { service: "Extra Large (60\"+ OR 50+ lbs) Prep All-In", dg: "$4.00/unit", market: "$5.00–$8.00+" },
-    { service: "Rug Prep (roll/fold + polybag/shrink + FNSKU + dim verify)", dg: "$3.00/unit", market: "$4.00–$6.00" },
-    { service: "Bubble Wrap (bulky/fragile)", dg: "+$1.50/unit", market: "+$2.00–$3.50" },
-    { service: "Palletizing (incl. pallet, packing, shrink wrap)", dg: "$30/pallet", market: "$40–$50/pallet" },
-    { service: "Receiving", dg: "FREE", market: "$0.25–$0.50/unit" },
-    { service: "Storage (first 30 days)", dg: "FREE", market: "$0.75–$2.00/cu ft/mo" },
+    { service: "Large Bulky (18\" to 60\", under 50 lbs) Prep All-In", dg: "$2.50/unit" },
+    { service: "Extra Large (60\"+ OR 50+ lbs) Prep All-In", dg: "$4.00/unit" },
+    { service: "Rug Prep (roll/fold + polybag/shrink + FNSKU + dim verify)", dg: "$3.00/unit" },
+    { service: "Bubble Wrap (bulky/fragile)", dg: "+$1.50/unit" },
+    { service: "Palletizing (incl. pallet, packing, shrink wrap)", dg: "$30/pallet" },
+    { service: "Receiving", dg: "FREE" },
+    { service: "Storage (first 30 days)", dg: "FREE" },
   ],
   ongoing: [
-    { service: "Large Bulky Prep", dg: "$3.00/unit", market: "$3.50–$5.00" },
-    { service: "Extra Large Prep", dg: "$5.00/unit", market: "$5.00–$8.00+" },
-    { service: "Rug Prep All-In", dg: "$3.50/unit", market: "$4.00–$6.00" },
-    { service: "Bubble Wrap (bulky)", dg: "+$1.75/unit", market: "+$2.00–$3.50" },
-    { service: "Palletizing", dg: "$35/pallet", market: "$40–$50/pallet" },
-    { service: "Receiving", dg: "$0.20/unit", market: "$0.25–$0.50" },
-    { service: "Storage", dg: "$0.60/cu ft/mo", market: "$0.75–$2.00" },
+    { service: "Large Bulky Prep", dg: "$3.00/unit" },
+    { service: "Extra Large Prep", dg: "$5.00/unit" },
+    { service: "Rug Prep All-In", dg: "$3.50/unit" },
+    { service: "Bubble Wrap (bulky)", dg: "+$1.75/unit" },
+    { service: "Palletizing", dg: "$35/pallet" },
+    { service: "Receiving", dg: "$0.20/unit" },
+    { service: "Storage", dg: "$0.60/cu ft/mo" },
   ],
   volume: [
     { service: "Large Bulky Prep", dg: "$2.25/unit" },
@@ -133,26 +133,24 @@ const bulkyPricing = {
 }
 
 const addOns = [
-  { service: "Expiration Date Labeling", dg: "$0.10/unit", market: "$0.15–$0.25" },
-  { service: "Suffocation Warning Label", dg: "Included in prep", market: "$0.05–$0.10" },
-  { service: "\"Sold as Set\" / \"This is a Set\" Label", dg: "Included in bundles", market: "$0.05–$0.15" },
-  { service: "Photo Documentation (damaged/questionable units)", dg: "FREE", market: "$0.25–$0.50/photo" },
-  { service: "Returns Processing & Inspection", dg: "$1.00/unit", market: "$1.50–$3.00" },
-  { service: "Returns Re-Prep (re-bag, re-label, restock)", dg: "$0.75/unit", market: "$1.25–$2.00" },
-  { service: "Custom Request / Special Handling", dg: "$30/hour", market: "$40–$50/hour" },
-  { service: "Additional Storage (standard, 30+ days)", dg: "$0.40/cu ft/mo", market: "$0.50–$1.50" },
-  { service: "Additional Storage (bulky, 30+ days)", dg: "$0.60/cu ft/mo", market: "$0.75–$2.00" },
-  { service: "Long-Term Storage (90+ days)", dg: "$0.75/cu ft/mo", market: "$1.00–$2.50" },
+  { service: "Expiration Date Labeling", dg: "$0.10/unit" },
+  { service: "Suffocation Warning Label", dg: "Included in prep" },
+  { service: "\"Sold as Set\" / \"This is a Set\" Label", dg: "Included in bundles" },
+  { service: "Photo Documentation (damaged/questionable units)", dg: "FREE" },
+  { service: "Returns Processing & Inspection", dg: "$1.00/unit" },
+  { service: "Returns Re-Prep (re-bag, re-label, restock)", dg: "$0.75/unit" },
+  { service: "Custom Request / Special Handling", dg: "$30/hour" },
+  { service: "Additional Storage (standard, 30+ days)", dg: "$0.40/cu ft/mo" },
+  { service: "Additional Storage (bulky, 30+ days)", dg: "$0.60/cu ft/mo" },
+  { service: "Long-Term Storage (90+ days)", dg: "$0.75/cu ft/mo" },
 ]
 
 /* ── Pricing Table Component ── */
 
 function PricingTable({
   rows,
-  showMarket = true,
 }: {
-  rows: { service: string; dg: string; market?: string }[]
-  showMarket?: boolean
+  rows: { service: string; dg: string }[]
 }) {
   return (
     <div className="overflow-x-auto">
@@ -165,11 +163,6 @@ function PricingTable({
             <th className="py-3 px-4 text-[12px] font-semibold uppercase tracking-wide text-[#B8962E] text-right whitespace-nowrap">
               DeliveryGroup
             </th>
-            {showMarket && (
-              <th className="py-3 pl-4 text-[12px] font-semibold uppercase tracking-wide text-[#A3A3A3] text-right whitespace-nowrap">
-                Market Avg
-              </th>
-            )}
           </tr>
         </thead>
         <tbody>
@@ -192,11 +185,6 @@ function PricingTable({
                     {row.dg}
                   </span>
                 </td>
-                {showMarket && (
-                  <td className="py-3.5 pl-4 text-[13px] text-[#A3A3A3] text-right whitespace-nowrap line-through decoration-[#C8C4BB]">
-                    {row.market || "—"}
-                  </td>
-                )}
               </tr>
             )
           })}
@@ -223,9 +211,9 @@ function CategorySection({
   icon: React.ComponentType<{ size?: number; className?: string }>
   title: string
   description: string
-  intro: { service: string; dg: string; market?: string }[]
-  ongoing: { service: string; dg: string; market?: string }[]
-  volume: { service: string; dg: string; market?: string }[]
+  intro: { service: string; dg: string }[]
+  ongoing: { service: string; dg: string }[]
+  volume: { service: string; dg: string }[]
   introLabel?: string
   volumeLabel?: string
 }) {
@@ -251,7 +239,7 @@ function CategorySection({
           <div className="absolute top-0 left-0 right-0 h-1 bg-[#B8962E]" />
           <Badge variant="gold">Most Popular</Badge>
           <h3 className="text-[15px] font-semibold text-[#0D0D0D] mt-3 mb-1">
-            Tier 1 — Intro
+Tier 1 &middot; Intro
           </h3>
           <p className="text-[12px] text-[#737373] mb-5">
             {introLabel || "First 90 days or first 5,000 units"}
@@ -263,7 +251,7 @@ function CategorySection({
         <div className="bg-white rounded-xl border border-[#E2DFD8] p-6">
           <Badge>Standard</Badge>
           <h3 className="text-[15px] font-semibold text-[#0D0D0D] mt-3 mb-1">
-            Tier 2 — Ongoing
+Tier 2 &middot; Ongoing
           </h3>
           <p className="text-[12px] text-[#737373] mb-5">
             500+ units/month
@@ -277,7 +265,7 @@ function CategorySection({
             Best Value
           </span>
           <h3 className="text-[15px] font-semibold text-white mt-3 mb-1">
-            Tier 3 — Volume
+Tier 3 &middot; Volume
           </h3>
           <p className="text-[12px] text-[#737373] mb-5">
             {volumeLabel || "5,000+ units/month"}
@@ -343,7 +331,7 @@ export default function AmazonFBAPrepPage() {
           },
           areaServed: "US",
           description:
-            "Professional Amazon FBA prep services from our 75,000 sq ft Northern Kentucky facility — 5 miles from Amazon's CVG Air Hub. Under 48-hour turnaround, 99.9% accuracy, rates starting at $0.20/unit.",
+            "Amazon FBA prep with 48-hour turnaround and same-day receiving in most cases, from a Northern Kentucky prep center near the Amazon CVG air hub. FNSKU labeling, polybagging with suffocation warnings, bundling, kitting, reboxing, expiration labeling, and protective packaging.",
         }}
       />
       {/* ── Hero ── */}
@@ -374,16 +362,17 @@ export default function AmazonFBAPrepPage() {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-[56px] font-semibold text-white leading-[1.1] tracking-[-0.03em] mb-6">
-                The fastest, most{" "}
+                Fast, compliant{" "}
                 <br />
-                cost-effective FBA prep{" "}
+                Amazon FBA prep{" "}
                 <br />
-                <span className="gold-text">in the country.</span>
+                <span className="gold-text">near the CVG hub.</span>
               </h1>
               <p className="text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[540px] mb-10">
-                75,000 sq ft facility, 5 miles from Amazon&apos;s $1.5B CVG Air Hub.
-                Under 48-hour turnaround. 99.9% accuracy. Rates 30–50% below
-                market. No minimums to start.
+                Amazon FBA prep with a 48-hour turnaround and same-day receiving
+                in most cases, from a Northern Kentucky facility near the Amazon
+                CVG air hub. FNSKU labeling, polybagging, and bundling for FBA,
+                FBM, and DTC sellers.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
@@ -404,7 +393,7 @@ export default function AmazonFBAPrepPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1400&q=80"
-                alt="Amazon FBA prep facility — Northern Kentucky warehouse 5 miles from CVG Air Hub"
+                alt="Amazon FBA prep facility, Northern Kentucky warehouse near the CVG air hub"
                 className="w-full h-full object-cover"
                 loading="eager"
               />
@@ -419,7 +408,7 @@ export default function AmazonFBAPrepPage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=80"
-              alt="Amazon FBA prep facility — Northern Kentucky warehouse 5 miles from CVG Air Hub"
+              alt="Amazon FBA prep facility, Northern Kentucky warehouse near the CVG air hub"
               className="w-full h-full object-cover"
               loading="eager"
             />
@@ -431,11 +420,11 @@ export default function AmazonFBAPrepPage() {
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-8">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-0 md:divide-x md:divide-[#1f1f1f]">
               {[
-                { value: "75,000", label: "Sq Ft Facility" },
-                { value: "<48hr", label: "Turnaround Time" },
-                { value: "99.9%", label: "Accuracy Rate" },
-                { value: "5 mi", label: "From Amazon CVG Hub" },
-                { value: "30–50%", label: "Below Market Rates" },
+                { value: "48hr", label: "FBA Prep Turnaround" },
+                { value: "Same-day", label: "Receiving (Most Cases)" },
+                { value: "FNSKU", label: "Labeling & Polybagging" },
+                { value: "FBA/FBM/DTC", label: "Fulfillment In One Place" },
+                { value: "CVG", label: "Near the Amazon Air Hub" },
               ].map((s) => (
                 <div key={s.label} className="md:px-8 first:pl-0 last:pr-0">
                   <div className="text-2xl md:text-3xl font-semibold text-white tracking-tight">
@@ -451,34 +440,34 @@ export default function AmazonFBAPrepPage() {
         </div>
       </section>
 
-      {/* ── Why Amazon Changed Everything ── */}
+      {/* ── What is FBA Prep + Requirements ── */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <SectionLabel>Why This Matters Now</SectionLabel>
+              <SectionLabel>What Is Amazon FBA Prep</SectionLabel>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0D0D0D] mb-6">
-                Amazon eliminated its own FBA prep services. The stakes have never been higher.
+                Getting every unit compliant and shelf-ready for FBA.
               </h2>
               <p className="text-[15px] text-[#737373] leading-relaxed mb-8">
-                As of January 1, 2026, Amazon discontinued all FBA prep and labeling services in the US. Every unit must now arrive at Amazon&apos;s fulfillment centers 100% compliant and shelf-ready. The consequences of non-compliance are severe.
+                Amazon FBA prep is the set of steps that make a product compliant and shelf-ready before it enters Fulfillment by Amazon: applying the FNSKU barcode, polybagging with suffocation warnings where required, bundling multi-packs, and inspecting each unit. Amazon inspects inbound shipments and can charge fees or block receipt when units arrive non-compliant, so many sellers hand prep to a third-party prep center. Delivery Group Inc. runs FBA prep alongside FBM and direct-to-consumer fulfillment, so one partner covers receiving through outbound shipping.
               </p>
               <div className="space-y-5">
                 {[
                   {
-                    icon: Shield,
-                    title: "Defect Fees Skyrocketed 80x",
-                    body: "Inbound defect fees jumped from $0.02–$0.07/unit to $0.32–$1.74 for standard items and up to $5.72 for bulky items. A single labeling mistake on 1,000 units now costs up to $1,740.",
+                    icon: Tag,
+                    title: "FNSKU Labeling",
+                    body: "A scannable FNSKU barcode on every unit. We apply and verify labels per unit so shipments are ready for Amazon's inbound scan.",
                   },
                   {
-                    icon: DollarSign,
-                    title: "Zero Reimbursement Policy",
-                    body: "Improperly prepped inventory now receives zero reimbursement from Amazon if lost or damaged. The safety net sellers relied on is gone.",
+                    icon: Shield,
+                    title: "Polybagging & Set Labeling",
+                    body: "Polybagging with a suffocation warning on bags over the size threshold, and sold as set labeling on multi-packs. Bagged and labeled to spec.",
                   },
                   {
                     icon: CheckCircle,
-                    title: "100% Compliance Required",
-                    body: "Every unit through AWD, AGL, SEND, or direct to FBA must be fully compliant. FNSKU labels, poly bags, suffocation warnings, set labels — everything.",
+                    title: "Inspection & Protective Packaging",
+                    body: "We inspect each unit and secure fragile or bulky items with bubble wrap and reboxing, so problems get caught on our dock, not at Amazon's.",
                   },
                 ].map((item) => {
                   const Icon = item.icon
@@ -501,21 +490,19 @@ export default function AmazonFBAPrepPage() {
               </div>
             </div>
 
-            {/* Cost Comparison Card */}
+            {/* Requirements Card */}
             <div className="bg-[#0D0D0D] rounded-xl p-8 text-white sticky top-24">
               <div className="flex items-center gap-2 mb-6">
                 <MapPin size={16} className="text-[#B8962E]" />
                 <span className="text-[13px] font-semibold text-[#B8962E]">
-                  The CVG Advantage
+                  Amazon FBA Prep Requirements
                 </span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">
-                Why Northern Kentucky is the #1 FBA prep location in the country
+                What Amazon expects, and how we handle it
               </h3>
               <p className="text-[16px] text-[#A3A3A3] leading-relaxed mb-6">
-                We&apos;re 5 miles from Amazon&apos;s $1.5 billion Air Hub at CVG — the central
-                node of Amazon Air&apos;s entire US cargo network — surrounded by 20+ Amazon
-                fulfillment centers within 200 miles.
+                Amazon requires that every inbound unit arrive compliant and shelf-ready, and it inspects shipments on receipt. We check each unit against these requirements before it ships.
               </p>
 
               <div className="overflow-x-auto mb-6">
@@ -523,36 +510,30 @@ export default function AmazonFBAPrepPage() {
                   <thead>
                     <tr className="border-b border-[#2a2a2a]">
                       <th className="py-2.5 pr-3 text-[11px] font-semibold uppercase tracking-wide text-[#737373]">
-                        Factor
+                        Requirement
                       </th>
-                      <th className="py-2.5 px-3 text-[11px] font-semibold uppercase tracking-wide text-[#737373] text-center">
-                        OR/DE
-                      </th>
-                      <th className="py-2.5 pl-3 text-[11px] font-semibold uppercase tracking-wide text-[#B8962E] text-center">
-                        KY (Us)
+                      <th className="py-2.5 pl-3 text-[11px] font-semibold uppercase tracking-wide text-[#B8962E]">
+                        How we handle it
                       </th>
                     </tr>
                   </thead>
                   <tbody className="text-[12.5px]">
                     {[
-                      ["Nearest Amazon FCs", "2–4", "20+"],
-                      ["Air Hub Distance", "600–2,300 mi", "5 mi"],
-                      ["Freight to FC (standard)", "$0.15–$0.60", "$0.05–$0.15"],
-                      ["Freight to FC (bulky)", "$0.50–$3.00", "$0.15–$0.40"],
-                      ["Transit to FC", "1–7 days", "Same day–1 day"],
-                    ].map(([factor, nomad, ky]) => (
+                      ["FNSKU labeling", "Applied and verified per unit"],
+                      ["Polybagging", "Bagged and labeled to spec"],
+                      ["Bundling", "Set-labeled and verified"],
+                      ["Protective packaging", "Bubble wrap and reboxing as needed"],
+                      ["Expiration items", "Lot and expiration labeling"],
+                    ].map(([requirement, handling]) => (
                       <tr
-                        key={factor}
+                        key={requirement}
                         className="border-b border-[#1f1f1f] last:border-0"
                       >
                         <td className="py-2.5 pr-3 text-[#A3A3A3]">
-                          {factor}
+                          {requirement}
                         </td>
-                        <td className="py-2.5 px-3 text-[#737373] text-center">
-                          {nomad}
-                        </td>
-                        <td className="py-2.5 pl-3 text-[#B8962E] font-semibold text-center">
-                          {ky}
+                        <td className="py-2.5 pl-3 text-[#B8962E] font-semibold">
+                          {handling}
                         </td>
                       </tr>
                     ))}
@@ -561,14 +542,14 @@ export default function AmazonFBAPrepPage() {
               </div>
               <div className="bg-[#1a1a1a] rounded-lg p-4 border border-[#2a2a2a]">
                 <div className="text-[12px] text-[#737373] uppercase tracking-wide mb-1">
-                  Net Savings vs. NOMAD States
+                  Fast FBA Prep Turnaround
                 </div>
                 <div className="text-2xl font-semibold text-[#B8962E]">
-                  $0.25–$0.62
+                  48 hours
                 </div>
                 <div className="text-[12.5px] text-[#737373] mt-0.5">
-                  per unit in freight &amp; placement — more than offsetting KY&apos;s
-                  6% service tax
+                  with same-day receiving in most cases, so units clear the dock
+                  and reach Amazon sooner
                 </div>
               </div>
             </div>
@@ -588,44 +569,44 @@ export default function AmazonFBAPrepPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
               {
-                icon: Warehouse,
-                title: "75,000 Sq Ft Facility",
-                body: "Purpose-built warehouse infrastructure — not rented space. Dedicated zones for standard, apparel, footwear, and bulky prep.",
+                icon: MapPin,
+                title: "Northern Kentucky Location",
+                body: "Our facility sits near the Amazon CVG air hub, which keeps inbound freight and outbound Amazon shipments moving.",
               },
               {
                 icon: Zap,
-                title: "Under 48-Hour Turnaround",
-                body: "From receipt to out the door in under 48 hours. Lightning-fast processing powered by Hopstack WMS automation.",
-              },
-              {
-                icon: Star,
-                title: "99.9% Accuracy Rate",
-                body: "Automated compliance workflows catch labeling and prep errors before they ship — saving you from $1.74+/unit defect fees.",
-              },
-              {
-                icon: MapPin,
-                title: "5 Miles from CVG Air Hub",
-                body: "Your inventory goes from our dock to Amazon's shelves same-day. No cross-country freight bills. No transit delays.",
-              },
-              {
-                icon: ShoppingCart,
-                title: "Real-Time Client Portal",
-                body: "Track every unit through prep in real time. Full integration with your Seller Central for seamless inventory management.",
-              },
-              {
-                icon: Tag,
-                title: "No Minimums to Start",
-                body: "Start with any volume during the intro period. We accept online arbitrage, retail arbitrage, wholesale, and private label sellers.",
+                title: "48-Hour Turnaround",
+                body: "A consistent 48-hour turnaround on Amazon FBA prep, so your product reaches Amazon and becomes sellable sooner.",
               },
               {
                 icon: Clock,
-                title: "Free 30-Day Storage",
-                body: "No storage charges for the first 30 days — giving you flexibility to time your inbound shipments strategically.",
+                title: "Same-Day Receiving",
+                body: "We receive most inbound inventory the same day it arrives, so units clear the dock fast and prep can begin.",
+              },
+              {
+                icon: Star,
+                title: "Compliance Checks",
+                body: "We check each unit against Amazon's requirements before it ships, so labeling and prep issues get caught on our dock.",
+              },
+              {
+                icon: ShoppingCart,
+                title: "Inventory Visibility",
+                body: "Inventory is tracked by SKU, location, lot, and expiration, so you can follow units and stock the whole way through.",
+              },
+              {
+                icon: Tag,
+                title: "Flexible Prep Options",
+                body: "FNSKU labeling, polybagging, bundling, kitting, reboxing, and expiration labeling, customized to your product and category.",
               },
               {
                 icon: Truck,
-                title: "Same-Day FC Delivery",
-                body: "20+ Amazon fulfillment centers within 200 miles. Same-day to next-day delivery from our dock to Amazon's shelves.",
+                title: "FBA, FBM, and DTC",
+                body: "Prep and fulfillment handled under one roof, with FBM and DTC orders flowing in through Hopstack.",
+              },
+              {
+                icon: Warehouse,
+                title: "Hands-On Support",
+                body: "We work directly with you on labeling, compliance, and inventory questions rather than leaving a shipment stuck.",
               },
             ].map((d) => {
               const Icon = d.icon
@@ -657,12 +638,9 @@ export default function AmazonFBAPrepPage() {
             <SectionLabel>Transparent Pricing</SectionLabel>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0D0D0D] mt-1 mb-3">
               Simple, transparent pricing.
-              <br />
-              30–50% below market.
             </h2>
             <p className="text-[15px] text-[#737373] max-w-[540px] mx-auto">
-              All pricing is per-unit, all-inclusive. No hidden fees, no surprise surcharges.
-              Receiving, shipping plan creation, and 30-day storage included free on intro tiers.
+              All pricing is per-unit and all-inclusive, with no hidden fees and no surprise surcharges.
             </p>
           </div>
 
@@ -695,7 +673,7 @@ export default function AmazonFBAPrepPage() {
               id="standard"
               icon={Package}
               title="Standard Items"
-              description="Non-apparel, standard-size items. The most common FBA prep category — FNSKU labeling, poly bagging, inspection, and bundling."
+              description="Non-apparel, standard-size items. The most common FBA prep category, covering FNSKU labeling, polybagging, inspection, and bundling."
               intro={standardPricing.intro}
               ongoing={standardPricing.ongoing}
               volume={standardPricing.volume}
@@ -705,8 +683,8 @@ export default function AmazonFBAPrepPage() {
             <CategorySection
               id="apparel"
               icon={Shirt}
-              title="Clothing & Apparel"
-              description="Mandatory polybagging, suffocation labels, polybag trimming/taping to the 3-inch overhang rule, tag removal/covering, and size/color/style verification."
+              title="Clothing and Apparel"
+              description="Mandatory polybagging, suffocation labels, polybag trimming and taping to the 3-inch overhang rule, tag removal or covering, and size, color, and style verification."
               intro={apparelPricing.intro}
               ongoing={apparelPricing.ongoing}
               volume={apparelPricing.volume}
@@ -716,8 +694,8 @@ export default function AmazonFBAPrepPage() {
             <CategorySection
               id="footwear"
               icon={Footprints}
-              title="Shoes & Footwear"
-              description="Box condition check, box polybagging, shoe pair matching, price tag removal, and dimensional handling. Boxed shoes require 2–3x the handling time of standard items."
+              title="Shoes and Footwear"
+              description="Box condition check, box polybagging, shoe pair matching, price tag removal, and dimensional handling. Boxed shoes require more handling time than standard items."
               intro={shoePricing.intro}
               ongoing={shoePricing.ongoing}
               volume={shoePricing.volume}
@@ -727,8 +705,8 @@ export default function AmazonFBAPrepPage() {
             <CategorySection
               id="bulky"
               icon={Box}
-              title="Bulky & Oversized Items"
-              description={'Items exceeding standard size (18"+ longest side or 20+ lbs). Rugs, furniture, fitness equipment — requiring floor staging, larger polybags or shrink wrap, and heavy handling. Inbound defect fees for bulky items can reach $5.72/unit.'}
+              title="Bulky and Oversized Items"
+              description={'Items exceeding standard size (18"+ longest side or 20+ lbs). Rugs, furniture, and fitness equipment, requiring floor staging, larger polybags or shrink wrap, and heavy handling.'}
               intro={bulkyPricing.intro}
               ongoing={bulkyPricing.ongoing}
               volume={bulkyPricing.volume}
@@ -773,22 +751,22 @@ export default function AmazonFBAPrepPage() {
               {
                 step: "01",
                 title: "Ship to Us",
-                body: "Send your inventory to our 75,000 sq ft facility in Northern Kentucky. We handle receiving and intake at no charge on intro tiers.",
+                body: "Send your inventory to our Northern Kentucky facility, from single cartons to LTL, FTL, and palletized freight. We receive it, usually same day.",
               },
               {
                 step: "02",
                 title: "We Prep",
-                body: "FNSKU labeling, poly bagging, inspection, bundling, and all Amazon compliance requirements. Automated quality checks at every stage.",
+                body: "FNSKU labeling, polybagging, inspection, bundling, and Amazon compliance requirements. We log each unit by SKU, location, lot, and expiration.",
               },
               {
                 step: "03",
                 title: "Quality Check",
-                body: "Every unit passes our quality verification process. Photo documentation of any issues. 99.9% accuracy guaranteed.",
+                body: "We verify compliance and document any questionable units before they ship, so problems get caught on our dock, not at Amazon's.",
               },
               {
                 step: "04",
                 title: "Ship to Amazon",
-                body: "Optimized shipping plans created automatically. Same-day to next-day delivery to 20+ Amazon FCs within 200 miles.",
+                body: "We create the inbound shipping plan and ship into Amazon FBA, and you track units and inventory with full visibility the whole way.",
               },
             ].map((s) => (
               <div key={s.step} className="relative">
@@ -812,13 +790,14 @@ export default function AmazonFBAPrepPage() {
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 text-center">
           <SectionLabel light>Start Prepping</SectionLabel>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white tracking-tight mt-1 mb-5">
-            Ready to save 30–50% on
+            Ready to start your
             <br />
-            your FBA prep?
+            FBA prep?
           </h2>
           <p className="text-[15px] text-[#737373] max-w-[500px] mx-auto mb-10">
-            No minimums. No long-term contracts. Free receiving and 30-day
-            storage to start. Get a custom quote or call us today.
+            Tell us your unit volume, product category, and sales channels, and
+            we will send an FBA prep quote built around your product. Get a custom
+            quote or call us today.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link

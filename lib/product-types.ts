@@ -90,80 +90,80 @@ We integrate with subscription platforms and your e-commerce store to automate r
   {
     slug: "oversized",
     name: "Oversized & Heavy Items",
-    description: "Specialized handling, freight shipping, and pallet storage for products that do not fit in a standard box.",
+    description: "Oversized shipping and fulfillment for big, bulky, heavy products. LTL and FTL freight receiving, pallet storage, and protective packaging across the US.",
     icon: "Box",
     highlights: [
-      "Freight and LTL shipping capabilities",
-      "Pallet storage and heavy item racking",
-      "Liftgate delivery coordination",
-      "Custom protective packaging",
-      "White glove delivery options",
-      "B2B and residential delivery handling",
+      "Freight and LTL receiving inbound, palletized freight outbound via carriers",
+      "Pallet storage and heavy-item racking",
+      "Palletizing and securing oversized units for LTL and FTL freight",
+      "Custom protective packaging and wrapping",
+      "Pick and pack for big and bulky orders",
+      "B2B case and pallet shipments",
     ],
     stats: [
-      { value: "75K", label: "Sq ft facility capacity" },
-      { value: "LTL", label: "Freight shipping available" },
-      { value: "B2B+B2C", label: "Business and residential" },
+      { value: "LTL+FTL", label: "Freight receiving and outbound" },
+      { value: "Pallet", label: "Storage and heavy-item racking" },
+      { value: "B2B", label: "Case and pallet shipments" },
     ],
-    body: `Oversized and heavy products require fulfillment infrastructure that most 3PLs simply do not have. Standard pick-and-pack operations are not built for items that weigh 50 pounds or come in boxes that are 4 feet long. You need a partner with the space, equipment, and shipping relationships to handle these products efficiently.
+    body: `Oversized and heavy products require fulfillment infrastructure that most 3PLs simply do not have. A single catalog can run from a 5-pound accessory to a 50-pound box that is four feet long, and standard pick-and-pack operations are not set up for that range. You need a partner with the space, equipment, and freight relationships to handle these products efficiently.
 
-DeliveryGroup's 75,000 square foot facility in Northern Kentucky is equipped for oversized fulfillment. We have the racking, floor space, and material handling equipment to store and ship large items. Pallet storage accommodates bulk inventory, and our team is trained in safe handling for heavy products.
+DeliveryGroup's Northern Kentucky facility is equipped for oversized fulfillment, with pallet racking, floor space, and material handling for large items. We receive inbound LTL and FTL freight at the dock, log each SKU, and store oversized units on heavy-item racking or open floor space. Our team is trained in safe handling for heavy products.
 
-Shipping oversized items is where costs can spiral. Our DHL partnership and carrier relationships include freight and LTL options that keep costs manageable. For residential deliveries, we coordinate liftgate service so your customers do not need to unload heavy packages themselves. For B2B shipments, we handle dock delivery, appointment scheduling, and compliance documentation.
+On the way out, we ship oversized items by LTL, FTL, and palletized freight through carriers when they are too large for a parcel carrier, palletizing, securing, and labeling each unit for freight. For B2B shipments, we handle appointment scheduling and compliance documentation. Protective packaging is standard on oversized orders, not an upsell: we use custom packaging and protective wrapping sized to each item, so heavy and awkward products are cushioned before they ship.
 
-Whether you sell furniture, fitness equipment, large electronics, or industrial products, we build a fulfillment process tailored to your product's specific requirements. Custom packaging, protective wrapping, and careful handling are standard — not add-ons.`,
+Whether you sell furniture, fitness equipment, large electronics, or industrial products, we build a fulfillment process around the product's size and weight. Many fulfillment providers decline big and bulky items because they lack the racking, floor space, and freight relationships to move them. We take those products, keep inventory accurate by SKU, and coordinate freight and B2B shipment details directly with you rather than leaving a shipment stuck. We provide oversized shipping and fulfillment across the United States.`,
   },
   {
     slug: "fragile",
     name: "Fragile & High-Value",
-    description: "Extra care, custom protective packaging, and inspection protocols for products that cannot afford damage in transit.",
+    description: "Fragile shipping and fulfillment with protective pack-out, reboxing, and inspection at receiving and returns so breakable goods ship ready for transit.",
     icon: "ShieldCheck",
     highlights: [
-      "Custom protective packaging design",
-      "Multi-point inspection before shipping",
-      "Photo documentation of packed orders",
-      "Insurance coordination for high-value items",
-      "Careful handling SOPs for warehouse staff",
-      "Damage rate tracking and reporting",
+      "Protective pack-out for breakable and damage-prone goods",
+      "Reboxing into a right-sized carton with protective fill",
+      "Polybagging, bundling, and kitting for multi-item orders",
+      "Item and condition inspection at receiving",
+      "Inspection on returns, with restocking, relabeling, and repacking",
+      "FBA, FBM, and direct-to-consumer fulfillment for fragile catalogs",
     ],
     stats: [
-      { value: "<0.1%", label: "Target damage rate" },
-      { value: "QC", label: "Multi-point inspection" },
-      { value: "Photo", label: "Documentation available" },
+      { value: "Careful", label: "Protective pack-out" },
+      { value: "QC", label: "Inspection at receiving and returns" },
+      { value: "FBA+FBM+DTC", label: "Fulfillment coverage" },
     ],
-    body: `When your products are fragile, expensive, or both, fulfillment errors are not just inconvenient — they are costly. A broken item means a refund, a replacement shipment, and potentially a lost customer. For high-value products, the stakes are even higher.
+    body: `When your products are fragile or breakable, fulfillment errors are not just inconvenient, they are costly. A broken item is expensive twice, once for the refund and again for the replacement shipment. Fragile fulfillment lives or dies on two things: how the order is packed and whether it is inspected before it ships.
 
-DeliveryGroup takes a different approach to fragile and high-value fulfillment. We start by designing custom protective packaging for your specific products. Bubble wrap, foam inserts, double-boxing, corner protectors — whatever your product needs to arrive in perfect condition, we build that into the standard packing process.
+DeliveryGroup builds careful pack-out into the standard packing process. We rebox items into a right-sized carton with protective fill and polybag or bundle multi-item orders, so a breakable order leaves the building packed for transit rather than thrown in a box. We do not build custom foam tooling or crating, and we do not guarantee a breakage rate. Fragile handling here means protective pack-out, right-sized reboxing, and inspection.
 
-Every fragile item goes through a multi-point inspection before it ships. We check the product condition, verify the correct item and variant, confirm the packaging meets protection standards, and document the packed order with photos when requested. This level of quality control keeps damage rates well below industry averages.
+Every fragile item is inspected at receiving, and orders are checked during pack-out so the correct item and variant go out. If something looks wrong at receiving, we flag it and call you rather than send it on. Inventory is tracked by SKU, location, lot, and expiration for full visibility the whole way.
 
-For high-value products, we coordinate shipping insurance and use carrier services that include signature confirmation and delivery documentation. Our real-time tracking gives you and your customers visibility into exactly where the package is at every point in transit. If an exception occurs, our system alerts you immediately so we can take action before the customer even notices.`,
+We fulfill Amazon FBA, Amazon FBM, and direct-to-consumer orders for fragile catalogs, and we connect to Shopify and other platforms through Hopstack, the multi-channel integration platform we use, so orders flow in automatically. Returns come back to us for inspection, restocking, relabeling, and repacking, and we identify and flag damaged inventory so returned units get back to sellable condition or are pulled. We ship from a fulfillment center in Northern Kentucky, near the Cincinnati and CVG hub, with same-day receiving in most cases and 48-hour FBA prep.`,
   },
   {
     slug: "beauty-cosmetics",
     name: "Beauty & Cosmetics",
-    description: "Lot-tracked, beautifully packaged fulfillment for beauty brands that care about the customer experience.",
+    description: "Cosmetics fulfillment with lot and expiration tracking, branded unboxing, gift-set and subscription-box kitting, influencer kits, and returns for DTC beauty brands.",
     icon: "Sparkles",
     highlights: [
-      "Lot tracking for batch traceability",
-      "Temperature-aware storage",
-      "Sample and GWP (gift with purchase) inserts",
-      "Gift packaging and wrapping options",
-      "Influencer kit assembly",
-      "Subscription box kitting for beauty boxes",
+      "Lot and expiration tracking by SKU and location for batch traceability",
+      "Recall workflows when a specific lot needs to be identified",
+      "Branded boxes, tissue, stickers, and inserts on every order",
+      "Sample sachets, gift-with-purchase items, and promotional cards per order",
+      "Gift-set kitting, subscription-box assembly, and influencer kits",
+      "Protective packaging (polybagging, reboxing) for fragile and leak-prone items",
     ],
     stats: [
       { value: "Lot", label: "Batch-level tracking" },
       { value: "GWP", label: "Gift with purchase support" },
       { value: "Custom", label: "Unboxing experience" },
     ],
-    body: `Beauty and cosmetics brands live and die by the customer experience. From the moment someone places an order to the moment they open the box, every touchpoint reflects your brand. Generic fulfillment with brown boxes and packing peanuts does not cut it in the beauty space.
+    body: `Beauty and cosmetics brands live and die by the customer experience. In this category the box is part of the product, so generic brown boxes and packing peanuts undercut the brand a customer paid a premium for. We receive your inventory, track it by lot and expiration for batch traceability, and pack each order in your branded materials with the sample sachets, gift-with-purchase items, and inserts you specify. The result is an unboxing experience you designed, shipped by a partner who protects both the presentation and the product inside.
 
-DeliveryGroup provides fulfillment that matches the quality of your products. We support custom branded packaging — your boxes, your tissue paper, your stickers, your inserts. Sample sachets, gift-with-purchase items, and promotional cards are included in every order according to your specifications. The unboxing experience your customer gets is the one you designed.
+Beauty products need to arrive undamaged and traceable, so our cosmetics fulfillment covers both protective packing and batch-level records. We pack each order in your branded boxes, tissue, stickers, and inserts, and add protective packaging such as polybagging or reboxing where a product needs it, so fragile compacts, glass bottles, and palettes travel safely. On the inventory side, our warehouse system tracks stock by SKU, location, lot, and expiration, which gives you batch traceability if a formulation issue ever requires a recall workflow.
 
-Beauty products often require lot tracking for batch traceability. If a formulation issue arises, you need to know exactly which batch went to which customers. Our WMS tracks inventory at the lot level and supports recall workflows when needed. We also monitor storage conditions to ensure your products maintain their quality.
+Cosmetics sell in sets as much as in singles, so kitting and assembly are core to beauty fulfillment. We build gift sets and multi-product bundles, assemble beauty subscription boxes on your schedule, and put together influencer kits for outreach campaigns, from a handful of kits to several hundred. Whether an order is a single lipstick or a curated holiday set, it ships packed to your specification.
 
-Influencer marketing is a major channel for beauty brands. We assemble custom influencer kits — curated selections of your products, packaged beautifully, and shipped to your influencer list on your schedule. Whether you are sending 10 kits or 500, we handle the assembly and shipping so your marketing team can focus on relationships.`,
+For a DTC beauty brand the unboxing is the brand, and the return has to be just as easy, so we handle both ends of the customer experience. Every outbound order reflects the packaging you designed, from the box to the tissue to the insert. When product comes back, we run full returns processing, including inspection, restocking, relabeling, and repacking, so sellable units go back to stock while damaged or expired units are flagged rather than reshipped. You connect your sales channels through Hopstack, the multi-channel integration platform we use, send inventory inbound from single cartons to LTL and palletized freight, and we receive it, same day in most cases, then pick, pack, and kit your orders in your branded materials.`,
   },
 ]
 

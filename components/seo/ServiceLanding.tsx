@@ -161,6 +161,19 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
           })),
         }}
       />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": `https://deliverygroupinc.com/${data.slug}#webpage`,
+          url: `https://deliverygroupinc.com/${data.slug}`,
+          name: data.metaTitle,
+          description: data.metaDescription,
+          isPartOf: { "@type": "WebSite", url: "https://deliverygroupinc.com" },
+          about: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
+          speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".quick-answer"] },
+        }}
+      />
 
       {/* Hero — dark with text */}
       <section className="bg-[#0D0D0D] text-white py-20 md:py-28">
@@ -218,7 +231,7 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
       <section className="py-16 md:py-20">
         <div className="max-w-[820px] mx-auto px-6 md:px-10 lg:px-12">
           <SectionLabel>{data.overviewLabel}</SectionLabel>
-          <p className="text-[16px] text-[#3D3D3D] leading-relaxed mb-10">{data.intro}</p>
+          <p className="quick-answer text-[16px] text-[#3D3D3D] leading-relaxed mb-10">{data.intro}</p>
           {data.sections.map((s) => (
             <div key={s.h2} className="mb-9">
               <h2 className="text-xl md:text-2xl font-semibold text-[#0D0D0D] tracking-tight mb-3">{s.h2}</h2>

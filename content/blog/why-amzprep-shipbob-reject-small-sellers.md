@@ -8,7 +8,7 @@ author: "Louis Bradley"
 image: "/blog/fba-prep.svg"
 ---
 
-If you have tried to get started with a professional FBA prep center and found the doors closed, you are not imagining it. Two of the most visible names in the industry — AMZ Prep and ShipBob — have minimums and policies that effectively exclude the sellers who need them most: people doing under 1,000 units a month, online arbitrage and retail arbitrage sellers, and brands in their early growth stages.
+If you have tried to get started with a professional FBA prep center and found the doors closed, you are not imagining it. Two of the most visible names in the industry, AMZ Prep and ShipBob, have minimums and policies that effectively exclude the sellers who need them most: people doing under 1,000 units a month, online arbitrage and retail arbitrage sellers, and brands in their early growth stages.
 
 Here is exactly what those policies look like, why they exist, and what your actual options are.
 
@@ -24,7 +24,7 @@ The practical result: if you are sourcing from retail stores, online clearance e
 
 ## What ShipBob Actually Costs to Start
 
-ShipBob is not primarily an FBA prep center — it is a DTC fulfillment platform. But it appears in searches for prep services and is often evaluated by sellers looking for a combined prep-and-fulfillment solution.
+ShipBob is not primarily an FBA prep center, it is a DTC fulfillment platform. But it appears in searches for prep services and is often evaluated by sellers looking for a combined prep-and-fulfillment solution.
 
 The problem is the entry cost.
 
@@ -40,7 +40,7 @@ AMZ Prep requires 300 units minimum and screens out OA/RA sellers under 2,500 un
 
 That leaves a large group of sellers with no obvious professional option: people doing 100 to 800 units per month, OA and RA sellers who are proven but not at scale, brands testing new product lines, and anyone who does not want to commit $975 before they know if a prep center relationship will work.
 
-The alternative that most of these sellers fall back on is handling prep themselves. The actual cost of DIY FBA prep — accounting for labor, poly bags, FNSKU labels, tape, boxes, and the time spent learning and re-learning Amazon's compliance requirements — runs $1.20 to $1.80 per unit. At 300 units a month, that is $360 to $540 per month before counting your own time. At 500 units, it is $600 to $900.
+The alternative that most of these sellers fall back on is handling prep themselves. The actual cost of DIY FBA prep, accounting for labor, poly bags, FNSKU labels, tape, boxes, and the time spent learning and re-learning Amazon's compliance requirements, runs $1.20 to $1.80 per unit. At 300 units a month, that is $360 to $540 per month before counting your own time. At 500 units, it is $600 to $900.
 
 DIY prep also carries compliance risk. Amazon's requirements for labeling, poly bagging, suffocation warnings, and bundling are detailed, updated regularly, and enforced through inbound defect fees that run $0.32 to $5.72 per unit for standard items and up to $8.25 per unit for bulky items. One category of mistakes on a 500-unit shipment can cost more than a month of professional prep.
 
@@ -50,7 +50,7 @@ If you are doing under 1,000 units a month, here is what a workable prep center 
 
 **No rigid minimum.** You should not be locked out because your current volume is 200 or 400 units per month. Growth is the goal, and a prep center that works with you at lower volumes and scales with you is more valuable than one that only wants you after you have already figured it out.
 
-**Per-unit pricing that makes sense.** At $0.50 per unit for standard FBA prep — labeling, poly bagging, bundling, shipping plan creation — professional prep costs less than the lower end of DIY labor costs. The math should not require a spreadsheet to justify.
+**Per-unit pricing that makes sense.** At $0.50 per unit for standard FBA prep, labeling, poly bagging, bundling, shipping plan creation, professional prep costs less than the lower end of DIY labor costs. The math should not require a spreadsheet to justify.
 
 **Acceptance of OA and RA inventory.** If you source through online arbitrage or retail arbitrage, you should not need to hit a 2,500-unit threshold before a prep center will touch your account.
 
@@ -62,7 +62,7 @@ DeliveryGroup works with sellers starting at 100 units per month. There is no po
 
 Standard FBA prep is $0.50 per unit and includes FNSKU labeling, poly bagging, bundling, kitting, suffocation warning compliance, and shipping plan creation. Receiving is free at standard volumes and $0.10 per unit above the Tier 1 threshold.
 
-For accounts under 500 units per month, there is a one-time onboarding fee of $350. This is not a recurring monthly minimum — it is a single setup cost, and it does not repeat. That is 64 percent less than ShipBob's setup fee, and unlike ShipBob's monthly minimum, it does not hit your account again the following month.
+For accounts under 500 units per month, there is a one-time onboarding fee of $350. This is not a recurring monthly minimum, it is a single setup cost, and it does not repeat. That is 64 percent less than ShipBob's setup fee, and unlike ShipBob's monthly minimum, it does not hit your account again the following month.
 
 The facility is 75,000 square feet in Northern Kentucky, 5 miles from Amazon's CVG Air Hub. Turnaround from receipt to out the door is under 48 hours. Every account gets a dedicated account manager from day one.
 
@@ -72,4 +72,4 @@ If you are currently doing DIY prep, the comparison is straightforward. At 300 u
 
 If you have been turned away by AMZ Prep or priced out by ShipBob, the answer is not to wait until you hit their thresholds. The answer is to find a center that treats your current volume as a real account, not a waiting list.
 
-[Get a quote from DeliveryGroup](/quote) — response within one business day, no commitment required.
+[Get a quote from DeliveryGroup](/quote), response within one business day, no commitment required.

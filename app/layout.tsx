@@ -68,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <JsonLd
           data={{
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": ["Organization", "LocalBusiness"],
             name: "Delivery Group Inc.",
             url: "https://deliverygroupinc.com",
             logo: "https://deliverygroupinc.com/logo.png",

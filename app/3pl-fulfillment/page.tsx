@@ -1,9 +1,9 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import {
-  ArrowRight, Package, MapPin, Clock, Shield, CheckCircle,
-  Truck, DollarSign, Warehouse, Zap, Star,
-  ShoppingCart, BarChart3, RefreshCw, Settings, Plus, Layers,
+  ArrowRight, Package, MapPin, Shield, CheckCircle,
+  Truck, DollarSign, Warehouse, Zap,
+  BarChart3, RefreshCw, Settings, Plus, Layers,
   Box, Tag, Users
 } from "lucide-react"
 import SectionLabel from "@/components/ui/SectionLabel"
@@ -11,14 +11,14 @@ import Badge from "@/components/ui/Badge"
 import JsonLd from "@/components/JsonLd"
 
 export const metadata: Metadata = {
-  title: "3PL Fulfillment Services — Ship Faster",
+  title: "3PL Fulfillment Services | Delivery Group Inc.",
   description:
-    "Full-service 3PL from our Northern Kentucky hub — direct DHL rates, pick & pack, storage, kitting, returns, and branded packaging for e-commerce brands.",
+    "A 3PL fulfillment company in Northern Kentucky that receives same-day, preps FBA in 48 hours, and ships FBA, FBM, and DTC orders for ecommerce brands.",
   alternates: { canonical: "https://deliverygroupinc.com/3pl-fulfillment" },
   openGraph: {
     url: "https://deliverygroupinc.com/3pl-fulfillment",
-    title: "3PL Fulfillment Services — Ship Faster",
-    description: "Full-service 3PL from our Northern Kentucky hub — direct DHL rates, pick & pack, storage, kitting, returns, and branded packaging for e-commerce brands.",
+    title: "3PL Fulfillment Services | Delivery Group Inc.",
+    description: "A 3PL fulfillment company in Northern Kentucky that receives same-day, preps FBA in 48 hours, and ships FBA, FBM, and DTC orders for ecommerce brands.",
     images: [{ url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80", width: 1200, height: 630 }],
   },
 }
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 const onboardingPricing = [
   { service: "Account Setup & Integration", dg: "$350", note: "WMS config, SKU mapping, system setup" },
-  { service: "Custom API/EDI Integration", dg: "$1,000–$2,500", note: "Shopify, WooCommerce, custom ERP" },
+  { service: "Custom API/EDI Integration", dg: "$1,000 to $2,500", note: "Shopify, WooCommerce, custom ERP" },
   { service: "SKU Onboarding", dg: "$0.75/SKU", note: "Catalog entry, barcode verification" },
 ]
 
@@ -67,11 +67,10 @@ const returnsPricing = [
 ]
 
 const vasPricing = [
-  { service: "Kitting & Bundling", dg: "$1.50–$3.00/kit", note: "Subscription boxes, gift sets, variety packs" },
+  { service: "Kitting & Bundling", dg: "$1.50 to $3.00/kit", note: "Subscription boxes, gift sets, variety packs" },
   { service: "Labeling / Relabeling", dg: "$0.50/unit", note: "Barcode, compliance, promo stickers" },
   { service: "Shrink Wrapping", dg: "$1.00/unit" },
   { service: "Lot / Expiration Tracking", dg: "$0.15/unit", note: "Supplements, nutraceuticals, cosmetics" },
-  { service: "Cycle Counts (extra)", dg: "$75/count" },
   { service: "Custom Reporting", dg: "$150/month", note: "Advanced analytics, dashboards" },
 ]
 
@@ -84,8 +83,8 @@ const accountPricing = [
 const surcharges = [
   { service: "Rush / Same-Day Processing", dg: "+35%" },
   { service: "After-Hours Work", dg: "+50%", note: "Weekend or holiday fulfillment" },
-  { service: "Oversized / Heavy Items", dg: "$5–$15/unit" },
-  { service: "Hazmat / Special Handling", dg: "$5–$10/unit" },
+  { service: "Oversized / Heavy Items", dg: "$5 to $15/unit" },
+  { service: "Hazmat / Special Handling", dg: "$5 to $10/unit" },
   { service: "Project / Manual Labor", dg: "$40/hr" },
 ]
 
@@ -140,7 +139,7 @@ function PricingTable({
                 </td>
                 {showNotes && (
                   <td className="py-3.5 pl-4 text-[12.5px] text-[#A3A3A3] text-right whitespace-nowrap hidden md:table-cell">
-                    {row.note || "—"}
+                    {row.note || ""}
                   </td>
                 )}
               </tr>
@@ -169,7 +168,7 @@ export default function ThreePLFulfillmentPage() {
           },
           areaServed: "US",
           description:
-            "Full-service 3PL fulfillment from our Northern Kentucky warehouse. Direct DHL partnership for lower shipping rates. Pick & pack, storage, kitting, returns, and branded packaging for e-commerce brands.",
+            "Full-service 3PL fulfillment from a Northern Kentucky facility: receiving, storage, pick and pack, Amazon FBA prep, FBA/FBM/DTC shipping, returns processing, kitting, and B2B case and pallet fulfillment.",
         }}
       />
       {/* ── Hero ── */}
@@ -200,16 +199,17 @@ export default function ThreePLFulfillmentPage() {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-[56px] font-semibold text-white leading-[1.1] tracking-[-0.03em] mb-6">
-                Ship faster.{" "}
+                3PL fulfillment{" "}
                 <br />
-                Spend less.{" "}
+                from one{" "}
                 <br />
-                <span className="gold-text">Scale without limits.</span>
+                <span className="gold-text">Northern Kentucky hub.</span>
               </h1>
               <p className="text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[540px] mb-10">
-                Full-service 3PL fulfillment powered by a direct DHL partnership
-                and one of the most strategic shipping locations in the country.
-                Your customers get orders faster — and you pay less to ship them.
+                A third-party logistics fulfillment company that receives your
+                inventory, stores it, and ships FBA, FBM, and direct-to-consumer
+                orders from one facility, with same-day receiving in most cases
+                and 48-hour Amazon FBA prep.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
@@ -230,7 +230,7 @@ export default function ThreePLFulfillmentPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80"
-                alt="Delivery Group Inc. 3PL fulfillment warehouse — organized inventory and pick-and-pack operations in Northern Kentucky"
+                alt="Delivery Group Inc. 3PL fulfillment warehouse, organized inventory and pick-and-pack operations in Northern Kentucky"
                 className="w-full h-full object-cover"
                 loading="eager"
               />
@@ -245,7 +245,7 @@ export default function ThreePLFulfillmentPage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80"
-              alt="Delivery Group Inc. 3PL fulfillment warehouse — organized inventory in Northern Kentucky"
+              alt="Delivery Group Inc. 3PL fulfillment warehouse, organized inventory in Northern Kentucky"
               className="w-full h-full object-cover"
               loading="eager"
             />
@@ -257,11 +257,11 @@ export default function ThreePLFulfillmentPage() {
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-8">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-0 md:divide-x md:divide-[#1f1f1f]">
               {[
-                { value: "80%+", label: "US in 2–3 Day Ground" },
-                { value: "DHL", label: "Direct Partnership" },
-                { value: "1–2 Day", label: "Faster Than Coastal 3PLs" },
-                { value: "200+", label: "Platform Integrations" },
-                { value: "99.5%", label: "Order Accuracy" },
+                { value: "Same-day", label: "Receiving (Most Cases)" },
+                { value: "48hr", label: "Amazon FBA Prep" },
+                { value: "FBA/FBM/DTC", label: "Order Fulfillment" },
+                { value: "Returns", label: "Full Reverse Logistics" },
+                { value: "B2B", label: "Case & Pallet Shipments" },
               ].map((s) => (
                 <div key={s.label} className="md:px-8 first:pl-0 last:pr-0">
                   <div className="text-2xl md:text-3xl font-semibold text-white tracking-tight">
@@ -277,36 +277,34 @@ export default function ThreePLFulfillmentPage() {
         </div>
       </section>
 
-      {/* ── Two Core Advantages ── */}
+      {/* ── What is 3PL Fulfillment ── */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <SectionLabel>Why DeliveryGroup</SectionLabel>
+              <SectionLabel>What Is 3PL Fulfillment</SectionLabel>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0D0D0D] mb-6">
-                Two structural advantages no other 3PL can match.
+                One partner for receiving through outbound shipping.
               </h2>
               <p className="text-[15px] text-[#737373] leading-relaxed mb-8">
-                Most 3PLs compete on price or service. We compete on outcomes —
-                because our infrastructure gives us advantages that are
-                impossible to replicate.
+                3PL fulfillment is order fulfillment run by a third-party logistics provider that stores your inventory and ships each customer order for you, covering receiving, storage, pick and pack, packaging, and outbound shipping. It differs from self-fulfillment, where you pack and ship every order yourself, and from a plain warehouse, which mainly stores goods in bulk. At Delivery Group Inc., 3PL fulfillment also includes Amazon FBA prep, returns processing, kitting, and B2B case and pallet shipments.
               </p>
               <div className="space-y-6">
                 {[
                   {
                     icon: Truck,
-                    title: "Direct DHL Partnership with Volume Pricing",
-                    body: "We have a direct integration and negotiated bulk discount with DHL. We ship at rates that most 3PLs and nearly all brands cannot access on their own. We pass meaningful savings to our clients — this is the single biggest cost advantage we offer.",
+                    title: "Receiving and Fulfillment",
+                    body: "We receive inbound freight, store it with SKU-level tracking, prep and pack each order, and ship FBA, FBM, and direct-to-consumer orders from one Northern Kentucky facility.",
                   },
                   {
                     icon: MapPin,
-                    title: "Premier Shipping Location",
-                    body: "Our warehouse sits in one of the most strategically advantageous shipping locations in the country. We reach the vast majority of the US population with faster ground transit times than competing 3PLs. Your customers receive orders 1–2 days faster without paying for expedited shipping.",
+                    title: "Near the Amazon CVG Hub",
+                    body: "Our Northern Kentucky location sits near the Cincinnati and CVG air hub, which keeps inbound freight and outbound Amazon shipments moving.",
                   },
                   {
                     icon: DollarSign,
-                    title: "Faster AND Cheaper — Not One or the Other",
-                    body: "Most providers can offer speed or savings — not both. Our DHL partnership delivers lower rates while our central location delivers faster transit. The combination is extremely rare in 3PL.",
+                    title: "Hands-On Service",
+                    body: "On labeling, compliance, or inventory questions, we work directly with you rather than leaving a shipment stuck. That is what separates a 3PL from a warehouse that only stores your boxes.",
                   },
                 ].map((item) => {
                   const Icon = item.icon
@@ -329,52 +327,73 @@ export default function ThreePLFulfillmentPage() {
               </div>
             </div>
 
-            {/* Transit Time Card */}
+            {/* Comparison Card */}
             <div className="bg-[#0D0D0D] rounded-xl p-8 text-white sticky top-24">
               <div className="flex items-center gap-2 mb-6">
                 <MapPin size={16} className="text-[#B8962E]" />
                 <span className="text-[13px] font-semibold text-[#B8962E]">
-                  The NKY Advantage
+                  3PL vs. Warehouse vs. Self-Fulfillment
                 </span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">
-                Central location = faster delivery to more customers
+                What a 3PL does that a warehouse does not
               </h3>
               <p className="text-[16px] text-[#A3A3A3] leading-relaxed mb-6">
-                Coastal 3PLs are close to one coast but far from the other. Our
-                Northern Kentucky location puts us within fast ground reach of
-                the majority of the US population.
+                A warehouse mainly stores goods in bulk. A 3PL stores your products and also picks, packs, ships, and processes returns on every order.
               </p>
 
-              <div className="space-y-3 mb-6">
-                {[
-                  { pct: "80%+", desc: "of the US population within 2–3 day ground" },
-                  { pct: "60%+", desc: "of the US population within 1–2 day ground" },
-                  { pct: "1–2 days", desc: "faster than most coastal 3PLs on average" },
-                ].map((row) => (
-                  <div
-                    key={row.desc}
-                    className="flex items-center gap-3 p-3 bg-[#1a1a1a] rounded-lg border border-[#2a2a2a]"
-                  >
-                    <span className="text-[15px] font-semibold text-[#B8962E] whitespace-nowrap min-w-[70px]">
-                      {row.pct}
-                    </span>
-                    <span className="text-[13px] text-[#A3A3A3]">
-                      {row.desc}
-                    </span>
-                  </div>
-                ))}
+              <div className="overflow-x-auto mb-6">
+                <table className="w-full text-left border-collapse text-[13px]">
+                  <thead>
+                    <tr className="border-b border-[#2a2a2a]">
+                      <th className="py-2.5 pr-3 text-[11px] font-semibold uppercase tracking-wide text-[#737373]">
+                        Capability
+                      </th>
+                      <th className="py-2.5 px-3 text-[11px] font-semibold uppercase tracking-wide text-[#B8962E] text-center">
+                        3PL
+                      </th>
+                      <th className="py-2.5 pl-3 text-[11px] font-semibold uppercase tracking-wide text-[#737373] text-center">
+                        Warehouse
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-[12.5px]">
+                    {[
+                      ["Pick and pack", "Yes", "No"],
+                      ["Order shipping", "Yes", "No"],
+                      ["Returns processing", "Yes", "Rarely"],
+                      ["Amazon FBA prep", "Yes", "No"],
+                      ["Bulk storage", "Yes", "Yes"],
+                    ].map(([cap, threepl, wh]) => (
+                      <tr
+                        key={cap}
+                        className="border-b border-[#1f1f1f] last:border-0"
+                      >
+                        <td className="py-2.5 pr-3 text-[#A3A3A3]">
+                          {cap}
+                        </td>
+                        <td className="py-2.5 px-3 text-[#B8962E] font-semibold text-center">
+                          {threepl}
+                        </td>
+                        <td className="py-2.5 pl-3 text-[#737373] text-center">
+                          {wh}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
 
               <div className="bg-[#1a1a1a] rounded-lg p-4 border border-[#2a2a2a]">
                 <div className="text-[12px] text-[#737373] uppercase tracking-wide mb-1">
-                  DHL Partnership Savings
+                  Same-Day Receiving
                 </div>
                 <div className="text-2xl font-semibold text-[#B8962E]">
-                  10–15%+
+                  Most cases
                 </div>
                 <div className="text-[12.5px] text-[#737373] mt-0.5">
-                  lower shipping rates vs. what brands pay on their own
+                  so inventory clears the dock fast and your product becomes
+                  sellable sooner
                 </div>
               </div>
             </div>
@@ -405,8 +424,8 @@ export default function ThreePLFulfillmentPage() {
               },
               {
                 icon: Truck,
-                title: "Shipping via DHL",
-                body: "Direct DHL partnership delivers carrier rates you cannot access on your own. Multi-carrier rate shopping for optimal cost and speed.",
+                title: "Outbound Shipping",
+                body: "We create inbound shipping plans and ship FBA, FBM, and direct-to-consumer orders, including cartons to LTL and FTL freight.",
               },
               {
                 icon: RefreshCw,
@@ -568,7 +587,7 @@ export default function ThreePLFulfillmentPage() {
                     Shipping & Postage
                   </h2>
                   <p className="text-[16px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
-                    Our DHL partnership is where the biggest savings happen. We negotiate volume discounts and pass competitive rates to you.
+                    We create inbound shipping plans and ship each order, with carrier surcharges passed through at cost.
                   </p>
                 </div>
               </div>
@@ -576,12 +595,12 @@ export default function ThreePLFulfillmentPage() {
                 <div className="flex items-center gap-2 mb-4">
                   <Zap size={16} className="text-[#B8962E]" />
                   <span className="text-[13px] font-semibold text-[#B8962E]">
-                    DHL Direct Partnership
+                    Outbound Shipping
                   </span>
                 </div>
                 <p className="text-[14px] text-[#A3A3A3] leading-relaxed mb-6 max-w-[600px]">
-                  We ship at negotiated DHL volume rates that most 3PLs and nearly all brands cannot access independently.
-                  Ask us for a shipping cost analysis using your actual order data — most brands see meaningful savings on every shipment.
+                  We ship FBA, FBM, and direct-to-consumer orders, from cartons to LTL and FTL freight.
+                  Ask us for a shipping cost analysis using your actual order data.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
@@ -725,7 +744,7 @@ export default function ThreePLFulfillmentPage() {
                   ["Receiving", "$240"],
                   ["Pick & Pack (1,000 orders)", "$3,500"],
                   ["Packing Materials", "$1,000"],
-                  ["DHL Shipping Savings", "~$1,250"],
+                  ["Outbound Shipping", "~$1,250"],
                   ["Marketing Inserts (50%)", "$175"],
                   ["Returns (3% rate)", "$135"],
                 ].map(([label, value]) => (
@@ -752,7 +771,7 @@ export default function ThreePLFulfillmentPage() {
                   5,000 orders/month
                 </h3>
                 <p className="text-[13px] text-[#A3A3A3] leading-relaxed">
-                  Mid-size brand doing $300K–$500K/month. Selling on Shopify and Amazon. Needs better rates and faster delivery.
+                  Mid-size brand doing $300K to $500K/month. Selling on Shopify and Amazon. Needs better rates and faster delivery.
                 </p>
               </div>
               <div className="p-6 space-y-3">
@@ -762,7 +781,7 @@ export default function ThreePLFulfillmentPage() {
                   ["Receiving", "$720"],
                   ["Pick & Pack (5,000 orders)", "$16,250"],
                   ["Packing Materials", "$5,000"],
-                  ["DHL Shipping Savings", "~$7,500"],
+                  ["Outbound Shipping", "~$7,500"],
                   ["Kitting (20% of orders)", "$1,500"],
                   ["Marketing Inserts", "$1,750"],
                   ["Returns (5% rate)", "$1,125"],
@@ -798,7 +817,7 @@ export default function ThreePLFulfillmentPage() {
                   ["Receiving", "$1,800"],
                   ["Pick & Pack (15,000 orders)", "$45,000"],
                   ["Branded Packaging", "$30,000"],
-                  ["DHL Shipping Savings", "~$26,250"],
+                  ["Outbound Shipping", "~$26,250"],
                   ["Kitting (30% of orders)", "$6,750"],
                   ["Marketing Inserts", "$5,250"],
                   ["Returns (5% rate)", "$3,375"],
@@ -837,13 +856,13 @@ export default function ThreePLFulfillmentPage() {
             {[
               {
                 step: "01",
-                title: "Shipping Analysis",
-                body: "We analyze your current shipping data and show you exactly what you'd save with our DHL rates and NKY location.",
+                title: "Connect Your Channels",
+                body: "Connect your sales channels through Hopstack, the multi-channel integration platform we use, including Shopify, other ecommerce platforms, and Amazon FBA and FBM.",
               },
               {
                 step: "02",
                 title: "Onboarding",
-                body: "WMS configuration, SKU mapping, and platform integration. Shopify, WooCommerce, Amazon — we connect to your stack.",
+                body: "WMS configuration, SKU mapping, and platform integration. Shopify, WooCommerce, and Amazon, we connect to your stack.",
               },
               {
                 step: "03",
@@ -853,12 +872,12 @@ export default function ThreePLFulfillmentPage() {
               {
                 step: "04",
                 title: "We Fulfill",
-                body: "Orders flow in automatically. We pick, pack, and ship via DHL at negotiated rates with real-time tracking.",
+                body: "Orders flow in automatically. We pick, pack, and ship each order, with real-time tracking the whole way.",
               },
               {
                 step: "05",
                 title: "You Grow",
-                body: "Monitor everything through your client portal. Focus on marketing and product development — we handle the logistics.",
+                body: "Monitor everything through your client portal. Focus on marketing and product development, we handle the logistics.",
               },
             ].map((s) => (
               <div key={s.step} className="relative">
@@ -907,10 +926,10 @@ export default function ThreePLFulfillmentPage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { value: "500+", label: "Min Orders/Month", sub: "Flexible minimums" },
-                { value: "90-Day", label: "Trial Available", sub: "Reduced minimums" },
-                { value: "24–48hr", label: "Order Turnaround", sub: "Standard processing" },
-                { value: "No", label: "Long-Term Contracts", sub: "Month-to-month available" },
+                { value: "Same-day", label: "Receiving", sub: "In most cases" },
+                { value: "48hr", label: "FBA Prep", sub: "Consistent turnaround" },
+                { value: "FBA/FBM/DTC", label: "Fulfillment", sub: "In one place" },
+                { value: "B2B", label: "Case & Pallet", sub: "Wholesale shipments" },
               ].map((s) => (
                 <div key={s.label} className="p-7 bg-white rounded-lg border border-[#E2DFD8]">
                   <div className="text-2xl font-semibold text-[#0D0D0D] tracking-tight">
@@ -965,7 +984,7 @@ export default function ThreePLFulfillmentPage() {
           </h2>
           <p className="text-[15px] text-[#737373] max-w-[500px] mx-auto mb-10">
             Request a free shipping cost analysis using your actual order data.
-            Most brands see meaningful savings on every shipment — before factoring
+            Most brands see meaningful savings on every shipment, before factoring
             in faster transit times.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
