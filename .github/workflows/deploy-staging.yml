@@ -26,9 +26,8 @@ jobs:
             git pull origin seo-staging
             npm install --production=false
             npm run build
-            if pm2 describe dg-staging > /dev/null 2>&1; then
-              pm2 restart dg-staging
-            else
-              PORT=3001 pm2 start npm --name dg-staging -- start
-            fi
+            # Stop + delete the old process so pm2 picks up the new build from the correct CWD
+            pm2 delete dg-staging 2>/dev/null || true
+            PORT=3001 pm2 start npm --name dg-staging -- start
+            pm2 save
             echo "Staging deploy complete"
