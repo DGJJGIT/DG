@@ -23,7 +23,7 @@ jobs:
             cd /var/www/delivery-group-staging
             git fetch origin
             git checkout seo-staging
-            git pull origin seo-staging
+            git reset --hard origin/seo-staging
             npm install --production=false
             npm run build
             # Stop + delete the old process so pm2 picks up the new build from the correct CWD
