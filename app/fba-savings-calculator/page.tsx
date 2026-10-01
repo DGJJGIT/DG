@@ -5,11 +5,11 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "FBA Savings Calculator — See What You'd Save with DeliveryGroup",
+  title: "FBA Savings Calculator, See What You'd Save with DeliveryGroup",
   description: "Calculate your real monthly FBA prep cost vs. DIY. DeliveryGroup charges $0.50/unit with no hidden fees. See your exact savings in 30 seconds.",
   alternates: { canonical: "https://deliverygroupinc.com/fba-savings-calculator" },
   openGraph: {
-    title: "FBA Savings Calculator — DeliveryGroup",
+    title: "FBA Savings Calculator, DeliveryGroup",
     description: "Calculate your real monthly FBA prep cost vs. DIY.",
     images: [{ url: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
   },
@@ -29,7 +29,7 @@ export default function FbaSavingsCalculatorPage() {
             How much are you actually spending on FBA prep?
           </h1>
           <p className="text-[16px] text-[#A3A3A3] max-w-[520px] leading-relaxed">
-            DIY prep costs $1.20–$1.80 per unit in labor and materials — verified. DeliveryGroup charges $0.50/unit all-in. See the difference for your volume.
+            DIY prep costs $1.20–$1.80 per unit in labor and materials, verified. DeliveryGroup charges $0.50/unit all-in. See the difference for your volume.
           </p>
         </div>
       </section>
@@ -71,14 +71,14 @@ export default function FbaSavingsCalculatorPage() {
             <SectionLabel>Location Advantage</SectionLabel>
             <h2 className="text-2xl font-semibold text-[#0D0D0D] mt-2 mb-4">5 miles from Amazon's CVG Air Hub</h2>
             <p className="text-[14px] text-[#737373] leading-relaxed">
-              Our 75,000 sq ft facility in Northern Kentucky sits 5 miles from Amazon's CVG Air Hub — the primary Amazon air cargo facility in the US. Inventory prepped at DeliveryGroup reaches Amazon fulfillment centers faster than prep centers located anywhere else in the country. Faster to Amazon means faster to your customer.
+              Our 75,000 sq ft facility in Northern Kentucky sits 5 miles from Amazon's CVG Air Hub, the primary Amazon air cargo facility in the US. Inventory prepped at DeliveryGroup reaches Amazon fulfillment centers faster than prep centers located anywhere else in the country. Faster to Amazon means faster to your customer.
             </p>
           </div>
 
           <div className="bg-white border border-[#E2DFD8] rounded-xl p-7">
             <h3 className="text-[17px] font-semibold text-[#0D0D0D] mb-2">Ready for a real number?</h3>
             <p className="text-[14px] text-[#737373] mb-5">
-              The calculator gives you a close estimate. For an exact quote based on your product mix, apparel or bulky requirements, or multi-channel setup — contact us.
+              The calculator gives you a close estimate. For an exact quote based on your product mix, apparel or bulky requirements, or multi-channel setup, contact us.
             </p>
             <Link
               href="/quote"

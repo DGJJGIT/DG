@@ -52,9 +52,9 @@ export default function QuoteForm() {
       volume: (form.elements.namedItem("volume") as HTMLSelectElement).value,
       geography: (form.elements.namedItem("geography") as HTMLInputElement).value,
       notes: (form.elements.namedItem("notes") as HTMLTextAreaElement).value,
-      // Honeypot — humans leave this blank; bots fill it
+      // Honeypot, humans leave this blank; bots fill it
       bot_field: (form.elements.namedItem("bot_field") as HTMLInputElement | null)?.value || "",
-      // Turnstile token — present when widget is active and solved
+      // Turnstile token, present when widget is active and solved
       cfToken: (form.elements.namedItem("cf-turnstile-response") as HTMLInputElement | null)?.value || "",
       // Attribution (card #115): which SEO page produced the lead + first-touch/UTM.
       seoService: new URLSearchParams(window.location.search).get("service") || "",
@@ -106,7 +106,7 @@ export default function QuoteForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      {/* Honeypot — hidden from real users, bots fill it */}
+      {/* Honeypot, hidden from real users, bots fill it */}
       <input
         name="bot_field"
         type="text"
@@ -144,10 +144,10 @@ export default function QuoteForm() {
         <select name="service" required value={prefillService} onChange={e => setPrefillService(e.target.value)} className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors">
           <option value="">Select primary service</option>
           <optgroup label="FBA Prep">
-            <option value="fba-prep-standard">Amazon FBA Prep — Standard</option>
-            <option value="fba-prep-apparel">Amazon FBA Prep — Apparel / Footwear</option>
-            <option value="fba-prep-bulky">Amazon FBA Prep — Bulky / Oversized</option>
-            <option value="fba-prep-hazmat">Amazon FBA Prep — Hazmat / Dangerous Goods</option>
+            <option value="fba-prep-standard">Amazon FBA Prep, Standard</option>
+            <option value="fba-prep-apparel">Amazon FBA Prep, Apparel / Footwear</option>
+            <option value="fba-prep-bulky">Amazon FBA Prep, Bulky / Oversized</option>
+            <option value="fba-prep-hazmat">Amazon FBA Prep, Hazmat / Dangerous Goods</option>
           </optgroup>
           <optgroup label="Fulfillment &amp; 3PL">
             <option value="3pl-fulfillment">3PL / eCommerce Fulfillment</option>
@@ -187,7 +187,7 @@ export default function QuoteForm() {
         <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Additional Requirements</label>
         <textarea name="notes" rows={4} className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors resize-none" placeholder="Special handling requirements, integration needs, timeline, etc." />
       </div>
-      {/* Cloudflare Turnstile — renders when NEXT_PUBLIC_TURNSTILE_SITEKEY is set */}
+      {/* Cloudflare Turnstile, renders when NEXT_PUBLIC_TURNSTILE_SITEKEY is set */}
       {TURNSTILE_SITEKEY && (
         <div
           className="cf-turnstile"

@@ -6,11 +6,12 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Fulfillment & 3PL Pricing",
   description:
-    "Transparent per-order fulfillment and 3PL pricing from Delivery Group — receiving, storage, pick & pack, and returns. Estimate your costs.",
+    "Transparent per-order fulfillment and 3PL pricing from Delivery Group, covering receiving, storage, pick & pack, and returns. Estimate your costs.",
   alternates: { canonical: "https://deliverygroupinc.com/pricing" },
   openGraph: {
     title: "Fulfillment & 3PL Pricing | Delivery Group",
-    description: "Transparent per-order fulfillment and 3PL pricing — estimate your costs.",
+    description: "Transparent per-order fulfillment and 3PL pricing, estimate your costs.",
+    images: [{ url: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&h=630&q=80", width: 1200, height: 630 }],
   },
 }
 

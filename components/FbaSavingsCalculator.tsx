@@ -2,12 +2,12 @@
 
 import { useState } from "react"
 
-// ─── Confirmed pricing — FBA Prep only (3PL has a separate structure) ─────────
+// ─── Confirmed pricing, FBA Prep only (3PL has a separate structure) ─────────
 const PREP_COST_PER_UNIT        = 0.50   // standard FBA prep, all-in
 const RECEIVING_COST_PER_UNIT   = 0.10   // Tier 2 rate (after free period ends)
 const ONBOARDING_FEE            = 350    // one-time, only if monthly volume < 500 units
 
-// Storage — per cubic foot / month (FBA Prep)
+// Storage, per cubic foot / month (FBA Prep)
 const STORAGE_STANDARD_PER_CUFT = 0.40  // standard size items
 const STORAGE_BULKY_PER_CUFT    = 0.60  // bulky / oversized items
 
@@ -80,13 +80,13 @@ export default function FbaSavingsCalculator() {
       {/* Header */}
       <div className="mb-8">
         <span className="inline-block text-[11px] font-semibold tracking-widest uppercase text-[#B8962E] mb-3">
-          FBA Prep — Savings Calculator
+          FBA Prep, Savings Calculator
         </span>
         <h2 className="text-2xl font-semibold text-[#0D0D0D] tracking-tight">
           How much are you spending on FBA prep?
         </h2>
         <p className="text-[14px] text-[#737373] mt-2">
-          Compare your real monthly cost — DIY vs. DeliveryGroup. FBA Prep pricing only.{" "}
+          Compare your real monthly cost, DIY vs. DeliveryGroup. FBA Prep pricing only.{" "}
           <a href="/3pl-fulfillment" className="underline underline-offset-2 hover:text-[#0D0D0D] transition-colors">
             3PL fulfillment uses different pricing →
           </a>
@@ -144,7 +144,7 @@ export default function FbaSavingsCalculator() {
         <div>
           <p className="text-[13px] font-medium text-[#3D3D3D] mb-2">Are you a new DeliveryGroup client?</p>
           <div className="flex gap-3">
-            {["Yes — within first 90 days / 5,000 units", "No — ongoing account"] .map((label, i) => {
+            {["Yes, within first 90 days / 5,000 units", "No, ongoing account"] .map((label, i) => {
               const active = i === 0 ? isNewClient : !isNewClient
               return (
                 <button
@@ -163,7 +163,7 @@ export default function FbaSavingsCalculator() {
             })}
           </div>
           <p className="text-[11px] text-[#A3A3A3] mt-1.5">
-            New clients receive free receiving for the first 90 days <em>or</em> 5,000 cumulative units — whichever comes first. After that, $0.10/unit.
+            New clients receive free receiving for the first 90 days <em>or</em> 5,000 cumulative units, whichever comes first. After that, $0.10/unit.
           </p>
         </div>
 
@@ -226,7 +226,7 @@ export default function FbaSavingsCalculator() {
 
       {/* Cost breakdown */}
       <div className="space-y-2 mb-8">
-        <p className="text-[12px] font-semibold text-[#3D3D3D] uppercase tracking-wider">Cost breakdown — DeliveryGroup</p>
+        <p className="text-[12px] font-semibold text-[#3D3D3D] uppercase tracking-wider">Cost breakdown, DeliveryGroup</p>
         <div className="divide-y divide-[#E2DFD8] border border-[#E2DFD8] rounded-lg overflow-hidden bg-white text-[13px]">
           <div className="flex justify-between px-4 py-3">
             <span className="text-[#737373]">Prep ({volume.toLocaleString()} units × $0.50)</span>
@@ -235,8 +235,8 @@ export default function FbaSavingsCalculator() {
           <div className="flex justify-between px-4 py-3">
             <span className="text-[#737373]">
               Receiving {isNewClient
-                ? "(free — Tier 1: first 90 days / 5,000 units)"
-                : `(${volume.toLocaleString()} units × $0.10 — Tier 2)`}
+                ? "(free, Tier 1: first 90 days / 5,000 units)"
+                : `(${volume.toLocaleString()} units × $0.10, Tier 2)`}
             </span>
             <span className="font-medium text-[#0D0D0D]">{fmtUSD(dg.receiving)}</span>
           </div>
@@ -261,7 +261,7 @@ export default function FbaSavingsCalculator() {
         </div>
       </div>
 
-      {/* CTA — passes calculator state to quote form as URL params */}
+      {/* CTA, passes calculator state to quote form as URL params */}
       <div className="text-center">
         <a
           href={(() => {

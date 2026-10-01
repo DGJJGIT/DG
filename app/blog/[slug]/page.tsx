@@ -7,6 +7,7 @@ import { posts, getPost } from "@/lib/blog"
 import SectionLabel from "@/components/ui/SectionLabel"
 import Badge from "@/components/ui/Badge"
 import JsonLd from "@/components/JsonLd"
+import { clampMeta } from "@/lib/seo/meta"
 
 export async function generateStaticParams() {
   return posts.map(p => ({ slug: p.slug }))
@@ -31,11 +32,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const metaTitle = shortTitle(post.title)
   return {
     title: metaTitle,
-    description: post.excerpt,
+    description: clampMeta(post.excerpt),
     openGraph: {
       type: "article",
       title: metaTitle,
-      description: post.excerpt,
+      description: clampMeta(post.excerpt),
       publishedTime: post.date,
       authors: [post.author],
       ...(post.image ? { images: [{ url: post.image }] } : {}),
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     twitter: {
       card: "summary_large_image",
       title: metaTitle,
-      description: post.excerpt,
+      description: clampMeta(post.excerpt),
     },
     alternates: { canonical: `https://deliverygroupinc.com/blog/${slug}` },
   }
@@ -63,7 +64,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           "@context": "https://schema.org",
           "@type": "Article",
           headline: post.title,
-          description: post.excerpt,
+          description: clampMeta(post.excerpt),
           image: post.image
             ? `https://deliverygroupinc.com${post.image}`
             : undefined,

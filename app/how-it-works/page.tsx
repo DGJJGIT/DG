@@ -4,7 +4,7 @@ import { ArrowRight, MessageSquare, Settings, Warehouse, Truck, CheckCircle } fr
 import SectionLabel from "@/components/ui/SectionLabel"
 
 export const metadata: Metadata = {
-  title: "How It Works — Getting Started with DeliveryGroup",
+  title: "How It Works, Getting Started with DeliveryGroup",
   description: "Go from first call to first shipment in 5-10 business days. See how our simple onboarding process works for FBA prep and 3PL fulfillment.",
   alternates: { canonical: "https://deliverygroupinc.com/how-it-works" },
 }
@@ -60,7 +60,7 @@ export default function HowItWorksPage() {
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <SectionLabel light>Getting Started</SectionLabel>
           <h1 className="text-4xl md:text-5xl font-semibold text-white tracking-tight mt-2 mb-6 max-w-[600px]">
-            From first call to first shipment —{" "}
+            From first call to first shipment,{" "}
             <span className="gold-text">in days, not months.</span>
           </h1>
           <p className="text-[16px] text-[#A3A3A3] max-w-[520px] leading-relaxed">

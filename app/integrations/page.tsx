@@ -4,7 +4,7 @@ import { ArrowRight, ShoppingCart, Store, Database, Truck, RotateCcw, Code } fro
 import SectionLabel from "@/components/ui/SectionLabel"
 
 export const metadata: Metadata = {
-  title: "Integrations — 200+ Platform Connections",
+  title: "Integrations, 200+ Platform Connections",
   description: "DeliveryGroup integrates with every major e-commerce platform, marketplace, ERP, and shipping carrier. Shopify, Amazon, WooCommerce, BigCommerce, and 200+ more.",
   alternates: { canonical: "https://deliverygroupinc.com/integrations" },
 }
@@ -46,7 +46,7 @@ const erps = [
 ]
 
 const carriers = [
-  { name: "DHL", desc: "Primary Partner — Direct CVG Super Hub inject for fastest transit and lowest rates", featured: true },
+  { name: "DHL", desc: "Primary Partner, Direct CVG Super Hub inject for fastest transit and lowest rates", featured: true },
   { name: "UPS", desc: "Ground and express shipping options nationwide" },
   { name: "USPS", desc: "First-class and priority mail for lightweight shipments" },
   { name: "FedEx", desc: "Ground, express, and freight shipping services" },

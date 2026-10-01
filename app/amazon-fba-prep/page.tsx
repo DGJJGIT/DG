@@ -10,7 +10,7 @@ import Badge from "@/components/ui/Badge"
 import JsonLd from "@/components/JsonLd"
 
 export const metadata: Metadata = {
-  title: "Amazon FBA Prep Service | Delivery Group Inc.",
+  title: "Amazon FBA Prep Service",
   description:
     "Amazon FBA prep with 48-hour turnaround and same-day receiving in most cases. FNSKU labeling, polybagging, and bundling for FBA, FBM, and DTC sellers.",
   alternates: { canonical: "https://deliverygroupinc.com/amazon-fba-prep" },

@@ -27,13 +27,13 @@ export const productTypes: ProductType[] = [
       { value: "<48hr", label: "Order processing turnaround" },
       { value: "99.4%", label: "On-time delivery rate" },
     ],
-    body: `Apparel fulfillment is different from standard e-commerce. Clothing needs to arrive in perfect condition — wrinkle-free, neatly folded or hung, and protected from damage during transit. Your customers judge your brand by the unboxing experience, and a crushed blouse or wrinkled dress means a return and a lost customer.
+    body: `Apparel fulfillment is different from standard e-commerce. Clothing needs to arrive in perfect condition, wrinkle-free, neatly folded or hung, and protected from damage during transit. Your customers judge your brand by the unboxing experience, and a crushed blouse or wrinkled dress means a return and a lost customer.
 
 DeliveryGroup handles apparel fulfillment with the care your brand demands. Every garment is poly bagged or tissue wrapped before shipping. Items are stored on hangers or folded neatly in organized bins, sorted by SKU, size, and color. When an order comes in, we pick the exact variant, pack it in your custom packaging, and ship it using our discounted DHL rates.
 
-Apparel has the highest return rate of any e-commerce category — often exceeding 30 percent. Our returns processing system handles the full cycle: customer-facing returns portal, return label generation, incoming inspection, restocking of sellable items, and reporting on return reasons. We help you identify patterns so you can reduce returns over time.
+Apparel has the highest return rate of any e-commerce category, often exceeding 30 percent. Our returns processing system handles the full cycle: customer-facing returns portal, return label generation, incoming inspection, restocking of sellable items, and reporting on return reasons. We help you identify patterns so you can reduce returns over time.
 
-Fashion is seasonal. Black Friday, holiday gifting, spring launches — your order volume can triple overnight. Our warehouse operations and staffing model are designed to absorb these spikes without delays or errors. Whether you ship 500 orders a month or 5,000, we scale with your brand.`,
+Fashion is seasonal. Black Friday, holiday gifting, spring launches, your order volume can triple overnight. Our warehouse operations and staffing model are designed to absorb these spikes without delays or errors. Whether you ship 500 orders a month or 5,000, we scale with your brand.`,
   },
   {
     slug: "supplements",
@@ -57,7 +57,7 @@ Fashion is seasonal. Black Friday, holiday gifting, spring launches — your ord
 
 DeliveryGroup has built supplement fulfillment capabilities from the ground up. Every unit in our warehouse is tracked at the lot level. Our WMS enforces FEFO rotation automatically, ensuring that products closest to expiration ship first. Expiration alerts notify you well in advance so you can plan promotions or removals before products expire on the shelf.
 
-Our facility meets FDA storage requirements for dietary supplements, including temperature monitoring and proper documentation. In the event of a recall, our lot-level traceability means we can identify exactly which units went to which customers — down to the individual order.
+Our facility meets FDA storage requirements for dietary supplements, including temperature monitoring and proper documentation. In the event of a recall, our lot-level traceability means we can identify exactly which units went to which customers, down to the individual order.
 
 For subscription supplement brands, we automate recurring orders across all your channels. Whether a customer subscribes through your Shopify store, reorders on Amazon, or you fulfill wholesale orders to retail partners, everything ships from the same inventory pool in our Northern Kentucky warehouse.`,
   },
@@ -79,13 +79,13 @@ For subscription supplement brands, we automate recurring orders across all your
       { value: "<48hr", label: "Kit assembly turnaround" },
       { value: "200+", label: "Platform integrations" },
     ],
-    body: `Subscription box fulfillment is part logistics, part production line. Every box needs to be assembled with the right products, the right packaging, and the right inserts — consistently, at scale, every single month.
+    body: `Subscription box fulfillment is part logistics, part production line. Every box needs to be assembled with the right products, the right packaging, and the right inserts, consistently, at scale, every single month.
 
 DeliveryGroup handles the full kitting and assembly process. We store your individual components, assemble each box according to your specifications, include branded packaging and marketing inserts, and ship on your schedule. Whether your box contains 3 items or 15, we build it to your exact standard.
 
 Subscription brands often change their product mix monthly. A new hero product, a seasonal item, a promotional insert for an upcoming launch. Our flexible assembly process accommodates these changes without slowing down fulfillment. You tell us the new kit configuration and we execute it.
 
-We integrate with subscription platforms and your e-commerce store to automate recurring orders. When renewal day hits, orders flow into our system automatically. We assemble, pack, and ship — and your subscribers get their box on time, every time. Our discounted DHL rates keep your per-box shipping costs low, which matters when margins are tight in the subscription space.`,
+We integrate with subscription platforms and your e-commerce store to automate recurring orders. When renewal day hits, orders flow into our system automatically. We assemble, pack, and ship, and your subscribers get their box on time, every time. Our discounted DHL rates keep your per-box shipping costs low, which matters when margins are tight in the subscription space.`,
   },
   {
     slug: "oversized",

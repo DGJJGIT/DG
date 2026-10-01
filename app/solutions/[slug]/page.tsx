@@ -4,6 +4,7 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowRight, CheckCircle } from "lucide-react"
 import { productTypes, getProductType } from "@/lib/product-types"
+import { clampMeta } from "@/lib/seo/meta"
 import SectionLabel from "@/components/ui/SectionLabel"
 
 export async function generateStaticParams() {
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!pt) return { title: "Not Found" }
   return {
     title: `${pt.name} Fulfillment`,
-    description: pt.description,
+    description: clampMeta(pt.description),
     alternates: { canonical: `https://deliverygroupinc.com/solutions/${slug}` },
   }
 }

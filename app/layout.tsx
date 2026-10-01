@@ -17,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://deliverygroupinc.com"),
   title: {
-    default: "Delivery Group Inc. — Last-Mile Delivery & Logistics",
+    default: "Delivery Group Inc. · Last-Mile Delivery & Logistics",
     template: "%s | Delivery Group Inc.",
   },
   description:
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://deliverygroupinc.com",
     siteName: "Delivery Group Inc.",
-    title: "Delivery Group Inc. — Last-Mile Delivery & Logistics",
+    title: "Delivery Group Inc. · Last-Mile Delivery & Logistics",
     description: "Premium Amazon FBA prep, last-mile, and expedited shipping solutions nationwide.",
     images: [
       {
         url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80",
         width: 1200,
         height: 630,
-        alt: "Delivery Group Inc. — warehouse and logistics operations in Northern Kentucky",
+        alt: "Delivery Group Inc. warehouse and logistics operations in Northern Kentucky",
       },
     ],
   },

@@ -5,8 +5,9 @@ import { locations } from "@/lib/locations"
 import SectionLabel from "@/components/ui/SectionLabel"
 
 export const metadata: Metadata = {
-  title: "Delivery Locations — Markets We Serve",
+  title: "Delivery Locations, Markets We Serve",
   description: "Delivery Group operates in all 50 states plus over 100 additional countries. Find delivery services available in your city.",
+  alternates: { canonical: "https://deliverygroupinc.com/locations" },
 }
 
 export default function LocationsPage() {

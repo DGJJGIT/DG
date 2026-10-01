@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-export const metadata: Metadata = { title: "Terms of Service", description: "Delivery Group Inc. Terms of Service." }
+export const metadata: Metadata = { title: "Terms of Service", description: "Delivery Group Inc. Terms of Service.", alternates: { canonical: "https://deliverygroupinc.com/terms" } }
 export default function TermsPage() {
   return (
     <>

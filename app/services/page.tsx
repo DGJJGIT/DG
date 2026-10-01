@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   description: "44 dedicated service pages across fulfillment, 3PL warehousing, courier & delivery, reverse logistics, and hazmat. One trusted partner for every logistics need.",
   alternates: { canonical: "https://deliverygroupinc.com/services" },
   openGraph: {
-    title: "All Logistics & Delivery Services | Delivery Group Inc.",
+    title: "All Logistics & Delivery Services",
     description: "44 dedicated service pages across fulfillment, 3PL, courier, reverse logistics, and hazmat.",
-    images: [{ url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80", width: 1200, height: 630, alt: "Delivery Group Inc. — logistics services" }],
+    images: [{ url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80", width: 1200, height: 630, alt: "Delivery Group Inc., logistics services" }],
   },
 }
 
@@ -93,7 +93,7 @@ const clusters = [
     label: "Hazmat",
     icon: AlertTriangle,
     color: "#C0392B",
-    tagline: "Full-vertical hazardous materials logistics — near-zero competition",
+    tagline: "Full-vertical hazardous materials logistics, near-zero competition",
     hub: { label: "Hazmat Trucking Companies", href: "/hazmat-trucking-companies", flagship: true },
     pages: [
       { label: "Hazmat Storage", href: "/hazmat-storage" },
@@ -120,7 +120,7 @@ export default function ServicesPage() {
             <span className="gold-text">One trusted partner.</span>
           </h1>
           <p className="text-[16px] text-[#A3A3A3] max-w-[560px] leading-relaxed mb-8">
-            {totalPages} dedicated service pages across 5 specializations — fulfillment, 3PL warehousing, courier &amp; delivery, reverse logistics, and hazmat. 2M+ deliveries/month, 99.4% on-time, all 50 states.
+            {totalPages} dedicated service pages across 5 specializations, fulfillment, 3PL warehousing, courier &amp; delivery, reverse logistics, and hazmat. 2M+ deliveries/month, 99.4% on-time, all 50 states.
           </p>
           <div className="flex flex-wrap gap-2">
             {clusters.map((c) => (

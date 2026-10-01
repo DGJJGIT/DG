@@ -6,6 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel"
 export const metadata: Metadata = {
   title: "Partners & Integrations",
   description: "Delivery Group's partner ecosystem includes technology platforms, e-commerce providers, and logistics integrators.",
+  alternates: { canonical: "https://deliverygroupinc.com/partners" },
 }
 
 const partnerTypes = [

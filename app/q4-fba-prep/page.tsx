@@ -9,15 +9,15 @@ import SectionLabel from "@/components/ui/SectionLabel"
 import JsonLd from "@/components/JsonLd"
 
 export const metadata: Metadata = {
-  title: "Q4 FBA Prep 2026 — Ship Now, Hit BFCM Deadlines | Delivery Group",
+  title: "Q4 FBA Prep 2026, Ship Now, Hit BFCM Deadlines",
   description:
-    "FBA prep center 5 miles from Amazon's CVG Air Hub. Same-day to next-day inbound. $0.50/unit standard prep — 30–50% below market. No minimums. Ship before BFCM cutoffs.",
+    "FBA prep center 5 miles from Amazon's CVG Air Hub. Same-day to next-day inbound. $0.50/unit standard prep, 30–50% below market. Ship before BFCM cutoffs.",
   alternates: { canonical: "https://deliverygroupinc.com/q4-fba-prep" },
   openGraph: {
     url: "https://deliverygroupinc.com/q4-fba-prep",
-    title: "Q4 FBA Prep 2026 — Ship Now, Hit BFCM Deadlines | Delivery Group",
+    title: "Q4 FBA Prep 2026, Ship Now, Hit BFCM Deadlines | Delivery Group",
     description:
-      "FBA prep center 5 miles from Amazon's CVG Air Hub. Same-day to next-day inbound. $0.50/unit standard prep — 30–50% below market. No minimums. Ship before BFCM cutoffs.",
+      "FBA prep center 5 miles from Amazon's CVG Air Hub. Same-day to next-day inbound. $0.50/unit standard prep, 30–50% below market. Ship before BFCM cutoffs.",
     images: [
       {
         url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80",
@@ -48,18 +48,18 @@ const urgencyPoints = [
 
 const pricingRows = [
   { service: "Standard Prep (FNSKU + poly bag + inspection)", dg: "$0.50/unit", market: "$0.80–$1.25/unit" },
-  { service: "Receiving — new accounts (first 90 days / 5,000 units)", dg: "FREE", market: "$0.10–$0.25/unit" },
+  { service: "Receiving, new accounts (first 90 days / 5,000 units)", dg: "FREE", market: "$0.10–$0.25/unit" },
   { service: "FNSKU Labeling Only", dg: "$0.20/unit", market: "$0.50–$0.75/unit" },
   { service: "Bundling (2-pack, incl. FNSKU + poly bag)", dg: "$1.00/bundle", market: "$1.50–$2.50/bundle" },
-  { service: "Apparel / Footwear Prep", dg: "Custom — contact us", market: "$1.00–$2.00+/unit" },
-  { service: "Storage — first 30 days", dg: "FREE", market: "$0.50–$1.50/cu ft/mo" },
+  { service: "Apparel / Footwear Prep", dg: "Custom, contact us", market: "$1.00–$2.00+/unit" },
+  { service: "Storage, first 30 days", dg: "FREE", market: "$0.50–$1.50/cu ft/mo" },
   { service: "Onboarding / Setup Fee", dg: "FREE", market: "$0–$975" },
 ]
 
 const speedFacts = [
   { stat: "Same-day → next-day", label: "Inbound to Amazon FCs from our dock" },
   { stat: "48 hours", label: "Standard FBA prep turnaround (consistently delivered)" },
-  { stat: "Same-day", label: "Receiving in most cases — inventory in the system fast" },
+  { stat: "Same-day", label: "Receiving in most cases, inventory in the system fast" },
   { stat: "5 miles", label: "From Amazon's CVG Air Hub, one of the largest Amazon Air freight nodes in the US" },
 ]
 
@@ -73,7 +73,7 @@ const categories = [
 const competitors = [
   {
     name: "ShipBob",
-    issues: ["$975 setup fee", "$275/month minimum", "Quote-gated pricing — no public rate card"],
+    issues: ["$975 setup fee", "$275/month minimum", "Quote-gated pricing, no public rate card"],
     dgAdvantage: "No setup fee, no monthly minimum, published rates you can see today.",
   },
   {
@@ -88,7 +88,7 @@ const competitors = [
   {
     name: "NOMAD State Prep Centers (OR / DE / MT)",
     issues: [
-      "Sales-tax advantage ended with the 2019 Wayfair decision — myth, not math",
+      "Sales-tax advantage ended with the 2019 Wayfair decision, myth, not math",
       "Longer transit to Amazon MidWest/East FCs means slower inbound",
       "Higher Amazon placement fees due to suboptimal inbound origin",
     ],
@@ -99,7 +99,7 @@ const competitors = [
 const faqs = [
   {
     q: "Can I start with a test shipment before committing?",
-    a: "Yes. We accept test shipments from new clients — no minimum order required. It's the lowest-friction way to verify turnaround, accuracy, and communication before you scale into Q4.",
+    a: "Yes. We accept test shipments from new clients, no minimum order required. It's the lowest-friction way to verify turnaround, accuracy, and communication before you scale into Q4.",
   },
   {
     q: "How fast can you realistically get my inventory to Amazon before BFCM?",
@@ -107,11 +107,11 @@ const faqs = [
   },
   {
     q: "Do you accept online arbitrage (OA) or retail arbitrage (RA) sellers?",
-    a: "Yes — including low-volume accounts. AMZ Prep rejects OA/RA sellers under 2,500 units/month. We don't have that policy.",
+    a: "Yes, including low-volume accounts. AMZ Prep rejects OA/RA sellers under 2,500 units/month. We don't have that policy.",
   },
   {
     q: "Is there a setup or onboarding fee?",
-    a: "No setup fee. No onboarding fee. Month-to-month only — no long-term contracts. For new accounts under 500 units/month, we waive the $350 one-time onboarding fee entirely.",
+    a: "No setup fee. No onboarding fee. Month-to-month only, no long-term contracts. For new accounts under 500 units/month, we waive the $350 one-time onboarding fee entirely.",
   },
   {
     q: "Do you handle apparel, footwear, and bulky items?",
@@ -119,7 +119,7 @@ const faqs = [
   },
   {
     q: "What happens if Amazon rejects part of my shipment?",
-    a: "We work directly with you to resolve compliance, labeling, or inventory issues — we don't let inventory sit and wait. Hands-on communication when problems come up is part of the service.",
+    a: "We work directly with you to resolve compliance, labeling, or inventory issues, we don't let inventory sit and wait. Hands-on communication when problems come up is part of the service.",
   },
 ]
 
@@ -130,7 +130,7 @@ export default function Q4FbaPrepPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "Service",
-          name: "Q4 FBA Prep — Black Friday / Cyber Monday 2026",
+          name: "Q4 FBA Prep, Black Friday / Cyber Monday 2026",
           provider: {
             "@type": "LocalBusiness",
             name: "Delivery Group Inc.",
@@ -177,7 +177,7 @@ export default function Q4FbaPrepPage() {
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-[#B8962E] animate-pulse shrink-0" />
               <span className="text-[12.5px] text-[#A3A3A3]">
-                Q4 2026 — BFCM inbound cutoffs approaching. Same-day receiving available.
+                Q4 2026, BFCM inbound cutoffs approaching. Same-day receiving available.
               </span>
             </div>
             <Link
@@ -205,7 +205,7 @@ export default function Q4FbaPrepPage() {
             <p className="text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[600px] mb-10">
               Delivery Group is an FBA prep center 5 miles from Amazon's CVG Air Hub in Northern Kentucky.
               Same-day to next-day inbound to Amazon FCs from our dock. Sellers who ship to us this week can
-              still hit the optimized-split deadline — most NOMAD-state and coastal prep centers can't say the same.
+              still hit the optimized-split deadline, most NOMAD-state and coastal prep centers can't say the same.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -274,7 +274,7 @@ export default function Q4FbaPrepPage() {
               Published rates. No quote-gating.
             </h2>
             <p className="text-[15px] text-[#737373] mt-4 max-w-[540px] leading-relaxed">
-              30–50% below market. See the real number today — not after a sales call next week you don&apos;t have time for.
+              30–50% below market. See the real number today, not after a sales call next week you don&apos;t have time for.
             </p>
           </div>
 
@@ -305,7 +305,7 @@ export default function Q4FbaPrepPage() {
           <div className="mt-6 flex flex-col sm:flex-row gap-4 items-start">
             <div className="flex items-start gap-2.5 text-[13px] text-[#737373]">
               <CheckCircle size={14} className="text-[#B8962E] shrink-0 mt-0.5" />
-              <span>New accounts: receiving is free for first 90 days or 5,000 cumulative units — whichever comes first.</span>
+              <span>New accounts: receiving is free for first 90 days or 5,000 cumulative units, whichever comes first.</span>
             </div>
             <div className="flex items-start gap-2.5 text-[13px] text-[#737373]">
               <CheckCircle size={14} className="text-[#B8962E] shrink-0 mt-0.5" />
@@ -334,7 +334,7 @@ export default function Q4FbaPrepPage() {
                 Every category. One roof. No split shipments.
               </h2>
               <p className="text-[15px] text-[#737373] leading-relaxed mb-8 max-w-[480px]">
-                Standard, apparel, footwear, and bulky/oversized — all handled in our single 75,000 sq ft
+                Standard, apparel, footwear, and bulky/oversized, all handled in our single 75,000 sq ft
                 Northern Kentucky facility. No need to route different product types to different prep centers
                 during the exact season when speed matters most.
               </p>
@@ -354,9 +354,9 @@ export default function Q4FbaPrepPage() {
 
             <div className="space-y-4">
               {[
-                { icon: Zap, title: "Same-day receiving", body: "Inventory hits our system the day it arrives in most cases — no multi-day check-in queue." },
+                { icon: Zap, title: "Same-day receiving", body: "Inventory hits our system the day it arrives in most cases, no multi-day check-in queue." },
                 { icon: Clock, title: "48-hour turnaround", body: "Standard FBA prep turnaround we consistently deliver. Not a best-effort estimate." },
-                { icon: Truck, title: "Direct DHL partnership", body: "Outbound ships direct-inject into DHL's CVG Super Hub, 5 miles from our facility — faster and cheaper nationwide." },
+                { icon: Truck, title: "Direct DHL partnership", body: "Outbound ships direct-inject into DHL's CVG Super Hub, 5 miles from our facility, faster and cheaper nationwide." },
                 { icon: MapPin, title: "5 miles from Amazon CVG Air Hub", body: "One of the largest Amazon Air freight nodes in the country. Same-day to next-day inbound to Amazon FCs." },
               ].map((item) => {
                 const Icon = item.icon

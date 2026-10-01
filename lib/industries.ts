@@ -21,7 +21,7 @@ export const industries: Industry[] = [
     challenges: [
       { title: "Peak Season Scalability", body: "Your carrier network must flex from 10,000 to 100,000+ shipments during Q4 without degraded performance." },
       { title: "Returns Management", body: "A frictionless returns experience is as important as the forward shipment for retention and LTV." },
-      { title: "Real-Time Visibility", body: "Customers expect proactive tracking notifications — not reactive responses to complaints." },
+      { title: "Real-Time Visibility", body: "Customers expect proactive tracking notifications, not reactive responses to complaints." },
       { title: "Multi-Channel Complexity", body: "Serving marketplace, DTC, and wholesale channels through a unified logistics operation." },
     ],
     solutions: ["Platform integrations (Shopify, Magento, WooCommerce)", "Automated label generation", "Carrier rate shopping", "Branded tracking pages", "Returns portal management", "Inventory distributed storage"],
@@ -68,7 +68,7 @@ export const industries: Industry[] = [
     title: "Supplements & Nutraceuticals",
     tagline: "Precision fulfillment for the OTD supplements market.",
     description: "Lot-tracked, expiration-managed fulfillment for supplement brands selling direct-to-consumer, on Amazon, and through wholesale channels.",
-    longDescription: "The supplements and nutraceuticals market demands fulfillment that goes beyond standard e-commerce — lot tracking, expiration date management, FDA-compliant labeling, and the operational discipline to handle products that consumers trust with their health. Delivery Group provides purpose-built supplement fulfillment with the compliance infrastructure, inventory precision, and shipping speed that OTD supplement brands need to scale.",
+    longDescription: "The supplements and nutraceuticals market demands fulfillment that goes beyond standard e-commerce, lot tracking, expiration date management, FDA-compliant labeling, and the operational discipline to handle products that consumers trust with their health. Delivery Group provides purpose-built supplement fulfillment with the compliance infrastructure, inventory precision, and shipping speed that OTD supplement brands need to scale.",
     challenges: [
       { title: "Lot & Expiration Tracking", body: "Every unit must be traceable by lot number with FEFO (First Expired, First Out) inventory rotation." },
       { title: "FDA Compliance", body: "Supplement labeling, storage conditions, and handling must meet FDA and cGMP requirements." },

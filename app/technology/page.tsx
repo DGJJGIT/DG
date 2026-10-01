@@ -7,7 +7,7 @@ import {
 import SectionLabel from "@/components/ui/SectionLabel"
 
 export const metadata: Metadata = {
-  title: "Technology & Platform Integrations — 3PL for Shopify, Amazon, WooCommerce & More",
+  title: "Technology & Platform Integrations, 3PL for Shopify, Amazon, WooCommerce & More",
   description:
     "DeliveryGroup integrates with 17+ major e-commerce platforms including Shopify, Amazon, WooCommerce, BigCommerce, Walmart, eBay, Etsy, TikTok Shop, and more. AI-powered route optimization, real-time tracking, and enterprise-grade logistics technology.",
   alternates: { canonical: "https://deliverygroupinc.com/technology" },
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 const platformCapabilities = [
   { icon: Map, title: "Route Intelligence", body: "AI-driven route optimization that factors in real-time traffic, vehicle capacity, delivery time windows, and driver skill to minimize time and cost while maximizing success rates." },
   { icon: BarChart3, title: "Real-Time Dashboard", body: "Live visibility into every shipment across your account. Track delivery status, monitor performance metrics, and identify exceptions before they impact your customers." },
-  { icon: Bell, title: "Proactive Notifications", body: "Automated, branded delivery communications via SMS, email, and push — keeping recipients informed without requiring a single customer service contact." },
+  { icon: Bell, title: "Proactive Notifications", body: "Automated, branded delivery communications via SMS, email, and push, keeping recipients informed without requiring a single customer service contact." },
   { icon: Code2, title: "API Platform", body: "Enterprise-grade REST API with webhooks, enabling seamless integration with your e-commerce platform, WMS, OMS, and ERP systems in 48 hours or less." },
-  { icon: Lock, title: "Proof of Delivery", body: "Electronic POD with GPS coordinates, timestamp, photo documentation, and signature capture — eliminating delivery disputes and accelerating invoice processing." },
+  { icon: Lock, title: "Proof of Delivery", body: "Electronic POD with GPS coordinates, timestamp, photo documentation, and signature capture, eliminating delivery disputes and accelerating invoice processing." },
   { icon: Cpu, title: "Predictive Analytics", body: "Machine learning models that forecast delivery success rates, identify high-risk shipments, and surface operational improvement opportunities before they become problems." },
 ]
 
@@ -40,7 +40,7 @@ const marketplaces = [
   {
     name: "Walmart Marketplace",
     slug: "walmart",
-    description: "Walmart Marketplace has grown rapidly and now hosts over 150,000 third-party sellers. Walmart holds sellers to strict shipping standards — late shipments and cancellations can get your account suspended. DeliveryGroup integrates with Walmart's API to pull orders automatically, ship on time, and meet Walmart's two-day delivery expectations using our central NKY location and DHL partnership.",
+    description: "Walmart Marketplace has grown rapidly and now hosts over 150,000 third-party sellers. Walmart holds sellers to strict shipping standards, late shipments and cancellations can get your account suspended. DeliveryGroup integrates with Walmart's API to pull orders automatically, ship on time, and meet Walmart's two-day delivery expectations using our central NKY location and DHL partnership.",
     highlights: ["Meets Walmart 2-day standards", "Automatic order pull via API", "Central location for fast ground shipping"],
   },
   {
@@ -58,7 +58,7 @@ const marketplaces = [
   {
     name: "TikTok Shop",
     slug: "tiktok-shop",
-    description: "TikTok Shop has transformed social media into a direct selling channel, and brands that go viral need a fulfillment partner that can handle sudden spikes in order volume. DeliveryGroup integrates with TikTok Shop to automatically receive orders and ship them fast. When a product takes off on TikTok, order volume can jump from 50 to 5,000 in a single day — our infrastructure is built to scale without breaking.",
+    description: "TikTok Shop has transformed social media into a direct selling channel, and brands that go viral need a fulfillment partner that can handle sudden spikes in order volume. DeliveryGroup integrates with TikTok Shop to automatically receive orders and ship them fast. When a product takes off on TikTok, order volume can jump from 50 to 5,000 in a single day, our infrastructure is built to scale without breaking.",
     highlights: ["Handles viral order spikes", "Automatic order integration", "Scalable infrastructure"],
   },
   {
@@ -103,13 +103,13 @@ const storefronts = [
   {
     name: "Wix",
     slug: "wix",
-    description: "Wix eCommerce serves millions of small businesses and entrepreneurs who want an easy way to sell online. As Wix stores grow, shipping and fulfillment becomes a bottleneck. DeliveryGroup integrates with Wix to take over the fulfillment process — orders are pulled automatically, packed with care, and shipped at discounted DHL rates from our central NKY location.",
+    description: "Wix eCommerce serves millions of small businesses and entrepreneurs who want an easy way to sell online. As Wix stores grow, shipping and fulfillment becomes a bottleneck. DeliveryGroup integrates with Wix to take over the fulfillment process, orders are pulled automatically, packed with care, and shipped at discounted DHL rates from our central NKY location.",
     highlights: ["Automatic order import", "Great for growing Wix stores", "Discounted DHL shipping"],
   },
   {
     name: "Adobe Commerce (Magento)",
     slug: "magento",
-    description: "Adobe Commerce, formerly Magento, is the platform of choice for enterprise e-commerce brands that need deep customization and control. DeliveryGroup offers custom API and EDI integrations for Adobe Commerce stores. Our technical team works with your developers to build a fulfillment connection that fits your exact workflow — including custom order routing, multi-warehouse logic, and advanced inventory rules.",
+    description: "Adobe Commerce, formerly Magento, is the platform of choice for enterprise e-commerce brands that need deep customization and control. DeliveryGroup offers custom API and EDI integrations for Adobe Commerce stores. Our technical team works with your developers to build a fulfillment connection that fits your exact workflow, including custom order routing, multi-warehouse logic, and advanced inventory rules.",
     highlights: ["Custom API & EDI integration", "Enterprise-grade fulfillment", "Multi-warehouse support"],
   },
   {
@@ -124,13 +124,13 @@ const wholesale = [
   {
     name: "Faire",
     slug: "faire",
-    description: "Faire is the leading online wholesale marketplace, connecting independent retailers with brands. Brands selling on Faire need a fulfillment partner that can handle both individual store orders and bulk wholesale shipments. DeliveryGroup integrates with Faire to fulfill wholesale orders alongside your DTC orders from a single inventory pool — no need for separate warehouses or operations.",
+    description: "Faire is the leading online wholesale marketplace, connecting independent retailers with brands. Brands selling on Faire need a fulfillment partner that can handle both individual store orders and bulk wholesale shipments. DeliveryGroup integrates with Faire to fulfill wholesale orders alongside your DTC orders from a single inventory pool, no need for separate warehouses or operations.",
     highlights: ["Wholesale + DTC from one warehouse", "Single inventory pool", "B2B shipping capabilities"],
   },
   {
     name: "Amazon Business",
     slug: "amazon-business",
-    description: "Amazon Business is the B2B arm of Amazon, serving millions of business buyers. Sellers on Amazon Business need fulfillment that meets business customer expectations — including purchase order numbers, bulk packaging, and reliable delivery schedules. DeliveryGroup handles Amazon Business fulfillment with the same infrastructure that powers our FBA prep and merchant-fulfilled services.",
+    description: "Amazon Business is the B2B arm of Amazon, serving millions of business buyers. Sellers on Amazon Business need fulfillment that meets business customer expectations, including purchase order numbers, bulk packaging, and reliable delivery schedules. DeliveryGroup handles Amazon Business fulfillment with the same infrastructure that powers our FBA prep and merchant-fulfilled services.",
     highlights: ["B2B fulfillment capabilities", "Bulk packaging options", "PO number tracking"],
   },
 ]
@@ -180,7 +180,7 @@ export default function TechnologyPage() {
             <span className="gold-text">every delivery.</span>
           </h1>
           <p className="text-[16px] text-[#A3A3A3] max-w-[520px] leading-relaxed mb-10">
-            Our logistics platform combines AI-powered route optimization, real-time tracking, and native integrations with every major e-commerce selling platform — from Shopify and Amazon to TikTok Shop and Faire.
+            Our logistics platform combines AI-powered route optimization, real-time tracking, and native integrations with every major e-commerce selling platform, from Shopify and Amazon to TikTok Shop and Faire.
           </p>
           <div className="flex flex-wrap gap-4">
             {[
@@ -263,7 +263,7 @@ export default function TechnologyPage() {
                 Marketplace Integrations
               </h2>
               <p className="text-[15px] text-[#737373] mt-2 leading-relaxed max-w-[640px]">
-                We integrate with the biggest online marketplaces in the United States. Sell on one platform or sell on all of them — DeliveryGroup fulfills orders from a single inventory pool in our Northern Kentucky warehouse with discounted DHL shipping rates.
+                We integrate with the biggest online marketplaces in the United States. Sell on one platform or sell on all of them, DeliveryGroup fulfills orders from a single inventory pool in our Northern Kentucky warehouse with discounted DHL shipping rates.
               </p>
             </div>
           </div>
@@ -287,7 +287,7 @@ export default function TechnologyPage() {
                 Storefront & DTC Platform Integrations
               </h2>
               <p className="text-[15px] text-[#737373] mt-2 leading-relaxed max-w-[640px]">
-                Whether you run your own online store on Shopify, WooCommerce, BigCommerce, or an enterprise platform like Salesforce Commerce Cloud, DeliveryGroup plugs into your stack and starts fulfilling orders in days — not weeks.
+                Whether you run your own online store on Shopify, WooCommerce, BigCommerce, or an enterprise platform like Salesforce Commerce Cloud, DeliveryGroup plugs into your stack and starts fulfilling orders in days, not weeks.
               </p>
             </div>
           </div>
@@ -335,13 +335,13 @@ export default function TechnologyPage() {
               When you sell online, getting orders to customers fast and cheap is what keeps your business growing. But as your order volume increases, packing and shipping from your home, garage, or office becomes impossible. That is where a 3PL (third-party logistics) partner like DeliveryGroup comes in.
             </p>
             <p>
-              A 3PL stores your inventory in their warehouse, picks and packs your orders when they come in, and ships them to your customers. The best 3PLs connect directly to your selling platform so orders flow in automatically — no copying and pasting, no manual data entry, no mistakes.
+              A 3PL stores your inventory in their warehouse, picks and packs your orders when they come in, and ships them to your customers. The best 3PLs connect directly to your selling platform so orders flow in automatically, no copying and pasting, no manual data entry, no mistakes.
             </p>
             <p>
               DeliveryGroup integrates with all of the major e-commerce platforms in the United States: Amazon, Shopify, WooCommerce, BigCommerce, eBay, Walmart Marketplace, Etsy, TikTok Shop, Temu, Mercari, Poshmark, Squarespace, Wix, Adobe Commerce, Salesforce Commerce Cloud, Faire, and Amazon Business.
             </p>
             <p>
-              What makes DeliveryGroup different from other 3PLs is two things. First, we have a direct partnership with DHL that gives you shipping rates you cannot get on your own. Second, our warehouse is in Northern Kentucky — one of the best shipping locations in the country. From here, we can reach over 80% of the US population within 2 to 3 business days by ground shipping. That means your customers get their orders faster, and you pay less to ship them.
+              What makes DeliveryGroup different from other 3PLs is two things. First, we have a direct partnership with DHL that gives you shipping rates you cannot get on your own. Second, our warehouse is in Northern Kentucky, one of the best shipping locations in the country. From here, we can reach over 80% of the US population within 2 to 3 business days by ground shipping. That means your customers get their orders faster, and you pay less to ship them.
             </p>
             <p>
               Whether you sell on one platform or ten, DeliveryGroup manages all of your fulfillment from a single warehouse with a single inventory count. You never have to worry about overselling or splitting your stock between different locations. Our technology keeps everything in sync across every channel, every order, every day.

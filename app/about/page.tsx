@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Delivery Group Inc. is a premium last-mile delivery and logistics company built on precision, technology, and a commitment to the customer experience.",
   alternates: { canonical: "https://deliverygroupinc.com/about" },
   openGraph: {
-    title: "About Us | Delivery Group Inc.",
+    title: "About Us",
     description: "Delivery Group Inc. is a premium last-mile delivery and logistics company built on precision, technology, and a commitment to the customer experience.",
     images: [{ url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80", width: 1200, height: 630 }],
   },
@@ -61,7 +61,7 @@ export default function AboutPage() {
                 We believe that logistics is not a commodity. The way a package is delivered is a brand statement. The moment a customer receives an order is a brand moment. We exist to make that moment exceptional.
               </p>
               <p className="text-[15px] text-[#737373] leading-relaxed mb-8">
-                Our mission is to be the most trusted delivery partner in North America — trusted by clients for our reliability, trusted by recipients for our professionalism, and trusted by our team for our culture.
+                Our mission is to be the most trusted delivery partner in North America, trusted by clients for our reliability, trusted by recipients for our professionalism, and trusted by our team for our culture.
               </p>
               <div className="space-y-3">
                 {["99.4% on-time delivery performance", "Industry-leading NPS of 72", "Zero-compromise service level guarantees", "Named account management for every client"].map(i => (

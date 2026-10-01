@@ -11,7 +11,7 @@ import Badge from "@/components/ui/Badge"
 import JsonLd from "@/components/JsonLd"
 
 export const metadata: Metadata = {
-  title: "3PL Fulfillment Services | Delivery Group Inc.",
+  title: "3PL Fulfillment Services",
   description:
     "A 3PL fulfillment company in Northern Kentucky that receives same-day, preps FBA in 48 hours, and ships FBA, FBM, and DTC orders for ecommerce brands.",
   alternates: { canonical: "https://deliverygroupinc.com/3pl-fulfillment" },

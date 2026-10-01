@@ -37,7 +37,7 @@ const services = [
   {
     icon: Truck,
     title: "Expedited Shipping",
-    body: "Direct inject into DHL's CVG Super Hub — 5 miles away. Central NKY location means faster, cheaper shipping nationwide.",
+    body: "Direct inject into DHL's CVG Super Hub, 5 miles away. Central NKY location means faster, cheaper shipping nationwide.",
     href: "/services/expedited-shipping",
   },
 ]
@@ -58,7 +58,7 @@ const differentiators = [
   {
     icon: Shield,
     title: "Guaranteed SLAs",
-    body: "Contractual service level commitments with financial accountability — not just best-effort promises.",
+    body: "Contractual service level commitments with financial accountability, not just best-effort promises.",
   },
   {
     icon: Clock,
@@ -73,7 +73,7 @@ const differentiators = [
   {
     icon: Users,
     title: "Dedicated Accounts",
-    body: "A named account team for every client — not a call center queue.",
+    body: "A named account team for every client, not a call center queue.",
   },
   {
     icon: Award,
@@ -177,7 +177,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Hero photo — tablet and up */}
+            {/* Hero photo, tablet and up */}
             <div className="hidden md:block">
               <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -301,7 +301,7 @@ export default function Home() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80"
-                  alt="Delivery Group Inc. — 3PL warehouse facility with organized inventory shelving"
+                  alt="Delivery Group Inc., 3PL warehouse facility with organized inventory shelving"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

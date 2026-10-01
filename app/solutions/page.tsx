@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 const solutions = [
   { icon: Warehouse, title: "3PL Fulfillment", body: "Full-service pick, pack, and ship with direct DHL partnership. Faster transit times and lower shipping costs from our NKY warehouse.", href: "/3pl-fulfillment" },
   { icon: Package, title: "E-Commerce Fulfillment", body: "End-to-end fulfillment from warehouse to doorstep with platform integrations, automated workflows, and branded delivery communications.", href: "/industries/ecommerce" },
-  { icon: RefreshCw, title: "Reverse Logistics", body: "Consumer returns portal, label generation, pickup scheduling, and returned goods processing — turning returns into a retention tool.", href: "/services" },
+  { icon: RefreshCw, title: "Reverse Logistics", body: "Consumer returns portal, label generation, pickup scheduling, and returned goods processing, turning returns into a retention tool.", href: "/services" },
   { icon: Globe, title: "Omnichannel Distribution", body: "Unified logistics across DTC, marketplace, and brick-and-mortar channels, with inventory visibility and flexible fulfillment routing.", href: "/industries/retail" },
-  { icon: Zap, title: "Expedited Shipping", body: "DHL direct-inject from our NKY facility — faster transit times and lower zoned pricing for brands that need speed.", href: "/services/expedited-shipping" },
+  { icon: Zap, title: "Expedited Shipping", body: "DHL direct-inject from our NKY facility, faster transit times and lower zoned pricing for brands that need speed.", href: "/services/expedited-shipping" },
   { icon: BarChart3, title: "Supply Chain Analytics", body: "Delivery performance intelligence, cost analysis, and operational benchmarking to continuously optimize your logistics investment.", href: "/technology" },
   { icon: Settings, title: "Managed Logistics", body: "Fully outsourced logistics management with a dedicated team, comprehensive reporting, and continuous process optimization.", href: "/contact" },
 ]
