@@ -8,6 +8,23 @@ const nextConfig: NextConfig = {
       { source: "/solutions/apparel", destination: "/apparel-fulfillment", permanent: true },
       { source: "/solutions/supplements", destination: "/supplement-fulfillment", permanent: true },
       { source: "/services/expedited-shipping", destination: "/expedited-freight", permanent: true },
+
+      // #302 consolidation — 301 duplicate / cannibalizing URLs into their canonical page
+      { source: "/3pl-warehouse", destination: "/3pl-warehousing", permanent: true },
+      { source: "/returns-processing", destination: "/returns-management", permanent: true },
+      { source: "/ecommerce-returns-management", destination: "/returns-management", permanent: true },
+      { source: "/ecommerce-returns-solution", destination: "/returns-management", permanent: true },
+      { source: "/reverse-logistics-services", destination: "/reverse-logistics-company", permanent: true },
+      { source: "/industries/ecommerce", destination: "/3pl-ecommerce-fulfillment", permanent: true },
+      { source: "/industries/supplements", destination: "/supplement-fulfillment", permanent: true },
+
+      // #302 hazmat cluster → /hazmat-fulfillment (hazmat is a confirmed DG capability)
+      { source: "/hazmat-3pl", destination: "/hazmat-fulfillment", permanent: true },
+      { source: "/hazmat-logistics", destination: "/hazmat-fulfillment", permanent: true },
+      { source: "/hazmat-storage", destination: "/hazmat-fulfillment", permanent: true },
+      { source: "/hazmat-warehouse", destination: "/hazmat-fulfillment", permanent: true },
+      { source: "/dangerous-goods-warehouse", destination: "/hazmat-fulfillment", permanent: true },
+      { source: "/hazmat-trucking-companies", destination: "/hazmat-fulfillment", permanent: true },
     ]
   },
 };

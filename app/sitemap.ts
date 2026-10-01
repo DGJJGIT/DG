@@ -50,10 +50,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   /* ── Industry pages ── */
   const industrySlugs = [
-    "ecommerce",
+    // "ecommerce" and "supplements" 301 to /3pl-ecommerce-fulfillment and /supplement-fulfillment (#302)
     "healthcare",
     "retail",
-    "supplements",
   ]
 
   const industryPages: MetadataRoute.Sitemap = [
@@ -217,7 +216,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   /* ── New SEO cluster pages (hazmat, fulfillment, 3PL, courier, reverse logistics) ── */
-  const seoSlugs = Object.keys(seoPagesData)
+  // #302 — exclude URLs that 301 to a canonical (see next.config redirects)
+  const REDIRECTED_SLUGS = new Set([
+    "3pl-warehouse",
+    "returns-processing",
+    "ecommerce-returns-management",
+    "ecommerce-returns-solution",
+    "reverse-logistics-services",
+    "hazmat-3pl",
+    "hazmat-logistics",
+    "hazmat-storage",
+    "hazmat-warehouse",
+    "dangerous-goods-warehouse",
+    "hazmat-trucking-companies",
+  ])
+  const seoSlugs = Object.keys(seoPagesData).filter((slug) => !REDIRECTED_SLUGS.has(slug))
   const seoPages: MetadataRoute.Sitemap = seoSlugs.map((slug) => ({
     url: `${BASE_URL}/${slug}`,
     lastModified,
