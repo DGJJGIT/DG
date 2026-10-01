@@ -38,22 +38,22 @@ const CLUSTER_IMAGES: { match: string[]; url: string; alt: string }[] = [
   {
     match: ["3pl", "warehousing", "warehouse"],
     url: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80",
-    alt: "3PL warehouse operations — organized shelving and inventory management",
+    alt: "3PL warehouse operations, organized shelving and inventory management",
   },
   {
     match: ["courier", "delivery", "last-mile", "last mile"],
     url: "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?auto=format&fit=crop&w=1400&q=80",
-    alt: "Courier and delivery operations — Delivery Group fleet on route",
+    alt: "Courier and delivery operations, Delivery Group fleet on route",
   },
   {
     match: ["return", "reverse"],
     url: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1400&q=80",
-    alt: "Returns processing center — reverse logistics operations",
+    alt: "Returns processing center, reverse logistics operations",
   },
   {
     match: ["hazmat", "dangerous", "hazardous"],
     url: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1400&q=80",
-    alt: "Hazmat storage and logistics facility — compliant dangerous goods handling",
+    alt: "Hazmat storage and logistics facility, compliant dangerous goods handling",
   },
   {
     match: ["supplement"],
@@ -64,7 +64,7 @@ const CLUSTER_IMAGES: { match: string[]; url: string; alt: string }[] = [
 
 const DEFAULT_IMAGE = {
   url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1400&q=80",
-  alt: "Delivery Group Inc. fulfillment and logistics operations — Northern Kentucky hub",
+  alt: "Delivery Group Inc. fulfillment and logistics operations, Northern Kentucky hub",
 }
 
 // Secondary "Why DG" images — different photo per cluster so pages don't all look the same
@@ -98,7 +98,7 @@ const CLUSTER_WHY_IMAGES: { match: string[]; url: string; alt: string }[] = [
 
 const DEFAULT_WHY_IMAGE = {
   url: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=80",
-  alt: "Delivery Group Inc. warehouse team — pick, pack, and ship operations",
+  alt: "Delivery Group Inc. warehouse team, pick, pack, and ship operations",
 }
 
 function getClusterImage(eyebrow: string, slug: string): { url: string; alt: string } {
