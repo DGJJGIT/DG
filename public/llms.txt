@@ -1,0 +1,27 @@
+# Delivery Group Inc.
+
+> Delivery Group Inc. is a third-party logistics (3PL) and order-fulfillment company based in Northern Kentucky, near the Cincinnati/CVG air hub. It provides ecommerce fulfillment, Amazon FBA prep, warehousing, pick and pack, kitting and assembly, returns and reverse logistics, and B2B case and pallet fulfillment, shipping to all 50 states. Contact: 7587 Empire Dr, Florence, KY 41042, +1-800-370-2105.
+
+## Core services
+- [3PL Fulfillment](https://deliverygroupinc.com/3pl-fulfillment): Receiving, storage, pick and pack, and FBA/FBM/DTC shipping from one facility; same-day receiving in most cases.
+- [Amazon FBA Prep](https://deliverygroupinc.com/amazon-fba-prep): 48-hour FBA prep, FNSKU labeling, polybagging, and bundling near the CVG hub.
+- [3PL Warehousing](https://deliverygroupinc.com/3pl-warehousing): Third-party warehousing with storage, fulfillment, and distribution.
+- [Fulfillment Center](https://deliverygroupinc.com/fulfillment-center): Ecommerce fulfillment center services and pricing.
+- [Ecommerce Fulfillment](https://deliverygroupinc.com/3pl-ecommerce-fulfillment): DTC order fulfillment for online brands.
+- [Pick and Pack](https://deliverygroupinc.com/pick-and-pack-fulfillment): Per-order pick, pack, and ship with branded packaging.
+- [Kitting Services](https://deliverygroupinc.com/kitting-services): Bundles, subscription boxes, and multi-SKU assembly.
+- [Returns Management](https://deliverygroupinc.com/returns-management): Returns intake, inspection, grading, and restock.
+- [Reverse Logistics](https://deliverygroupinc.com/reverse-logistics-company): Full backward flow of goods, returns through recovery.
+
+## Industries served
+- [Supplement Fulfillment](https://deliverygroupinc.com/supplement-fulfillment)
+- [DTC Fulfillment](https://deliverygroupinc.com/dtc-fulfillment)
+- [Apparel Fulfillment](https://deliverygroupinc.com/apparel-fulfillment)
+- [Subscription Box Fulfillment](https://deliverygroupinc.com/subscription-box-fulfillment)
+- [Crowdfunding Fulfillment](https://deliverygroupinc.com/crowdfunding-fulfillment)
+
+## Company
+- [What is a 3PL?](https://deliverygroupinc.com/what-is-a-3pl)
+- [Get a Quote](https://deliverygroupinc.com/quote)
+- [Contact](https://deliverygroupinc.com/contact)
+- [Sitemap](https://deliverygroupinc.com/sitemap.xml)
