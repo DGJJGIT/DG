@@ -88,6 +88,35 @@ const surcharges = [
   { service: "Project / Manual Labor", dg: "$40/hr" },
 ]
 
+/* ── FAQ Data (shared by visible FAQ + FAQPage schema) ── */
+
+const faqs = [
+  {
+    q: "What does a 3PL fulfillment company do?",
+    a: "A 3PL fulfillment company receives your inventory, stores it, and picks, packs, and ships each customer order for you. Delivery Group Inc. handles receiving, storage, pick and pack, Amazon FBA prep, FBA, FBM, and DTC shipping, returns processing, and B2B case and pallet fulfillment from one Northern Kentucky facility.",
+  },
+  {
+    q: "How fast does Delivery Group receive and prep inventory?",
+    a: "We offer same-day receiving in most cases and prep Amazon FBA shipments within 48 hours, so inventory clears the dock and becomes sellable quickly.",
+  },
+  {
+    q: "Is there an order minimum for 3PL fulfillment?",
+    a: "The standard monthly minimum is 200 orders, reduced to 100 orders for the first 90 days. A $400 monthly platform fee covers WMS access and account management.",
+  },
+  {
+    q: "Which sales channels and platforms do you integrate with?",
+    a: "We connect to Shopify, WooCommerce, BigCommerce, Amazon FBA and FBM, and custom ERP systems through Hopstack and direct API or EDI integrations.",
+  },
+  {
+    q: "Do you handle returns and kitting?",
+    a: "Yes. We run full reverse logistics, receiving, inspecting, grading, restocking, or disposing of returns, and we offer kitting and bundling for subscription boxes, gift sets, and variety packs.",
+  },
+  {
+    q: "Where is Delivery Group Inc. located?",
+    a: "Our fulfillment facility is in Northern Kentucky, near the Cincinnati and CVG air hub, which keeps inbound freight and outbound Amazon shipments moving.",
+  },
+]
+
 /* ── Pricing Table Component ── */
 
 function PricingTable({
@@ -159,16 +188,53 @@ export default function ThreePLFulfillmentPage() {
       <JsonLd
         data={{
           "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://deliverygroupinc.com" },
+            { "@type": "ListItem", position: 2, name: "3PL Fulfillment Services", item: "https://deliverygroupinc.com/3pl-fulfillment" },
+          ],
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
           "@type": "Service",
           name: "3PL Fulfillment",
+          serviceType: "3pl fulfillment",
           provider: {
             "@type": "Organization",
             name: "Delivery Group Inc.",
             url: "https://deliverygroupinc.com",
           },
-          areaServed: "US",
+          areaServed: { "@type": "Country", name: "United States" },
+          url: "https://deliverygroupinc.com/3pl-fulfillment",
           description:
             "Full-service 3PL fulfillment from a Northern Kentucky facility: receiving, storage, pick and pack, Amazon FBA prep, FBA/FBM/DTC shipping, returns processing, kitting, and B2B case and pallet fulfillment.",
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://deliverygroupinc.com/3pl-fulfillment#webpage",
+          url: "https://deliverygroupinc.com/3pl-fulfillment",
+          name: "3PL Fulfillment Services | Delivery Group Inc.",
+          description:
+            "A 3PL fulfillment company in Northern Kentucky that receives same-day, preps FBA in 48 hours, and ships FBA, FBM, and DTC orders for ecommerce brands.",
+          isPartOf: { "@type": "WebSite", url: "https://deliverygroupinc.com" },
+          about: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
+          speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".quick-answer"] },
         }}
       />
       {/* ── Hero ── */}
@@ -205,7 +271,7 @@ export default function ThreePLFulfillmentPage() {
                 <br />
                 <span className="gold-text">Northern Kentucky hub.</span>
               </h1>
-              <p className="text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[540px] mb-10">
+              <p className="quick-answer text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[540px] mb-10">
                 A third-party logistics fulfillment company that receives your
                 inventory, stores it, and ships FBA, FBM, and direct-to-consumer
                 orders from one facility, with same-day receiving in most cases
@@ -970,6 +1036,26 @@ export default function ThreePLFulfillmentPage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="py-20 md:py-28 bg-[#F7F6F3]">
+        <div className="max-w-[820px] mx-auto px-6 md:px-10 lg:px-12">
+          <div className="mb-10">
+            <SectionLabel>Frequently Asked</SectionLabel>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0D0D0D] mt-1">
+              3PL fulfillment questions.
+            </h2>
+          </div>
+          <dl className="space-y-6">
+            {faqs.map((f) => (
+              <div key={f.q} className="border-b border-[#E2DFD8] pb-6 last:border-0">
+                <dt className="text-[16px] font-semibold text-[#0D0D0D] mb-2">{f.q}</dt>
+                <dd className="text-[14px] text-[#737373] leading-relaxed">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 

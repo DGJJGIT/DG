@@ -314,6 +314,35 @@ Tier 3 &middot; Volume
   )
 }
 
+/* ── FAQ Data (shared by visible FAQ + FAQPage schema) ── */
+
+const faqs = [
+  {
+    q: "What is Amazon FBA prep?",
+    a: "Amazon FBA prep is the receiving, labeling, and packaging work needed to make your inventory compliant with Amazon's FBA requirements before it ships to a fulfillment center. Delivery Group Inc. handles FNSKU labeling, polybagging with suffocation warnings, bundling, kitting, reboxing, expiration labeling, and protective packaging.",
+  },
+  {
+    q: "How fast is your FBA prep turnaround?",
+    a: "We prep Amazon FBA shipments within 48 hours and receive inbound inventory the same day in most cases, so your units move to Amazon quickly.",
+  },
+  {
+    q: "Where is your FBA prep center located?",
+    a: "Our prep center is in Northern Kentucky, near the Amazon CVG air hub, which shortens inbound and outbound transit for FBA shipments.",
+  },
+  {
+    q: "What FBA prep services do you provide?",
+    a: "FNSKU labeling, polybagging with suffocation warnings, bundling, kitting, reboxing, expiration and lot labeling, and protective packaging, plus inbound shipment plans into Amazon FBA.",
+  },
+  {
+    q: "Do you handle FBM and DTC orders too?",
+    a: "Yes. The same facility ships FBA, FBM, and direct-to-consumer orders, so you can run multiple sales channels from one inventory pool.",
+  },
+  {
+    q: "How does the FBA prep process work?",
+    a: "You ship inventory to our Northern Kentucky facility, we receive and prep it with labeling, polybagging, inspection, and bundling, quality-check each unit for compliance, then create the inbound plan and ship into Amazon FBA with full tracking.",
+  },
+]
+
 /* ── Page ── */
 
 export default function AmazonFBAPrepPage() {
@@ -322,16 +351,53 @@ export default function AmazonFBAPrepPage() {
       <JsonLd
         data={{
           "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://deliverygroupinc.com" },
+            { "@type": "ListItem", position: 2, name: "Amazon FBA Prep Services", item: "https://deliverygroupinc.com/amazon-fba-prep" },
+          ],
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
           "@type": "Service",
           name: "Amazon FBA Prep",
+          serviceType: "amazon fba prep",
           provider: {
             "@type": "Organization",
             name: "Delivery Group Inc.",
             url: "https://deliverygroupinc.com",
           },
-          areaServed: "US",
+          areaServed: { "@type": "Country", name: "United States" },
+          url: "https://deliverygroupinc.com/amazon-fba-prep",
           description:
             "Amazon FBA prep with 48-hour turnaround and same-day receiving in most cases, from a Northern Kentucky prep center near the Amazon CVG air hub. FNSKU labeling, polybagging with suffocation warnings, bundling, kitting, reboxing, expiration labeling, and protective packaging.",
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://deliverygroupinc.com/amazon-fba-prep#webpage",
+          url: "https://deliverygroupinc.com/amazon-fba-prep",
+          name: "Amazon FBA Prep Services | Delivery Group Inc.",
+          description:
+            "Amazon FBA prep with 48-hour turnaround and same-day receiving, from a Northern Kentucky prep center near the Amazon CVG air hub.",
+          isPartOf: { "@type": "WebSite", url: "https://deliverygroupinc.com" },
+          about: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
+          speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".quick-answer"] },
         }}
       />
       {/* ── Hero ── */}
@@ -368,7 +434,7 @@ export default function AmazonFBAPrepPage() {
                 <br />
                 <span className="gold-text">near the CVG hub.</span>
               </h1>
-              <p className="text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[540px] mb-10">
+              <p className="quick-answer text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[540px] mb-10">
                 Amazon FBA prep with a 48-hour turnaround and same-day receiving
                 in most cases, from a Northern Kentucky facility near the Amazon
                 CVG air hub. FNSKU labeling, polybagging, and bundling for FBA,
@@ -782,6 +848,26 @@ export default function AmazonFBAPrepPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-[820px] mx-auto px-6 md:px-10 lg:px-12">
+          <div className="mb-10">
+            <SectionLabel>Frequently Asked</SectionLabel>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0D0D0D] mt-1">
+              Amazon FBA prep questions.
+            </h2>
+          </div>
+          <dl className="space-y-6">
+            {faqs.map((f) => (
+              <div key={f.q} className="border-b border-[#E2DFD8] pb-6 last:border-0">
+                <dt className="text-[16px] font-semibold text-[#0D0D0D] mb-2">{f.q}</dt>
+                <dd className="text-[14px] text-[#737373] leading-relaxed">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
