@@ -283,16 +283,16 @@ export default function PricingPage() {
                 { service: "Storage (first 30 days)", price: "FREE" },
               ],
               shoes: [
-                { service: "Shoe Prep — Boxed (FNSKU + polybag over box + tag removal + verification)", price: "$1.00/unit" },
-                { service: "Shoe Prep — Unboxed (slippers, sandals, Crocs)", price: "$0.75/unit" },
+                { service: "Shoe Prep, Boxed (FNSKU + polybag over box + tag removal + verification)", price: "$1.00/unit" },
+                { service: "Shoe Prep, Unboxed (slippers, sandals, Crocs)", price: "$0.75/unit" },
                 { service: "Shoe Bundling (pair sets, multi-pack)", price: "$1.50/bundle" },
                 { service: "Box Replacement (if damaged)", price: "$0.50 + box cost" },
                 { service: "Receiving", price: "FREE" },
                 { service: "Storage (first 30 days)", price: "FREE" },
               ],
               bulky: [
-                { service: "Large Bulky (18\u201360\u2033, under 50 lbs) — Prep All-In", price: "$2.50/unit" },
-                { service: "Extra Large (60\u2033+ or 50+ lbs) — Prep All-In", price: "$4.00/unit" },
+                { service: "Large Bulky (18\u201360\u2033, under 50 lbs), Prep All-In", price: "$2.50/unit" },
+                { service: "Extra Large (60\u2033+ or 50+ lbs), Prep All-In", price: "$4.00/unit" },
                 { service: "Rug Prep (roll/fold + polybag/shrink + FNSKU + dim verify)", price: "$3.00/unit" },
                 { service: "Bubble Wrap (bulky/fragile)", price: "+$1.50/unit" },
                 { service: "Palletizing (incl. pallet, packing, shrink wrap)", price: "$30/pallet" },
@@ -382,7 +382,7 @@ export default function PricingPage() {
               5 miles from Amazon's CVG Air Hub.
             </h2>
             <p className="text-[15px] text-[#737373] leading-relaxed mb-8 max-w-[560px] mx-auto">
-              Our Northern Kentucky facility sits next to Amazon's $1.5 billion Air Hub — the central node of Amazon Air's US cargo network. With 20+ Amazon fulfillment centers within 200 miles, your inventory goes from our dock to Amazon's shelves same-day.
+              Our Northern Kentucky facility sits next to Amazon's $1.5 billion Air Hub, the central node of Amazon Air's US cargo network. With 20+ Amazon fulfillment centers within 200 miles, your inventory goes from our dock to Amazon's shelves same-day.
             </p>
             <div className="grid grid-cols-3 gap-4 max-w-[500px] mx-auto">
               <div className="p-5 bg-white rounded-lg border border-[#E2DFD8]">

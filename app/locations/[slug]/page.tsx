@@ -4,6 +4,7 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowRight, MapPin, CheckCircle, ArrowLeft, Phone } from "lucide-react"
 import { locations, getLocation } from "@/lib/locations"
+import { clampMeta } from "@/lib/seo/meta"
 import SectionLabel from "@/components/ui/SectionLabel"
 import Badge from "@/components/ui/Badge"
 
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!loc) return { title: "Not Found" }
   return {
     title: `Delivery Services in ${loc.city}, ${loc.stateAbbr}`,
-    description: `Premium last-mile and logistics delivery services in ${loc.city}, ${loc.state}. ${loc.description}`,
+    description: clampMeta(`Premium last-mile and logistics delivery services in ${loc.city}, ${loc.state}. ${loc.description}`),
     alternates: { canonical: `https://deliverygroupinc.com/locations/${slug}` },
   }
 }
