@@ -76,8 +76,8 @@ export default function AboutPage() {
               <div className="relative w-full h-[240px] rounded-lg overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/warehouse/warehouse-exterior-florence-ky.jpg"
-                  alt="Delivery Group Inc. warehouse facility exterior in Florence, Kentucky"
+                  src="/images/facility/dock-exterior.jpg"
+                  alt="Loading dock doors on the outside of the Delivery Group warehouse in Florence, Kentucky"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
