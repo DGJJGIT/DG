@@ -70,25 +70,25 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid sm:grid-cols-2 gap-5">
         <div>
-          <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">First Name</label>
-          <input name="firstName" type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] placeholder-[#A3A3A3] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="First name" />
+          <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">First Name *</label>
+          <input name="firstName" required type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] placeholder-[#A3A3A3] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="First name" />
         </div>
         <div>
-          <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Last Name</label>
-          <input name="lastName" type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] placeholder-[#A3A3A3] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="Last name" />
+          <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Last Name *</label>
+          <input name="lastName" required type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] placeholder-[#A3A3A3] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="Last name" />
         </div>
       </div>
       <div>
-        <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Work Email</label>
+        <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Work Email *</label>
         <input name="email" type="email" required className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] placeholder-[#A3A3A3] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="you@company.com" />
       </div>
       <div>
-        <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Company</label>
-        <input name="company" type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] placeholder-[#A3A3A3] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="Company name" />
+        <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Company *</label>
+        <input name="company" required type="text" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] placeholder-[#A3A3A3] focus:outline-none focus:border-[#B8962E] transition-colors" placeholder="Company name" />
       </div>
       <div>
-        <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Subject</label>
-        <select name="subject" className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] focus:outline-none focus:border-[#B8962E] transition-colors">
+        <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Subject *</label>
+        <select name="subject" required className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] focus:outline-none focus:border-[#B8962E] transition-colors">
           <option value="">Select a subject</option>
           <option>Get a Quote</option>
           <option>Service Information</option>
@@ -98,8 +98,8 @@ export default function ContactForm() {
         </select>
       </div>
       <div>
-        <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Message</label>
-        <textarea name="message" rows={5} className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] placeholder-[#A3A3A3] focus:outline-none focus:border-[#B8962E] transition-colors resize-none" placeholder="Tell us about your logistics needs..." />
+        <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Message *</label>
+        <textarea name="message" required rows={5} className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] text-[#0D0D0D] placeholder-[#A3A3A3] focus:outline-none focus:border-[#B8962E] transition-colors resize-none" placeholder="Tell us about your logistics needs..." />
       </div>
       {status === "error" && (
         <p className="text-[13px] text-red-500">{errorMsg}</p>
