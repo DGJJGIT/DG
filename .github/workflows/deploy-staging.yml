@@ -16,18 +16,25 @@ jobs:
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_SSH_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          envs: NEXT_PUBLIC_TURNSTILE_SITEKEY,TURNSTILE_SECRET_KEY,HUBSPOT_API_KEY,ADMIN_TOKEN
           script: |
             if [ ! -d /var/www/delivery-group-staging ]; then
               git clone https://github.com/DGJJGIT/DG.git /var/www/delivery-group-staging
             fi
             cd /var/www/delivery-group-staging
+            printf "NEXT_PUBLIC_TURNSTILE_SITEKEY=%s\nTURNSTILE_SECRET_KEY=%s\nHUBSPOT_API_KEY=%s\nADMIN_TOKEN=%s\n" \
+              "$NEXT_PUBLIC_TURNSTILE_SITEKEY" "$TURNSTILE_SECRET_KEY" "$HUBSPOT_API_KEY" "$ADMIN_TOKEN" > .env.local
             git fetch origin
             git checkout seo-staging
             git reset --hard origin/seo-staging
             npm install --production=false
             npm run build
-            # Stop + delete the old process so pm2 picks up the new build from the correct CWD
             pm2 delete dg-staging 2>/dev/null || true
             PORT=3001 pm2 start npm --name dg-staging -- start
             pm2 save
             echo "Staging deploy complete"
+        env:
+          NEXT_PUBLIC_TURNSTILE_SITEKEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITEKEY }}
+          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
+          HUBSPOT_API_KEY: ${{ secrets.HUBSPOT_API_KEY }}
+          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
