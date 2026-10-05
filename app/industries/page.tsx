@@ -1,6 +1,8 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, ShoppingCart, Heart, Store, Pill } from "lucide-react"
+import Image from "next/image"
+import { industryImagery } from "@/lib/imagery"
 import SectionLabel from "@/components/ui/SectionLabel"
 
 export const metadata: Metadata = {
@@ -41,12 +43,24 @@ export default function IndustriesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((ind) => {
               const Icon = iconMap[ind.icon]
+              const photo = industryImagery[ind.slug].hero
               return (
                 <Link
                   key={ind.slug}
                   href={`/industries/${ind.slug}`}
-                  className="group p-8 bg-[#F7F6F3] rounded-lg hover:bg-[#0D0D0D] transition-all duration-300 flex flex-col border border-transparent hover:border-[#2a2a2a]"
+                  className="group bg-[#F7F6F3] rounded-lg hover:bg-[#0D0D0D] transition-all duration-300 flex flex-col border border-transparent hover:border-[#2a2a2a] overflow-hidden"
                 >
+                  <div className="relative w-full aspect-[16/10] bg-[#151515]">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw"
+                      style={{ objectPosition: photo.position }}
+                      className="object-cover opacity-95 group-hover:opacity-100 transition-opacity"
+                    />
+                  </div>
+                  <div className="p-8 flex flex-col flex-1">
                   <div className="w-10 h-10 rounded-md bg-white group-hover:bg-[#1a1a1a] border border-[#E2DFD8] group-hover:border-[#333] flex items-center justify-center mb-5 transition-colors">
                     <Icon size={18} className="text-[#B8962E]" />
                   </div>
@@ -59,6 +73,7 @@ export default function IndustriesPage() {
                   </p>
                   <div className="mt-5 flex items-center gap-1 text-[12.5px] font-medium text-[#B8962E] group-hover:text-[#D4AF37]">
                     View solutions <ArrowRight size={12} />
+                  </div>
                   </div>
                 </Link>
               )

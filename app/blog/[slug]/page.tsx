@@ -8,6 +8,7 @@ import SectionLabel from "@/components/ui/SectionLabel"
 import Badge from "@/components/ui/Badge"
 import JsonLd from "@/components/JsonLd"
 import { clampMeta } from "@/lib/seo/meta"
+import { getPostImagery, withInlineImages } from "@/lib/imagery"
 
 export async function generateStaticParams() {
   return posts.map(p => ({ slug: p.slug }))
@@ -39,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: clampMeta(post.excerpt),
       publishedTime: post.date,
       authors: [post.author],
-      ...(post.image ? { images: [{ url: post.image }] } : {}),
+      images: [{ url: getPostImagery(post.slug, post.category).hero.src, alt: getPostImagery(post.slug, post.category).hero.alt }],
     },
     twitter: {
       card: "summary_large_image",
@@ -56,6 +57,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound()
 
   const related = posts.filter(p => p.category === post.category && p.slug !== post.slug).slice(0, 3)
+  const { hero, inline } = getPostImagery(post.slug, post.category)
+  const bodyHtml = withInlineImages(post.body, inline)
 
   return (
     <>
@@ -65,9 +68,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           "@type": "Article",
           headline: post.title,
           description: clampMeta(post.excerpt),
-          image: post.image
-            ? `https://deliverygroupinc.com${post.image}`
-            : undefined,
+          image: `https://deliverygroupinc.com${hero.src}`,
           datePublished: new Date(post.date).toISOString(),
           author: {
             "@type": "Organization",
@@ -98,23 +99,27 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       </section>
 
-      {post.image && (
-        <div className="relative w-full h-[320px] md:h-[420px] bg-[#151515]">
-          <Image
-            src={post.image}
-            alt={post.title}
-            fill
-            className="object-cover opacity-90"
-            priority
-          />
+      <div className="relative -mt-12 bg-[linear-gradient(to_bottom,#0D0D0D_50%,#ffffff_50%)]">
+        <div className="relative max-w-[960px] mx-auto px-6 md:px-10">
+          <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden bg-[#151515] shadow-lg">
+            <Image
+              src={hero.src}
+              alt={hero.alt}
+              fill
+              sizes="(min-width: 960px) 880px, 100vw"
+              style={{ objectPosition: hero.position }}
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
-      )}
+      </div>
 
-      <section className="py-16 bg-white">
+      <section className="pt-12 pb-16 bg-white">
         <div className="max-w-[800px] mx-auto px-6 md:px-10">
           <div
             className="prose prose-dg max-w-none"
-            dangerouslySetInnerHTML={{ __html: post.body }}
+            dangerouslySetInnerHTML={{ __html: bodyHtml }}
           />
           <div className="mt-10 pt-8 border-t border-[#E2DFD8]">
             <div className="text-[13px] text-[#737373]">Written by the {post.author}</div>
@@ -129,11 +134,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <div className="grid md:grid-cols-3 gap-5 mt-6">
               {related.map(r => (
                 <Link key={r.slug} href={`/blog/${r.slug}`} className="group bg-white rounded-lg border border-[#E2DFD8] hover:border-[#B8962E] transition-all overflow-hidden">
-                  {r.image && (
-                    <div className="relative w-full h-[140px] bg-[#151515]">
-                      <Image src={r.image} alt={r.title} fill className="object-cover opacity-90 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                  )}
+                  <div className="relative w-full h-[140px] bg-[#151515]">
+                    <Image
+                      src={getPostImagery(r.slug, r.category).hero.src}
+                      alt={getPostImagery(r.slug, r.category).hero.alt}
+                      fill
+                      sizes="(min-width: 768px) 400px, 100vw"
+                      style={{ objectPosition: getPostImagery(r.slug, r.category).hero.position }}
+                      className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                    />
+                  </div>
                   <div className="p-6">
                     <Badge variant="muted">{r.category}</Badge>
                     <h3 className="text-[14px] font-semibold text-[#0D0D0D] mt-3 mb-2 group-hover:text-[#B8962E] transition-colors leading-snug">{r.title}</h3>

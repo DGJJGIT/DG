@@ -2,8 +2,11 @@ import { Metadata } from "next"
 import JsonLd from "@/components/JsonLd"
 import { notFound } from "next/navigation"
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, CheckCircle, ArrowLeft, AlertCircle } from "lucide-react"
 import { industries, getIndustry } from "@/lib/industries"
+import { industryImagery } from "@/lib/imagery"
+import FacilityVideo from "@/components/ui/FacilityVideo"
 import SectionLabel from "@/components/ui/SectionLabel"
 
 export async function generateStaticParams() {
@@ -21,6 +24,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
   const { slug } = await params
   const industry = getIndustry(slug)
   if (!industry) notFound()
+  const imagery = industryImagery[slug]
 
   return (
     <>
@@ -37,6 +41,8 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
       />
       <section className="bg-[#0D0D0D] text-white py-20 md:py-28">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
+          <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center">
+          <div>
           <Link href="/industries" className="inline-flex items-center gap-1.5 text-[13px] text-[#737373] hover:text-white transition-colors mb-8">
             <ArrowLeft size={13} /> All Industries
           </Link>
@@ -55,6 +61,30 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
                 <div className="text-[12px] text-[#737373] mt-1">{s.label}</div>
               </div>
             ))}
+          </div>
+          </div>
+          <div className="hidden md:block relative overflow-hidden rounded-xl aspect-[4/3]">
+            <Image
+              src={imagery.hero.src}
+              alt={imagery.hero.alt}
+              fill
+              sizes="(min-width: 1280px) 560px, 50vw"
+              style={{ objectPosition: imagery.hero.position }}
+              className="object-cover"
+              priority
+            />
+          </div>
+          </div>
+          <div className="md:hidden relative overflow-hidden rounded-xl aspect-[4/3] mt-10">
+            <Image
+              src={imagery.hero.src}
+              alt={imagery.hero.alt}
+              fill
+              sizes="100vw"
+              style={{ objectPosition: imagery.hero.position }}
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -98,6 +128,37 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-20 md:pb-28 bg-white">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
+          <SectionLabel>Inside Our Facility</SectionLabel>
+          <h2 className="text-3xl font-semibold tracking-tight text-[#0D0D0D] mb-8">
+            Where {industry.title} orders get fulfilled
+          </h2>
+          {imagery.video && (
+            <div className="mb-8">
+              <FacilityVideo video={imagery.video} />
+            </div>
+          )}
+          <div className="grid sm:grid-cols-2 gap-5">
+            {imagery.gallery.map(photo => (
+              <figure key={photo.src}>
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-[#151515]">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(min-width: 640px) 600px, 100vw"
+                    style={{ objectPosition: photo.position }}
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="mt-2.5 text-[13px] text-[#737373]">{photo.caption}</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
