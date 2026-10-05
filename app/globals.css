@@ -109,6 +109,20 @@
   border-radius: 0.5rem;
   margin: 1.5rem 0;
 }
+.prose-dg .blog-figure {
+  margin: 2.25rem 0;
+}
+.prose-dg .blog-figure img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: 0;
+}
+.prose-dg .blog-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: #737373;
+}
 .prose-dg hr {
   border: none;
   border-top: 1px solid #E2DFD8;

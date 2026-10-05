@@ -3,6 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Clock } from "lucide-react"
 import { posts } from "@/lib/blog"
+import { getPostImagery } from "@/lib/imagery"
 import SectionLabel from "@/components/ui/SectionLabel"
 import Badge from "@/components/ui/Badge"
 
@@ -22,6 +23,7 @@ const categories = Array.from(new Set(posts.map(p => p.category)))
 export default function BlogPage() {
   const featured = posts[0]
   const rest = posts.slice(1)
+  const featuredHero = getPostImagery(featured.slug, featured.category).hero
 
   return (
     <>
@@ -41,11 +43,16 @@ export default function BlogPage() {
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           {/* Featured */}
           <Link href={`/blog/${featured.slug}`} className="group block bg-[#F7F6F3] rounded-xl overflow-hidden border border-[#E2DFD8] hover:border-[#B8962E] transition-all mb-12">
-            {featured.image && (
-              <div className="relative w-full h-[240px] md:h-[320px] bg-[#151515]">
-                <Image src={featured.image} alt={featured.title} fill className="object-cover opacity-90 group-hover:opacity-100 transition-opacity" />
-              </div>
-            )}
+            <div className="relative w-full h-[240px] md:h-[320px] bg-[#151515]">
+              <Image
+                src={featuredHero.src}
+                alt={featuredHero.alt}
+                fill
+                sizes="(min-width: 1280px) 1180px, 100vw"
+                style={{ objectPosition: featuredHero.position }}
+                className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+              />
+            </div>
             <div className="p-8 md:p-10">
               <div className="flex flex-wrap gap-3 mb-4">
                 <Badge variant="gold">{featured.category}</Badge>
@@ -70,13 +77,20 @@ export default function BlogPage() {
 
           {/* Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {rest.map(post => (
+            {rest.map(post => {
+              const hero = getPostImagery(post.slug, post.category).hero
+              return (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group flex flex-col bg-[#F7F6F3] rounded-lg border border-[#E2DFD8] hover:border-[#B8962E] transition-all overflow-hidden">
-                {post.image && (
-                  <div className="relative w-full h-[160px] bg-[#151515]">
-                    <Image src={post.image} alt={post.title} fill className="object-cover opacity-90 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                )}
+                <div className="relative w-full h-[160px] bg-[#151515]">
+                  <Image
+                    src={hero.src}
+                    alt={hero.alt}
+                    fill
+                    sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw"
+                    style={{ objectPosition: hero.position }}
+                    className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                  />
+                </div>
                 <div className="flex items-center justify-between mb-4 px-6 pt-5">
                   <Badge variant="muted">{post.category}</Badge>
                   <span className="flex items-center gap-1 text-[11.5px] text-[#737373]">
@@ -96,7 +110,8 @@ export default function BlogPage() {
                   </span>
                 </div>
               </Link>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
