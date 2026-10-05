@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ArrowRight, CheckCircle, type LucideIcon } from "lucide-react"
+import { photos } from "@/lib/imagery"
 import SectionLabel from "@/components/ui/SectionLabel"
 import Badge from "@/components/ui/Badge"
 import JsonLd from "@/components/JsonLd"
@@ -37,18 +38,18 @@ export type ServiceLandingData = {
 const CLUSTER_IMAGES: { match: string[]; url: string; alt: string }[] = [
   {
     match: ["3pl", "warehousing", "warehouse"],
-    url: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80",
-    alt: "3PL warehouse operations, organized shelving and inventory management",
+    url: photos.aisleRacking.src,
+    alt: photos.aisleRacking.alt,
   },
   {
     match: ["courier", "delivery", "last-mile", "last mile"],
-    url: "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?auto=format&fit=crop&w=1400&q=80",
-    alt: "Courier and delivery operations, Delivery Group fleet on route",
+    url: photos.dockExterior.src,
+    alt: photos.dockExterior.alt,
   },
   {
     match: ["return", "reverse"],
-    url: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1400&q=80",
-    alt: "Returns processing center, reverse logistics operations",
+    url: photos.returnsTables.src,
+    alt: photos.returnsTables.alt,
   },
   {
     match: ["hazmat", "dangerous", "hazardous"],
@@ -57,8 +58,13 @@ const CLUSTER_IMAGES: { match: string[]; url: string; alt: string }[] = [
   },
   {
     match: ["supplement"],
-    url: "/images/warehouse/warehouse-supplement-inventory.jpg",
-    alt: "Delivery Group Inc. warehouse shelving with labeled supplement inventory",
+    url: photos.supplementInventory.src,
+    alt: photos.supplementInventory.alt,
+  },
+  {
+    match: ["fulfillment", "pick and pack", "kitting"],
+    url: photos.autoBagger.src,
+    alt: photos.autoBagger.alt,
   },
 ]
 
@@ -71,18 +77,18 @@ const DEFAULT_IMAGE = {
 const CLUSTER_WHY_IMAGES: { match: string[]; url: string; alt: string }[] = [
   {
     match: ["3pl", "warehousing", "warehouse"],
-    url: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=900&q=80",
-    alt: "Forklift operations in Delivery Group Inc. Northern Kentucky warehouse",
+    url: photos.forklift.src,
+    alt: photos.forklift.alt,
   },
   {
     match: ["courier", "delivery", "last-mile", "last mile"],
-    url: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=80",
-    alt: "Delivery Group Inc. last-mile courier operations and fleet dispatch",
+    url: photos.trailerLoaded.src,
+    alt: photos.trailerLoaded.alt,
   },
   {
     match: ["return", "reverse"],
-    url: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=900&q=80",
-    alt: "Returns processing and reverse logistics operations",
+    url: photos.returnsWorkstation.src,
+    alt: photos.returnsWorkstation.alt,
   },
   {
     match: ["hazmat", "dangerous", "hazardous"],
@@ -91,8 +97,13 @@ const CLUSTER_WHY_IMAGES: { match: string[]; url: string; alt: string }[] = [
   },
   {
     match: ["supplement"],
-    url: "/images/warehouse/warehouse-pretium-pallets.jpg",
-    alt: "Palletized supplement inventory staged for shipment in Delivery Group Inc.'s warehouse",
+    url: photos.palletStaging.src,
+    alt: photos.palletStaging.alt,
+  },
+  {
+    match: ["fulfillment", "pick and pack", "kitting"],
+    url: photos.glassesPacking.src,
+    alt: photos.glassesPacking.alt,
   },
 ]
 
