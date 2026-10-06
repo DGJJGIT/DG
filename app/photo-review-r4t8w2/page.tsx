@@ -12,12 +12,12 @@ type Shot = { id: string; src: string; w: number; h: number; caption: string; wh
 const used: Shot[] = [
   { id: "U01", src: "/images/review-p1-r4t8w2/U01.jpg", w: 525, h: 700, caption: "DHL eCommerce pallets staged for pickup", where: "Blog (Platform Guides, Business Strategy, Retail, B2B) \u00b7 Retail industry page" },
   { id: "U02", src: "/images/review-p1-r4t8w2/U02.jpg", w: 525, h: 700, caption: "Pallets loaded in a trailer", where: "Blog (Business Strategy, Industry Insights, Retail, B2B) \u00b7 courier service pages" },
-  { id: "U03", src: "/images/review-p1-r4t8w2/U03.jpg", w: 525, h: 700, caption: "Forklift", where: "Blog (Operations, Industry Insights) \u00b7 3PL service pages" },
+  { id: "U03", src: "/images/review-p1-r4t8w2/U03.jpg", w: 700, h: 933, caption: "Forklift (PULLED from the pages)", where: "Removed: handwritten client labels are readable in the background. Waiting for a cleaned version." },
   { id: "U04", src: "/images/review-p1-r4t8w2/U04.jpg", w: 525, h: 700, caption: "Reach truck", where: "Blog (Operations)" },
   { id: "U05", src: "/images/review-p1-r4t8w2/U05.jpg", w: 700, h: 525, caption: "Dock doors from inside", where: "Blog (Platform Guides, Business Strategy, Operations, B2B)" },
   { id: "U06", src: "/images/review-p1-r4t8w2/U06.jpg", w: 700, h: 525, caption: "Numbered dock doors", where: "Not placed on any page yet" },
   { id: "U07", src: "/images/review-p1-r4t8w2/U07.jpg", w: 700, h: 525, caption: "Loading docks, exterior", where: "Blog (Comparisons, Business Strategy, Industry Insights, Sustainability) \u00b7 Healthcare industry page \u00b7 courier service pages" },
-  { id: "U08", src: "/images/review-p1-r4t8w2/U08.jpg", w: 700, h: 525, caption: "Dock row and yard", where: "Blog (Operations, Industry Insights) \u00b7 Retail industry page" },
+  { id: "U08", src: "/images/review-p1-r4t8w2/U08.jpg", w: 700, h: 400, caption: "Loading docks, retouched by Jason", where: "Container removed, yard cleaned, company sign added (the original photo has no sign). Blog (Operations, Industry Insights) · Retail industry page" },
   { id: "U09", src: "/images/review-p1-r4t8w2/U09.jpg", w: 700, h: 525, caption: "Automatic bagger at a pack bench", where: "Blog (FBA Prep, Platform Guides, Comparisons, E-Commerce) \u00b7 E-Commerce industry \u00b7 fulfillment service pages" },
   { id: "U10", src: "/images/review-p1-r4t8w2/U10.jpg", w: 525, h: 700, caption: "Pack bench, portrait", where: "Not placed on any page yet" },
   { id: "U11", src: "/images/review-p1-r4t8w2/U11.jpg", w: 525, h: 700, caption: "Bagger close-up with carrier label", where: "Blog (FBA Prep, Technology, Customer Experience)" },
@@ -91,7 +91,7 @@ export default function PhotoReviewPage() {
       <div className="max-w-[1080px] mx-auto px-6 md:px-10 py-14 md:py-20">
         <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0D0D0D] mb-3">Photo review: batch 1</h1>
         <p className="text-[16px] text-[#737373] leading-relaxed max-w-[680px] mb-2">
-          Allenn sent 45 photos. 17 are in use on staging, 28 are held back. Below is every photo and why, so you can approve, change, or veto before anything goes to the live site.
+          Allenn sent 45 photos. 16 are in use on staging, 29 are held back. Below is every photo and why, so you can approve, change, or veto before anything goes to the live site.
         </p>
         <p className="text-[13px] text-[#737373] mb-10">Prepared October 6, 2026. Reply with photo IDs (for example &quot;U03 out, B03 ok&quot;).</p>
 
@@ -105,8 +105,8 @@ export default function PhotoReviewPage() {
           </ol>
         </div>
 
-        <h2 className={h2}>In use on staging (17)</h2>
-        <p className={sub}>These appear on blog posts, industries, and service pages on staging only. Two (U06, U10) are ready but not placed yet. Production is untouched.</p>
+        <h2 className={h2}>In use on staging (16, plus U03 pulled)</h2>
+        <p className={sub}>These appear on blog posts, industries, and service pages on staging only. Two (U06, U10) are ready but not placed yet. Production is untouched. Machine brand names (Yale, Rollbag) are still visible in U04, U09, U10 and U11 until retouched versions replace them.</p>
         <Grid shots={used} />
 
         <h2 className={h2}>Held back: people (7)</h2>
