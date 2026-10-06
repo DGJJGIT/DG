@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, ShoppingCart, Heart, Store, Pill } from "lucide-react"
 import Image from "next/image"
-import { industryImagery } from "@/lib/imagery"
+import { industryImagery, photos } from "@/lib/imagery"
 import SectionLabel from "@/components/ui/SectionLabel"
 
 export const metadata: Metadata = {
@@ -25,8 +25,20 @@ const industries = [
 export default function IndustriesPage() {
   return (
     <>
-      <section className="bg-[#0D0D0D] text-white py-20 md:py-28">
-        <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
+      <section className="relative overflow-hidden bg-[#0D0D0D] text-white py-20 md:py-28">
+        <div className="hidden md:block absolute inset-0">
+          <Image
+            src={photos.aiIndustriesHero.src}
+            alt=""
+            fill
+            sizes="100vw"
+            style={{ objectPosition: photos.aiIndustriesHero.position }}
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0D0D0D] via-[#0D0D0D]/70 to-transparent" />
+        </div>
+        <div className="relative max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <SectionLabel light>Vertical Expertise</SectionLabel>
           <h1 className="text-4xl md:text-5xl font-semibold text-white tracking-tight mt-2 mb-5 max-w-[560px]">
             Purpose-built for<br />
@@ -36,11 +48,21 @@ export default function IndustriesPage() {
             Generic logistics can't serve specialized industries. We've invested in building vertical-specific expertise, compliance frameworks, and operational protocols for the sectors that demand the most.
           </p>
         </div>
+        <div className="md:hidden relative mt-10 mx-6 aspect-[4/3] overflow-hidden rounded-lg">
+          <Image
+            src={photos.aiIndustriesHero.src}
+            alt={photos.aiIndustriesHero.alt}
+            fill
+            sizes="100vw"
+            style={{ objectPosition: "100% 60%" }}
+            className="object-cover"
+          />
+        </div>
       </section>
 
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {industries.map((ind) => {
               const Icon = iconMap[ind.icon]
               const photo = industryImagery[ind.slug].hero
@@ -50,7 +72,7 @@ export default function IndustriesPage() {
                   href={`/industries/${ind.slug}`}
                   className="group bg-[#F7F6F3] rounded-lg hover:bg-[#0D0D0D] transition-all duration-300 flex flex-col border border-transparent hover:border-[#2a2a2a] overflow-hidden"
                 >
-                  <div className="relative w-full aspect-[16/10] bg-[#151515]">
+                  <div className="relative w-full aspect-[16/10] md:aspect-[16/9] bg-[#151515]">
                     <Image
                       src={photo.src}
                       alt={photo.alt}

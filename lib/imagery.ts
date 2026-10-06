@@ -189,6 +189,49 @@ export const photos = {
     h: 2000,
     position: "center 55%",
   },
+  // AI-generated, supplied by the client's marketing lead on Oct 6, 2026 for
+  // the industries pages. Generic scenes with no Delivery Group branding; the
+  // people and vehicles in them are not ours.
+  aiIndustriesHero: {
+    src: "/images/industries/hero.jpg",
+    alt: "Delivery van loading at a warehouse dock at dusk, illustration",
+    caption: "Industries hero (illustration)",
+    w: 1776,
+    h: 896,
+    position: "50% 60%",
+  },
+  aiEcommerce: {
+    src: "/images/industries/ecommerce.jpg",
+    alt: "Gloved hands taping a carton on a conveyor next to a barcode scanner, illustration",
+    caption: "E-Commerce (illustration)",
+    w: 1536,
+    h: 1024,
+    position: "center 50%",
+  },
+  aiRetail: {
+    src: "/images/industries/retail.jpg",
+    alt: "Worker wheeling cartons on a hand truck into a clothing store, illustration",
+    caption: "Retail (illustration)",
+    w: 1536,
+    h: 1024,
+    position: "center 50%",
+  },
+  aiHealthcare: {
+    src: "/images/industries/healthcare.jpg",
+    alt: "Courier carrying an insulated medical cooler from a van toward a clinic entrance, illustration",
+    caption: "Healthcare (illustration)",
+    w: 1536,
+    h: 1024,
+    position: "center 45%",
+  },
+  aiSupplements: {
+    src: "/images/industries/supplements.jpg",
+    alt: "Gloved hand scanning supplement bottles on a stainless shelf, illustration",
+    caption: "Supplements and nutraceuticals (illustration)",
+    w: 1536,
+    h: 1024,
+    position: "center 55%",
+  },
 } satisfies Record<string, Photo>
 
 const defaultPool: Photo[] = [
@@ -278,19 +321,19 @@ export interface IndustryImagery {
 
 export const industryImagery: Record<string, IndustryImagery> = {
   ecommerce: {
-    hero: photos.autoBagger,
+    hero: photos.aiEcommerce,
     gallery: [photos.returnsTables, photos.glassesPacking],
   },
   healthcare: {
-    hero: photos.supplementInventory,
+    hero: photos.aiHealthcare,
     gallery: [photos.receivingPallets, photos.dockExterior],
   },
   retail: {
-    hero: photos.palletStaging,
+    hero: photos.aiRetail,
     gallery: [photos.dhlGaylords, photos.dockRowContainer],
   },
   supplements: {
-    hero: photos.supplementInventory,
+    hero: photos.aiSupplements,
     gallery: [photos.palletStaging, photos.receivingPallets],
   },
 }
