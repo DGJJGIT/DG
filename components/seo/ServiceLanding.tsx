@@ -77,8 +77,8 @@ const DEFAULT_IMAGE = {
 const CLUSTER_WHY_IMAGES: { match: string[]; url: string; alt: string }[] = [
   {
     match: ["3pl", "warehousing", "warehouse"],
-    url: photos.forklift.src,
-    alt: photos.forklift.alt,
+    url: photos.dockInterior.src,
+    alt: photos.dockInterior.alt,
   },
   {
     match: ["courier", "delivery", "last-mile", "last mile"],
