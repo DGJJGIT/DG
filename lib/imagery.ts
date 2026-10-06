@@ -189,14 +189,6 @@ export const photos = {
     h: 2000,
     position: "center 55%",
   },
-  orderStation: {
-    src: "/images/facility/order-station-scanner.jpg",
-    alt: "Warehouse workstation with a monitor and a handheld barcode scanner",
-    caption: "Order station with barcode scanner",
-    w: 2000,
-    h: 1500,
-    position: "center 50%",
-  },
 } satisfies Record<string, Photo>
 
 const defaultPool: Photo[] = [
@@ -211,11 +203,11 @@ const defaultPool: Photo[] = [
 // through its category's pool by slug so cards in the index do not all match.
 const categoryPools: Record<string, Photo[]> = {
   "FBA Prep": [photos.polyBags, photos.autoBagger, photos.autoBaggerClose, photos.barcodeScanner, photos.glassesPacking],
-  "Platform Guides": [photos.autoBagger, photos.returnsTables, photos.glassesPacking, photos.orderStation, photos.dhlGaylords, photos.aisleRacking, photos.dockInterior],
+  "Platform Guides": [photos.autoBagger, photos.returnsTables, photos.glassesPacking, photos.dhlGaylords, photos.aisleRacking, photos.dockInterior],
   Comparisons: [photos.aisleRacking, photos.receivingPallets, photos.returnsTables, photos.dockExterior, photos.autoBagger],
   "Business Strategy": [photos.dhlGaylords, photos.trailerLoaded, photos.dockExterior, photos.dockInterior, photos.palletStaging],
   Operations: [photos.forklift, photos.receivingPallets, photos.dockRowContainer, photos.reachTruck, photos.dockInterior, photos.aisleRacking],
-  Technology: [photos.orderStation, photos.barcodeScanner, photos.returnsWorkstation, photos.autoBaggerClose],
+  Technology: [photos.barcodeScanner, photos.returnsWorkstation, photos.autoBaggerClose],
   "Industry Insights": [photos.dockRowContainer, photos.trailerLoaded, photos.dockExterior, photos.forklift],
   "Customer Experience": [photos.glassesPacking, photos.autoBaggerClose, photos.polyBags, photos.returnsWorkstation],
   Sustainability: [photos.dockExterior, photos.palletStaging, photos.aisleRacking],
