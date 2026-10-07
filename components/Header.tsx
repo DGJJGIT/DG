@@ -9,7 +9,7 @@ const servicesClusters = [
     icon: Package,
     hub: { label: "Fulfillment Center", href: "/fulfillment-center" },
     spokes: [
-      { label: "Pick & Pack Services", href: "/pick-and-pack-services" },
+      { label: "Pick & Pack Fulfillment", href: "/pick-and-pack-fulfillment" },
       { label: "Kitting Services", href: "/kitting-services" },
       { label: "Subscription Box", href: "/subscription-box-fulfillment" },
       { label: "TikTok Shop", href: "/tiktok-shop-fulfillment" },
@@ -22,7 +22,6 @@ const servicesClusters = [
     icon: Warehouse,
     hub: { label: "3PL Fulfillment", href: "/3pl-fulfillment" },
     spokes: [
-      { label: "3PL Warehouse", href: "/3pl-warehouse" },
       { label: "3PL Warehousing", href: "/3pl-warehousing" },
       { label: "3PL WMS", href: "/3pl-wms" },
       { label: "eCommerce 3PL", href: "/3pl-ecommerce-fulfillment" },
@@ -49,23 +48,15 @@ const servicesClusters = [
     icon: RefreshCw,
     hub: { label: "Returns Management", href: "/returns-management" },
     spokes: [
-      { label: "Reverse Logistics", href: "/reverse-logistics-services" },
-      { label: "eCommerce Returns", href: "/ecommerce-returns-management" },
-      { label: "Returns Processing", href: "/returns-processing" },
-      { label: "Reverse Logistics Co.", href: "/reverse-logistics-company" },
-      { label: "Returns Solution", href: "/ecommerce-returns-solution" },
+      { label: "Reverse Logistics", href: "/reverse-logistics-company" },
     ],
   },
   {
     label: "Hazmat",
     icon: AlertTriangle,
-    hub: { label: "Hazmat Trucking", href: "/hazmat-trucking-companies" },
+    hub: { label: "Hazmat Fulfillment", href: "/hazmat-fulfillment" },
     spokes: [
-      { label: "Hazmat Storage", href: "/hazmat-storage" },
-      { label: "Hazmat Warehouse", href: "/hazmat-warehouse" },
-      { label: "Hazmat Logistics", href: "/hazmat-logistics" },
-      { label: "Hazmat 3PL", href: "/hazmat-3pl" },
-      { label: "Dangerous Goods", href: "/dangerous-goods-warehouse" },
+      { label: "Electronics & Batteries", href: "/electronics-fulfillment" },
     ],
   },
 ]
@@ -75,10 +66,10 @@ const otherNav = [
     label: "Industries",
     href: "/industries",
     children: [
-      { label: "E-Commerce", href: "/industries/ecommerce" },
+      { label: "E-Commerce", href: "/3pl-ecommerce-fulfillment" },
       { label: "Healthcare", href: "/industries/healthcare" },
       { label: "Retail", href: "/industries/retail" },
-      { label: "Supplements", href: "/industries/supplements" },
+      { label: "Supplements", href: "/supplement-fulfillment" },
     ],
   },
   {

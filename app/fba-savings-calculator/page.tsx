@@ -5,7 +5,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "FBA Savings Calculator, See What You'd Save with DeliveryGroup",
+  title: "FBA Savings Calculator",
   description: "Calculate your real monthly FBA prep cost vs. DIY. DeliveryGroup charges $0.50/unit with no hidden fees. See your exact savings in 30 seconds.",
   alternates: { canonical: "https://deliverygroupinc.com/fba-savings-calculator" },
   openGraph: {

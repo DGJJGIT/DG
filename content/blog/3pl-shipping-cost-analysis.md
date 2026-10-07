@@ -1,5 +1,6 @@
 ---
 title: "How a Shipping Cost Analysis Can Save Your Brand Thousands Per Month"
+seoTitle: "Shipping Cost Analysis for Brands"
 excerpt: "Most e-commerce brands are overpaying for shipping. A structured cost analysis reveals exactly where the savings are."
 category: "Business Strategy"
 date: "June 19, 2024"

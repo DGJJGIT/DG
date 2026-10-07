@@ -1,5 +1,6 @@
 ---
 title: "Proactive Customer Communication in Logistics: A Competitive Advantage"
+seoTitle: "Proactive Customer Communication"
 excerpt: "The brands with the lowest WISMO (Where Is My Order) contact rates are also the ones with the highest NPS scores."
 category: "Customer Experience"
 date: "March 27, 2024"

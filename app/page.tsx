@@ -19,7 +19,7 @@ const services = [
   {
     icon: Package,
     title: "Amazon FBA Prep",
-    body: "75,000 sq ft facility 5 miles from Amazon's CVG Air Hub. Under 48-hour turnaround with 99.9% accuracy.",
+    body: "75,000 sq ft facility 5 miles from Amazon's CVG Air Hub. Under 48-hour turnaround with 99.5% accuracy.",
     href: "/amazon-fba-prep",
   },
   {
@@ -32,21 +32,21 @@ const services = [
     icon: Star,
     title: "Last-Mile Delivery",
     body: "The most critical leg of the supply chain, executed with precision and brand-level care.",
-    href: "/services/last-mile-delivery",
+    href: "/last-mile-delivery",
   },
   {
     icon: Truck,
     title: "Expedited Shipping",
     body: "Direct inject into DHL's CVG Super Hub, 5 miles away. Central NKY location means faster, cheaper shipping nationwide.",
-    href: "/services/expedited-shipping",
+    href: "/expedited-freight",
   },
 ]
 
 const industries = [
-  { label: "E-Commerce", href: "/industries/ecommerce" },
+  { label: "E-Commerce", href: "/3pl-ecommerce-fulfillment" },
   { label: "Healthcare", href: "/industries/healthcare" },
   { label: "Retail", href: "/industries/retail" },
-  { label: "Supplements", href: "/industries/supplements" },
+  { label: "Supplements", href: "/supplement-fulfillment" },
 ]
 
 const differentiators = [
@@ -110,6 +110,7 @@ export default function Home() {
         data={{
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
+          "@id": "https://deliverygroupinc.com/#org",
           name: "Delivery Group Inc.",
           url: "https://deliverygroupinc.com",
           telephone: "+1-800-370-2105",
@@ -130,11 +131,6 @@ export default function Home() {
           },
           areaServed: "US",
           priceRange: "$$",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "500",
-          },
         }}
       />
       {/* ── Hero ── */}

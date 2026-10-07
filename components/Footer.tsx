@@ -50,17 +50,17 @@ const clusterHubs = [
   { label: "3PL Fulfillment", href: "/3pl-fulfillment" },
   { label: "White Glove Delivery", href: "/white-glove-delivery" },
   { label: "Returns Management", href: "/returns-management" },
-  { label: "Hazmat Trucking", href: "/hazmat-trucking-companies" },
+  { label: "Hazmat Fulfillment", href: "/hazmat-fulfillment" },
   { label: "Amazon FBA Prep", href: "/amazon-fba-prep" },
   { label: "View all 44 services →", href: "/services" },
 ]
 
 const footerNav = {
   Industries: [
-    { label: "E-Commerce", href: "/industries/ecommerce" },
+    { label: "E-Commerce", href: "/3pl-ecommerce-fulfillment" },
     { label: "Healthcare", href: "/industries/healthcare" },
     { label: "Retail", href: "/industries/retail" },
-    { label: "Supplements", href: "/industries/supplements" },
+    { label: "Supplements", href: "/supplement-fulfillment" },
   ],
   Company: [
     { label: "About Us", href: "/about" },

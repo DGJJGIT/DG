@@ -61,6 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           data={{
             "@context": "https://schema.org",
             "@type": "WebSite",
+            "@id": "https://deliverygroupinc.com/#website",
             name: "Delivery Group Inc.",
             url: "https://deliverygroupinc.com",
           }}
@@ -69,11 +70,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           data={{
             "@context": "https://schema.org",
             "@type": ["Organization", "LocalBusiness"],
+            "@id": "https://deliverygroupinc.com/#org",
             name: "Delivery Group Inc.",
             url: "https://deliverygroupinc.com",
             logo: "https://deliverygroupinc.com/logo.png",
             description:
-              "Premium last-mile delivery and logistics company offering Amazon FBA prep, 3PL fulfillment, last-mile delivery, and expedited shipping.",
+              "Northern Kentucky logistics company providing Amazon FBA prep, 3PL fulfillment, last-mile delivery, and expedited shipping, near the Cincinnati/CVG Amazon hub.",
             contactPoint: {
               "@type": "ContactPoint",
               telephone: "+1-800-370-2105",

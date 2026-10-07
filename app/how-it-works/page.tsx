@@ -4,7 +4,7 @@ import { ArrowRight, MessageSquare, Settings, Warehouse, Truck, CheckCircle } fr
 import SectionLabel from "@/components/ui/SectionLabel"
 
 export const metadata: Metadata = {
-  title: "How It Works, Getting Started with DeliveryGroup",
+  title: "How It Works: Getting Started",
   description: "Go from first call to first shipment in 5-10 business days. See how our simple onboarding process works for FBA prep and 3PL fulfillment.",
   alternates: { canonical: "https://deliverygroupinc.com/how-it-works" },
 }

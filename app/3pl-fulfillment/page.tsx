@@ -1018,14 +1018,14 @@ export default function ThreePLFulfillmentPage() {
           <p className="text-[11.5px] font-semibold uppercase tracking-[0.1em] text-[#A3A3A3] mb-4">Related services</p>
           <div className="flex flex-wrap gap-2.5">
             {[
-              { label: "3PL Warehouse", href: "/3pl-warehouse" },
+              { label: "3PL Warehouse", href: "/3pl-warehousing" },
               { label: "3PL Warehousing", href: "/3pl-warehousing" },
               { label: "3PL WMS", href: "/3pl-wms" },
               { label: "eCommerce 3PL Fulfillment", href: "/3pl-ecommerce-fulfillment" },
               { label: "3PL for Small Business", href: "/3pl-for-small-business" },
               { label: "Liquidation Pallets", href: "/liquidation-pallets" },
               { label: "Fulfillment Center", href: "/fulfillment-center" },
-              { label: "Pick & Pack Services", href: "/pick-and-pack-services" },
+              { label: "Pick & Pack Services", href: "/pick-and-pack-fulfillment" },
             ].map((s) => (
               <Link
                 key={s.href}

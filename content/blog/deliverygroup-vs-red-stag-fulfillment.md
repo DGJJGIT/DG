@@ -4,9 +4,12 @@ excerpt: "Red Stag and DeliveryGroup both operate from strategic central US loca
 category: "Comparisons"
 date: "April 5, 2025"
 readTime: "12 min read"
+updated: "October 7, 2026"
 author: "Louis Bradley"
 image: "/blog/business-strategy.svg"
 ---
+
+*This comparison is published by DeliveryGroup. Competitor details reflect their public materials at the time of writing; confirm current services and pricing with each provider.*
 
 Red Stag Fulfillment and DeliveryGroup are both 3PLs that operate from strategic central US locations. Red Stag is based in Knoxville, Tennessee. DeliveryGroup is based in Florence, Kentucky. Both use their geographic advantage to offer fast ground shipping to most of the country.
 
@@ -32,9 +35,9 @@ If your primary products are oversized and heavy, Red Stag is purpose-built for 
 
 ## FBA Prep
 
-This is a significant differentiator. **DeliveryGroup offers full Amazon FBA prep services** from the same facility. FNSKU labeling, poly bagging, bundling, inspection, and shipping plan creation. Their proximity to Amazon's CVG Air Hub means same-day inbound delivery.
+**DeliveryGroup offers full Amazon FBA prep services** from the same facility. FNSKU labeling, poly bagging, bundling, inspection, and shipping plan creation. Their proximity to Amazon's CVG Air Hub means same-day inbound delivery.
 
-**Red Stag does not offer FBA prep.** If you sell on Amazon through FBA, you would need a separate prep center. With DeliveryGroup, FBA prep and merchant fulfilled orders run from the same inventory pool.
+**Red Stag's focus is DTC and B2B fulfillment, especially heavy and high-value items.** If FBA prep matters to you, confirm Red Stag's current prep options directly. With DeliveryGroup, FBA prep and merchant fulfilled orders run from the same inventory pool.
 
 ## Performance Guarantees
 
@@ -77,7 +80,7 @@ DeliveryGroup's pricing starts at $3.00 per order for pick and pack, with $25 pe
 For standard-sized products, DeliveryGroup is typically more cost-effective. For oversized and heavy products, Red Stag's specialized handling may be worth the premium.
 
 **Does Red Stag offer FBA prep?**
-No. Red Stag focuses on DTC and B2B fulfillment. DeliveryGroup offers full FBA prep services.
+Red Stag focuses on DTC and B2B fulfillment, so check with Red Stag for its current FBA prep options. DeliveryGroup offers full FBA prep services.
 
 **Can DeliveryGroup handle heavy or oversized items?**
 Yes. DeliveryGroup handles oversized products, though it is not their primary specialization the way it is for Red Stag.

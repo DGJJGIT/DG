@@ -1,5 +1,6 @@
 ---
 title: "Retail Logistics in the Omnichannel Era: A Practical Framework"
+seoTitle: "Omnichannel Retail Logistics"
 excerpt: "The lines between online and in-store fulfillment have dissolved. Here's how leading retailers are responding."
 category: "Retail"
 date: "July 3, 2024"

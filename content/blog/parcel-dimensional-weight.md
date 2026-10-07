@@ -1,5 +1,6 @@
 ---
 title: "Understanding Dimensional Weight Pricing and How to Reduce It"
+seoTitle: "Dimensional Weight Pricing Explained"
 excerpt: "Dimensional weight charges are one of the most misunderstood costs in parcel shipping. Here's how to manage them."
 category: "Operations"
 date: "January 30, 2024"

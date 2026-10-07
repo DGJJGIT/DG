@@ -14,29 +14,28 @@ export async function generateStaticParams() {
   return posts.map(p => ({ slug: p.slug }))
 }
 
-// Shorten a blog post title to fit within 38 chars (template adds " | Delivery Group Inc." = 22, total ≤60)
-function shortTitle(title: string): string {
+// Title fitting: "<title> | Delivery Group Inc." when it fits in 60 chars; else the part before a ": " / " - "
+// separator; else the full post title on its own (never cut mid-phrase with an ellipsis).
+function shortTitle(title: string): string | { absolute: string } {
   if (title.length <= 38) return title
   for (const sep of [": ", " — ", " - "]) {
     const i = title.indexOf(sep)
     if (i > 10 && i <= 38) return title.slice(0, i)
   }
-  const trimmed = title.slice(0, 38)
-  const lastSpace = trimmed.lastIndexOf(" ")
-  return (lastSpace > 10 ? trimmed.slice(0, lastSpace) : trimmed) + "…"
+  return { absolute: title }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
   const post = getPost(slug)
   if (!post) return { title: "Not Found" }
-  const metaTitle = shortTitle(post.title)
+  const metaTitle = shortTitle(post.seoTitle || post.title)
   return {
     title: metaTitle,
     description: clampMeta(post.excerpt),
     openGraph: {
       type: "article",
-      title: metaTitle,
+      title: typeof metaTitle === "string" ? metaTitle : metaTitle.absolute,
       description: clampMeta(post.excerpt),
       publishedTime: post.date,
       authors: [post.author],
@@ -44,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: "summary_large_image",
-      title: metaTitle,
+      title: typeof metaTitle === "string" ? metaTitle : metaTitle.absolute,
       description: clampMeta(post.excerpt),
     },
     alternates: { canonical: `https://deliverygroupinc.com/blog/${slug}` },
@@ -70,16 +69,32 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           description: clampMeta(post.excerpt),
           image: `https://deliverygroupinc.com${hero.src}`,
           datePublished: new Date(post.date).toISOString(),
-          author: {
-            "@type": "Organization",
-            name: "Delivery Group Inc.",
-          },
+          dateModified: new Date(post.updated || post.date).toISOString(),
+          mainEntityOfPage: { "@type": "WebPage", "@id": `https://deliverygroupinc.com/blog/${post.slug}` },
+          author: post.author
+            ? { "@type": "Person", name: post.author }
+            : { "@type": "Organization", name: "Delivery Group Inc." },
           publisher: {
             "@type": "Organization",
+            "@id": "https://deliverygroupinc.com/#org",
             name: "Delivery Group Inc.",
+            logo: { "@type": "ImageObject", url: "https://deliverygroupinc.com/logo.png" },
           },
         }}
       />
+      {post.faqs.length > 0 && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: post.faqs.map(f => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
+          }}
+        />
+      )}
       <section className="bg-[#0D0D0D] text-white pt-16 pb-20">
         <div className="max-w-[800px] mx-auto px-6 md:px-10">
           <Link href="/blog" className="inline-flex items-center gap-1.5 text-[13px] text-[#737373] hover:text-white transition-colors mb-8">
@@ -91,6 +106,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <Clock size={12} /> {post.readTime}
             </span>
             <span className="text-[12.5px] text-[#737373]">{post.date}</span>
+            {post.updated && <span className="text-[12.5px] text-[#737373]">Updated {post.updated}</span>}
           </div>
           <h1 className="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-5 leading-snug">
             {post.title}
@@ -122,7 +138,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             dangerouslySetInnerHTML={{ __html: bodyHtml }}
           />
           <div className="mt-10 pt-8 border-t border-[#E2DFD8]">
-            <div className="text-[13px] text-[#737373]">Written by the {post.author}</div>
+            <div className="text-[13px] text-[#737373]">Written by {post.author}</div>
           </div>
         </div>
       </section>
