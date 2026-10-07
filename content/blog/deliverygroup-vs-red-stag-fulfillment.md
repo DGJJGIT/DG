@@ -35,7 +35,7 @@ If your primary products are oversized and heavy, Red Stag is purpose-built for 
 
 ## FBA Prep
 
-**DeliveryGroup offers full Amazon FBA prep services** from the same facility. FNSKU labeling, poly bagging, bundling, inspection, and shipping plan creation. Their proximity to Amazon's CVG Air Hub means same-day inbound delivery.
+**DeliveryGroup offers full Amazon FBA prep services** from the same facility. FNSKU labeling, poly bagging, bundling, inspection, and shipping plan creation. Their proximity to Amazon's CVG Air Hub keeps the trip to Amazon short.
 
 **Red Stag's focus is DTC and B2B fulfillment, especially heavy and high-value items.** If FBA prep matters to you, confirm Red Stag's current prep options directly. With DeliveryGroup, FBA prep and merchant fulfilled orders run from the same inventory pool.
 
