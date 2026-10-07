@@ -33,7 +33,7 @@ DHL's CVG Super Hub is one of only three in the world. DeliveryGroup's direct-in
 
 ## FBA Prep Services
 
-Both companies offer FBA prep, so the difference is how it is delivered. **DeliveryGroup offers full Amazon FBA prep services.** That includes FNSKU labeling, poly bagging, bundling, kitting, shrink wrapping, inspection, and shipping plan creation. Their facility is just 5 miles from Amazon's CVG Air Hub, which means inventory reaches Amazon's shelves the same day it leaves the dock.
+Both companies offer FBA prep, so the difference is how it is delivered. **DeliveryGroup offers full Amazon FBA prep services.** That includes FNSKU labeling, poly bagging, bundling, kitting, shrink wrapping, inspection, and shipping plan creation. Their facility is about 5 miles from Amazon's CVG Air Hub, which keeps the trip to Amazon short.
 
 **ShipBob also offers FBA prep** as part of its fulfillment services. The difference is the model: ShipBob spreads inventory across a multi-location network, while DeliveryGroup runs FBA prep and merchant fulfilled orders from one inventory pool in a single Northern Kentucky facility near the CVG hub.
 
@@ -51,7 +51,7 @@ DeliveryGroup offers transparent, all-inclusive per-shipment pricing with no hid
 
 ## Customer Service
 
-ShipBob assigns support through a ticketing system. As a large operation handling thousands of brands, individual attention can vary.
+ShipBob handles support through a ticketing system.
 
 DeliveryGroup assigns a dedicated account manager to every client from day one. You have a single point of contact who knows your business, your products, and your requirements. That level of personal service is a meaningful difference for brands that value a true partnership over a transactional relationship.
 
@@ -60,7 +60,7 @@ DeliveryGroup assigns a dedicated account manager to every client from day one. 
 **ShipBob is a good fit if:**
 - You need fulfillment centers in multiple countries
 - You want distributed inventory across many US locations
-- You do not sell on Amazon FBA
+- You want inventory spread across a multi-location network
 - You are comfortable with a more self-service model
 
 **DeliveryGroup is a good fit if:**

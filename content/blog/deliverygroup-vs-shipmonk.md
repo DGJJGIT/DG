@@ -37,7 +37,7 @@ DeliveryGroup's primary shipping advantage is their direct DHL partnership. Thei
 
 ## FBA Prep
 
-**DeliveryGroup offers full FBA prep services** including FNSKU labeling, poly bagging, bundling, shrink wrapping, inspection, and shipping plan creation. Their proximity to Amazon's CVG Air Hub means inventory reaches Amazon fulfillment centers the same day.
+**DeliveryGroup offers full FBA prep services** including FNSKU labeling, poly bagging, bundling, shrink wrapping, inspection, and shipping plan creation. Their proximity to Amazon's CVG Air Hub keeps the trip to Amazon short.
 
 **ShipMonk also offers FBA prep services.** The difference is the model: ShipMonk runs a technology-led, multi-location network, while DeliveryGroup runs FBA prep and DTC fulfillment from the same warehouse and the same inventory.
 
@@ -65,7 +65,7 @@ DeliveryGroup provides all-inclusive, transparent per-shipment pricing. Pick and
 - You want AI-driven carrier optimization across multiple carriers
 - You are focused primarily on DTC subscription box fulfillment
 - You prefer a self-service, software-first onboarding experience
-- You do not need FBA prep
+- You prefer a software-first, multi-location 3PL
 
 **DeliveryGroup is a good fit if:**
 - You need FBA prep and 3PL fulfillment under one roof
