@@ -1,5 +1,6 @@
 ---
 title: "Why Your FBA Prep Center's Location Is Your Biggest Cost Lever"
+seoTitle: "Why FBA Prep Center Location Matters"
 excerpt: "The distance between your prep center and Amazon's fulfillment centers determines your inbound shipping costs and speed."
 category: "FBA Prep"
 date: "August 29, 2024"

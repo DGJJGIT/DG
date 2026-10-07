@@ -25,6 +25,9 @@ const nextConfig: NextConfig = {
       { source: "/hazmat-warehouse", destination: "/hazmat-fulfillment", permanent: true },
       { source: "/dangerous-goods-warehouse", destination: "/hazmat-fulfillment", permanent: true },
       { source: "/hazmat-trucking-companies", destination: "/hazmat-fulfillment", permanent: true },
+      // 2026-10-07 AEO audit: duplicate pages competing with their canonical twins
+      { source: "/pick-and-pack-services", destination: "/pick-and-pack-fulfillment", permanent: true },
+      { source: "/services/last-mile-delivery", destination: "/last-mile-delivery", permanent: true },
     ]
   },
 };

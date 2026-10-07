@@ -7,7 +7,7 @@ import {
 import SectionLabel from "@/components/ui/SectionLabel"
 
 export const metadata: Metadata = {
-  title: "Technology & Platform Integrations, 3PL for Shopify, Amazon, WooCommerce & More",
+  title: "Technology & Platform Integrations",
   description:
     "DeliveryGroup integrates with 17+ ecommerce platforms including Shopify, Amazon, WooCommerce, BigCommerce, Walmart, eBay, and TikTok Shop, with real-time sync.",
   alternates: { canonical: "https://deliverygroupinc.com/technology" },

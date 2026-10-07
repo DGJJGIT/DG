@@ -4,6 +4,7 @@ excerpt: "Amazon's FBA requirements keep changing. Here's everything sellers nee
 category: "FBA Prep"
 date: "December 20, 2024"
 readTime: "16 min read"
+updated: "October 7, 2026"
 author: "Louis Bradley"
 image: "/blog/fba-prep.svg"
 ---
@@ -187,7 +188,7 @@ Yes, but it may not be the best use of your time. Many sellers start by prepping
 Check Amazon's prep requirements in Seller Central. Search for your product's category and read the specific prep guidance. When in doubt, bag it. Over-prepping is better than having a shipment rejected.
 
 **What happens if Amazon rejects my shipment?**
-Amazon will notify you of the issue and give you options. You can have the shipment returned to you at your cost, have Amazon dispose of the items, or in some cases, have Amazon fix the issue and charge you a fee. Repeated rejections can lead to shipping plan restrictions.
+Amazon will notify you of the issue and give you options. You can have the shipment returned to you at your cost or have Amazon dispose of the items. Amazon ended its own FBA prep and labeling service in the US on January 1, 2026, so units have to arrive fully prepped. Repeated rejections can lead to shipping plan restrictions.
 
 **How long does it take for inventory to check in at Amazon?**
 Typically 3 to 7 business days after delivery. During peak seasons like Q4, check-in can take 2 to 3 weeks. Plan your inventory pipeline accordingly and ship well in advance of high-demand periods.

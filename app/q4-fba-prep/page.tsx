@@ -9,7 +9,7 @@ import SectionLabel from "@/components/ui/SectionLabel"
 import JsonLd from "@/components/JsonLd"
 
 export const metadata: Metadata = {
-  title: "Q4 FBA Prep 2026, Ship Now, Hit BFCM Deadlines",
+  title: "Q4 FBA Prep 2026: BFCM Deadlines",
   description:
     "FBA prep center 5 miles from Amazon's CVG Air Hub. Same-day to next-day inbound. $0.50/unit standard prep, 30–50% below market. Ship before BFCM cutoffs.",
   alternates: { canonical: "https://deliverygroupinc.com/q4-fba-prep" },

@@ -12,6 +12,7 @@
 - [Kitting Services](https://deliverygroupinc.com/kitting-services): Bundles, subscription boxes, and multi-SKU assembly.
 - [Returns Management](https://deliverygroupinc.com/returns-management): Returns intake, inspection, grading, and restock.
 - [Reverse Logistics](https://deliverygroupinc.com/reverse-logistics-company): Full backward flow of goods, returns through recovery.
+- [Hazmat Fulfillment](https://deliverygroupinc.com/hazmat-fulfillment): Storage, pick, pack, and shipping of regulated products (aerosols, fragrances, lithium batteries) per DOT and IATA rules.
 
 ## Industries served
 - [Supplement Fulfillment](https://deliverygroupinc.com/supplement-fulfillment)

@@ -19,11 +19,11 @@ Third-party logistics = outsourcing the physical side of getting products from y
 A full-service 3PL typically covers:
 
 - **Receiving & warehousing**, taking in your inventory and storing it. See [3PL warehousing](/3pl-warehousing).
-- **Pick & pack**, pulling the right items for each order and packing them. See [pick and pack services](/pick-and-pack-services).
+- **Pick & pack**, pulling the right items for each order and packing them. See [pick and pack services](/pick-and-pack-fulfillment).
 - **Shipping**, choosing carriers and getting orders out the door, often with same-day cut-offs.
 - **Inventory management**, real-time stock visibility through a [WMS](/3pl-wms).
 - **Returns / reverse logistics**, processing what comes back. See [returns management](/returns-management).
-- **Value-adds**, [kitting](/kitting-services), branded packaging, and specialty handling like [hazmat logistics](/hazmat-logistics).
+- **Value-adds**, [kitting](/kitting-services), branded packaging, and specialty handling like [hazmat logistics](/hazmat-fulfillment).
 
 ## How does a 3PL work?
 

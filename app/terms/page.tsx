@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-export const metadata: Metadata = { title: "Terms of Service", description: "Delivery Group Inc. Terms of Service.", alternates: { canonical: "https://deliverygroupinc.com/terms" } }
+export const metadata: Metadata = { title: "Terms of Service", description: "Terms of Service for Delivery Group Inc., covering use of this website and our FBA prep, 3PL fulfillment, warehousing, and delivery services.", alternates: { canonical: "https://deliverygroupinc.com/terms" } }
 export default function TermsPage() {
   return (
     <>

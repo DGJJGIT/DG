@@ -4,9 +4,12 @@ excerpt: "How does DeliveryGroup compare to ShipMonk on pricing, technology, and
 category: "Comparisons"
 date: "April 6, 2025"
 readTime: "12 min read"
+updated: "October 7, 2026"
 author: "Louis Bradley"
 image: "/blog/business-strategy.svg"
 ---
+
+*This comparison is published by DeliveryGroup. Competitor details reflect their public materials at the time of writing; confirm current services and pricing with each provider.*
 
 If you are shopping for a 3PL, ShipMonk and DeliveryGroup are both names worth considering. They serve similar markets but take different approaches to technology, pricing, and service. This comparison will help you figure out which one makes more sense for your brand.
 
@@ -36,7 +39,7 @@ DeliveryGroup's primary shipping advantage is their direct DHL partnership. Thei
 
 **DeliveryGroup offers full FBA prep services** including FNSKU labeling, poly bagging, bundling, shrink wrapping, inspection, and shipping plan creation. Their proximity to Amazon's CVG Air Hub means inventory reaches Amazon fulfillment centers the same day.
 
-**ShipMonk does not specialize in FBA prep.** If you sell on Amazon through FBA, you would need to use a separate prep center. DeliveryGroup lets you run FBA prep and DTC fulfillment from the same warehouse and the same inventory.
+**ShipMonk also offers FBA prep services.** The difference is the model: ShipMonk runs a technology-led, multi-location network, while DeliveryGroup runs FBA prep and DTC fulfillment from the same warehouse and the same inventory.
 
 ## Supplement and Nutraceutical Fulfillment
 
@@ -77,7 +80,7 @@ DeliveryGroup provides all-inclusive, transparent per-shipment pricing. Pick and
 It depends on your product weight, shipping zones, and volume. DeliveryGroup's DHL rates are often lower for ground shipping nationwide. ShipMonk's carrier optimization can find deals on specific lanes. Request quotes from both to compare.
 
 **Can I do FBA prep with ShipMonk?**
-ShipMonk does not specialize in FBA prep. You would need a separate provider. DeliveryGroup handles both under one roof.
+Yes, ShipMonk offers FBA prep services. DeliveryGroup's difference is that FBA prep and DTC fulfillment run from one Northern Kentucky building and one inventory pool.
 
 **Which is better for subscription boxes?**
 Both handle subscription fulfillment. ShipMonk has a strong reputation in this space. DeliveryGroup offers kitting, custom packaging, and marketing inserts for subscription orders as well.

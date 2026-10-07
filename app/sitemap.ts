@@ -218,6 +218,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   /* ── New SEO cluster pages (hazmat, fulfillment, 3PL, courier, reverse logistics) ── */
   // #302 — exclude URLs that 301 to a canonical (see next.config redirects)
   const REDIRECTED_SLUGS = new Set([
+    "pick-and-pack-services",
     "3pl-warehouse",
     "returns-processing",
     "ecommerce-returns-management",

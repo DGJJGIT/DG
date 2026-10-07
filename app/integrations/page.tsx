@@ -4,7 +4,7 @@ import { ArrowRight, ShoppingCart, Store, Database, Truck, RotateCcw, Code } fro
 import SectionLabel from "@/components/ui/SectionLabel"
 
 export const metadata: Metadata = {
-  title: "Integrations, 200+ Platform Connections",
+  title: "200+ Platform Integrations",
   description: "DeliveryGroup integrates with every major e-commerce platform, marketplace, ERP, and shipping carrier. Shopify, Amazon, WooCommerce, BigCommerce, and 200+ more.",
   alternates: { canonical: "https://deliverygroupinc.com/integrations" },
 }

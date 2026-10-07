@@ -4,6 +4,7 @@ excerpt: "BigCommerce's multi-storefront architecture and native marketplace cha
 category: "Platform Guides"
 date: "April 2, 2025"
 readTime: "12 min read"
+updated: "October 7, 2026"
 author: "Louis Bradley"
 image: "/blog/platform-guides.svg"
 ---
@@ -56,7 +57,7 @@ This is a genuine edge case worth asking any 3PL about directly, a lot of fulfil
 
 Kitting on BigCommerce has one wrinkle that's easy to miss: if a kit is sold as its own product (a gift set with its own SKU), the components inside it still need to be decremented from *their own* individual stock levels when the kit ships, otherwise your component-level inventory silently drifts from reality every time a bundle sells. DeliveryGroup's kitting workflow decrements at the component level, not just the kit-level SKU, so a candle sold individually and a candle sold inside a gift set draw from the same underlying count.
 
-Common kitting use cases we see from BigCommerce sellers: multi-pack variant bundles (three different scent options.md sold as one SKU), B2B case packs, seasonal gift sets assembled ahead of Q4, and subscription-style recurring boxes for sellers using a subscription app on top of BigCommerce.
+Common kitting use cases we see from BigCommerce sellers: multi-pack variant bundles (three different scent options sold as one SKU), B2B case packs, seasonal gift sets assembled ahead of Q4, and subscription-style recurring boxes for sellers using a subscription app on top of BigCommerce.
 
 ## Shipping From Northern Kentucky
 

@@ -8,7 +8,7 @@ import SectionLabel from "@/components/ui/SectionLabel"
 import Badge from "@/components/ui/Badge"
 
 export const metadata: Metadata = {
-  title: "Blog, Logistics Insights & Industry News",
+  title: "Logistics & Fulfillment Blog",
   description: "Expert perspectives on last-mile delivery, logistics technology, industry trends, and supply chain best practices from the Delivery Group team.",
   alternates: { canonical: "https://deliverygroupinc.com/blog" },
   openGraph: {

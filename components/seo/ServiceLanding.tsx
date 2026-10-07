@@ -4,6 +4,10 @@ import SectionLabel from "@/components/ui/SectionLabel"
 import Badge from "@/components/ui/Badge"
 import JsonLd from "@/components/JsonLd"
 
+// AEO freshness signal (visible + WebPage.dateModified). Bump when the service pages are re-reviewed.
+const LAST_REVIEWED = "October 7, 2026"
+const LAST_REVIEWED_ISO = "2026-10-07"
+
 export type Section = { h2: string; body: string }
 export type NavLink = { label: string; href: string }
 export type Faq = { q: string; a: string }
@@ -169,8 +173,9 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
           url: `https://deliverygroupinc.com/${data.slug}`,
           name: data.metaTitle,
           description: data.metaDescription,
-          isPartOf: { "@type": "WebSite", url: "https://deliverygroupinc.com" },
-          about: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
+          isPartOf: { "@type": "WebSite", "@id": "https://deliverygroupinc.com/#website", url: "https://deliverygroupinc.com" },
+          about: { "@type": "Organization", "@id": "https://deliverygroupinc.com/#org", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
+          dateModified: LAST_REVIEWED_ISO,
           speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".quick-answer"] },
         }}
       />
@@ -185,7 +190,7 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
                 <span className="text-[13px] text-[#B8962E] font-medium">{data.eyebrow}</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-semibold text-white tracking-tight mb-5">
-                {data.h1lead}
+                {data.h1lead}{" "}
                 <br />
                 <span className="gold-text">{data.h1gold}</span>
               </h1>
@@ -231,7 +236,8 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
       <section className="py-16 md:py-20">
         <div className="max-w-[820px] mx-auto px-6 md:px-10 lg:px-12">
           <SectionLabel>{data.overviewLabel}</SectionLabel>
-          <p className="quick-answer text-[16px] text-[#3D3D3D] leading-relaxed mb-10">{data.intro}</p>
+          <p className="quick-answer text-[16px] text-[#3D3D3D] leading-relaxed mb-3">{data.intro}</p>
+          <p className="text-[12.5px] text-[#737373] mb-10">Last reviewed {LAST_REVIEWED}</p>
           {data.sections.map((s) => (
             <div key={s.h2} className="mb-9">
               <h2 className="text-xl md:text-2xl font-semibold text-[#0D0D0D] tracking-tight mb-3">{s.h2}</h2>

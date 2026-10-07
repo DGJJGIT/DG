@@ -1,3 +1,4 @@
+import JsonLd from "@/components/JsonLd"
 import { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
@@ -64,8 +65,18 @@ const faqs = [
 ]
 
 export default function FAQPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.flatMap(section => section.items).map(f => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  }
   return (
     <>
+      <JsonLd data={faqSchema} />
       <section className="bg-[#0D0D0D] text-white py-20 md:py-28">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <SectionLabel light>FAQ</SectionLabel>
