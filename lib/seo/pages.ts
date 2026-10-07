@@ -452,7 +452,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
     faqs: [
       { q: "What is Etsy fulfillment?", a: "Etsy fulfillment is an outsourced service where a 3PL receives your inventory, stores it, and picks, packs, and ships each Etsy order for you. Delivery Group runs it from a Northern Kentucky fulfillment center and packs with your own branded materials." },
       { q: "Will my Etsy branding stay the same?", a: "Yes. We pack with your packaging and inserts, so the unboxing experience is unchanged and the buyer sees only faster shipping. Your handmade brand stays intact." },
-      { q: "Do you have a minimum order volume for an Etsy shop?", a: "We work with flexible minimums built for growing shops rather than a fixed enterprise threshold, and we do not publish a set MOQ. Share your current monthly order count and we will confirm the right fit." },
+      { q: "Do you have a minimum order volume for an Etsy shop?", a: "We work with flexible minimums built for growing shops rather than a fixed enterprise threshold. Share your current monthly order count and we will confirm the right fit." },
       { q: "Can you handle small-batch and made-to-order items?", a: "Yes. Our kitting, bundling, and reboxing support small-batch runs and made-to-order bundles, so limited drops and custom orders ship the way you intend rather than as a plain pick and pack." },
       { q: "Does fulfillment connect to my Etsy shop automatically?", a: "Yes. Orders flow in through a platform integration and tracking syncs back to the buyer, so you are not exporting spreadsheets. We map your listings to stored inventory by SKU during onboarding so variations and multi-item orders pick correctly." },
     ],
