@@ -1,9 +1,12 @@
 ---
 title: "Why AMZ Prep and ShipBob Reject Small Sellers (and What to Do Instead)"
+seoTitle: "Prep Centers That Accept Small Sellers"
 excerpt: "AMZ Prep requires 300 units minimum and won't touch OA/RA sellers under 2,500 units/month. ShipBob charges $975 to get started. Here's what small sellers can actually do."
+answer: "Larger prep centers and fulfillment platforms are often built for high-volume sellers, so unit minimums, setup fees, and monthly minimums screen out small and arbitrage sellers. Rather than risking DIY prep, look for a prep center with no rigid minimum, sensible per-unit pricing, acceptance of arbitrage inventory, and a clear, non-recurring setup cost."
 category: "FBA Prep"
 date: "September 14, 2026"
 readTime: "9 min read"
+updated: "October 9, 2026"
 author: "Louis Bradley"
 image: "/blog/fba-prep.svg"
 ---
@@ -30,7 +33,7 @@ The problem is the entry cost.
 
 ShipBob charges a $975 setup fee before you ship a single unit. On top of that, there is a $275 monthly minimum. If your fulfillment spend in any given month does not reach that floor, you pay the difference regardless.
 
-For a seller doing 300 to 500 units a month, the $975 setup fee alone represents two to three months of prep costs if you were paying $0.50 per unit elsewhere. The monthly minimum adds another $275 every month whether you hit volume or not. And ShipBob does not offer traditional FBA prep services, so you would still need a separate prep center on top of everything.
+For a seller doing 300 to 500 units a month, the $975 setup fee alone represents roughly four to six months of prep costs at $0.50 per unit. The monthly minimum adds another $275 every month whether you hit volume or not. ShipBob does offer FBA prep, but the setup fee and monthly minimum still apply on top of it.
 
 In practice, ShipBob's cost structure prices out sellers under about 500 units per month before any per-unit fees are counted.
 
@@ -60,11 +63,11 @@ If you are doing under 1,000 units a month, here is what a workable prep center 
 
 DeliveryGroup works with sellers starting at 100 units per month. There is no policy against OA or RA inventory.
 
-Standard FBA prep is $0.50 per unit for your first 90 days or 5,000 units, then $0.65 per unit, and includes FNSKU labeling, poly bagging, bundling, kitting, suffocation warning compliance, and shipping plan creation. Receiving is free at standard volumes and $0.10 per unit above the Tier 1 threshold.
+Standard FBA prep is $0.50 per unit for your first 90 days or 5,000 units, then $0.65 per unit, and covers FNSKU labeling, poly bagging, suffocation warning compliance, inspection, and shipping plan creation; bundling is priced per bundle on the rate card. Receiving is free during the intro period and at 5,000+ units a month, and $0.10 per unit otherwise.
 
 For accounts under 500 units per month, there is a one-time onboarding fee of $350. This is not a recurring monthly minimum, it is a single setup cost, and it does not repeat. That is 64 percent less than ShipBob's setup fee, and unlike ShipBob's monthly minimum, it does not hit your account again the following month.
 
-The facility is 75,000 square feet in Northern Kentucky, 5 miles from Amazon's CVG Air Hub. Turnaround from receipt to out the door is under 48 hours. Every account gets a dedicated account manager from day one.
+The facility is 75,000 square feet in Northern Kentucky, 5 miles from Amazon's CVG Air Hub. Standard prep is turned around within 48 hours of receipt, and once you are onboarded you have a dedicated point of contact who handles day-to-day account communication.
 
 ## Making the Switch
 

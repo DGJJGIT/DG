@@ -1,9 +1,11 @@
 ---
 title: "Logistics Contract Negotiation: What Shippers Often Miss"
 excerpt: "Most logistics contracts are written to protect the carrier. Here's what to negotiate before you sign."
+answer: "Shippers often miss that most logistics contracts are written to protect the carrier. Before signing, negotiate liability caps and the cargo claims process, measurable service levels with real penalties, rate escalation and fuel surcharge formulas, a complete accessorial fee schedule, and balanced termination rights. Watch for unilateral rate changes, broad force majeure clauses, and vague service descriptions."
 category: "Business Strategy"
 date: "March 13, 2024"
 readTime: "14 min read"
+updated: "October 9, 2026"
 author: "Louis Bradley"
 image: "/blog/business-strategy.svg"
 ---

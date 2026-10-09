@@ -3,10 +3,14 @@
 import { useState } from "react"
 
 // ─── Confirmed pricing, FBA Prep only (3PL has a separate structure) ─────────
-const PREP_COST_PER_UNIT        = 0.50   // standard FBA prep, Tier 1 intro (first 90 days / 5,000 units)
-const PREP_COST_ONGOING         = 0.65   // Tier 2: automatic after the intro period, any volume
-const RECEIVING_COST_PER_UNIT   = 0.10   // Tier 2 rate (after free period ends)
-const ONBOARDING_FEE            = 350    // one-time, only if monthly volume < 500 units
+// Mirrors the published /amazon-fba-prep rate card. Tier 1 intro applies to the first 90 days or the intro unit
+// cap (whichever comes first); after that Tier 2 applies at any volume, and Tier 3 at the volume threshold.
+const RATES = {
+  standard: { intro: 0.50, tier2: 0.65, tier3: 0.45, introCap: 5000, tier3Min: 5000, receivingTier2: 0.10 },
+  bulky:    { intro: 2.50, tier2: 3.00, tier3: 2.25, introCap: 2000, tier3Min: 1000, receivingTier2: 0.20 },
+} as const
+const INTRO_MONTHS_MAX = 3            // 90 days
+const ONBOARDING_FEE   = 350          // one-time, new accounts under 500 units/month
 
 // Storage, per cubic foot / month (FBA Prep)
 const STORAGE_STANDARD_PER_CUFT = 0.40  // standard size items
@@ -32,8 +36,10 @@ interface CalcResult {
   storage: number
   storageCuFt: number
   total: number
+  avgPrepRate: number
 }
 
+// Monthly cost in either the intro month (new client) or an ongoing month.
 function calcDGCost(
   volume: number,
   storageUnits: number,
@@ -41,14 +47,26 @@ function calcDGCost(
   isBulky: boolean,
   months: number,
 ): CalcResult {
-  const prep = volume * (isNewClient ? PREP_COST_PER_UNIT : PREP_COST_ONGOING)
+  const r = isBulky ? RATES.bulky : RATES.standard
+  const volumeTier = volume >= r.tier3Min
+  const ongoingRate = volumeTier ? r.tier3 : r.tier2
+  const ongoingReceiving = volumeTier ? 0 : r.receivingTier2
 
-  // Receiving: free during first 90 days OR first 5,000 cumulative units (whichever comes first).
-  // For new clients, show $0. For existing clients past Tier 1, charge $0.10/unit on the full volume.
-  const receiving = isNewClient ? 0 : volume * RECEIVING_COST_PER_UNIT
+  let prep: number
+  let receiving: number
+  if (isNewClient) {
+    // intro rate up to the intro unit cap; any units above it already fall under the ongoing tiers
+    const introUnits = Math.min(volume, r.introCap)
+    const rest = volume - introUnits
+    prep = introUnits * r.intro + rest * ongoingRate
+    receiving = rest * ongoingReceiving
+  } else {
+    prep = volume * ongoingRate
+    receiving = volume * ongoingReceiving
+  }
 
-  // One-time onboarding fee amortized over the selected period (only < 500 units/mo)
-  const onboarding = volume < 500 ? ONBOARDING_FEE / months : 0
+  // One-time onboarding fee for new accounts under 500 units/month, shown amortized over the period
+  const onboarding = isNewClient && volume < 500 ? ONBOARDING_FEE / months : 0
 
   // Storage: convert units → cubic feet, then apply rate by product type
   const cuFtPerUnit = isBulky ? AVG_CUFT_BULKY : AVG_CUFT_STANDARD
@@ -56,7 +74,18 @@ function calcDGCost(
   const storageRate = isBulky ? STORAGE_BULKY_PER_CUFT : STORAGE_STANDARD_PER_CUFT
   const storage = storageCuFt * storageRate
 
-  return { prep, receiving, onboarding, storage, storageCuFt, total: prep + receiving + onboarding + storage }
+  return { prep, receiving, onboarding, storage, storageCuFt, total: prep + receiving + onboarding + storage, avgPrepRate: volume ? prep / volume : 0 }
+}
+
+// First-year DG cost: intro months (up to 90 days or the intro unit cap) then ongoing months.
+function firstYearCost(volume: number, storageUnits: number, isNewClient: boolean, isBulky: boolean): number {
+  const ongoing = calcDGCost(volume, storageUnits, false, isBulky, 12).total
+  if (!isNewClient) return ongoing * 12
+  const r = isBulky ? RATES.bulky : RATES.standard
+  const introMonths = Math.min(INTRO_MONTHS_MAX, volume ? r.introCap / volume : INTRO_MONTHS_MAX)
+  const intro = calcDGCost(volume, storageUnits, true, isBulky, 12)
+  const introMonthly = intro.total - intro.onboarding
+  return introMonths * introMonthly + (12 - introMonths) * ongoing + (volume < 500 ? ONBOARDING_FEE : 0)
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -72,6 +101,9 @@ export default function FbaSavingsCalculator() {
   const diyHigh = volume * DIY_HIGH
   const savingsLow  = diyLow  - dg.total
   const savingsHigh = diyHigh - dg.total
+  const yearDG = firstYearCost(volume, storageUnits, isNewClient, isBulky)
+  const yearSavingsLow  = diyLow * 12 - yearDG
+  const yearSavingsHigh = diyHigh * 12 - yearDG
 
   const storageRate = isBulky ? STORAGE_BULKY_PER_CUFT : STORAGE_STANDARD_PER_CUFT
 
@@ -145,7 +177,7 @@ export default function FbaSavingsCalculator() {
         <div>
           <p className="text-[13px] font-medium text-[#3D3D3D] mb-2">Are you a new DeliveryGroup client?</p>
           <div className="flex gap-3">
-            {["Yes, within first 90 days / 5,000 units", "No, ongoing account"] .map((label, i) => {
+            {[`Yes, within first 90 days / ${(isBulky ? RATES.bulky : RATES.standard).introCap.toLocaleString()} units`, "No, ongoing account"] .map((label, i) => {
               const active = i === 0 ? isNewClient : !isNewClient
               return (
                 <button
@@ -204,7 +236,7 @@ export default function FbaSavingsCalculator() {
           <p className="text-[12px] font-semibold text-[#B8962E] uppercase tracking-wider mb-1">DeliveryGroup Cost</p>
           <p className="text-2xl font-bold">{fmtUSD(dg.total)}</p>
           <p className="text-[12px] text-[#A3A3A3] mt-1">per month</p>
-          {volume < 500 && (
+          {isNewClient && volume < 500 && (
             <p className="text-[11px] text-[#A3A3A3] mt-2">
               Includes ${(ONBOARDING_FEE / months).toFixed(2)}/mo onboarding (one-time $350 over {months} months)
             </p>
@@ -220,7 +252,7 @@ export default function FbaSavingsCalculator() {
             {fmtUSD(savingsLow)} – {fmtUSD(savingsHigh)}
           </p>
           <p className="text-[12px] text-[#737373] mt-2">
-            That&apos;s <strong>{fmtUSD(savingsLow * 12)} – {fmtUSD(savingsHigh * 12)}</strong> per year back in your pocket.
+            Over {isNewClient ? "your first year" : "a year"}, that&apos;s <strong>{fmtUSD(yearSavingsLow)} – {fmtUSD(yearSavingsHigh)}</strong>{isNewClient ? ", including the intro period and then ongoing rates" : ""}.
           </p>
         </div>
       )}
@@ -230,14 +262,14 @@ export default function FbaSavingsCalculator() {
         <p className="text-[12px] font-semibold text-[#3D3D3D] uppercase tracking-wider">Cost breakdown, DeliveryGroup</p>
         <div className="divide-y divide-[#E2DFD8] border border-[#E2DFD8] rounded-lg overflow-hidden bg-white text-[13px]">
           <div className="flex justify-between px-4 py-3">
-            <span className="text-[#737373]">Prep ({volume.toLocaleString()} units × ${isNewClient ? "0.50" : "0.65"})</span>
+            <span className="text-[#737373]">Prep ({volume.toLocaleString()} units × ${dg.avgPrepRate.toFixed(2)}{isNewClient ? (volume > (isBulky ? RATES.bulky : RATES.standard).introCap ? " blended: intro rate up to the cap, then ongoing" : " intro rate") : volume >= (isBulky ? RATES.bulky : RATES.standard).tier3Min ? " volume rate" : " ongoing rate"})</span>
             <span className="font-medium text-[#0D0D0D]">{fmtUSD(dg.prep)}</span>
           </div>
           <div className="flex justify-between px-4 py-3">
             <span className="text-[#737373]">
-              Receiving {isNewClient
-                ? "(free, Tier 1: first 90 days / 5,000 units)"
-                : `(${volume.toLocaleString()} units × $0.10, Tier 2)`}
+              Receiving {dg.receiving === 0
+                ? (isNewClient ? "(free during the intro period)" : "(free at volume rates)")
+                : `(at $${(isBulky ? RATES.bulky : RATES.standard).receivingTier2.toFixed(2)}/unit)`}
             </span>
             <span className="font-medium text-[#0D0D0D]">{fmtUSD(dg.receiving)}</span>
           </div>
@@ -249,7 +281,7 @@ export default function FbaSavingsCalculator() {
               <span className="font-medium text-[#0D0D0D]">{fmtUSD(dg.storage)}</span>
             </div>
           )}
-          {volume < 500 && (
+          {isNewClient && volume < 500 && (
             <div className="flex justify-between px-4 py-3">
               <span className="text-[#737373]">Onboarding fee (one-time $350, amortized)</span>
               <span className="font-medium text-[#0D0D0D]">{fmtUSD(dg.onboarding)}</span>

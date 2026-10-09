@@ -1,6 +1,7 @@
 ---
 title: "Urban Delivery Density: How to Maximize Efficiency in City Markets"
 excerpt: "Urban delivery is the most expensive per-stop environment. Here's how technology and micro-fulfillment are changing the economics."
+answer: "To make city deliveries more efficient, focus on stop density, the number of stops per square mile or route hour. Cluster stops by geography and time window, use dynamic route optimization, and offer narrow delivery windows to reduce failed attempts. Micro-fulfillment brings inventory closer to customers, while package lockers, cargo bikes, and electric vehicles help with traffic, parking, and access."
 category: "Operations"
 date: "October 25, 2024"
 readTime: "12 min read"

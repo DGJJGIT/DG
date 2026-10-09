@@ -1,6 +1,7 @@
 ---
 title: "Sustainability in Last-Mile Logistics: Beyond Carbon Offsets"
 excerpt: "True logistics sustainability requires operational change, not just carbon credits. Here's what leading companies are doing."
+answer: "Real sustainability in last-mile logistics means changing operations, not just buying carbon offsets. Offsets vary in quality, leave operations unchanged, and invite greenwashing concerns. Meaningful steps include route optimization to cut fuel use, electric delivery vehicles, packaging reduction, delivery consolidation, and fewer failed deliveries. Measure and report your actual impact so customers can see what you are doing differently."
 category: "Sustainability"
 date: "December 6, 2024"
 readTime: "12 min read"

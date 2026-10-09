@@ -5,8 +5,8 @@ import Badge from "@/components/ui/Badge"
 import JsonLd from "@/components/JsonLd"
 
 // AEO freshness signal (visible + WebPage.dateModified). Bump when the service pages are re-reviewed.
-const LAST_REVIEWED = "October 7, 2026"
-const LAST_REVIEWED_ISO = "2026-10-07"
+const LAST_REVIEWED = "October 9, 2026"
+const LAST_REVIEWED_ISO = "2026-10-09"
 
 export type Section = { h2: string; body: string }
 export type NavLink = { label: string; href: string }
@@ -149,7 +149,7 @@ export default function ServiceLanding({ data }: { data: ServiceLandingData }) {
           "@type": "Service",
           name: data.metaTitle,
           serviceType: data.keyword,
-          provider: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
+          provider: { "@type": "Organization", "@id": "https://deliverygroupinc.com/#org", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
           areaServed: { "@type": "Country", name: "United States" },
           url: `https://deliverygroupinc.com/${data.slug}`,
         }}

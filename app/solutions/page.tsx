@@ -19,6 +19,13 @@ const solutions = [
   { icon: Settings, title: "Managed Logistics", body: "Fully outsourced logistics management with a dedicated team, comprehensive reporting, and continuous process optimization.", href: "/contact" },
 ]
 
+// Slugs whose /solutions/<slug> URL 301s to a dedicated page: link to the final URL directly (no redirect hop).
+const SOLUTION_HREF: Record<string, string> = {
+  apparel: "/apparel-fulfillment",
+  supplements: "/supplement-fulfillment",
+  "subscription-boxes": "/subscription-box-fulfillment",
+}
+
 export default function SolutionsPage() {
   return (
     <>
@@ -77,7 +84,7 @@ export default function SolutionsPage() {
             ]).map(pt => {
               const Icon = pt.icon
               return (
-                <Link key={pt.slug} href={`/solutions/${pt.slug}`} className="group p-7 bg-white rounded-lg border border-[#E2DFD8] hover:border-[#B8962E] transition-all">
+                <Link key={pt.slug} href={SOLUTION_HREF[pt.slug] ?? `/solutions/${pt.slug}`} className="group p-7 bg-white rounded-lg border border-[#E2DFD8] hover:border-[#B8962E] transition-all">
                   <div className="w-10 h-10 rounded-md bg-[#F7F6F3] border border-[#E2DFD8] flex items-center justify-center mb-4 group-hover:border-[#B8962E] transition-colors">
                     <Icon size={18} className="text-[#B8962E]" />
                   </div>

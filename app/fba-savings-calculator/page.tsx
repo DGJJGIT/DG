@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "FBA Savings Calculator",
-  description: "Calculate your real monthly FBA prep cost vs. DIY. DeliveryGroup charges $0.50/unit with no hidden fees. See your exact savings in 30 seconds.",
+  description: "Calculate your real monthly FBA prep cost vs. DIY. DeliveryGroup's intro prep rate is $0.50/unit, then $0.65/unit, with every fee published upfront. See your exact savings in 30 seconds.",
   alternates: { canonical: "https://deliverygroupinc.com/fba-savings-calculator" },
   openGraph: {
     title: "FBA Savings Calculator, DeliveryGroup",
@@ -46,16 +46,16 @@ export default function FbaSavingsCalculatorPage() {
 
           <div>
             <SectionLabel>What's Included</SectionLabel>
-            <h2 className="text-2xl font-semibold text-[#0D0D0D] mt-2 mb-4">Standard FBA prep at $0.50/unit</h2>
+            <h2 className="text-2xl font-semibold text-[#0D0D0D] mt-2 mb-4">What standard FBA prep covers</h2>
             <ul className="space-y-3 text-[14px] text-[#737373]">
               {[
                 "Receiving and inspection",
                 "FNSKU labeling (printed on-site, applied per Amazon requirements)",
                 "Poly bagging with suffocation warnings where required",
-                "Bundling and kitting per your shipment plan",
-                "Shrink wrapping for eligible items",
+                "Bundling and kitting per your shipment plan (priced per bundle)",
+                "Shrink wrapping for eligible items (add-on)",
                 "Shipping plan creation and box content uploads",
-                "Under 48-hour turnaround from receipt to out the door",
+                "48-hour turnaround from receipt, consistently hit",
               ].map(item => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="mt-0.5 w-4 h-4 rounded-full bg-[#B8962E]/15 flex items-center justify-center flex-shrink-0">

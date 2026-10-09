@@ -2,6 +2,7 @@
 title: "Retail Logistics in the Omnichannel Era: A Practical Framework"
 seoTitle: "Omnichannel Retail Logistics"
 excerpt: "The lines between online and in-store fulfillment have dissolved. Here's how leading retailers are responding."
+answer: "Omnichannel retail logistics works when inventory is unified across stores, warehouses, and online channels. Real-time inventory visibility is the foundation for buy online, pick up in-store, ship from store, and buy online, return in-store. Get inventory accuracy right first, launch the highest-impact capabilities, add others one at a time, and use a 3PL for warehouse-based fulfillment."
 category: "Retail"
 date: "July 3, 2024"
 readTime: "12 min read"

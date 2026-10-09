@@ -1,6 +1,7 @@
 ---
 title: "Electric Vehicle Delivery Fleets: The Business Case and Operational Reality"
 excerpt: "EV adoption in delivery fleets is accelerating. Here's an honest assessment of the economics, challenges, and opportunities."
+answer: "Electric delivery vans cost more upfront, but lower fuel and maintenance costs can make them cheaper to own over their lifetime, and incentives can narrow the price gap. The tradeoffs are limited range, cold-weather range loss, and charging infrastructure. A phased approach reduces risk: pilot EVs on short, predictable routes, add chargers gradually, train staff, and track results."
 category: "Sustainability"
 date: "February 14, 2024"
 readTime: "12 min read"

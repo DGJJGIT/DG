@@ -1,6 +1,7 @@
 ---
 title: "What Customers Actually Want from Delivery Tracking"
 excerpt: "Most retailers over-invest in the tracking page and under-invest in proactive communication. New research changes the calculus."
+answer: "Customers want to know where their package is without having to look it up. They value proactive updates when the order ships, when it is out for delivery, and when it arrives, plus a warning about delays before the expected date passes. SMS suits urgent updates, email covers the rest, and delivery photos prove the package arrived."
 category: "Customer Experience"
 date: "October 10, 2024"
 readTime: "12 min read"

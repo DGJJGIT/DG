@@ -1,9 +1,11 @@
 ---
 title: "ShipBob Pricing 2026: Setup Fees, Minimums, and Why Small Sellers Are Looking Elsewhere"
 excerpt: "ShipBob's $975 setup fee and $275 monthly minimum make it a tough fit for small and mid-size sellers. Here's what the numbers actually look like in 2026."
+answer: "Small sellers comparing fulfillment providers should look past headline pricing and add up every layer, including one-time setup fees, monthly minimums, per-unit pick and pack, storage, and receiving charges. For low-volume or seasonal sellers, a monthly minimum means paying for unused capacity. Distributed multi-warehouse models tend to suit high-volume brands, while smaller sellers often want predictable per-unit pricing."
 category: "Comparisons"
 date: "September 14, 2026"
 readTime: "10 min read"
+updated: "October 9, 2026"
 author: "Louis Bradley"
 image: "/blog/business-strategy.svg"
 ---
@@ -58,11 +60,11 @@ DeliveryGroup operates from a 75,000 square foot facility in Northern Kentucky, 
 
 The pricing is straightforward:
 
-- **Standard FBA prep: $0.50 per unit for the first 90 days or 5,000 units, then $0.65 per unit.** That is the cost for FNSKU labeling, poly bagging, bundling, kitting, and shipping plan creation.
-- **Receiving: free at standard volumes.** Above the Tier 1 threshold, receiving is $0.10 per unit.
-- **Onboarding fee: $350 one-time** for accounts under 500 units per month. This is not a recurring monthly minimum, it is a single setup cost, and it is 63 percent less than ShipBob's entry fee.
+- **Standard FBA prep: $0.50 per unit for the first 90 days or 5,000 units, then $0.65 per unit.** That covers FNSKU labeling, poly bagging, inspection, and shipping plan creation; bundling is priced per bundle on the rate card.
+- **Receiving: free during the intro period and at 5,000+ units a month,** and $0.10 per unit otherwise.
+- **Onboarding fee: $350 one-time** for accounts under 500 units per month. This is not a recurring monthly minimum, it is a single setup cost, and it is 64 percent less than ShipBob's entry fee.
 
-At $0.50 per unit compared to a DIY cost of $1.20 to $1.80 per unit, the math is direct. A seller doing 500 units a month saves between $350 and $650 per month by using DeliveryGroup instead of managing prep internally.
+At $0.50 per unit compared to a DIY cost of $1.20 to $1.80 per unit, the math is direct. During the intro period, a seller doing 500 units a month saves between $350 and $650 per month by using DeliveryGroup instead of managing prep internally.
 
 DeliveryGroup maintains a 99.4 percent on-time rate across all shipments and an NPS of 72. Its direct-inject DHL partnership gives packages early network entry at one of only three DHL Super Hubs in the world, reaching more than 80 percent of the US population within 2 to 3 ground transit days. The platform integrates with 200-plus e-commerce tools and carriers.
 

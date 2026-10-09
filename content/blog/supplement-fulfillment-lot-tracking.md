@@ -1,6 +1,7 @@
 ---
 title: "Supplement Fulfillment: Why Lot Tracking and Expiration Management Are Non-Negotiable"
 excerpt: "OTD supplement brands need fulfillment partners that handle lot-level traceability and FEFO rotation as standard operating procedure."
+answer: "Lot tracking and expiration management are non-negotiable because supplements expire, are regulated, and can be recalled. Lot tracking records which batch went to which customer, so a recall can be handled quickly. FEFO rotation ships the stock closest to expiration first, and expired inventory should be quarantined before it can be picked. Shipping expired product risks complaints and brand damage."
 category: "Supplements"
 date: "February 12, 2025"
 readTime: "12 min read"

@@ -2,6 +2,7 @@
 title: "Proactive Customer Communication in Logistics: A Competitive Advantage"
 seoTitle: "Proactive Customer Communication"
 excerpt: "The brands with the lowest WISMO (Where Is My Order) contact rates are also the ones with the highest NPS scores."
+answer: "Proactive communication gives customers updates before they have to ask, which reduces Where Is My Order contacts and builds trust. A strong flow covers order confirmation, shipment confirmation, in-transit updates, an out-for-delivery alert, delivery confirmation, and exception alerts. Use email for detailed messages, SMS for time-sensitive alerts, and a branded tracking page to keep customers on your site."
 category: "Customer Experience"
 date: "March 27, 2024"
 readTime: "12 min read"

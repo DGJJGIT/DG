@@ -148,8 +148,8 @@ export default function Header() {
                   {item.children && <ChevronDown size={13} className="text-[#A3A3A3]" />}
                 </Link>
 
-                {item.children && openDropdown === item.label && (
-                  <div className="absolute top-full left-0 pt-1.5 w-52">
+                {item.children && (
+                  <div className={`${openDropdown === item.label ? "" : "hidden "}absolute top-full left-0 pt-1.5 w-52`}>
                     <div className="bg-white rounded-lg border border-[#E2DFD8] shadow-[0_8px_24px_-4px_rgba(0,0,0,0.1)] py-1.5 overflow-hidden">
                       {item.children.map((child) => (
                         <Link
@@ -201,9 +201,10 @@ export default function Header() {
       </div>
 
       {/* Mega-menu — full-width panel below header */}
-      {megaOpen && (
+      {/* Always rendered so crawlers see every service link; shown on hover via CSS (2026-10-09 indexing fix) */}
+      {(
         <div
-          className="hidden lg:block absolute top-full left-0 right-0 bg-white border-t border-[#E2DFD8] shadow-[0_12px_32px_-8px_rgba(0,0,0,0.12)] z-40"
+          className={`hidden ${megaOpen ? "lg:block " : ""}absolute top-full left-0 right-0 bg-white border-t border-[#E2DFD8] shadow-[0_12px_32px_-8px_rgba(0,0,0,0.12)] z-40`}
           onMouseEnter={openMega}
           onMouseLeave={closeMega}
         >
@@ -244,7 +245,7 @@ export default function Header() {
               })}
             </div>
             <div className="mt-5 pt-4 border-t border-[#F0EDE6] flex items-center justify-between">
-              <span className="text-[12px] text-[#A3A3A3]">44 service pages across 5 specializations</span>
+              <span className="text-[12px] text-[#A3A3A3]">{new Set(servicesClusters.flatMap((c) => [c.hub.href, ...c.spokes.map((sp) => sp.href)])).size} service pages across {servicesClusters.length} specializations</span>
               <Link
                 href="/services"
                 className="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-[#B8962E] hover:text-[#0D0D0D] transition-colors"

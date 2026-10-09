@@ -1,6 +1,7 @@
 ---
 title: "Best 3PL for Amazon Sellers: FBA Prep and Merchant Fulfilled from One Partner"
 excerpt: "As of January 1, 2026, Amazon no longer preps or labels FBA inventory in-house, third-party prep isn't a nice-to-have anymore, it's the only option."
+answer: "The best 3PL for Amazon sellers handles both FBA prep and merchant fulfilled orders from one inventory pool. Since January 1, 2026, Amazon no longer preps or labels FBA inventory, and non-compliant shipments are refused or returned rather than fixed. Look for a partner that preps to current category rules and sits close to Amazon's receiving network."
 category: "Platform Guides"
 date: "April 4, 2025"
 readTime: "14 min read"

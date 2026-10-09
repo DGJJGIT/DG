@@ -40,11 +40,11 @@ const timeline = [
   { day: "Day 1–2", label: "Discovery call + custom proposal", detail: "We learn your business and deliver a tailored pricing proposal within 24 hours." },
   { day: "Day 2–4", label: "Platform integration & API setup", detail: "Our tech team connects your selling platforms and configures order routing." },
   { day: "Day 4–7", label: "Inventory receiving & cataloging", detail: "We receive your products, barcode them, and organize them in our warehouse." },
-  { day: "Day 7–10", label: "First orders fulfilled", detail: "Orders start flowing and shipping. Your dedicated account manager monitors everything." },
+  { day: "Day 7–10", label: "First orders fulfilled", detail: "Orders start flowing and shipping. Your point of contact monitors everything." },
 ]
 
 const includes = [
-  "Dedicated implementation specialist",
+  "Hands-on onboarding team",
   "Platform integration (200+ supported)",
   "SKU mapping & inventory setup",
   "Custom packaging configuration",
@@ -124,7 +124,7 @@ export default function HowItWorksPage() {
             ))}
           </div>
           <p className="text-[13px] text-[#A3A3A3] mt-8 text-center italic">
-            Enterprise clients with complex integrations may require additional time. Your dedicated implementation specialist manages the entire process.
+            Enterprise clients with complex integrations may require additional time. Our onboarding team manages the entire process with you.
           </p>
         </div>
       </section>

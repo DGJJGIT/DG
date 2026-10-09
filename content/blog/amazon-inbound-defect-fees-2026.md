@@ -1,9 +1,11 @@
 ---
 title: "Amazon Inbound Defect Fees 2026: What They Actually Cost You"
 excerpt: "Amazon's inbound defect fees run $0.32–$5.72 per unit for standard items and up to $8.25 for bulky. Here's what triggers them and how to stop paying them."
+answer: "Amazon inbound defect fees are per-unit charges deducted from your seller account when FBA inventory arrives without meeting prep requirements. Common triggers include FNSKU labeling errors, missing poly bags or suffocation warnings, the wrong prep type, unexpected items, and bundling violations. You avoid them by using an accurate prep center, auditing inbound performance, and checking category requirements before each launch."
 category: "FBA Prep"
 date: "September 14, 2026"
 readTime: "11 min read"
+updated: "October 9, 2026"
 author: "Louis Bradley"
 image: "/blog/fba-prep.svg"
 ---
@@ -48,7 +50,7 @@ Three scenarios at different volumes illustrate how quickly these fees compound.
 
 **2,000 units, 5% defect rate (100 units):** At $5.72 per unit on a standard-size product, total defect fees are $572. If the defect is systematic, the same prep error repeated across every unit of a particular SKU, the rate can be higher and affects future shipments of the same product.
 
-**5,000 units, 3% defect rate (150 units):** Even at the low end of the standard fee range ($0.32 per unit), 150 defective units cost $48. At the midpoint, $375. At the maximum, $858 for bulky items. A seemingly low 3% defect rate on a large shipment represents real dollars on every send.
+**5,000 units, 3% defect rate (150 units):** Even at the low end of the standard fee range ($0.32 per unit), 150 defective units cost $48. At the midpoint, $375. At the standard maximum ($5.72 per unit), $858, and bulky items can cost more. A seemingly low 3% defect rate on a large shipment represents real dollars on every send.
 
 These numbers assume you catch the defect at the first incident. Repeat violations of the same prep requirement can trigger escalated fees and, in some cases, receiving restrictions on future shipments.
 
@@ -60,7 +62,7 @@ Amazon updates its prep requirements regularly. Poly bag specifications, label p
 
 DIY prep operations are especially vulnerable. When you are managing prep in-house alongside sourcing, listing, and customer service, compliance monitoring often gets less attention than it deserves. A single outdated guideline applied to a 500-unit shipment generates the fees above.
 
-Third-party prep centers with low prices and no compliance focus are also a source of defects. A center charging $0.20 per unit is not spending the time to verify labeling accuracy, poly bag compliance, and suffocation warning placement on every unit.
+Third-party prep centers with low prices and no compliance focus are also a source of defects. A center that skips inspection to cut its price is not spending the time to verify labeling accuracy, poly bag compliance, and suffocation warning placement on every unit.
 
 ## How to Prevent Defect Fees
 
@@ -76,7 +78,7 @@ The facility is 75,000 square feet in Northern Kentucky, 5 miles from Amazon's C
 
 ## The Cost Comparison
 
-Standard FBA prep through DeliveryGroup is $0.50 per unit for your first 90 days or 5,000 units, then $0.65 per unit. That includes everything listed above, labeling, poly bagging, suffocation compliance, bundling, inspection, and shipping plan creation.
+Standard FBA prep through DeliveryGroup is $0.50 per unit for your first 90 days or 5,000 units, then $0.65 per unit. That covers labeling, poly bagging, suffocation compliance, inspection, and shipping plan creation; bundles are priced per bundle on the rate card.
 
 At $0.50 per unit, 500 units costs $250 to prep. One defect incident at the midpoint fee of $2.50 on 25 units, a 5% rate, costs $62.50 in Amazon fees alone, before accounting for any prep you paid for on those units. A 10% defect rate on 500 units at $5.72 per unit costs $286 in fees.
 

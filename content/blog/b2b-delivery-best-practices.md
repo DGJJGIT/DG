@@ -1,6 +1,7 @@
 ---
 title: "B2B Delivery Best Practices: Elevating the Business Customer Experience"
 excerpt: "B2B customers have unique delivery requirements that consumer-focused logistics often overlooks. Here's how to get it right."
+answer: "Good B2B delivery respects how businesses receive goods. Schedule deliveries within receiving windows and dock appointments, confirm whether a site needs liftgate service, build pallets on standard pallets with secure wrap and clear labels, capture electronic proof of delivery with photos, include the required documentation, and communicate early when exceptions like damage or short shipments happen."
 category: "B2B Logistics"
 date: "November 22, 2024"
 readTime: "12 min read"

@@ -203,6 +203,7 @@ export default function ThreePLFulfillmentPage() {
           serviceType: "3pl fulfillment",
           provider: {
             "@type": "Organization",
+            "@id": "https://deliverygroupinc.com/#org",
             name: "Delivery Group Inc.",
             url: "https://deliverygroupinc.com",
           },
@@ -232,8 +233,9 @@ export default function ThreePLFulfillmentPage() {
           name: "3PL Fulfillment Services | Delivery Group Inc.",
           description:
             "A 3PL fulfillment company in Northern Kentucky that receives same-day, preps FBA in 48 hours, and ships FBA, FBM, and DTC orders for ecommerce brands.",
-          isPartOf: { "@type": "WebSite", url: "https://deliverygroupinc.com" },
-          about: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
+          isPartOf: { "@type": "WebSite", "@id": "https://deliverygroupinc.com/#website", url: "https://deliverygroupinc.com" },
+          about: { "@type": "Organization", "@id": "https://deliverygroupinc.com/#org", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
+          dateModified: "2026-10-09",
           speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".quick-answer"] },
         }}
       />
@@ -271,12 +273,14 @@ export default function ThreePLFulfillmentPage() {
                 <br />
                 <span className="gold-text">Northern Kentucky hub.</span>
               </h1>
-              <p className="quick-answer text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[540px] mb-10">
-                A third-party logistics fulfillment company that receives your
-                inventory, stores it, and ships FBA, FBM, and direct-to-consumer
-                orders from one facility, with same-day receiving in most cases
-                and 48-hour Amazon FBA prep.
+              <p className="quick-answer text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[540px] mb-3">
+                3PL fulfillment is order fulfillment run by a third-party logistics
+                company that receives your inventory, stores it, and picks, packs, and
+                ships each order. Delivery Group handles FBA, FBM, and direct-to-consumer
+                orders from one Northern Kentucky facility, with same-day receiving in
+                most cases, 48-hour Amazon FBA prep, and no order minimums to start.
               </p>
+              <p className="text-[12.5px] text-[#8a8a8a] mb-10">Last reviewed October 9, 2026</p>
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/quote"
@@ -552,7 +556,7 @@ export default function ThreePLFulfillmentPage() {
               No hidden fees.
             </h2>
             <p className="text-[15px] text-[#737373] max-w-[540px] mx-auto">
-              Every rate is published. No surprise surcharges, no opaque billing.
+              Every rate is published upfront, including surcharges, so your invoice has no surprises.
               Volume discounts and custom pricing available for high-volume accounts.
             </p>
           </div>

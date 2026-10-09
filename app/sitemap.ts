@@ -1,16 +1,40 @@
 import type { MetadataRoute } from "next"
+import { execSync } from "child_process"
 import { seoPages as seoPagesData } from "@/lib/seo/pages"
+import { posts } from "@/lib/blog"
 
 const BASE_URL = "https://deliverygroupinc.com"
 
+// Real per-page lastmod (2026-10-09 indexing fix): the date of the last git commit that touched the files behind
+// each URL, instead of the build time on every URL (which teaches Google to ignore lastmod). Blog posts use their
+// own "updated" or publish date. Falls back to a fixed date if git history is unavailable at build time.
+const FALLBACK_DATE = new Date("2026-10-09T00:00:00Z")
+const gitDateCache = new Map<string, Date>()
+function gitDate(...paths: string[]): Date {
+  const key = paths.join("|")
+  const hit = gitDateCache.get(key)
+  if (hit) return hit
+  let d = FALLBACK_DATE
+  try {
+    const out = execSync(`git log -1 --format=%cI -- ${paths.map((x) => `"${x}"`).join(" ")}`, {
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    }).trim()
+    if (out) d = new Date(out)
+  } catch {
+    /* no git history: keep the fallback */
+  }
+  gitDateCache.set(key, d)
+  return d
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date()
 
   /* ── Static pages ── */
   const homepage: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
-      lastModified,
+      lastModified: gitDate("app/page.tsx"),
       changeFrequency: "weekly",
       priority: 1.0,
     },
@@ -20,14 +44,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const serviceSlugs: string[] = []
 
   const servicePages: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/amazon-fba-prep`, lastModified, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE_URL}/3pl-fulfillment`, lastModified, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE_URL}/services`, lastModified, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE_URL}/solutions`, lastModified, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE_URL}/fba-savings-calculator`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/amazon-fba-prep`, lastModified: gitDate("app/amazon-fba-prep"), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/3pl-fulfillment`, lastModified: gitDate("app/3pl-fulfillment"), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/services`, lastModified: gitDate("app/services"), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/solutions`, lastModified: gitDate("app/solutions"), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE_URL}/fba-savings-calculator`, lastModified: gitDate("app/fba-savings-calculator", "components/FbaSavingsCalculator.tsx"), changeFrequency: "monthly", priority: 0.8 },
     ...serviceSlugs.map((slug) => ({
       url: `${BASE_URL}/services/${slug}`,
-      lastModified,
+      lastModified: gitDate("app/services"),
       changeFrequency: "monthly" as const,
       priority: 0.9,
     })),
@@ -42,7 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const solutionPages: MetadataRoute.Sitemap = solutionSlugs.map((slug) => ({
     url: `${BASE_URL}/solutions/${slug}`,
-    lastModified,
+    lastModified: gitDate("app/solutions", "lib/product-types.ts"),
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }))
@@ -55,79 +79,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const industryPages: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/industries`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/industries`, lastModified: gitDate("app/industries", "lib/industries.ts"), changeFrequency: "monthly", priority: 0.8 },
     ...industrySlugs.map((slug) => ({
       url: `${BASE_URL}/industries/${slug}`,
-      lastModified,
+      lastModified: gitDate("app/industries", "lib/industries.ts"),
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
   ]
 
-  /* ── Blog posts ── */
-  const blogSlugs = [
-    "what-is-3pl",
-    "3pl-shipping-cost-analysis",
-    "amazon-fba-prep-guide-2025",
-    "amazon-inbound-placement-fees",
-    "b2b-delivery-best-practices",
-    "best-3pl-for-amazon-business",
-    "best-3pl-for-amazon-sellers",
-    "best-3pl-for-bigcommerce",
-    "best-3pl-for-ebay-sellers",
-    "best-3pl-for-etsy-sellers",
-    "best-3pl-for-faire-wholesale",
-    "best-3pl-for-magento-adobe-commerce",
-    "best-3pl-for-mercari-sellers",
-    "best-3pl-for-poshmark-sellers",
-    "best-3pl-for-salesforce-commerce-cloud",
-    "best-3pl-for-shopify-sellers",
-    "best-3pl-for-squarespace",
-    "best-3pl-for-temu-sellers",
-    "best-3pl-for-tiktok-shop",
-    "best-3pl-for-walmart-marketplace",
-    "best-3pl-for-wix-stores",
-    "best-3pl-for-woocommerce",
-    "carrier-diversification-strategy",
-    "customer-communication-logistics",
-    "delivery-experience-customer-retention",
-    "delivery-proof-technology",
-    "delivery-tracking-customer-expectations",
-    "driver-shortage-solutions",
-    "ecommerce-returns-management",
-    "electric-vehicle-delivery-fleets",
-    "expedited-shipping-dhl-integration",
-    "fba-prep-location-matters",
-    "last-mile-cost-reduction",
-    "last-mile-delivery-trends-2025",
-    "logistics-contract-negotiation",
-    "logistics-data-analytics",
-    "logistics-technology-stack",
-    "micro-fulfillment-centers",
-    "national-delivery-network-advantages",
-    "parcel-dimensional-weight",
-    "peak-season-logistics-preparation",
-    "pharmaceutical-logistics-compliance",
-    "retail-logistics-omnichannel",
-    "route-optimization-technology",
-    "supplement-brand-fulfillment-guide",
-    "supplement-fulfillment-lot-tracking",
-    "sustainability-in-last-mile-logistics",
-    "urban-delivery-density",
-    "warehouse-to-doorstep-efficiency",
-    "deliverygroup-vs-shipbob",
-    "deliverygroup-vs-shipmonk",
-    "deliverygroup-vs-red-stag-fulfillment",
-    "fba-prep-center-comparison",
-    "in-house-fulfillment-vs-3pl",
-  ]
-
+  /* ── Blog posts ── every post in content/blog, dated by its own "updated" or publish date */
+  const postDate = (p: { date: string; updated?: string }) => {
+    const d = new Date(p.updated || p.date)
+    return isNaN(d.getTime()) ? FALLBACK_DATE : d
+  }
+  const newestPost = posts.reduce((m, p) => (postDate(p) > m ? postDate(p) : m), new Date(0))
   const blogPages: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/blog`, lastModified, changeFrequency: "weekly", priority: 0.7 },
-    ...blogSlugs.map((slug) => ({
-      url: `${BASE_URL}/blog/${slug}`,
-      lastModified,
-      changeFrequency: "weekly" as const,
+    { url: `${BASE_URL}/blog`, lastModified: newestPost, changeFrequency: "weekly", priority: 0.7 },
+    ...posts.map((p) => ({
+      url: `${BASE_URL}/blog/${p.slug}`,
+      lastModified: postDate(p),
+      changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
   ]
@@ -148,7 +120,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "integrations",
   ].map((path) => ({
     url: `${BASE_URL}/${path}`,
-    lastModified,
+    lastModified: gitDate(`app/${path}`),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }))
@@ -205,10 +177,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const locationPages: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/locations`, lastModified, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE_URL}/locations`, lastModified: gitDate("app/locations", "lib/locations.ts"), changeFrequency: "monthly", priority: 0.5 },
     ...locationSlugs.map((slug) => ({
       url: `${BASE_URL}/locations/${slug}`,
-      lastModified,
+      lastModified: gitDate("app/locations", "lib/locations.ts"),
       changeFrequency: "monthly" as const,
       priority: 0.5,
     })),
@@ -233,7 +205,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const seoSlugs = Object.keys(seoPagesData).filter((slug) => !REDIRECTED_SLUGS.has(slug))
   const seoPages: MetadataRoute.Sitemap = seoSlugs.map((slug) => ({
     url: `${BASE_URL}/${slug}`,
-    lastModified,
+    lastModified: gitDate("lib/seo/pages.ts", "components/seo/ServiceLanding.tsx", `app/${slug}`),
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }))

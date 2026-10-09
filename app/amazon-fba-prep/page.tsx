@@ -347,7 +347,7 @@ const faqs = [
   },
   {
     q: "What happens after the intro pricing period?",
-    a: "Intro rates apply for your first 90 days or 5,000 units (2,000 units for bulky items), whichever comes first. After that, the ongoing rates apply at any volume, for example standard prep moves from $0.50 to $0.65 per unit, with lower volume pricing at higher monthly volumes.",
+    a: "Intro rates apply for your first 90 days or 5,000 units (2,000 units for bulky items), whichever comes first. After that, Tier 2 rates apply below 5,000 units a month (for example, standard prep moves from $0.50 to $0.65 per unit) and Tier 3 volume rates apply at 5,000 units a month and up.",
   },
 ]
 
@@ -374,6 +374,7 @@ export default function AmazonFBAPrepPage() {
           serviceType: "amazon fba prep",
           provider: {
             "@type": "Organization",
+            "@id": "https://deliverygroupinc.com/#org",
             name: "Delivery Group Inc.",
             url: "https://deliverygroupinc.com",
           },
@@ -403,8 +404,9 @@ export default function AmazonFBAPrepPage() {
           name: "Amazon FBA Prep Services | Delivery Group Inc.",
           description:
             "Amazon FBA prep with 48-hour turnaround and same-day receiving, from a Northern Kentucky prep center near the Amazon CVG air hub.",
-          isPartOf: { "@type": "WebSite", url: "https://deliverygroupinc.com" },
-          about: { "@type": "Organization", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
+          isPartOf: { "@type": "WebSite", "@id": "https://deliverygroupinc.com/#website", url: "https://deliverygroupinc.com" },
+          about: { "@type": "Organization", "@id": "https://deliverygroupinc.com/#org", name: "Delivery Group Inc.", url: "https://deliverygroupinc.com" },
+          dateModified: "2026-10-09",
           speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".quick-answer"] },
         }}
       />
@@ -442,12 +444,14 @@ export default function AmazonFBAPrepPage() {
                 <br />
                 <span className="gold-text">near the CVG hub.</span>
               </h1>
-              <p className="quick-answer text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[540px] mb-10">
-                Amazon FBA prep with a 48-hour turnaround and same-day receiving
-                in most cases, from a Northern Kentucky facility near the Amazon
-                CVG air hub. FNSKU labeling, polybagging, and bundling for FBA,
-                FBM, and DTC sellers.
+              <p className="quick-answer text-[16px] md:text-[17px] text-[#A3A3A3] leading-relaxed max-w-[540px] mb-3">
+                Amazon FBA prep is the receiving, labeling, and packaging that makes
+                inventory meet Amazon&apos;s requirements before it ships to a fulfillment
+                center. Delivery Group preps FBA shipments within 48 hours, with same-day
+                receiving in most cases, from a Northern Kentucky facility near the Amazon
+                CVG air hub, covering FNSKU labeling, polybagging, and bundling.
               </p>
+              <p className="text-[12.5px] text-[#8a8a8a] mb-10">Last reviewed October 9, 2026</p>
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/quote"
@@ -714,7 +718,7 @@ export default function AmazonFBAPrepPage() {
               Simple, transparent pricing.
             </h2>
             <p className="text-[15px] text-[#737373] max-w-[540px] mx-auto">
-              Transparent per-unit pricing, with every fee published upfront.
+              Transparent per-unit pricing, with every fee published upfront. Accounts under 500 units/month pay a one-time $350 onboarding fee.
             </p>
           </div>
 

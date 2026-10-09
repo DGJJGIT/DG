@@ -2,9 +2,11 @@
 title: "Why Your FBA Prep Center's Location Is Your Biggest Cost Lever"
 seoTitle: "Why FBA Prep Center Location Matters"
 excerpt: "The distance between your prep center and Amazon's fulfillment centers determines your inbound shipping costs and speed."
+answer: "Inbound shipping from your prep center to Amazon fulfillment centers is a recurring cost on every replenishment, and distance drives it. A centrally located prep center near many Amazon fulfillment centers cuts freight costs and transit time, gets inventory live sooner, and makes splitting shipments across regional centers affordable, which can help reduce inbound placement fees."
 category: "FBA Prep"
 date: "August 29, 2024"
 readTime: "12 min read"
+updated: "October 9, 2026"
 author: "Louis Bradley"
 image: "/blog/fba-prep.svg"
 ---
@@ -37,7 +39,7 @@ Within a one-day ground shipping zone, you can reach roughly 60% of the U.S. pop
 
 But there is another reason NKY stands out. Amazon's CVG Air Hub is located right at the Cincinnati/Northern Kentucky International Airport. This is Amazon's primary air cargo facility. It is one of the largest air hubs in the company's entire network.
 
-Delivery Group's warehouse sits just 5 miles from this hub. That means your inventory can move from our prep floor to Amazon's air network the same day. No other location in the country offers that kind of proximity.
+Delivery Group's warehouse sits just 5 miles from this hub. That keeps the trip from our prep floor to Amazon's air network short. No other location in the country offers that kind of proximity.
 
 ## Amazon Placement Fees: The Hidden Tax on Bad Location
 
@@ -71,7 +73,7 @@ Cost is only half the equation. Speed matters too.
 
 When your inventory takes 5-7 days to reach an Amazon FC, that is 5-7 days your products are not available for sale. During peak season or product launches, that delay can cost you thousands in lost sales.
 
-From Northern Kentucky, most shipments reach Amazon FCs within 1-2 days. Some reach the CVG Air Hub the same day.
+From Northern Kentucky, most shipments reach Amazon FCs within 1-2 days.
 
 Faster transit means faster check-in at Amazon. Faster check-in means your inventory goes live sooner. Live inventory means sales.
 
@@ -115,7 +117,7 @@ At Delivery Group, we built our operation specifically to leverage our Northern 
 
 Our warehouse is 5 miles from Amazon's CVG Air Hub. We are minutes from DHL's Americas Super Hub. We sit at the crossroads of I-75 and I-71.
 
-We offer same-day prep for urgent shipments. Our team processes incoming inventory, applies labels, bundles products, and ships to Amazon FCs within 24-48 hours of receipt.
+Our team processes incoming inventory, applies labels, bundles products, and ships to Amazon FCs within 48 hours of receipt.
 
 Our 99.4% on-time rate means your inventory arrives at Amazon when expected. No delays. No surprises. No lost sales.
 
@@ -145,7 +147,7 @@ Yes. Our partnership with DHL gives our clients access to discounted shipping ra
 
 **How fast can Delivery Group turn around FBA prep orders?**
 
-We offer same-day prep for urgent shipments and standard turnaround of 24-48 hours. Because we are so close to Amazon's FCs and the CVG Air Hub, your inventory can go from our prep floor to Amazon's network faster than almost any other prep center in the country.
+Standard prep turnaround is 48 hours from receipt. Because we are so close to Amazon's FCs and the CVG Air Hub, your inventory can go from our prep floor to Amazon's network faster than almost any other prep center in the country.
 
 **Is Northern Kentucky really better than a prep center near my supplier?**
 

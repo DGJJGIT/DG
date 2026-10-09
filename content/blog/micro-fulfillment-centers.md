@@ -1,6 +1,7 @@
 ---
 title: "Micro-Fulfillment Centers: The Infrastructure Behind Fast Delivery"
 excerpt: "Proximity to the consumer is the foundation of fast delivery economics. Here's how micro-fulfillment makes it possible."
+answer: "A micro-fulfillment center is a small, technology-dense warehouse placed close to a dense population of consumers. It stocks high-velocity items rather than the full catalog and relies on automation and warehouse software. Because orders travel shorter distances, shipping costs fall and fast delivery becomes affordable. Brands with large catalogs often keep slower items in a central warehouse."
 category: "Industry Insights"
 date: "June 5, 2024"
 readTime: "12 min read"

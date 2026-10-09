@@ -15,6 +15,7 @@ export interface Post {
   image?: string
   updated?: string
   seoTitle?: string
+  answer?: string
   faqs: { q: string; a: string }[]
 }
 
@@ -70,6 +71,7 @@ function loadPosts(): Post[] {
       image: data.image,
       updated: data.updated,
       seoTitle: data.seoTitle,
+      answer: data.answer,
       faqs: extractFaqs(content),
     } satisfies Post
   })

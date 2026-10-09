@@ -1,15 +1,15 @@
 import { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight, Package, Warehouse, Truck, RefreshCw, AlertTriangle } from "lucide-react"
+import { ArrowRight, Package, Warehouse, Truck, RefreshCw, AlertTriangle, ShoppingBag, BookOpen } from "lucide-react"
 import SectionLabel from "@/components/ui/SectionLabel"
 
 export const metadata: Metadata = {
-  title: "All 44 Logistics & Delivery Services",
-  description: "44 dedicated service pages across fulfillment, 3PL warehousing, courier & delivery, reverse logistics, and hazmat. One trusted partner for every logistics need.",
+  title: "All Logistics & Delivery Services",
+  description: "Dedicated service pages across fulfillment, 3PL warehousing, courier & delivery, reverse logistics, and hazmat. One trusted partner for every logistics need.",
   alternates: { canonical: "https://deliverygroupinc.com/services" },
   openGraph: {
     title: "All Logistics & Delivery Services",
-    description: "44 dedicated service pages across fulfillment, 3PL, courier, reverse logistics, and hazmat.",
+    description: "Dedicated service pages across fulfillment, 3PL, courier, reverse logistics, and hazmat.",
     images: [{ url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&h=630&q=80", width: 1200, height: 630, alt: "Delivery Group Inc., logistics services" }],
   },
 }
@@ -24,9 +24,9 @@ const clusters = [
     hub: { label: "Fulfillment Center", href: "/fulfillment-center", flagship: true },
     pages: [
       { label: "Fulfillment Warehouse", href: "/fulfillment-warehouse" },
-      { label: "Pick & Pack Services", href: "/pick-and-pack-fulfillment" },
       { label: "Pick & Pack Fulfillment", href: "/pick-and-pack-fulfillment" },
       { label: "Kitting Services", href: "/kitting-services" },
+      { label: "Amazon FBA Prep", href: "/amazon-fba-prep" },
       { label: "Subscription Box Fulfillment", href: "/subscription-box-fulfillment" },
       { label: "Small Business Fulfillment", href: "/small-business-fulfillment" },
       { label: "TikTok Shop Fulfillment", href: "/tiktok-shop-fulfillment" },
@@ -45,7 +45,6 @@ const clusters = [
     hub: { label: "3PL Fulfillment", href: "/3pl-fulfillment", flagship: true },
     pages: [
       { label: "3PL (Overview)", href: "/3pl" },
-      { label: "3PL Warehouse", href: "/3pl-warehousing" },
       { label: "3PL Warehousing", href: "/3pl-warehousing" },
       { label: "3PL WMS", href: "/3pl-wms" },
       { label: "3PL Ecommerce Fulfillment", href: "/3pl-ecommerce-fulfillment" },
@@ -65,7 +64,6 @@ const clusters = [
       { label: "Last-Mile Delivery", href: "/last-mile-delivery" },
       { label: "Expedited Freight", href: "/expedited-freight" },
       { label: "Cross Docking", href: "/cross-docking" },
-      { label: "Amazon FBA Prep", href: "/amazon-fba-prep" },
       { label: "On-Demand Delivery", href: "/on-demand-delivery" },
       { label: "Rush Delivery", href: "/rush-delivery" },
       { label: "Courier for Business", href: "/courier-for-business" },
@@ -81,11 +79,7 @@ const clusters = [
     tagline: "Returns processing and reverse logistics at scale",
     hub: { label: "Returns Management", href: "/returns-management", flagship: true },
     pages: [
-      { label: "Reverse Logistics Services", href: "/reverse-logistics-company" },
-      { label: "eCommerce Returns Management", href: "/returns-management" },
-      { label: "Returns Processing", href: "/returns-management" },
       { label: "Reverse Logistics Company", href: "/reverse-logistics-company" },
-      { label: "eCommerce Returns Solution", href: "/returns-management" },
     ],
   },
   {
@@ -93,15 +87,45 @@ const clusters = [
     label: "Hazmat",
     icon: AlertTriangle,
     color: "#C0392B",
-    tagline: "Full-vertical hazardous materials logistics, near-zero competition",
-    hub: { label: "Hazmat Trucking Companies", href: "/hazmat-fulfillment", flagship: true },
+    tagline: "Storage, pick, pack, and shipping of regulated products",
+    hub: { label: "Hazmat Fulfillment", href: "/hazmat-fulfillment", flagship: true },
     pages: [
-      { label: "Hazmat Storage", href: "/hazmat-fulfillment" },
-      { label: "Hazmat Warehouse", href: "/hazmat-fulfillment" },
-      { label: "Hazmat Logistics", href: "/hazmat-fulfillment" },
-      { label: "Hazmat 3PL", href: "/hazmat-fulfillment" },
-      { label: "Dangerous Goods Warehouse", href: "/hazmat-fulfillment" },
-      { label: "Hazmat Fulfillment", href: "/hazmat-fulfillment" },
+      { label: "Electronics & Batteries", href: "/electronics-fulfillment" },
+    ],
+  },
+  {
+    id: "products",
+    label: "Product Categories",
+    icon: ShoppingBag,
+    color: "#2E7D6B",
+    tagline: "Fulfillment built around what you sell",
+    hub: { label: "DTC Fulfillment", href: "/dtc-fulfillment", flagship: true },
+    pages: [
+      { label: "Electronics Fulfillment", href: "/electronics-fulfillment" },
+      { label: "Food & Beverage Fulfillment", href: "/food-and-beverage-fulfillment" },
+      { label: "Footwear Fulfillment", href: "/footwear-fulfillment" },
+      { label: "Jewelry Fulfillment", href: "/jewelry-fulfillment" },
+      { label: "Pet Product Fulfillment", href: "/pet-product-fulfillment" },
+      { label: "Sporting Goods Fulfillment", href: "/sporting-goods-fulfillment" },
+      { label: "Toy Fulfillment", href: "/toy-fulfillment" },
+      { label: "Book Fulfillment", href: "/book-fulfillment" },
+      { label: "CBD Fulfillment", href: "/cbd-fulfillment" },
+      { label: "Beauty & Cosmetics", href: "/solutions/beauty-cosmetics" },
+      { label: "Fragile Items", href: "/solutions/fragile" },
+      { label: "Oversized Items", href: "/solutions/oversized" },
+    ],
+  },
+  {
+    id: "guides",
+    label: "Guides & Comparisons",
+    icon: BookOpen,
+    color: "#5A6B7B",
+    tagline: "Answers for brands choosing a 3PL",
+    hub: { label: "What Is a 3PL?", href: "/what-is-a-3pl", flagship: true },
+    pages: [
+      { label: "3PL Services Overview", href: "/3pl" },
+      { label: "ShipBob Alternative", href: "/shipbob-alternative" },
+      { label: "ShipMonk Alternative", href: "/shipmonk-alternative" },
     ],
   },
 ]

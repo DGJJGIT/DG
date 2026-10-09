@@ -28,7 +28,7 @@ const marketplaces = [
   {
     name: "Amazon",
     slug: "amazon",
-    description: "Amazon is the largest online marketplace in the United States, with over 300 million active customer accounts. Sellers on Amazon need a fulfillment partner that can handle both Fulfillment by Amazon (FBA) prep and merchant-fulfilled orders. DeliveryGroup connects directly to Amazon Seller Central, syncing orders and inventory in real time. Our Northern Kentucky warehouse sits 5 miles from Amazon's $1.5 billion CVG Air Hub, so FBA shipments reach Amazon's shelves the same day they leave our dock.",
+    description: "Amazon is the largest online marketplace in the United States, with over 300 million active customer accounts. Sellers on Amazon need a fulfillment partner that can handle both Fulfillment by Amazon (FBA) prep and merchant-fulfilled orders. DeliveryGroup connects directly to Amazon Seller Central, syncing orders and inventory in real time. Our Northern Kentucky warehouse sits 5 miles from Amazon's $1.5 billion CVG Air Hub, which keeps the trip from our dock to Amazon short.",
     highlights: ["FBA prep + merchant fulfilled", "Real-time Seller Central sync", "5 miles from Amazon CVG Air Hub"],
   },
   {

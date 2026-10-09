@@ -1,6 +1,7 @@
 ---
 title: "Pharmaceutical Logistics Compliance: A 2024 Update"
 excerpt: "Regulatory requirements for pharmaceutical transport continue to evolve. Here's what compliance leaders need to know."
+answer: "Pharmaceutical logistics compliance centers on the Drug Supply Chain Security Act, which requires serialized drug packages, transaction documentation at every change of ownership, and package-level verification. Shippers also need controlled storage, temperature monitoring, distribution records, state wholesale distributor licensing, and Good Distribution Practice standards. Stay audit-ready by documenting everything, running internal audits, keeping training records, and qualifying logistics partners."
 category: "Healthcare"
 date: "February 28, 2024"
 readTime: "14 min read"

@@ -1,6 +1,7 @@
 ---
 title: "Carrier Diversification: Why Single-Carrier Dependency Is a Risk"
 excerpt: "Over-reliance on a single carrier creates vulnerability. Here's how to build a resilient, diversified carrier strategy."
+answer: "Relying on one carrier creates a single point of failure. You lose negotiating leverage, absorb rate increases with no alternative, risk being stranded during peak season capacity shortages, and stop shipping entirely when that carrier has a disruption. Most businesses do better with two to four carriers, including a primary, a backup, and regional carriers."
 category: "Business Strategy"
 date: "August 14, 2024"
 readTime: "12 min read"

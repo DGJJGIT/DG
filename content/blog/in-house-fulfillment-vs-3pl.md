@@ -1,9 +1,11 @@
 ---
 title: "In-House Fulfillment vs 3PL: When Should You Outsource?"
 excerpt: "At what point does outsourcing fulfillment to a 3PL make more sense than doing it yourself? Here is how to decide."
+answer: "Outsource when fulfillment starts holding your business back. Signs include spending more than two hours a day packing, missed deadlines or accuracy issues, peak season overwhelming you, shipping costs eating margins, or turning down wholesale and marketplace opportunities. Very low volume or highly customized orders can justify staying in-house, while most brands benefit around 200 to 500 orders a month."
 category: "Comparisons"
 date: "April 3, 2025"
 readTime: "12 min read"
+updated: "October 9, 2026"
 author: "Louis Bradley"
 image: "/blog/business-strategy.svg"
 ---
@@ -64,7 +66,7 @@ The transition to a 3PL is simpler than most people think. Here is what the proc
 
 **Week 2:** Ship your inventory to the warehouse. DeliveryGroup receives, inspects, catalogs, and organizes everything by SKU. Each item gets barcoded and stored.
 
-**Week 3:** Test orders and go-live. Your dedicated account manager runs test orders to make sure everything works perfectly. Once verified, you flip the switch and orders start flowing.
+**Week 3:** Test orders and go-live. Your point of contact runs test orders to make sure everything works perfectly. Once verified, you flip the switch and orders start flowing.
 
 Most DeliveryGroup clients are fully operational in 5 to 10 business days.
 

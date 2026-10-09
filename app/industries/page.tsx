@@ -22,6 +22,12 @@ const industries = [
   { slug: "supplements", icon: "Pill", title: "Supplements & Nutraceuticals", tagline: "Precision fulfillment for the OTD supplements market.", body: "Lot-tracked, expiration-managed fulfillment for supplement brands selling DTC, on Amazon, and through wholesale channels." },
 ]
 
+// /industries/ecommerce and /industries/supplements 301 to dedicated pages: link to the final URL directly.
+const INDUSTRY_HREF: Record<string, string> = {
+  ecommerce: "/3pl-ecommerce-fulfillment",
+  supplements: "/supplement-fulfillment",
+}
+
 export default function IndustriesPage() {
   return (
     <>
@@ -47,7 +53,7 @@ export default function IndustriesPage() {
               return (
                 <Link
                   key={ind.slug}
-                  href={`/industries/${ind.slug}`}
+                  href={INDUSTRY_HREF[ind.slug] ?? `/industries/${ind.slug}`}
                   className="group bg-[#F7F6F3] rounded-lg hover:bg-[#0D0D0D] transition-all duration-300 flex flex-col border border-transparent hover:border-[#2a2a2a] overflow-hidden"
                 >
                   <div className="relative w-full aspect-[16/10] bg-[#151515]">
