@@ -181,6 +181,31 @@ export const photos = {
     h: 2000,
     position: "center 55%",
   },
+  // P2 shoot, October 2026.
+  wrappedPallet: {
+    src: "/images/facility/wrapped-pallet.jpg",
+    alt: "Stack of cartons stretch-wrapped on a wooden pallet on the warehouse floor",
+    caption: "A stretch-wrapped pallet ready for freight",
+    w: 1255,
+    h: 2400,
+    position: "center 55%",
+  },
+  packedBottlesBox: {
+    src: "/images/facility/packed-bottles-box.jpg",
+    alt: "Two water bottles packed side by side in an open shipping carton",
+    caption: "An order packed and ready to close",
+    w: 1500,
+    h: 2000,
+    position: "center 45%",
+  },
+  packedBottlesBubble: {
+    src: "/images/facility/packed-bottles-bubble.jpg",
+    alt: "Two bottles wrapped in bubble wrap inside an open shipping carton",
+    caption: "Fragile items wrapped in bubble wrap",
+    w: 1500,
+    h: 2000,
+    position: "center 45%",
+  },
   // AI-generated, supplied by the client's marketing lead on Oct 6, 2026 for
   // the industries pages. Generic scenes with no Delivery Group branding; the
   // people and vehicles in them are not ours.
@@ -237,20 +262,20 @@ const defaultPool: Photo[] = [
 // Photos suited to each blog category, most relevant first. A post rotates
 // through its category's pool by slug so cards in the index do not all match.
 const categoryPools: Record<string, Photo[]> = {
-  "FBA Prep": [photos.polyBags, photos.autoBagger, photos.autoBaggerClose, photos.barcodeScanner, photos.glassesPacking],
-  "Platform Guides": [photos.autoBagger, photos.returnsTables, photos.glassesPacking, photos.dhlGaylords, photos.aisleRacking, photos.dockInterior],
+  "FBA Prep": [photos.polyBags, photos.autoBagger, photos.autoBaggerClose, photos.barcodeScanner, photos.glassesPacking, photos.packedBottlesBubble],
+  "Platform Guides": [photos.autoBagger, photos.returnsTables, photos.glassesPacking, photos.dhlGaylords, photos.aisleRacking, photos.dockInterior, photos.packedBottlesBox],
   Comparisons: [photos.aisleRacking, photos.receivingPallets, photos.returnsTables, photos.dockExterior, photos.autoBagger],
-  "Business Strategy": [photos.dhlGaylords, photos.trailerLoaded, photos.dockExterior, photos.dockInterior, photos.palletStaging],
-  Operations: [photos.receivingPallets, photos.dockRowContainer, photos.reachTruck, photos.dockInterior, photos.aisleRacking],
+  "Business Strategy": [photos.dhlGaylords, photos.trailerLoaded, photos.dockExterior, photos.dockInterior, photos.palletStaging, photos.wrappedPallet],
+  Operations: [photos.receivingPallets, photos.dockRowContainer, photos.reachTruck, photos.dockInterior, photos.aisleRacking, photos.wrappedPallet],
   Technology: [photos.barcodeScanner, photos.returnsWorkstation, photos.autoBaggerClose],
   "Industry Insights": [photos.dockRowContainer, photos.trailerLoaded, photos.dockExterior],
-  "Customer Experience": [photos.glassesPacking, photos.autoBaggerClose, photos.polyBags, photos.returnsWorkstation],
+  "Customer Experience": [photos.packedBottlesBubble, photos.packedBottlesBox, photos.glassesPacking, photos.autoBaggerClose, photos.polyBags, photos.returnsWorkstation],
   Sustainability: [photos.dockExterior, photos.palletStaging, photos.aisleRacking],
   Supplements: [photos.supplementInventory, photos.palletStaging, photos.aisleRacking, photos.receivingPallets],
-  Retail: [photos.palletStaging, photos.dhlGaylords, photos.trailerLoaded, photos.receivingPallets],
+  Retail: [photos.palletStaging, photos.dhlGaylords, photos.trailerLoaded, photos.receivingPallets, photos.wrappedPallet],
   Healthcare: [photos.supplementInventory, photos.aisleRacking, photos.receivingPallets],
-  "E-Commerce": [photos.returnsWorkstation, photos.returnsTables, photos.glassesPacking, photos.autoBagger],
-  "B2B Logistics": [photos.dhlGaylords, photos.trailerLoaded, photos.palletStaging, photos.dockInterior],
+  "E-Commerce": [photos.returnsWorkstation, photos.returnsTables, photos.glassesPacking, photos.autoBagger, photos.packedBottlesBox, photos.packedBottlesBubble],
+  "B2B Logistics": [photos.wrappedPallet, photos.dhlGaylords, photos.trailerLoaded, photos.palletStaging, photos.dockInterior],
 }
 
 // Per-post overrides, keyed by slug. Use these once post-specific photos exist.
