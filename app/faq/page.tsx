@@ -15,9 +15,9 @@ const faqs = [
     category: "Getting Started",
     items: [
       { q: "How quickly can we go live with Delivery Group?", a: "Most clients are operational within 5–10 business days. Technology integrations via our API platform typically deploy in 24–48 hours. We assign a dedicated implementation specialist to every new client to ensure a smooth launch." },
-      { q: "Is there a minimum volume requirement?", a: "We work with businesses ranging from 500 to 500,000+ monthly shipments. There is no rigid minimum, though our solutions are designed to deliver the most value at volumes of 1,000+ shipments per month." },
-      { q: "Do you require long-term contracts?", a: "We offer both contract and flexible arrangements. Most enterprise clients prefer annual contracts that provide rate certainty and dedicated capacity. We also offer month-to-month arrangements for clients who need flexibility." },
-      { q: "How is pricing structured?", a: "Pricing is based on service type, volume, delivery zones, and service level requirements. We provide all-inclusive, transparent per-shipment pricing with no hidden fees, surcharges, or surprises on invoices." },
+      { q: "Is there a minimum volume requirement?", a: "No. There are no order minimums to start. Share your current monthly volume and we will quote your account." },
+      { q: "Do you require long-term contracts?", a: "No. Every account is month-to-month with 14 days' notice." },
+      { q: "How is pricing structured?", a: "Pricing is based on service type, volume, delivery zones, and service level requirements. Every fee is published upfront, so there are no surprises on invoices." },
     ],
   },
   {
@@ -50,7 +50,7 @@ const faqs = [
   {
     category: "FBA Prep, Common Questions",
     items: [
-      { q: "Can we start with a test shipment?", a: "Yes. We encourage it. Send us a small batch, 50 to 200 units, and we'll process it end to end so you can verify turnaround time, labeling accuracy, and communication before committing volume. There's no setup fee for test shipments above 100 units. Contact us to arrange one." },
+      { q: "Can we start with a test shipment?", a: "Yes. We encourage it. Send us a small batch, 50 to 200 units, and we'll process it end to end so you can verify turnaround time, labeling accuracy, and communication before committing volume. There's no setup fee for test shipments. Contact us to arrange one." },
       { q: "What do you need from Seller Central?", a: "To create your shipping plan we need view access to your Seller Central account (or you can create the plan and share it with us). We'll need your ASIN list, FBA shipment details, and any active inbound plans. We handle the rest, FNSKU pulls, box content uploads, and carrier confirmation." },
       { q: "How do you handle apparel, shoes, and bulky items differently?", a: "Apparel and footwear require poly bagging with suffocation warnings on bags larger than 5 inches, and often FNSKU labeling over existing barcodes. Shoes need poly bagging and bubble wrap when the box is the sellable unit. Bulky items (over 18 lbs or oversized dimensions) receive reinforced cartons and special pallet treatment per Amazon's inbound requirements. We have category-specific SOPs for all three, and we catch compliance issues before Amazon does." },
       { q: "What happens if a unit is damaged or non-compliant?", a: "We flag it immediately and notify you before processing. You choose: dispose, return to you, or re-work if possible. We document every exception with photos and a written report. For damage that occurs during our prep, we cover the replacement cost at Amazon's current FBA fee value. We maintain a 99.5% accuracy rate across all prep operations." },

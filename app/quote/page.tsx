@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const includes = [
   "Custom service level proposal tailored to your volume and requirements",
-  "Transparent, all-inclusive pricing with no hidden fees",
+  "Transparent pricing, with every fee published upfront",
   "Integration assessment for your existing technology stack",
   "Dedicated account manager assignment from day one",
   "Response within 1 business day",

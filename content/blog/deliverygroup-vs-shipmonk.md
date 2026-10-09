@@ -57,7 +57,7 @@ DeliveryGroup assigns a dedicated implementation specialist to every new client.
 
 ShipMonk's pricing includes pick and pack fees, storage fees, and shipping. They sometimes offer promotional pricing for new clients. Fees can add up with special handling, custom packaging, and other add-ons.
 
-DeliveryGroup provides all-inclusive, transparent per-shipment pricing. Pick and pack starts at $3.00 for the first item. Storage is $25 per pallet per month. There are no hidden surcharges.
+DeliveryGroup provides transparent pricing, with every fee published upfront. Pick and pack starts at $3.00 for the first item. Storage is $25 per pallet per month. There are no hidden surcharges.
 
 ## Who Is Each Best For?
 

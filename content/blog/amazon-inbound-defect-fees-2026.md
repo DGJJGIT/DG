@@ -76,7 +76,7 @@ The facility is 75,000 square feet in Northern Kentucky, 5 miles from Amazon's C
 
 ## The Cost Comparison
 
-Standard FBA prep through DeliveryGroup is $0.50 per unit. That includes everything listed above, labeling, poly bagging, suffocation compliance, bundling, inspection, and shipping plan creation.
+Standard FBA prep through DeliveryGroup is $0.50 per unit for your first 90 days or 5,000 units, then $0.65 per unit. That includes everything listed above, labeling, poly bagging, suffocation compliance, bundling, inspection, and shipping plan creation.
 
 At $0.50 per unit, 500 units costs $250 to prep. One defect incident at the midpoint fee of $2.50 on 25 units, a 5% rate, costs $62.50 in Amazon fees alone, before accounting for any prep you paid for on those units. A 10% defect rate on 500 units at $5.72 per unit costs $286 in fees.
 

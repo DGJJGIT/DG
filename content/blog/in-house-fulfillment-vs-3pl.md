@@ -117,7 +117,7 @@ No. A good 3PL uses your packaging, your inserts, and your branding. To your cus
 Yes. DeliveryGroup supports custom packaging, marketing inserts, thank-you cards, and promotional materials in every order.
 
 **What if I am not happy with the 3PL?**
-Look for providers with flexible contract terms. DeliveryGroup offers month-to-month arrangements as well as annual contracts.
+Look for providers with flexible contract terms. DeliveryGroup works month-to-month with 14 days' notice.
 
 **How much cheaper is 3PL shipping vs my own rates?**
 Most brands save 20 to 40 percent on shipping by using a 3PL's negotiated carrier rates. The exact savings depend on your package sizes and shipping zones.
