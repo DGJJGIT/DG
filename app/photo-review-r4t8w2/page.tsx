@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 // Unlisted review page for the first photo batch. Not linked anywhere, not in
 // the sitemap, noindex. Faces are blurred, and no screens from the WMS appear.
 export const metadata: Metadata = {
-  title: "Photo Review, Batch 1",
+  title: "Photo Review",
   robots: { index: false, follow: false, nocache: true },
 }
 
@@ -103,7 +103,7 @@ export default function PhotoReviewPage() {
   return (
     <div className="bg-white">
       <div className="max-w-[1080px] mx-auto px-6 md:px-10 py-14 md:py-20">
-        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0D0D0D] mb-3">Photo review: batch 1</h1>
+        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0D0D0D] mb-3">Photo review: batches 1 and 2</h1>
         <p className="text-[16px] text-[#737373] leading-relaxed max-w-[680px] mb-2">
           Batch 1: 45 photos from Allenn, 16 in use on staging, 29 held back. Batch 2 is at the bottom. Below is every photo and why, so you can approve, change, or veto before anything goes to the live site.
         </p>
@@ -131,7 +131,7 @@ export default function PhotoReviewPage() {
         <div className="border border-[#E2DFD8] rounded-lg p-5 md:p-6 bg-[#FBFAF7]">
           <h2 className="text-lg font-semibold text-[#0D0D0D] mb-3">Three decisions needed, one settled</h2>
           <p className="text-[14.5px] text-[#3D3D3D] mb-3">
-            <strong className="font-semibold">Settled: DHL boxes (U01).</strong> Mr White approved showing partners&apos; logos in website imagery on Oct 6, so the DHL eCommerce pallets stay.
+            <strong className="font-semibold">Settled: DHL boxes (U01).</strong>{" "}Mr White approved showing partners&apos; logos in website imagery on Oct 6, so the DHL eCommerce pallets stay.
           </p>
           <ol className="list-decimal pl-5 space-y-2 text-[14.5px] text-[#3D3D3D]">
             <li><strong className="font-semibold">People (H01 to H07).</strong> Seven shots show a worker with no photo release on file. Get releases, or ask Allenn to reshoot with hands only.</li>
