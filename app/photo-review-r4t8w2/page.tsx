@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 type Shot = { id: string; src: string; w: number; h: number; caption: string; where?: string }
 
 const used: Shot[] = [
-  { id: "U01", src: "/images/review-p1-r4t8w2/U01.jpg", w: 525, h: 700, caption: "DHL eCommerce pallets staged for pickup", where: "Blog (Platform Guides, Business Strategy, Retail, B2B) \u00b7 Retail industry page" },
+  { id: "U01", src: "/images/review-p1-r4t8w2/U01.jpg", w: 525, h: 700, caption: "DHL eCommerce pallets staged for pickup (approved)", where: "Blog (Platform Guides, Business Strategy, Retail, B2B) \u00b7 Retail industry page" },
   { id: "U02", src: "/images/review-p1-r4t8w2/U02.jpg", w: 525, h: 700, caption: "Pallets loaded in a trailer", where: "Blog (Business Strategy, Industry Insights, Retail, B2B) \u00b7 courier service pages" },
   { id: "U03", src: "/images/review-p1-r4t8w2/U03.jpg", w: 700, h: 933, caption: "Forklift (PULLED from the pages)", where: "Removed: handwritten client labels are readable in the background. Waiting for a cleaned version." },
   { id: "U04", src: "/images/review-p1-r4t8w2/U04.jpg", w: 525, h: 700, caption: "Reach truck", where: "Blog (Operations)" },
@@ -107,15 +107,36 @@ export default function PhotoReviewPage() {
         <p className="text-[16px] text-[#737373] leading-relaxed max-w-[680px] mb-2">
           Batch 1: 45 photos from Allenn, 16 in use on staging, 29 held back. Batch 2 is at the bottom. Below is every photo and why, so you can approve, change, or veto before anything goes to the live site.
         </p>
-        <p className="text-[13px] text-[#737373] mb-10">Prepared October 6, 2026. Reply with photo IDs (for example &quot;U03 out, B03 ok&quot;).</p>
+        <p className="text-[13px] text-[#737373] mb-10">Prepared October 6, updated October 9, 2026. Reply with photo IDs (for example &quot;U03 out, B03 ok&quot;).</p>
+
+        <div className="border border-[#E2DFD8] rounded-lg p-5 md:p-6 mb-8">
+          <h2 className="text-lg font-semibold text-[#0D0D0D] mb-3">Update, Oct 9</h2>
+          <h3 className="text-[14.5px] font-semibold text-[#0D0D0D] mb-1">The 5 industries images</h3>
+          <p className="text-[14.5px] text-[#3D3D3D] mb-4 max-w-[680px]">
+            The new &quot;NEW AI PICTURES&quot; folder contained the same 5 industries images that came in the Oct 6 zip (Industries hero, E-Commerce, Retail, Healthcare, Supplements). The files are identical, so nothing changed on the site. If retouched versions exist, they were not in that folder. Please send them again and we will swap them in.
+          </p>
+          <h3 className="text-[14.5px] font-semibold text-[#0D0D0D] mb-1">What worked</h3>
+          <ul className="list-disc pl-5 space-y-1.5 text-[14.5px] text-[#3D3D3D] max-w-[680px] mb-4">
+            <li>The 5 AI images are in use on the Industries page and each industry card.</li>
+            <li>Jason&apos;s retouched loading docks (U08) are in, with the company sign.</li>
+            <li>3 clean photos from the second batch are live on staging: the wrapped pallet and two packed cartons (N01 to N03).</li>
+            <li>DHL boxes (U01) are approved by Mr White (partner logos).</li>
+          </ul>
+          <h3 className="text-[14.5px] font-semibold text-[#0D0D0D] mb-1">Still needed</h3>
+          <ul className="list-disc pl-5 space-y-1.5 text-[14.5px] text-[#3D3D3D] max-w-[680px]">
+            <li>Retouched versions of the shots that show machine brand names (Rollbag bagger, Yale reach truck, forklift), and the three decisions below.</li>
+          </ul>
+        </div>
 
         <div className="border border-[#E2DFD8] rounded-lg p-5 md:p-6 bg-[#FBFAF7]">
-          <h2 className="text-lg font-semibold text-[#0D0D0D] mb-3">Four decisions needed</h2>
+          <h2 className="text-lg font-semibold text-[#0D0D0D] mb-3">Three decisions needed, one settled</h2>
+          <p className="text-[14.5px] text-[#3D3D3D] mb-3">
+            <strong className="font-semibold">Settled: DHL boxes (U01).</strong> Mr White approved showing partners&apos; logos in website imagery on Oct 6, so the DHL eCommerce pallets stay.
+          </p>
           <ol className="list-decimal pl-5 space-y-2 text-[14.5px] text-[#3D3D3D]">
-            <li><strong className="font-semibold">DHL boxes (U01).</strong> The pallets say DHL eCommerce. DHL is a named partner on the site. OK to show?</li>
             <li><strong className="font-semibold">People (H01 to H07).</strong> Seven shots show a worker with no photo release on file. Get releases, or ask Allenn to reshoot with hands only.</li>
-            <li><strong className="font-semibold">Other companies&apos; products (B01 to B09).</strong> Toys with licensed characters and a sold-as-set label. OK to show, or reshoot with unbranded goods?</li>
-            <li><strong className="font-semibold">Lot label (L01).</strong> A production batch label from a client&apos;s product. Needs the client&apos;s OK or a cleaner shot.</li>
+            <li><strong className="font-semibold">Other companies&apos; products (B01 to B09, M03).</strong> Toys with licensed characters, a sold-as-set label, and a smartwatch box. These are not partners, so the Oct 6 approval does not clearly cover them. OK to show, or reshoot with unbranded goods?</li>
+            <li><strong className="font-semibold">Client labels (L01, M01, M02).</strong> Shipping labels and batch labels with barcodes from a client&apos;s product. Needs the client&apos;s OK or a cleaner shot.</li>
           </ol>
         </div>
 
