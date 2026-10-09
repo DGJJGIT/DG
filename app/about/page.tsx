@@ -43,7 +43,7 @@ export default function AboutPage() {
             <span className="gold-text">Built to last.</span>
           </h1>
           <p className="text-[16px] text-[#A3A3A3] max-w-[540px] leading-relaxed">
-            Founded in 2020 with a simple conviction: logistics could be both operationally excellent and genuinely service-oriented. Five years later, we've proven it at scale.
+            Delivery Group Inc. is a third-party logistics and Amazon FBA prep company in Northern Kentucky, near the Amazon CVG air hub. Founded in 2020 with a simple conviction: logistics could be both operationally excellent and genuinely service-oriented. Five years later, we've proven it at scale.
           </p>
         </div>
       </section>

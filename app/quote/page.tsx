@@ -13,7 +13,7 @@ const includes = [
   "Custom service level proposal tailored to your volume and requirements",
   "Transparent pricing, with every fee published upfront",
   "Integration assessment for your existing technology stack",
-  "Dedicated account manager assignment from day one",
+  "A dedicated point of contact once you are onboarded",
   "Response within 1 business day",
 ]
 

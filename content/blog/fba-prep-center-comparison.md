@@ -1,9 +1,11 @@
 ---
 title: "Best FBA Prep Centers Compared: How to Choose the Right One in 2025"
 excerpt: "A side-by-side comparison of top FBA prep centers including DeliveryGroup, MyFBAPrep, and ZonPrep to help Amazon sellers choose wisely."
+answer: "Choose an FBA prep center on three factors: location, turnaround time, and total cost, which means prep fees plus inbound shipping to Amazon. Location matters most because distance to Amazon fulfillment centers drives inbound cost and speed. Also confirm core services like FNSKU labeling, poly bagging, bundling, inspection, and shipping plan creation, along with tracking and visibility tools."
 category: "Comparisons"
 date: "April 4, 2025"
 readTime: "14 min read"
+updated: "October 9, 2026"
 author: "Louis Bradley"
 image: "/blog/fba-prep.svg"
 ---
@@ -32,7 +34,7 @@ We are looking at three of the most well-known FBA prep providers:
 
 Most sellers focus on per-unit prep fees when comparing prep centers. But the single largest cost variable is actually inbound shipping from the prep center to Amazon's fulfillment centers.
 
-**DeliveryGroup** is located just 5 miles from Amazon's CVG Air Hub, the $1.5 billion facility that serves as a major hub for Amazon's air and ground logistics. This means inventory can reach Amazon's fulfillment centers the same day it leaves DeliveryGroup's dock. There are over 20 Amazon FCs within 200 miles.
+**DeliveryGroup** is located just 5 miles from Amazon's CVG Air Hub, the $1.5 billion facility that serves as a major hub for Amazon's air and ground logistics. That keeps the trip to Amazon's fulfillment centers short. There are over 20 Amazon FCs within 200 miles.
 
 **MyFBAPrep** has multiple locations, which gives flexibility. However, not all locations are near major Amazon hubs. Depending on which location your inventory goes to, inbound shipping costs and times will vary.
 
@@ -46,7 +48,7 @@ For most sellers, DeliveryGroup's CVG proximity provides the best combination of
 - **MyFBAPrep**: Turnaround varies by location and volume, typically 24 to 72 hours
 - **ZonPrep**: Standard turnaround is 24 to 72 hours, with expedited options available
 
-All three offer fast turnaround, but DeliveryGroup's guarantee of under 48 hours combined with same-day Amazon inbound makes it the fastest path from your supplier to Amazon's shelves.
+All three offer fast turnaround. DeliveryGroup pairs a 48-hour prep turnaround it consistently hits with a short trip to Amazon's CVG hub.
 
 ## Services Offered
 
@@ -67,12 +69,12 @@ All three centers offer the core FBA prep services:
 
 FBA prep pricing typically includes per-unit fees for labeling, bagging, and handling, plus inbound shipping to Amazon.
 
-**DeliveryGroup** pricing for standard FBA prep:
-- Labeling: $0.30 per unit
-- Poly bagging: $0.50 per unit
-- Bundling: $1.00 per bundle
-- Inspection: $0.25 per unit
-- Plus competitive inbound shipping via DHL
+**DeliveryGroup** pricing for standard FBA prep (published rate card):
+- FNSKU labeling only: $0.20 per unit
+- Standard prep (FNSKU, poly bag, inspection): $0.50 per unit for the first 90 days or 5,000 units, then $0.65 per unit
+- Bundling (2-pack, incl. FNSKU and poly bag): $1.00 per bundle at intro rates
+- Receiving: free during the intro period, then $0.10 per unit below 5,000 units a month
+- Inbound shipping to Amazon: billed through your own connected Amazon account
 
 **MyFBAPrep** uses a range-based pricing model that varies by location and service complexity. They emphasize volume discounts for high-volume sellers.
 

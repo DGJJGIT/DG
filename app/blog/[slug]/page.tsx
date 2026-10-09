@@ -82,6 +82,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           },
         }}
       />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": `https://deliverygroupinc.com/blog/${post.slug}#webpage`,
+          url: `https://deliverygroupinc.com/blog/${post.slug}`,
+          name: post.title,
+          isPartOf: { "@type": "WebSite", "@id": "https://deliverygroupinc.com/#website" },
+          about: { "@type": "Organization", "@id": "https://deliverygroupinc.com/#org" },
+          dateModified: new Date(post.updated || post.date).toISOString(),
+          speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".quick-answer"] },
+        }}
+      />
       {post.faqs.length > 0 && (
         <JsonLd
           data={{
@@ -133,6 +146,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       <section className="pt-12 pb-16 bg-white">
         <div className="max-w-[800px] mx-auto px-6 md:px-10">
+          {post.answer && (
+            <div className="mb-8 rounded-lg border border-[#E2DFD8] bg-[#F7F6F3] p-5">
+              <div className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#B8962E] mb-2">Quick answer</div>
+              <p className="quick-answer text-[16px] text-[#3D3D3D] leading-relaxed">{post.answer}</p>
+            </div>
+          )}
           <div
             className="prose prose-dg max-w-none"
             dangerouslySetInnerHTML={{ __html: bodyHtml }}

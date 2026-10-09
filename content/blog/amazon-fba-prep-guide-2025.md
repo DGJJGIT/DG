@@ -1,10 +1,11 @@
 ---
 title: "Amazon FBA Prep: The Complete Guide for Sellers in 2025"
 excerpt: "Amazon's FBA requirements keep changing. Here's everything sellers need to know to stay compliant and profitable."
+answer: "FBA prep is the process of getting products ready to ship to Amazon's fulfillment centers. It includes inspecting products, applying scannable FNSKU labels over existing barcodes, adding suffocation warnings to large poly bags, bagging or bubble wrapping items that need protection, bundling multi-packs, and boxing everything to Amazon's weight and size rules under a confirmed shipping plan."
 category: "FBA Prep"
 date: "December 20, 2024"
 readTime: "16 min read"
-updated: "October 7, 2026"
+updated: "October 9, 2026"
 author: "Louis Bradley"
 image: "/blog/fba-prep.svg"
 ---
@@ -139,7 +140,7 @@ Delivery Group's Florence, Kentucky facility sits right in the middle of this co
 
 Ground shipping from Northern Kentucky reaches 60 percent of the US population within two days. This central location reduces transit costs to Amazon warehouses across the eastern United States.
 
-Our partnership with DHL also provides discounted shipping rates for inbound and outbound shipments. These savings get passed to our clients, reducing the total cost of FBA prep.
+Our partnership with DHL also provides discounted rates on outbound shipments, while FBA inbound shipments we create in Hopstack are billed through your own Amazon account. These savings get passed to our clients, reducing the total cost of FBA prep.
 
 ## FBA Prep Cost Breakdown
 

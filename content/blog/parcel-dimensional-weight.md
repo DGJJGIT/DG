@@ -2,6 +2,7 @@
 title: "Understanding Dimensional Weight Pricing and How to Reduce It"
 seoTitle: "Dimensional Weight Pricing Explained"
 excerpt: "Dimensional weight charges are one of the most misunderstood costs in parcel shipping. Here's how to manage them."
+answer: "Dimensional weight is a pricing method that bills a package by its size, not just its actual weight. Carriers multiply length, width, and height in inches, divide by a DIM divisor, and charge whichever is higher. To reduce it, right-size packaging, cut void fill, add custom box sizes, use poly mailers for non-fragile items, negotiate your divisor, and audit invoices."
 category: "Operations"
 date: "January 30, 2024"
 readTime: "12 min read"

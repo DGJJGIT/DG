@@ -52,7 +52,7 @@ const clusterHubs = [
   { label: "Returns Management", href: "/returns-management" },
   { label: "Hazmat Fulfillment", href: "/hazmat-fulfillment" },
   { label: "Amazon FBA Prep", href: "/amazon-fba-prep" },
-  { label: "View all 44 services →", href: "/services" },
+  { label: "View all services →", href: "/services" },
 ]
 
 const footerNav = {
@@ -61,6 +61,16 @@ const footerNav = {
     { label: "Healthcare", href: "/industries/healthcare" },
     { label: "Retail", href: "/industries/retail" },
     { label: "Supplements", href: "/supplement-fulfillment" },
+    { label: "DTC Brands", href: "/dtc-fulfillment" },
+    { label: "Electronics", href: "/electronics-fulfillment" },
+    { label: "Food & Beverage", href: "/food-and-beverage-fulfillment" },
+    { label: "Footwear", href: "/footwear-fulfillment" },
+    { label: "Jewelry", href: "/jewelry-fulfillment" },
+    { label: "Pet Products", href: "/pet-product-fulfillment" },
+    { label: "Sporting Goods", href: "/sporting-goods-fulfillment" },
+    { label: "Toys & Games", href: "/toy-fulfillment" },
+    { label: "Books & Media", href: "/book-fulfillment" },
+    { label: "CBD", href: "/cbd-fulfillment" },
   ],
   Company: [
     { label: "About Us", href: "/about" },
@@ -78,6 +88,9 @@ const footerNav = {
     { label: "Pricing", href: "/pricing" },
     { label: "How It Works", href: "/how-it-works" },
     { label: "Integrations", href: "/integrations" },
+    { label: "What Is a 3PL?", href: "/what-is-a-3pl" },
+    { label: "ShipBob Alternative", href: "/shipbob-alternative" },
+    { label: "ShipMonk Alternative", href: "/shipmonk-alternative" },
   ],
 }
 

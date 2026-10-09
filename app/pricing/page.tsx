@@ -90,8 +90,8 @@ export default function PricingPage() {
             See what fulfillment costs with{" "}
             <span className="gold-text">DeliveryGroup.</span>
           </h1>
-          <p className="text-[16px] text-[#A3A3A3] max-w-[480px] leading-relaxed">
-            Get an instant ballpark estimate based on your volume and requirements. For a detailed custom quote, contact our team.
+          <p className="quick-answer text-[16px] text-[#A3A3A3] max-w-[480px] leading-relaxed">
+            Delivery Group publishes its rates. FBA prep starts at $0.50 per unit for your first 90 days or 5,000 units, then $0.65, and 3PL fulfillment is priced per order with storage at $25 per pallet per month. Use the estimator for a ballpark, or contact our team for a custom quote.
           </p>
         </div>
       </section>
@@ -221,7 +221,7 @@ export default function PricingPage() {
               { icon: DollarSign, title: "Pick & Pack", body: "Per-order fulfillment fees based on items and complexity. Volume discounts available." },
               { icon: Warehouse, title: "Storage", body: "Monthly pallet storage in our climate-controlled NKY facility. $25 per pallet per month." },
               { icon: Truck, title: "Shipping", body: "Discounted DHL rates passed directly to you. No markup on carrier charges." },
-              { icon: Users, title: "Account Management", body: "Dedicated support, technology platform, and reporting included at no extra charge." },
+              { icon: Users, title: "Account Management", body: "Day-to-day account support, platform access, and standard reporting included at no extra charge." },
             ].map(c => {
               const Icon = c.icon
               return (
@@ -363,7 +363,7 @@ export default function PricingPage() {
                   </div>
 
                   <p className="text-[12px] text-[#A3A3A3] mt-4 text-center leading-relaxed">
-                    Introductory rates shown for your first 90 days or 5,000 units, then standard rates apply. Volume pricing is available at 5,000+ units/month.
+                    Introductory rates shown for your first 90 days or 5,000 units, then standard rates apply. Volume pricing is available at 5,000+ units/month. Accounts under 500 units/month pay a one-time $350 onboarding fee.
                     {activeTab !== "addons" && " Receiving, shipping plan creation, and first 30 days of storage included free."}
                   </p>
                 </div>
@@ -382,12 +382,12 @@ export default function PricingPage() {
               5 miles from Amazon's CVG Air Hub.
             </h2>
             <p className="text-[15px] text-[#737373] leading-relaxed mb-8 max-w-[560px] mx-auto">
-              Our Northern Kentucky facility sits next to Amazon's $1.5 billion Air Hub, the central node of Amazon Air's US cargo network. With 20+ Amazon fulfillment centers within 200 miles, your inventory goes from our dock to Amazon's shelves same-day.
+              Our Northern Kentucky facility is about 5 miles from Amazon's CVG Air Hub, the central node of Amazon Air's US cargo network. With 20+ Amazon fulfillment centers within 200 miles, the trip from our dock to Amazon is short.
             </p>
             <div className="grid grid-cols-3 gap-4 max-w-[500px] mx-auto">
               <div className="p-5 bg-white rounded-lg border border-[#E2DFD8]">
-                <div className="text-xl font-semibold text-[#0D0D0D] tracking-tight">Same Day</div>
-                <div className="text-[11px] text-[#B8962E] mt-0.5">FC Transit Time</div>
+                <div className="text-xl font-semibold text-[#0D0D0D] tracking-tight">5 mi</div>
+                <div className="text-[11px] text-[#B8962E] mt-0.5">To Amazon CVG Air Hub</div>
               </div>
               <div className="p-5 bg-white rounded-lg border border-[#E2DFD8]">
                 <div className="text-xl font-semibold text-[#0D0D0D] tracking-tight">20+</div>

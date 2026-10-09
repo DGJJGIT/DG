@@ -1,6 +1,7 @@
 ---
 title: "How to Prepare Your Logistics Operation for Peak Season"
 excerpt: "The brands that win Q4 start preparing in Q2. Here's the operational checklist top e-commerce companies follow."
+answer: "Start preparing for peak season in Q2. Build a demand forecast with conservative, expected, and aggressive scenarios, then share volume projections with your 3PL and carriers. Through Q2 and Q3, secure carrier capacity, position inventory, plan staffing, and order packaging supplies. Test technology under load before October, build an exception management plan, and communicate shipping cutoff dates clearly to customers."
 category: "Operations"
 date: "February 28, 2025"
 readTime: "14 min read"

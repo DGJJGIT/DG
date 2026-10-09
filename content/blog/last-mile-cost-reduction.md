@@ -1,6 +1,7 @@
 ---
 title: "5 Proven Strategies to Reduce Last-Mile Delivery Costs"
 excerpt: "Last-mile delivery represents 40-53% of total logistics costs. These five strategies have consistently moved the needle."
+answer: "Five strategies consistently lower last-mile delivery costs. Use route optimization to cut wasted miles, improve delivery density so stops sit closer together, negotiate carrier rates or use a 3PL's volume pricing, right-size packaging to avoid paying for dimensional weight, and reduce exceptions such as failed deliveries, damage, and wrong addresses. Combining all five creates compounding savings."
 category: "Operations"
 date: "April 10, 2024"
 readTime: "12 min read"

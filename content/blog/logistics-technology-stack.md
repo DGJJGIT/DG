@@ -1,6 +1,7 @@
 ---
 title: "Building the Modern Logistics Technology Stack"
 excerpt: "The logistics technology landscape is fragmented. Here's how to build a stack that creates competitive advantage."
+answer: "A modern logistics technology stack connects a warehouse management system, a transportation management system, an order management system, tracking and customer communication tools, and analytics through solid API integrations. The goal is a single source of truth with real-time data sharing and unified reporting, so teams avoid data silos, manual workarounds, and hidden costs. Start with a strong WMS."
 category: "Technology"
 date: "September 12, 2024"
 readTime: "14 min read"
