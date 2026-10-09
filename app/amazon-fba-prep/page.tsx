@@ -254,7 +254,7 @@ Tier 1 &middot; Intro
 Tier 2 &middot; Ongoing
           </h3>
           <p className="text-[12px] text-[#737373] mb-5">
-            500+ units/month
+            After the intro period
           </p>
           <PricingTable rows={ongoing} />
         </div>
@@ -340,6 +340,14 @@ const faqs = [
   {
     q: "How does the FBA prep process work?",
     a: "You ship inventory to our Northern Kentucky facility, we receive and prep it with labeling, polybagging, inspection, and bundling, quality-check each unit for compliance, then create the inbound plan and ship into Amazon FBA with full tracking.",
+  },
+  {
+    q: "How is shipping to Amazon billed?",
+    a: "When we create your FBA shipments in Hopstack, the inbound shipping charges go directly through your connected Amazon account.",
+  },
+  {
+    q: "What happens after the intro pricing period?",
+    a: "Intro rates apply for your first 90 days or 5,000 units (2,000 units for bulky items), whichever comes first. After that, the ongoing rates apply at any volume, for example standard prep moves from $0.50 to $0.65 per unit, with lower volume pricing at higher monthly volumes.",
   },
 ]
 
@@ -706,7 +714,7 @@ export default function AmazonFBAPrepPage() {
               Simple, transparent pricing.
             </h2>
             <p className="text-[15px] text-[#737373] max-w-[540px] mx-auto">
-              All pricing is per-unit and all-inclusive, with no hidden fees and no surprise surcharges.
+              Transparent per-unit pricing, with every fee published upfront.
             </p>
           </div>
 

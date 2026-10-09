@@ -47,7 +47,7 @@ DeliveryGroup integrates with over 200 platforms and offers a REST API for custo
 
 ShipBob's pricing includes pick and pack fees, storage fees, and shipping costs. Their distributed model can mean higher storage costs because you are storing inventory in multiple locations. There can also be additional fees for special projects and receiving.
 
-DeliveryGroup offers transparent, all-inclusive per-shipment pricing with no hidden fees. Storage is a flat $25 per pallet per month. Because everything ships from one location, there are no duplicate storage charges or inventory allocation complexities.
+DeliveryGroup offers transparent pricing, with every fee published upfront. Storage is a flat $25 per pallet per month. Because everything ships from one location, there are no duplicate storage charges or inventory allocation complexities.
 
 ## Customer Service
 

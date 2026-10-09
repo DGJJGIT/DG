@@ -28,6 +28,8 @@ const nextConfig: NextConfig = {
       // 2026-10-07 AEO audit: duplicate pages competing with their canonical twins
       { source: "/pick-and-pack-services", destination: "/pick-and-pack-fulfillment", permanent: true },
       { source: "/services/last-mile-delivery", destination: "/last-mile-delivery", permanent: true },
+      // 2026-10-09 owner decision: Q4 promo page removed (fee/waiver claims) -> evergreen FBA prep page with the rate card
+      { source: "/q4-fba-prep", destination: "/amazon-fba-prep", permanent: true },
     ]
   },
 };

@@ -29,7 +29,7 @@ export default function FbaSavingsCalculatorPage() {
             How much are you actually spending on FBA prep?
           </h1>
           <p className="text-[16px] text-[#A3A3A3] max-w-[520px] leading-relaxed">
-            DIY prep costs $1.20–$1.80 per unit in labor and materials, verified. DeliveryGroup charges $0.50/unit all-in. See the difference for your volume.
+            DIY prep costs $1.20–$1.80 per unit in labor and materials, verified. DeliveryGroup's intro prep rate is $0.50/unit, then $0.65/unit. See the difference for your volume.
           </p>
         </div>
       </section>

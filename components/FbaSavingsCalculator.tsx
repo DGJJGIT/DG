@@ -3,7 +3,8 @@
 import { useState } from "react"
 
 // ─── Confirmed pricing, FBA Prep only (3PL has a separate structure) ─────────
-const PREP_COST_PER_UNIT        = 0.50   // standard FBA prep, all-in
+const PREP_COST_PER_UNIT        = 0.50   // standard FBA prep, Tier 1 intro (first 90 days / 5,000 units)
+const PREP_COST_ONGOING         = 0.65   // Tier 2: automatic after the intro period, any volume
 const RECEIVING_COST_PER_UNIT   = 0.10   // Tier 2 rate (after free period ends)
 const ONBOARDING_FEE            = 350    // one-time, only if monthly volume < 500 units
 
@@ -40,7 +41,7 @@ function calcDGCost(
   isBulky: boolean,
   months: number,
 ): CalcResult {
-  const prep = volume * PREP_COST_PER_UNIT
+  const prep = volume * (isNewClient ? PREP_COST_PER_UNIT : PREP_COST_ONGOING)
 
   // Receiving: free during first 90 days OR first 5,000 cumulative units (whichever comes first).
   // For new clients, show $0. For existing clients past Tier 1, charge $0.10/unit on the full volume.
@@ -202,7 +203,7 @@ export default function FbaSavingsCalculator() {
         <div className="bg-[#0D0D0D] rounded-xl p-5 text-white">
           <p className="text-[12px] font-semibold text-[#B8962E] uppercase tracking-wider mb-1">DeliveryGroup Cost</p>
           <p className="text-2xl font-bold">{fmtUSD(dg.total)}</p>
-          <p className="text-[12px] text-[#A3A3A3] mt-1">per month, all-in</p>
+          <p className="text-[12px] text-[#A3A3A3] mt-1">per month</p>
           {volume < 500 && (
             <p className="text-[11px] text-[#A3A3A3] mt-2">
               Includes ${(ONBOARDING_FEE / months).toFixed(2)}/mo onboarding (one-time $350 over {months} months)
@@ -229,7 +230,7 @@ export default function FbaSavingsCalculator() {
         <p className="text-[12px] font-semibold text-[#3D3D3D] uppercase tracking-wider">Cost breakdown, DeliveryGroup</p>
         <div className="divide-y divide-[#E2DFD8] border border-[#E2DFD8] rounded-lg overflow-hidden bg-white text-[13px]">
           <div className="flex justify-between px-4 py-3">
-            <span className="text-[#737373]">Prep ({volume.toLocaleString()} units × $0.50)</span>
+            <span className="text-[#737373]">Prep ({volume.toLocaleString()} units × ${isNewClient ? "0.50" : "0.65"})</span>
             <span className="font-medium text-[#0D0D0D]">{fmtUSD(dg.prep)}</span>
           </div>
           <div className="flex justify-between px-4 py-3">

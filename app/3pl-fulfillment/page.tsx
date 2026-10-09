@@ -75,9 +75,9 @@ const vasPricing = [
 ]
 
 const accountPricing = [
-  { service: "Monthly Platform Fee", dg: "$400", note: "WMS access, account management" },
-  { service: "Monthly Order Minimum", dg: "200 orders", note: "Reduced to 100 for first 90 days" },
-  { service: "Dedicated Account Manager", dg: "$200/month", note: "Included at 5,000+ orders" },
+  { service: "Account Management", dg: "Included", note: "Day-to-day account communication and operations" },
+  { service: "Platform / WMS Access", dg: "Included", note: "No monthly platform fee" },
+  { service: "Order Minimum", dg: "None", note: "No minimums to start" },
 ]
 
 const surcharges = [
@@ -101,7 +101,7 @@ const faqs = [
   },
   {
     q: "Is there an order minimum for 3PL fulfillment?",
-    a: "The standard monthly minimum is 200 orders, reduced to 100 orders for the first 90 days. A $400 monthly platform fee covers WMS access and account management.",
+    a: "No. There is no order minimum to start, and account management and platform access are included with no monthly platform fee.",
   },
   {
     q: "Which sales channels and platforms do you integrate with?",
@@ -653,7 +653,7 @@ export default function ThreePLFulfillmentPage() {
                     Shipping & Postage
                   </h2>
                   <p className="text-[16px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
-                    We create inbound shipping plans and ship each order, with carrier surcharges passed through at cost.
+                    We create inbound shipping plans and ship each order. Postage is billed at our negotiated DHL and parcel rates with no markup, plus a $0.75 per-label fee.
                   </p>
                 </div>
               </div>
@@ -671,7 +671,7 @@ export default function ThreePLFulfillmentPage() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
                     { label: "Shipping Label Fee", value: "$0.75/label", sub: "On top of postage" },
-                    { label: "DIM Weight Surcharges", value: "Pass-through", sub: "Carrier surcharges at competitive rates" },
+                    { label: "DIM Weight Surcharges", value: "Pass-through", sub: "At our negotiated carrier rates, no markup" },
                     { label: "Residential Delivery", value: "Pass-through", sub: "Standard carrier surcharge" },
                     { label: "Signature / Insurance", value: "Cost + margin", sub: "Optional add-on per shipment" },
                   ].map((item) => (
@@ -739,13 +739,13 @@ export default function ThreePLFulfillmentPage() {
                     Account & Technology
                   </h2>
                   <p className="text-[16px] text-[#737373] mt-1 leading-relaxed max-w-[600px]">
-                    Platform access, account management, and onboarding.
+                    Account management and platform access are included. Onboarding fees are listed below.
                   </p>
                 </div>
               </div>
               <div className="grid lg:grid-cols-2 gap-5">
                 <div className="bg-[#F7F6F3] rounded-xl border border-[#E2DFD8] p-6">
-                  <h3 className="text-[14px] font-semibold text-[#0D0D0D] mb-4">Monthly Fees</h3>
+                  <h3 className="text-[14px] font-semibold text-[#0D0D0D] mb-4">Account</h3>
                   <PricingTable rows={accountPricing} showNotes />
                 </div>
                 <div className="bg-[#F7F6F3] rounded-xl border border-[#E2DFD8] p-6">
@@ -805,7 +805,6 @@ export default function ThreePLFulfillmentPage() {
               </div>
               <div className="p-6 space-y-3">
                 {[
-                  ["Platform Fee", "$400"],
                   ["Storage (8 pallets)", "$200"],
                   ["Receiving", "$240"],
                   ["Pick & Pack (1,000 orders)", "$3,500"],
@@ -821,7 +820,7 @@ export default function ThreePLFulfillmentPage() {
                 ))}
                 <div className="pt-3 mt-3 border-t border-[#E2DFD8] flex justify-between items-center">
                   <span className="text-[14px] font-semibold text-[#0D0D0D]">Est. Monthly Total</span>
-                  <span className="text-[18px] font-semibold text-[#B8962E]">~$6,900</span>
+                  <span className="text-[18px] font-semibold text-[#B8962E]">~$6,500</span>
                 </div>
               </div>
             </div>
@@ -842,7 +841,6 @@ export default function ThreePLFulfillmentPage() {
               </div>
               <div className="p-6 space-y-3">
                 {[
-                  ["Platform Fee", "$400"],
                   ["Storage (25 pallets)", "$625"],
                   ["Receiving", "$720"],
                   ["Pick & Pack (5,000 orders)", "$16,250"],
@@ -860,7 +858,7 @@ export default function ThreePLFulfillmentPage() {
                 ))}
                 <div className="pt-3 mt-3 border-t border-[#2a2a2a] flex justify-between items-center">
                   <span className="text-[14px] font-semibold text-white">Est. Monthly Total</span>
-                  <span className="text-[18px] font-semibold text-[#B8962E]">~$35,620</span>
+                  <span className="text-[18px] font-semibold text-[#B8962E]">~$35,220</span>
                 </div>
               </div>
             </div>
@@ -878,7 +876,6 @@ export default function ThreePLFulfillmentPage() {
               </div>
               <div className="p-6 space-y-3">
                 {[
-                  ["Platform + Acct Mgr", "$600"],
                   ["Storage (60 pallets)", "$1,500"],
                   ["Receiving", "$1,800"],
                   ["Pick & Pack (15,000 orders)", "$45,000"],
@@ -896,7 +893,7 @@ export default function ThreePLFulfillmentPage() {
                 ))}
                 <div className="pt-3 mt-3 border-t border-[#E2DFD8] flex justify-between items-center">
                   <span className="text-[14px] font-semibold text-[#0D0D0D]">Est. Monthly Total</span>
-                  <span className="text-[18px] font-semibold text-[#B8962E]">~$122,925</span>
+                  <span className="text-[18px] font-semibold text-[#B8962E]">~$122,325</span>
                 </div>
               </div>
             </div>

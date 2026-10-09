@@ -247,7 +247,7 @@ export default function PricingPage() {
               FBA Prep Pricing
             </h2>
             <p className="text-[15px] text-[#737373] max-w-[560px] mx-auto leading-relaxed">
-              Introductory rates for new clients. Volume discounts available at 500+ and 5,000+ units per month.
+              Introductory rates for your first 90 days or 5,000 units, then standard rates apply. Volume pricing is available at 5,000+ units per month.
               Free receiving, free shipping plan creation, and free storage for your first 30 days.
             </p>
           </div>
@@ -363,7 +363,7 @@ export default function PricingPage() {
                   </div>
 
                   <p className="text-[12px] text-[#A3A3A3] mt-4 text-center leading-relaxed">
-                    Introductory rates shown. Volume discounts available at 500+ and 5,000+ units/month.
+                    Introductory rates shown for your first 90 days or 5,000 units, then standard rates apply. Volume pricing is available at 5,000+ units/month.
                     {activeTab !== "addons" && " Receiving, shipping plan creation, and first 30 days of storage included free."}
                   </p>
                 </div>

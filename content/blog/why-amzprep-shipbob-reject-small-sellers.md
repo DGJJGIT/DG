@@ -50,7 +50,7 @@ If you are doing under 1,000 units a month, here is what a workable prep center 
 
 **No rigid minimum.** You should not be locked out because your current volume is 200 or 400 units per month. Growth is the goal, and a prep center that works with you at lower volumes and scales with you is more valuable than one that only wants you after you have already figured it out.
 
-**Per-unit pricing that makes sense.** At $0.50 per unit for standard FBA prep, labeling, poly bagging, bundling, shipping plan creation, professional prep costs less than the lower end of DIY labor costs. The math should not require a spreadsheet to justify.
+**Per-unit pricing that makes sense.** At $0.50 per unit (our intro rate) for standard FBA prep, labeling, poly bagging, bundling, shipping plan creation, professional prep costs less than the lower end of DIY labor costs. The math should not require a spreadsheet to justify.
 
 **Acceptance of OA and RA inventory.** If you source through online arbitrage or retail arbitrage, you should not need to hit a 2,500-unit threshold before a prep center will touch your account.
 
@@ -60,7 +60,7 @@ If you are doing under 1,000 units a month, here is what a workable prep center 
 
 DeliveryGroup works with sellers starting at 100 units per month. There is no policy against OA or RA inventory.
 
-Standard FBA prep is $0.50 per unit and includes FNSKU labeling, poly bagging, bundling, kitting, suffocation warning compliance, and shipping plan creation. Receiving is free at standard volumes and $0.10 per unit above the Tier 1 threshold.
+Standard FBA prep is $0.50 per unit for your first 90 days or 5,000 units, then $0.65 per unit, and includes FNSKU labeling, poly bagging, bundling, kitting, suffocation warning compliance, and shipping plan creation. Receiving is free at standard volumes and $0.10 per unit above the Tier 1 threshold.
 
 For accounts under 500 units per month, there is a one-time onboarding fee of $350. This is not a recurring monthly minimum, it is a single setup cost, and it does not repeat. That is 64 percent less than ShipBob's setup fee, and unlike ShipBob's monthly minimum, it does not hit your account again the following month.
 

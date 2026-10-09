@@ -42,7 +42,7 @@ The cost structure creates real problems for three groups of sellers.
 
 **Small and early-stage sellers.** If you are shipping fewer than 500 units a month, the $975 setup fee and $275 monthly minimum represent a significant percentage of your revenue. You are paying for infrastructure designed for larger operations.
 
-**FBA-first sellers.** ShipBob does not offer traditional Amazon FBA prep services. If your primary channel is Amazon FBA, you would need a separate prep center in addition to ShipBob, which means paying two sets of fees and managing two relationships.
+**FBA-first sellers.** ShipBob offers FBA prep as part of its fulfillment services, but the setup fee and monthly minimum apply on top of prep costs, which weighs most on sellers whose main channel is Amazon FBA.
 
 **Midwest and East Coast brands.** ShipBob's distributed model means your inventory is split across many locations. For brands whose customers are concentrated in the Midwest or East Coast, a single strategically located fulfillment center often provides equivalent transit times at lower cost and with less operational complexity.
 
@@ -58,7 +58,7 @@ DeliveryGroup operates from a 75,000 square foot facility in Northern Kentucky, 
 
 The pricing is straightforward:
 
-- **Standard FBA prep: $0.50 per unit.** That is the cost for FNSKU labeling, poly bagging, bundling, kitting, and shipping plan creation.
+- **Standard FBA prep: $0.50 per unit for the first 90 days or 5,000 units, then $0.65 per unit.** That is the cost for FNSKU labeling, poly bagging, bundling, kitting, and shipping plan creation.
 - **Receiving: free at standard volumes.** Above the Tier 1 threshold, receiving is $0.10 per unit.
 - **Onboarding fee: $350 one-time** for accounts under 500 units per month. This is not a recurring monthly minimum, it is a single setup cost, and it is 63 percent less than ShipBob's entry fee.
 

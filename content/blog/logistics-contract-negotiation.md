@@ -148,7 +148,7 @@ At Delivery Group, we believe contracts should be straightforward. Our agreement
 
 We do not hide behind vague language or bury fees in the fine print. Our clients know exactly what they are paying for and what level of service to expect. Our DHL partnership gives our clients access to discounted shipping rates, and those discounts are clearly documented.
 
-We welcome questions about our contracts. We encourage clients to negotiate. Because a contract that works for both parties creates a better long-term partnership.
+Every account runs month-to-month with 14 days' notice, and we welcome questions about our terms. Clear terms that work for both sides make for a better long-term partnership.
 
 Our location in Florence, Kentucky, near major air and ground hubs, gives us operational advantages that translate into reliable service. And our 99.4 percent on-time delivery rate is not just a number in a sales pitch. It is a measurable, auditable performance metric that we stand behind.
 
