@@ -64,6 +64,20 @@ const spare: Shot[] = [
   { id: "E06", src: "/images/review-p1-r4t8w2/E06.jpg", w: 525, h: 700, caption: "Forklift, rear view" },
 ]
 
+const batch2Used: Shot[] = [
+  { id: "N01", src: "/images/review-p1-r4t8w2/N01.jpg", w: 450, h: 600, caption: "Stretch-wrapped pallet", where: "Blog (Business Strategy, Operations, Retail, B2B)" },
+  { id: "N02", src: "/images/review-p1-r4t8w2/N02.jpg", w: 525, h: 700, caption: "Order packed in a carton", where: "Blog (Customer Experience, Platform Guides, E-Commerce)" },
+  { id: "N03", src: "/images/review-p1-r4t8w2/N03.jpg", w: 525, h: 700, caption: "Bottles wrapped in bubble wrap", where: "Blog (FBA Prep, Customer Experience, E-Commerce)" },
+]
+
+const batch2Held: Shot[] = [
+  { id: "M01", src: "/images/review-p1-r4t8w2/M01.jpg", w: 225, h: 300, caption: "Pallet with client shipping labels", where: "Barcodes and a client code are readable at full size. Needs a version with labels covered or turned away." },
+  { id: "M02", src: "/images/review-p1-r4t8w2/M02.jpg", w: 126, h: 300, caption: "Taller pallet, same labels", where: "Same issue as M01." },
+  { id: "M03", src: "/images/review-p1-r4t8w2/M03.jpg", w: 525, h: 700, caption: "Smartwatch box in a poly mailer", where: "Third-party product brand (PEJE) is legible. Same question as the other brand shots." },
+  { id: "M04", src: "/images/review-p1-r4t8w2/M04.jpg", w: 525, h: 700, caption: "White van at the building", where: "Is this a Delivery Group vehicle? It has no branding, and the courier pages would imply it is ours." },
+  { id: "M05", src: "/images/review-p1-r4t8w2/M05.jpg", w: 525, h: 700, caption: "Cardboard baler", where: "Real and useful for the sustainability posts, but the floor is stained and a warning sign is visible. Candidate for Jason's cleanup pass." },
+]
+
 function Grid({ shots, cols = "grid-cols-2 md:grid-cols-4" }: { shots: Shot[]; cols?: string }) {
   return (
     <div className={`grid ${cols} gap-4`}>
@@ -91,7 +105,7 @@ export default function PhotoReviewPage() {
       <div className="max-w-[1080px] mx-auto px-6 md:px-10 py-14 md:py-20">
         <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#0D0D0D] mb-3">Photo review: batch 1</h1>
         <p className="text-[16px] text-[#737373] leading-relaxed max-w-[680px] mb-2">
-          Allenn sent 45 photos. 16 are in use on staging, 29 are held back. Below is every photo and why, so you can approve, change, or veto before anything goes to the live site.
+          Batch 1: 45 photos from Allenn, 16 in use on staging, 29 held back. Batch 2 is at the bottom. Below is every photo and why, so you can approve, change, or veto before anything goes to the live site.
         </p>
         <p className="text-[13px] text-[#737373] mb-10">Prepared October 6, 2026. Reply with photo IDs (for example &quot;U03 out, B03 ok&quot;).</p>
 
@@ -124,6 +138,14 @@ export default function PhotoReviewPage() {
         <h2 className={h2}>Fine, but not needed yet (6)</h2>
         <p className={sub}>Usable. We have better versions of the same scenes. Say the word and they go in.</p>
         <Grid shots={spare} cols="grid-cols-2 md:grid-cols-4" />
+
+
+        <h2 className={h2}>Batch 2 (8 new photos, Oct 9)</h2>
+        <p className={sub}>Allenn sent 8 more phone photos plus the same 5 AI images as before (already in use). I put the 3 clean ones on staging and held the other 5.</p>
+        <h3 className="text-[15px] font-semibold text-[#0D0D0D] mb-2">In use on staging (3)</h3>
+        <Grid shots={batch2Used} />
+        <h3 className="text-[15px] font-semibold text-[#0D0D0D] mt-8 mb-2">Held back (5)</h3>
+        <Grid shots={batch2Held} />
 
         <h2 className={h2}>Not usable (5), not shown</h2>
         <ul className="list-disc pl-5 space-y-1.5 text-[14.5px] text-[#3D3D3D] max-w-[680px]">
