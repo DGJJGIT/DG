@@ -23,12 +23,26 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 }
 
+// US Census Bureau regions, used to pick nearby markets for cities that are alone in their state
+const REGION: Record<string, string> = {
+  CT: "Northeast", ME: "Northeast", MA: "Northeast", NH: "Northeast", RI: "Northeast", VT: "Northeast", NJ: "Northeast", NY: "Northeast", PA: "Northeast",
+  IL: "Midwest", IN: "Midwest", MI: "Midwest", OH: "Midwest", WI: "Midwest", IA: "Midwest", KS: "Midwest", MN: "Midwest", MO: "Midwest", NE: "Midwest", ND: "Midwest", SD: "Midwest",
+  DE: "South", DC: "South", FL: "South", GA: "South", MD: "South", NC: "South", SC: "South", VA: "South", WV: "South", AL: "South", KY: "South", MS: "South", TN: "South", AR: "South", LA: "South", OK: "South", TX: "South",
+  AZ: "West", CO: "West", ID: "West", MT: "West", NV: "West", NM: "West", UT: "West", WY: "West", AK: "West", CA: "West", HI: "West", OR: "West", WA: "West",
+}
+
 export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const loc = getLocation(slug)
   if (!loc) notFound()
 
-  const nearby = locations.filter(l => l.stateAbbr === loc.stateAbbr && l.slug !== loc.slug).slice(0, 3)
+  // Same-state markets first; cities alone in their state are filled from the same US Census region,
+  // rotated from this city's position so every location page gets inbound links from its neighbors.
+  const sameState = locations.filter(l => l.stateAbbr === loc.stateAbbr && l.slug !== loc.slug)
+  const idx = locations.findIndex(l => l.slug === loc.slug)
+  const rotated = [...locations.slice(idx + 1), ...locations.slice(0, idx)]
+  const regional = rotated.filter(l => l.stateAbbr !== loc.stateAbbr && REGION[l.stateAbbr] && REGION[l.stateAbbr] === REGION[loc.stateAbbr])
+  const nearby = [...sameState, ...regional].slice(0, 3)
 
   return (
     <>

@@ -264,7 +264,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
     whyHeading: "One partner for every delivery urgency.",
     whyBullets: ["Same-day, rush & on-demand", "White glove for high-value items", "Live tracking + proof of delivery", "Business accounts & recurring routes"],
     relatedLabel: "Related services",
-    related: [{ label: "Same day courier", href: "/same-day-courier" }, { label: "White glove delivery", href: "/white-glove-delivery" }, { label: "Cross docking", href: "/cross-docking" }, { label: "On-demand delivery", href: "/on-demand-delivery" }, { label: "Rush delivery", href: "/rush-delivery" }, { label: "Last-mile delivery", href: "/last-mile-delivery" }],
+    related: [{ label: "Same day courier", href: "/same-day-courier" }, { label: "White glove delivery", href: "/white-glove-delivery" }, { label: "Cross docking", href: "/cross-docking" }, { label: "On-demand delivery", href: "/on-demand-delivery" }, { label: "Rush delivery", href: "/rush-delivery" }, { label: "Last-mile delivery", href: "/last-mile-delivery" }, { label: "Courier for business", href: "/courier-for-business" }, { label: "Medical courier", href: "/medical-courier" }],
     faqs: [{ q: "What kinds of courier service do you offer?", a: "Same-day, rush, on-demand, and white glove, see the linked pages for each." }],
     ctaHeading: "Ready to get started?",
     ctaSub: "Share your requirements for courier service and we’ll send a tailored quote.",
@@ -733,7 +733,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
     whyHeading: "Kitting built into fulfillment, not run as a separate service.",
     whyBullets: ["Bundles, multipacks, subscription boxes, and retail displays", "Pre-kitted as one SKU or assembled on demand", "Custom inserts and branded packaging inside each kit", "Accurate, tracked assembly at the component and kit level"],
     relatedLabel: "Related services",
-    related: [{ label: "Fulfillment center (hub)", href: "/fulfillment-center" }, { label: "Pick and pack services", href: "/pick-and-pack-fulfillment" }, { label: "Subscription box fulfillment", href: "/subscription-box-fulfillment" }, { label: "Fulfillment warehouse", href: "/fulfillment-warehouse" }],
+    related: [{ label: "Fulfillment center (hub)", href: "/fulfillment-center" }, { label: "Pick and pack services", href: "/pick-and-pack-fulfillment" }, { label: "Subscription box fulfillment", href: "/subscription-box-fulfillment" }, { label: "Fulfillment warehouse", href: "/fulfillment-warehouse" }, { label: "Crowdfunding fulfillment", href: "/crowdfunding-fulfillment" }],
     faqs: [
       { q: "What are kitting services?", a: "Kitting services combine several separate SKUs into one ready-to-ship unit, such as a bundle, subscription box, gift set, or retail display. Delivery Group assembles, stores, and ships kits from its Northern Kentucky fulfillment center." },
       { q: "What is the difference between kitting and assembly?", a: "Kitting usually means gathering multiple components into one combined unit, while assembly means any light build or configuration step applied to them. At Delivery Group both run inside fulfillment, so a kit is received, stored, and shipped like any other SKU." },
@@ -824,7 +824,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
     whyHeading: "One partner for every delivery urgency.",
     whyBullets: ["Request a driver on demand", "Live tracking + proof of delivery", "No fleet or dispatch to run", "One-off or recurring"],
     relatedLabel: "Related services",
-    related: [{ label: "Courier services (hub)", href: "/courier-services" }, { label: "Same day courier", href: "/same-day-courier" }, { label: "Rush delivery", href: "/rush-delivery" }, { label: "Last-mile delivery", href: "/last-mile-delivery" }],
+    related: [{ label: "Courier services (hub)", href: "/courier-services" }, { label: "Same day courier", href: "/same-day-courier" }, { label: "Rush delivery", href: "/rush-delivery" }, { label: "Last-mile delivery", href: "/last-mile-delivery" }, { label: "Courier for business", href: "/courier-for-business" }],
     faqs: [
       { q: "How do I request an on-demand delivery?", a: "Contact your account manager or use the job request portal, a driver is dispatched immediately on confirmation." },
       { q: "Can on-demand deliveries be scheduled in advance?", a: "Yes, you can schedule a future pickup time as well as request immediate dispatch; both are available on the same account." },
@@ -1045,7 +1045,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
     whyHeading: "One partner for every delivery urgency.",
     whyBullets: ["Fastest-available dispatch", "Direct, dedicated routing", "Live tracking + proof of delivery", "Any category, same-day reach"],
     relatedLabel: "Related services",
-    related: [{ label: "Courier services (hub)", href: "/courier-services" }, { label: "Same day courier", href: "/same-day-courier" }, { label: "On-demand delivery", href: "/on-demand-delivery" }, { label: "Expedited freight", href: "/expedited-freight" }],
+    related: [{ label: "Courier services (hub)", href: "/courier-services" }, { label: "Same day courier", href: "/same-day-courier" }, { label: "On-demand delivery", href: "/on-demand-delivery" }, { label: "Expedited freight", href: "/expedited-freight" }, { label: "Medical courier", href: "/medical-courier" }],
     faqs: [
       { q: "How fast is rush delivery?", a: "Fastest-available dispatch with direct routing; timing depends on distance, share pickup and destination for an exact ETA." },
       { q: "Can you handle rush delivery for medical or industrial shipments?", a: "Yes, we handle any category that fits a vehicle: medical supplies, manufacturing parts, legal documents, retail samples, and more." },
@@ -1078,7 +1078,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
     whyHeading: "One partner for every delivery urgency.",
     whyBullets: ["Same-day local pickup & delivery", "Live tracking + proof of delivery", "Dedicated and scheduled routes", "Business accounts & recurring runs"],
     relatedLabel: "Related services",
-    related: [{ label: "Courier services (hub)", href: "/courier-services" }, { label: "White glove delivery", href: "/white-glove-delivery" }, { label: "Last-mile delivery", href: "/last-mile-delivery" }, { label: "Expedited freight", href: "/expedited-freight" }],
+    related: [{ label: "Courier services (hub)", href: "/courier-services" }, { label: "White glove delivery", href: "/white-glove-delivery" }, { label: "Last-mile delivery", href: "/last-mile-delivery" }, { label: "Expedited freight", href: "/expedited-freight" }, { label: "Medical courier", href: "/medical-courier" }],
     faqs: [
       { q: "How quickly can you dispatch a same-day courier?", a: "Driver assignment and dispatch happen immediately after booking, the window depends on driver proximity and distance; share your pickup location for an ETA." },
       { q: "Do you offer same-day courier for medical or legal shipments?", a: "Yes, medical specimens, legal documents, and other sensitive loads are within scope. Share the handling requirements and we'll confirm the right service level." },
@@ -1113,7 +1113,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
     whyHeading: "Fulfillment that scales from startup to enterprise volume.",
     whyBullets: ["Low-volume onboarding, no minimums to start", "Same account from launch through scale, no migration", "Same-day receiving in most cases; 48-hour FBA prep", "FBA, FBM, and DTC in one place"],
     relatedLabel: "Related services",
-    related: [{ label: "Fulfillment center (hub)", href: "/fulfillment-center" }, { label: "3PL fulfillment", href: "/3pl-fulfillment" }, { label: "Pick and pack services", href: "/pick-and-pack-fulfillment" }, { label: "Etsy fulfillment", href: "/etsy-fulfillment" }],
+    related: [{ label: "Fulfillment center (hub)", href: "/fulfillment-center" }, { label: "3PL fulfillment", href: "/3pl-fulfillment" }, { label: "Pick and pack services", href: "/pick-and-pack-fulfillment" }, { label: "Etsy fulfillment", href: "/etsy-fulfillment" }, { label: "Crowdfunding fulfillment", href: "/crowdfunding-fulfillment" }],
     faqs: [
       { q: "What is small business fulfillment?", a: "Small business fulfillment is an outsourced service where a 3PL receives your inventory, stores it, and picks, packs, and ships each order for you. Delivery Group Inc. runs it from a Northern Kentucky fulfillment center and adds FBA prep, returns, and kitting." },
       { q: "Is Delivery Group Inc. a good 3PL for startups?", a: "Yes. We onboard startups and early-stage brands at low order counts with no minimums to start, then scale on the same account as you grow, so there is no enterprise-only contract and no migration to a new provider later." },
@@ -1386,6 +1386,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
       { label: "White glove delivery", href: "/white-glove-delivery" },
       { label: "Same day courier", href: "/same-day-courier" },
       { label: "On demand delivery", href: "/on-demand-delivery" },
+      { label: "Courier for business", href: "/courier-for-business" },
     ],
     faqs: [
       { q: "What's your last mile delivery on-time rate?", a: "99.4% on-time across 2M+ monthly deliveries, one of the highest in the industry." },
@@ -1511,6 +1512,7 @@ export const seoPages: Record<string, ServiceLandingData> = {
       { label: "Pick and pack fulfillment", href: "/pick-and-pack-fulfillment" },
       { label: "Returns management", href: "/returns-management" },
       { label: "Kitting services", href: "/kitting-services" },
+      { label: "Crowdfunding fulfillment", href: "/crowdfunding-fulfillment" },
     ],
     faqs: [
       { q: "What is DTC fulfillment?", a: "DTC fulfillment is direct-to-consumer fulfillment: a partner stores your products and picks, packs, and ships each online order straight to the shopper. Delivery Group Inc. handles DTC fulfillment from a Northern Kentucky fulfillment center, including branded packaging and returns." },
