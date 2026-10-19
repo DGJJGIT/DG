@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { leadPing } from "@/lib/first-touch"
 
 const CALENDLY = "https://calendly.com/chris-l-deliverygroupinc/15min"
 
@@ -34,6 +35,7 @@ export default function ContactForm() {
         throw new Error(json.error || "Something went wrong")
       }
       setStatus("success")
+      leadPing("contact")
       form.reset()
     } catch (err: unknown) {
       setErrorMsg(err instanceof Error ? err.message : "Something went wrong. Please try again.")

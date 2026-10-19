@@ -5,6 +5,7 @@ import "./globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import JsonLd from "@/components/JsonLd"
+import FirstTouch from "@/components/FirstTouch"
 
 const TURNSTILE_SITEKEY = process.env.NEXT_PUBLIC_TURNSTILE_SITEKEY
 
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       )}
       <body className="font-[var(--font-inter)] min-h-screen flex flex-col">
+        <FirstTouch />
         <JsonLd
           data={{
             "@context": "https://schema.org",
