@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { leadPing } from "@/lib/first-touch"
 
 const TURNSTILE_SITEKEY = process.env.NEXT_PUBLIC_TURNSTILE_SITEKEY
 const CALENDLY = "https://calendly.com/chris-l-deliverygroupinc/15min"
@@ -72,6 +73,7 @@ export default function QuoteForm() {
         throw new Error(json.error || "Something went wrong")
       }
       setStatus("success")
+      leadPing("quote")
       form.reset()
     } catch (err: unknown) {
       setErrorMsg(err instanceof Error ? err.message : "Something went wrong. Please try again.")
