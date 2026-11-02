@@ -10,9 +10,13 @@ export async function POST(req: NextRequest) {
       seoService, utm_source, utm_medium, utm_campaign, utm_term, utm_content,
       first_touch_referrer, first_touch_landing,
     } = body
+    // visitor IP + browser, saved with the lead for bot tagging (GET /api/admin/leads adds human/suspect/bot)
+    const meta = { ip: req.headers.get("cf-connecting-ip") || (req.headers.get("x-forwarded-for") || "").split(",")[0].trim(),
+                   ua: (req.headers.get("user-agent") || "").slice(0, 200) }
 
-    // Honeypot — bots fill this hidden field; real users never see it
+    // Honeypot — bots fill this hidden field; real users never see it. Kept, tagged as a bot.
     if (bot_field) {
+      backupRejected("quote", "honeypot (bot)", body, { ...meta, honeypot: true })
       return NextResponse.json({ success: true })
     }
 
@@ -27,7 +31,7 @@ export async function POST(req: NextRequest) {
     if (!volume?.trim())    missing.push("Monthly volume")
     if (!geography?.trim()) missing.push("Delivery geography")
     if (missing.length > 0) {
-      backupRejected("quote", `missing fields: ${missing.join(", ")}`, body)
+      backupRejected("quote", `missing fields: ${missing.join(", ")}`, body, meta)
       return NextResponse.json(
         { error: `Please fill in all required fields: ${missing.join(", ")}.` },
         { status: 400 }
@@ -38,7 +42,7 @@ export async function POST(req: NextRequest) {
     const turnstileSecret = process.env.TURNSTILE_SECRET_KEY
     if (turnstileSecret) {
       if (!cfToken) {
-        backupRejected("quote", "security check: no token (widget not rendered or not completed)", body)
+        backupRejected("quote", "security check: no token (widget not rendered or not completed)", body, meta)
         return NextResponse.json({ error: "Please complete the security check." }, { status: 400 })
       }
       const tvRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
@@ -48,7 +52,7 @@ export async function POST(req: NextRequest) {
       })
       const tvData = await tvRes.json() as { success: boolean }
       if (!tvData.success) {
-        backupRejected("quote", "security check failed verification", body)
+        backupRejected("quote", "security check failed verification", body, meta)
         return NextResponse.json({ error: "Security check failed. Please refresh and try again." }, { status: 400 })
       }
     }
@@ -60,6 +64,7 @@ export async function POST(req: NextRequest) {
       service, volume, geography, notes,
       seoService, utm_source, utm_medium, utm_campaign,
       first_touch_landing, utm_content,
+      ...meta,
     })
 
     // Use only standard HubSpot contact properties — custom properties silently drop if they haven't

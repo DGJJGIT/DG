@@ -5,6 +5,10 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
     const { firstName, lastName, email, company, subject, message } = body
+    // visitor IP + browser, saved with the lead for bot tagging (GET /api/admin/leads adds human/suspect/bot)
+    const meta = { ip: req.headers.get("cf-connecting-ip") || (req.headers.get("x-forwarded-for") || "").split(",")[0].trim(),
+                   ua: (req.headers.get("user-agent") || "").slice(0, 200) }
+
 
     const missing = []
     if (!firstName?.trim()) missing.push("First name")
@@ -14,7 +18,7 @@ export async function POST(req: NextRequest) {
     if (!subject?.trim())   missing.push("Subject")
     if (!message?.trim())   missing.push("Message")
     if (missing.length > 0) {
-      backupRejected("contact", `missing fields: ${missing.join(", ")}`, body)
+      backupRejected("contact", `missing fields: ${missing.join(", ")}`, body, meta)
       return NextResponse.json(
         { error: `Please fill in all required fields: ${missing.join(", ")}.` },
         { status: 400 }
@@ -22,7 +26,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Local backup before touching HubSpot
-    backupLead({ source: "contact", firstName, lastName, email, company, subject, message })
+    backupLead({ source: "contact", firstName, lastName, email, company, subject, message, ...meta })
 
     const contactProperties = {
       firstname: firstName,
