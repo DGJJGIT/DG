@@ -25,6 +25,8 @@ export type LeadRecord = {
   utm_content?: string
   first_touch_referrer?: string
   first_touch_landing?: string
+  ip?: string
+  ua?: string
   savedAt: string
 }
 
@@ -48,7 +50,8 @@ export function backupLead(data: Omit<LeadRecord, "savedAt">) {
 // stored. View with GET /api/admin/leads?file=rejected. Never throws.
 const REJECTED_FILE = join(DATA_DIR, "rejected.jsonl")
 
-export function backupRejected(source: "quote" | "contact", reason: string, data: Record<string, unknown>) {
+export function backupRejected(source: "quote" | "contact", reason: string, data: Record<string, unknown>,
+                               meta: { ip?: string; ua?: string; honeypot?: boolean } = {}) {
   try {
     const clean: Record<string, unknown> = {}
     for (const [k, v] of Object.entries(data || {})) {
@@ -57,7 +60,8 @@ export function backupRejected(source: "quote" | "contact", reason: string, data
     }
     console.warn(`[lead rejected] source=${source} reason=${reason} email=${String(clean.email || "")}`)
     mkdirSync(DATA_DIR, { recursive: true })
-    appendFileSync(REJECTED_FILE, JSON.stringify({ source, reason, ...clean, savedAt: new Date().toISOString() }) + "\n", "utf8")
+    appendFileSync(REJECTED_FILE, JSON.stringify({ source, reason, ...clean, ip: meta.ip || "", ua: (meta.ua || "").slice(0, 200),
+      ...(meta.honeypot ? { honeypot: true } : {}), savedAt: new Date().toISOString() }) + "\n", "utf8")
   } catch {
     // best-effort, like backupLead
   }
