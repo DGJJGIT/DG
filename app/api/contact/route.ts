@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from "next/server"
-import { backupLead } from "@/lib/leads-backup"
+import { backupLead, backupRejected } from "@/lib/leads-backup"
 
 export async function POST(req: NextRequest) {
   try {
-    const { firstName, lastName, email, company, subject, message } = await req.json()
+    const body = await req.json()
+    const { firstName, lastName, email, company, subject, message } = body
 
     const missing = []
     if (!firstName?.trim()) missing.push("First name")
@@ -13,6 +14,7 @@ export async function POST(req: NextRequest) {
     if (!subject?.trim())   missing.push("Subject")
     if (!message?.trim())   missing.push("Message")
     if (missing.length > 0) {
+      backupRejected("contact", `missing fields: ${missing.join(", ")}`, body)
       return NextResponse.json(
         { error: `Please fill in all required fields: ${missing.join(", ")}.` },
         { status: 400 }

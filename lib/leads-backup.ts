@@ -40,3 +40,25 @@ export function backupLead(data: Omit<LeadRecord, "savedAt">) {
     // Intentionally swallowed — backup is best-effort
   }
 }
+
+
+// Submissions the API REJECTED (missing fields, security check), kept with the reason in
+// data/rejected.jsonl so a real visitor's details are never lost if validation or the security
+// check misfires (three quote leads were lost that way, Oct 19-27 2026). Security tokens are not
+// stored. View with GET /api/admin/leads?file=rejected. Never throws.
+const REJECTED_FILE = join(DATA_DIR, "rejected.jsonl")
+
+export function backupRejected(source: "quote" | "contact", reason: string, data: Record<string, unknown>) {
+  try {
+    const clean: Record<string, unknown> = {}
+    for (const [k, v] of Object.entries(data || {})) {
+      if (/token|captcha|turnstile|bot_field/i.test(k)) continue
+      clean[k] = typeof v === "string" ? v.slice(0, 5000) : v
+    }
+    console.warn(`[lead rejected] source=${source} reason=${reason} email=${String(clean.email || "")}`)
+    mkdirSync(DATA_DIR, { recursive: true })
+    appendFileSync(REJECTED_FILE, JSON.stringify({ source, reason, ...clean, savedAt: new Date().toISOString() }) + "\n", "utf8")
+  } catch {
+    // best-effort, like backupLead
+  }
+}
