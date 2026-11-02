@@ -8,7 +8,9 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
   }
 
-  const file = join(process.cwd(), "data", "leads.jsonl")
+  // ?file=rejected lists submissions the API rejected (see backupRejected), default = accepted leads
+  const which = req.nextUrl.searchParams.get("file") === "rejected" ? "rejected.jsonl" : "leads.jsonl"
+  const file = join(process.cwd(), "data", which)
   if (!existsSync(file)) {
     return NextResponse.json({ leads: [], total: 0, message: "No leads yet" })
   }

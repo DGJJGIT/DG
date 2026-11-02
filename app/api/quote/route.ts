@@ -1,14 +1,15 @@
 import { NextRequest, NextResponse } from "next/server"
-import { backupLead } from "@/lib/leads-backup"
+import { backupLead, backupRejected } from "@/lib/leads-backup"
 
 export async function POST(req: NextRequest) {
   try {
+    const body = await req.json()
     const {
       firstName, lastName, email, company, phone, service, volume, geography, notes,
       bot_field, cfToken,
       seoService, utm_source, utm_medium, utm_campaign, utm_term, utm_content,
       first_touch_referrer, first_touch_landing,
-    } = await req.json()
+    } = body
 
     // Honeypot — bots fill this hidden field; real users never see it
     if (bot_field) {
@@ -26,6 +27,7 @@ export async function POST(req: NextRequest) {
     if (!volume?.trim())    missing.push("Monthly volume")
     if (!geography?.trim()) missing.push("Delivery geography")
     if (missing.length > 0) {
+      backupRejected("quote", `missing fields: ${missing.join(", ")}`, body)
       return NextResponse.json(
         { error: `Please fill in all required fields: ${missing.join(", ")}.` },
         { status: 400 }
@@ -36,6 +38,7 @@ export async function POST(req: NextRequest) {
     const turnstileSecret = process.env.TURNSTILE_SECRET_KEY
     if (turnstileSecret) {
       if (!cfToken) {
+        backupRejected("quote", "security check: no token (widget not rendered or not completed)", body)
         return NextResponse.json({ error: "Please complete the security check." }, { status: 400 })
       }
       const tvRes = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
@@ -45,6 +48,7 @@ export async function POST(req: NextRequest) {
       })
       const tvData = await tvRes.json() as { success: boolean }
       if (!tvData.success) {
+        backupRejected("quote", "security check failed verification", body)
         return NextResponse.json({ error: "Security check failed. Please refresh and try again." }, { status: 400 })
       }
     }
