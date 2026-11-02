@@ -1,16 +1,50 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { leadPing } from "@/lib/first-touch"
 
 const TURNSTILE_SITEKEY = process.env.NEXT_PUBLIC_TURNSTILE_SITEKEY
 const CALENDLY = "https://calendly.com/chris-l-deliverygroupinc/15min"
+
+// Cloudflare Turnstile, rendered explicitly. The layout loads api.js once; its automatic
+// render only scans the page when the script first loads, so when a visitor reaches /quote
+// by clicking a link (client-side navigation) the widget never appeared, no token was sent
+// and /api/quote rejected the request with a 400.
+type Turnstile = {
+  render: (el: HTMLElement, opts: Record<string, unknown>) => string
+  reset: (id?: string) => void
+  remove: (id?: string) => void
+}
+const getTurnstile = () => (window as unknown as { turnstile?: Turnstile }).turnstile
 
 export default function QuoteForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
   const [errorMsg, setErrorMsg] = useState("")
   const [prefillService, setPrefillService] = useState("")
   const [prefillVolume, setPrefillVolume] = useState("")
+  const turnstileRef = useRef<HTMLDivElement>(null)
+  const turnstileId = useRef<string | null>(null)
+
+  // Render the widget whenever the form mounts (direct load or in-site navigation),
+  // waiting for api.js if it hasn't loaded yet.
+  useEffect(() => {
+    if (!TURNSTILE_SITEKEY) return
+    let tries = 0
+    const timer = window.setInterval(() => {
+      const ts = getTurnstile()
+      const el = turnstileRef.current
+      if (ts && el && turnstileId.current === null) {
+        turnstileId.current = ts.render(el, { sitekey: TURNSTILE_SITEKEY, theme: "light", size: "normal" })
+      }
+      if (turnstileId.current !== null || ++tries > 100) window.clearInterval(timer)
+    }, 100)
+    return () => {
+      window.clearInterval(timer)
+      const ts = getTurnstile()
+      if (ts && turnstileId.current !== null) ts.remove(turnstileId.current)
+      turnstileId.current = null
+    }
+  }, [])
 
   // Pre-fill service + volume when arriving from the calculator (?from=calculator)
   useEffect(() => {
@@ -78,6 +112,9 @@ export default function QuoteForm() {
     } catch (err: unknown) {
       setErrorMsg(err instanceof Error ? err.message : "Something went wrong. Please try again.")
       setStatus("error")
+      // Turnstile tokens are single-use: get a fresh one so the visitor can retry.
+      const ts = getTurnstile()
+      if (ts && turnstileId.current !== null) ts.reset(turnstileId.current)
     }
   }
 
@@ -189,15 +226,9 @@ export default function QuoteForm() {
         <label className="block text-[13px] font-medium text-[#3D3D3D] mb-2">Additional Requirements</label>
         <textarea name="notes" rows={4} className="w-full px-4 py-2.5 bg-[#F7F6F3] border border-[#E2DFD8] rounded-md text-[14px] focus:outline-none focus:border-[#B8962E] transition-colors resize-none" placeholder="Special handling requirements, integration needs, timeline, etc." />
       </div>
-      {/* Cloudflare Turnstile, renders when NEXT_PUBLIC_TURNSTILE_SITEKEY is set */}
-      {TURNSTILE_SITEKEY && (
-        <div
-          className="cf-turnstile"
-          data-sitekey={TURNSTILE_SITEKEY}
-          data-theme="light"
-          data-size="normal"
-        />
-      )}
+      {/* Cloudflare Turnstile, rendered explicitly above (no "cf-turnstile" class, so the
+          automatic render on a direct load can't add a second widget) */}
+      {TURNSTILE_SITEKEY && <div ref={turnstileRef} />}
       {status === "error" && (
         <p className="text-[13px] text-red-500">{errorMsg}</p>
       )}
