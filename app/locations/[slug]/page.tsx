@@ -23,7 +23,64 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 }
 
-// US Census Bureau regions, used to pick nearby markets for cities that are alone in their state
+// City-center coordinates: "Nearby Markets" = the 3 closest listed cities by distance (any state).
+// The old same-state + Census-region rotation listed cities up to 1,700 miles away (audit 2026-10-14).
+const COORDS: Record<string, [number, number]> = {
+  "new-york-ny": [40.7128, -74.006],
+  "los-angeles-ca": [34.0522, -118.2437],
+  "chicago-il": [41.8781, -87.6298],
+  "houston-tx": [29.7604, -95.3698],
+  "phoenix-az": [33.4484, -112.074],
+  "philadelphia-pa": [39.9526, -75.1652],
+  "san-antonio-tx": [29.4241, -98.4936],
+  "san-diego-ca": [32.7157, -117.1611],
+  "dallas-tx": [32.7767, -96.797],
+  "san-jose-ca": [37.3382, -121.8863],
+  "austin-tx": [30.2672, -97.7431],
+  "jacksonville-fl": [30.3322, -81.6557],
+  "fort-worth-tx": [32.7555, -97.3308],
+  "columbus-oh": [39.9612, -82.9988],
+  "charlotte-nc": [35.2271, -80.8431],
+  "indianapolis-in": [39.7684, -86.1581],
+  "san-francisco-ca": [37.7749, -122.4194],
+  "seattle-wa": [47.6062, -122.3321],
+  "denver-co": [39.7392, -104.9903],
+  "washington-dc": [38.9072, -77.0369],
+  "nashville-tn": [36.1627, -86.7816],
+  "el-paso-tx": [31.7619, -106.485],
+  "oklahoma-city-ok": [35.4676, -97.5164],
+  "boston-ma": [42.3601, -71.0589],
+  "portland-or": [45.5152, -122.6784],
+  "las-vegas-nv": [36.1699, -115.1398],
+  "memphis-tn": [35.1495, -90.049],
+  "louisville-ky": [38.2527, -85.7585],
+  "baltimore-md": [39.2904, -76.6122],
+  "milwaukee-wi": [43.0389, -87.9065],
+  "albuquerque-nm": [35.0844, -106.6504],
+  "tucson-az": [32.2226, -110.9747],
+  "fresno-ca": [36.7378, -119.7871],
+  "sacramento-ca": [38.5816, -121.4944],
+  "mesa-az": [33.4152, -111.8315],
+  "omaha-ne": [41.2565, -95.9345],
+  "atlanta-ga": [33.749, -84.388],
+  "miami-fl": [25.7617, -80.1918],
+  "minneapolis-mn": [44.9778, -93.265],
+  "cleveland-oh": [41.4993, -81.6944],
+  "tampa-fl": [27.9506, -82.4572],
+  "pittsburgh-pa": [40.4406, -79.9959],
+  "raleigh-nc": [35.7796, -78.6382],
+  "cincinnati-oh": [39.1031, -84.512],
+  "kansas-city-mo": [39.0997, -94.5786],
+  "st-louis-mo": [38.627, -90.1994],
+  "salt-lake-city-ut": [40.7608, -111.891],
+}
+function milesBetween(a: [number, number], b: [number, number]): number {
+  const r = (d: number) => (d * Math.PI) / 180
+  const h = Math.sin(r(b[0] - a[0]) / 2) ** 2 + Math.cos(r(a[0])) * Math.cos(r(b[0])) * Math.sin(r(b[1] - a[1]) / 2) ** 2
+  return 3959 * 2 * Math.asin(Math.sqrt(h))
+}
+
+// US Census Bureau regions, fallback for a city without coordinates
 const REGION: Record<string, string> = {
   CT: "Northeast", ME: "Northeast", MA: "Northeast", NH: "Northeast", RI: "Northeast", VT: "Northeast", NJ: "Northeast", NY: "Northeast", PA: "Northeast",
   IL: "Midwest", IN: "Midwest", MI: "Midwest", OH: "Midwest", WI: "Midwest", IA: "Midwest", KS: "Midwest", MN: "Midwest", MO: "Midwest", NE: "Midwest", ND: "Midwest", SD: "Midwest",
@@ -42,7 +99,11 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
   const idx = locations.findIndex(l => l.slug === loc.slug)
   const rotated = [...locations.slice(idx + 1), ...locations.slice(0, idx)]
   const regional = rotated.filter(l => l.stateAbbr !== loc.stateAbbr && REGION[l.stateAbbr] && REGION[l.stateAbbr] === REGION[loc.stateAbbr])
-  const nearby = [...sameState, ...regional].slice(0, 3)
+  const here = COORDS[loc.slug]
+  const nearby = here
+    ? locations.filter(l => l.slug !== loc.slug && COORDS[l.slug])
+        .sort((a, b) => milesBetween(here, COORDS[a.slug]) - milesBetween(here, COORDS[b.slug])).slice(0, 3)
+    : [...sameState, ...regional].slice(0, 3)
 
   return (
     <>
